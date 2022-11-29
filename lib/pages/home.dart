@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
               padding: EdgeInsets.all(20),
               child: Row(children: <Widget>[
                 Text(
-                  "Update & Newsletter",
+                  "Update and Newsletter",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 )
               ]),
