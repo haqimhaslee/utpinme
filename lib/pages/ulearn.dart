@@ -17,7 +17,6 @@ class _WebViewAppState extends State<ULearn> {
       ),
       body: const WebView(
         initialUrl: 'https://ulearn.utp.edu.my',
-        javascriptMode: JavascriptMode.unrestricted,
       ),
     );
   }
