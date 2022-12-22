@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/digitalBadge.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
 import 'package:utp_in_me/pages/settings.dart';
 import 'package:utp_in_me/pages/exemptionApp.dart';
+import 'package:utp_in_me/pages/ucampus.dart';
+import 'package:utp_in_me/pages/ulearn.dart';
 
 class MoreApp extends StatefulWidget {
   @override
@@ -50,9 +53,65 @@ class _MoreAppState extends State<MoreApp> {
                     color: Color.fromARGB(255, 0, 56, 160),
                   ),
                   Text(
-                    "Hotline",
+                    "Emergency",
                     style: TextStyle(
                         fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.calendar_month,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "USchedule Course",
+                    style: TextStyle(
+                        fontSize: 11.5, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.calendar_month,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "USchedule Exam",
+                    style: TextStyle(
+                        fontSize: 11.5, color: Color.fromARGB(255, 0, 56, 160)),
                   )
                 ],
               ),
@@ -117,7 +176,7 @@ class _MoreAppState extends State<MoreApp> {
           InkWell(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => hotlineApp()));
+                  MaterialPageRoute(builder: (context) => digitalBadge()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -185,7 +244,7 @@ class _MoreAppState extends State<MoreApp> {
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.check_circle_rounded,
                     size: 35,
                     color: Color.fromARGB(255, 0, 56, 160),
                   ),
@@ -200,8 +259,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => hotlineApp()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ULearn()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -228,8 +287,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => hotlineApp()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => UCampus()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -247,6 +306,202 @@ class _MoreAppState extends State<MoreApp> {
                   ),
                   Text(
                     "UCampus",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.design_services,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "UCS",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.person_add,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "UCareer",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.my_library_books,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "ULibrary",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.share,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "UResearch",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.label,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "ULab",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.edit_calendar_rounded,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "UBooking",
+                    style: TextStyle(
+                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            },
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 228, 228, 228),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Column(
+                children: [
+                  Padding(padding: EdgeInsets.all(10)),
+                  Icon(
+                    Icons.web_rounded,
+                    size: 35,
+                    color: Color.fromARGB(255, 0, 56, 160),
+                  ),
+                  Text(
+                    "UTP Nexus",
                     style: TextStyle(
                         fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
                   )

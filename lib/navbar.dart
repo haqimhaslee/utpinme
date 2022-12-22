@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:utp_in_me/pages/home.dart';
+import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/profile.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
@@ -17,10 +18,9 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 2;
   List<Widget> _windgetOption = <Widget>[
     Profile(),
-    ULearn(),
     Home(),
-    UCampus(),
     MoreApp(),
+    hotlineApp(),
   ];
 
   void _onItemTap(int index) {
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               activeColor: Color.fromARGB(255, 34, 33, 29),
               iconSize: 25,
               tabBackgroundColor: Color.fromARGB(255, 209, 171, 1),
-              padding: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               haptic: true,
               tabBorderRadius: 25,
               curve: Curves.easeInCubic,
@@ -64,21 +64,20 @@ class _HomePageState extends State<HomePage> {
               onTabChange: _onItemTap,
               tabs: const [
                 GButton(
-                  icon: Icons.person_outline_outlined,
+                  icon: Icons.person,
                   text: "Profile",
                 ),
                 GButton(
-                  icon: Icons.book_outlined,
-                  text: "ULearn",
-                ),
-                GButton(icon: Icons.home_rounded),
-                GButton(
-                  icon: Icons.school_outlined,
-                  text: "UCampus",
+                  icon: Icons.home_rounded,
+                  text: "Home",
                 ),
                 GButton(
                   icon: Icons.apps_outlined,
                   text: "Apps",
+                ),
+                GButton(
+                  icon: Icons.emergency,
+                  text: "Emergency",
                 ),
               ]),
         ),

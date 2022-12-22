@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 
-class hotlineApp extends StatefulWidget {
-  @override
-  _hotlineAppState createState() => _hotlineAppState();
-}
-
-class _hotlineAppState extends State<hotlineApp> {
+class digitalBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Emergency',
+          'Digital ID',
           style: TextStyle(color: Color.fromARGB(255, 209, 171, 1)),
         ),
         elevation: 5,
@@ -19,7 +14,7 @@ class _hotlineAppState extends State<hotlineApp> {
         backgroundColor: Color.fromARGB(255, 0, 63, 145),
       ),
       body: Center(
-        child: Text('Emergency page'),
+        child: Text('Digital ID page'),
       ),
     );
   }
