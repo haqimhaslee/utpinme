@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class ULearn extends StatelessWidget {
+class ULearn extends StatefulWidget {
+  const ULearn({super.key});
+
+  @override
+  State<ULearn> createState() => _WebViewAppState();
+}
+
+class _WebViewAppState extends State<ULearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'ULearn',
-          style: TextStyle(color: Color.fromARGB(255, 209, 171, 1)),
-        ),
-        elevation: 5,
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 0, 63, 145),
+        title: const Text('ULearn'),
       ),
-      body: Center(
-        child: Text('ULearn Page'),
+      body: const WebView(
+        initialUrl: 'https://ulearn.utp.edu.my',
+        javascriptMode: JavascriptMode.unrestricted,
       ),
     );
   }
