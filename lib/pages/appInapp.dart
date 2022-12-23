@@ -20,17 +20,17 @@ class _MoreAppState extends State<MoreApp> {
       appBar: AppBar(
         title: Text(
           '[BETA] More Application',
-          style: TextStyle(color: Color.fromARGB(255, 209, 171, 1)),
+          style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        elevation: 5,
+        elevation: 0,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 0, 63, 145),
+        backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
       body: GridView.count(
         primary: false,
         padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 20,
-        mainAxisSpacing: 10,
+        crossAxisSpacing: 7.5,
+        mainAxisSpacing: 7.5,
         crossAxisCount: 3,
         children: [
           InkWell(
@@ -41,21 +41,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.emergency_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Emergency",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -69,21 +69,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.calendar_month,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "USchedule Course",
                     style: TextStyle(
-                        fontSize: 11.5, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 12, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -97,21 +97,22 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.calendar_month,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "USchedule Exam",
                     style: TextStyle(
-                        fontSize: 11.5, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 11.5,
+                        color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -125,21 +126,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.notifications,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Notification",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -153,21 +154,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.app_registration_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Attendance",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -181,21 +182,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.badge_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Digital ID",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -209,21 +210,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.people_alt_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "iAttend",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -237,21 +238,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.check_circle_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Exemption",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -265,21 +266,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.book_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "ULearn",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -293,21 +294,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.school_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UCampus",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -321,21 +322,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.design_services,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UCS",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -349,21 +350,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.person_add,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UCareer",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -377,21 +378,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.my_library_books,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "ULibrary",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -405,21 +406,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.share,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UResearch",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -433,21 +434,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.label,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "ULab",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -461,21 +462,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.edit_calendar_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UBooking",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -489,21 +490,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.web_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "UTP Nexus",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),
@@ -517,21 +518,21 @@ class _MoreAppState extends State<MoreApp> {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 228, 228, 228),
-                borderRadius: BorderRadius.circular(50),
-              ),
+                  //color: Color.fromARGB(255, 228, 228, 228),
+                  //borderRadius: BorderRadius.circular(50),
+                  ),
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(10)),
                   Icon(
                     Icons.settings_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 0, 56, 160),
+                    color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
                     "Settings",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 0, 56, 160)),
+                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
                 ],
               ),

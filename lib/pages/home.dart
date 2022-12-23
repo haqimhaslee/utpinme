@@ -14,9 +14,9 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           title: Text(
             'UTPinMe',
-            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+            style: TextStyle(color: Color.fromARGB(255, 58, 58, 58)),
           ),
-          elevation: 5,
+          elevation: 0,
           centerTitle: true,
           actions: [
             IconButton(
@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                   }),
             )
           ],
-          backgroundColor: Color.fromARGB(255, 0, 63, 145),
+          backgroundColor: Color.fromARGB(255, 248, 248, 248),
         ),
         body: ListView(
           children: [

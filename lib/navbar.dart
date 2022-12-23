@@ -15,10 +15,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 1;
   List<Widget> _windgetOption = <Widget>[
-    Profile(),
     Home(),
+    Profile(),
     MoreApp(),
     hotlineApp(),
   ];
@@ -39,23 +39,23 @@ class _HomePageState extends State<HomePage> {
         //color: Color.fromARGB(255, 0, 63, 145),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
-              top: Radius.circular(27),
+              //top: Radius.circular(27),
               bottom: Radius.circular(0),
             ),
-            color: Color.fromARGB(255, 0, 63, 145)),
+            color: Color.fromARGB(255, 224, 234, 255)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: GNav(
-              rippleColor: Color.fromARGB(160, 209, 171, 1),
+              rippleColor: Color.fromARGB(255, 169, 196, 255),
               backgroundColor: Color.fromARGB(0, 8, 8, 8),
               gap: 10,
-              color: Color.fromARGB(255, 255, 255, 255),
-              activeColor: Color.fromARGB(255, 34, 33, 29),
+              color: Color.fromARGB(255, 95, 95, 95),
+              activeColor: Color.fromARGB(255, 31, 31, 31),
               iconSize: 25,
-              tabBackgroundColor: Color.fromARGB(255, 209, 171, 1),
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              tabBackgroundColor: Color.fromARGB(255, 192, 211, 252),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
               haptic: true,
-              tabBorderRadius: 25,
+              tabBorderRadius: 025,
               curve: Curves.easeInCubic,
               //tabBorder:
               //Border.all(color: Color.fromARGB(0, 0, 0, 0), width: 0),
@@ -64,12 +64,12 @@ class _HomePageState extends State<HomePage> {
               onTabChange: _onItemTap,
               tabs: const [
                 GButton(
-                  icon: Icons.person,
-                  text: "Profile",
-                ),
-                GButton(
                   icon: Icons.home_rounded,
                   text: "Home",
+                ),
+                GButton(
+                  icon: Icons.person,
+                  text: "Profile",
                 ),
                 GButton(
                   icon: Icons.apps_outlined,

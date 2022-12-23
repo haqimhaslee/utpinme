@@ -4,9 +4,9 @@ import 'package:utp_in_me/navbar.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(255, 0, 63, 145),
+      statusBarColor: Color.fromARGB(255, 224, 234, 255),
       statusBarIconBrightness: Brightness.light,
-      systemNavigationBarColor: Color.fromARGB(255, 0, 63, 145)));
+      systemNavigationBarColor: Color.fromARGB(255, 224, 234, 255)));
   runApp(const MyApp());
 }
 
