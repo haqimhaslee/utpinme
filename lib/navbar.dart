@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             ),
             color: Color.fromARGB(255, 224, 234, 255)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
           child: GNav(
               rippleColor: Color.fromARGB(255, 169, 196, 255),
               backgroundColor: Color.fromARGB(0, 8, 8, 8),
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
               activeColor: Color.fromARGB(255, 2, 13, 82),
               iconSize: 25,
               tabBackgroundColor: Color.fromARGB(255, 192, 211, 252),
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: 23, vertical: 15),
               haptic: true,
               tabBorderRadius: 025,
               curve: Curves.easeInCubic,
