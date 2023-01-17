@@ -17,7 +17,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
   List<Widget> _windgetOption = <Widget>[
-    Home(),
     MoreApp(),
     hotlineApp(),
   ];
@@ -62,10 +61,6 @@ class _HomePageState extends State<HomePage> {
               selectedIndex: _selectedIndex,
               onTabChange: _onItemTap,
               tabs: const [
-                GButton(
-                  icon: Icons.home_rounded,
-                  text: "Home",
-                ),
                 GButton(
                   icon: Icons.apps_outlined,
                   text: "Apps",

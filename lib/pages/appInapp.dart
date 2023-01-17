@@ -19,7 +19,7 @@ class _MoreAppState extends State<MoreApp> {
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         title: Text(
-          '[BETA] More Application',
+          'More Application',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,

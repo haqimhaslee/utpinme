@@ -12,11 +12,11 @@ class _exemptionAppState extends State<exemptionApp> {
       appBar: AppBar(
         title: Text(
           'Class Exemption',
-          style: TextStyle(color: Color.fromARGB(255, 209, 171, 1)),
+          style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        elevation: 5,
+        elevation: 0,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 0, 63, 145),
+        backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
       body: Center(
         child: Text('Class Exemption page'),

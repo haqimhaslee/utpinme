@@ -13,7 +13,13 @@ class _WebViewAppState extends State<ULearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ULearn'),
+        title: Text(
+          'ULearn',
+          style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
+        ),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
       //body: const WebView(initialUrl: 'https://ulearn.utp.edu.my',),
     );

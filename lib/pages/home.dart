@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
           ),
           elevation: 0,
           centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 224, 234, 255),
           actions: [
             IconButton(
               icon: Icon(Icons.notifications),
@@ -29,7 +30,6 @@ class _HomeState extends State<Home> {
                   }),
             )
           ],
-          backgroundColor: Color.fromARGB(255, 248, 248, 248),
         ),
         body: ListView(
           children: [
