@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
   List<Widget> _windgetOption = <Widget>[
     Home(),
-    Profile(),
     MoreApp(),
     hotlineApp(),
   ];
@@ -66,10 +65,6 @@ class _HomePageState extends State<HomePage> {
                 GButton(
                   icon: Icons.home_rounded,
                   text: "Home",
-                ),
-                GButton(
-                  icon: Icons.person,
-                  text: "Profile",
                 ),
                 GButton(
                   icon: Icons.apps_outlined,
