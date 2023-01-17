@@ -1,6 +1,6 @@
 # utp_in_me
 
-UTP Gimmick Official Application
+UTP Student Experience Application
 
 ## Getting Started
 
