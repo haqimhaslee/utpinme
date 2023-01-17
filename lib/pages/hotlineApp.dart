@@ -11,7 +11,7 @@ class _hotlineAppState extends State<hotlineApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Emergency',
+          'Hotline',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,
@@ -19,7 +19,7 @@ class _hotlineAppState extends State<hotlineApp> {
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
       body: Center(
-        child: Text('Emergency page'),
+        child: Text('Hotline page'),
       ),
     );
   }

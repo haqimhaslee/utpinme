@@ -22,6 +22,7 @@ class _HomeState extends State<Home> {
           actions: [
             IconButton(
               icon: Icon(Icons.notifications),
+              color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() => {
                     Navigator.push(
                         context,

@@ -17,6 +17,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 1;
   List<Widget> _windgetOption = <Widget>[
+    Home(),
+    UCampus(),
+    ULearn(),
     MoreApp(),
     hotlineApp(),
   ];
@@ -42,16 +45,16 @@ class _HomePageState extends State<HomePage> {
             ),
             color: Color.fromARGB(255, 224, 234, 255)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: GNav(
               rippleColor: Color.fromARGB(255, 169, 196, 255),
               backgroundColor: Color.fromARGB(0, 8, 8, 8),
               gap: 10,
               color: Color.fromARGB(255, 95, 95, 95),
-              activeColor: Color.fromARGB(255, 31, 31, 31),
+              activeColor: Color.fromARGB(255, 2, 13, 82),
               iconSize: 25,
               tabBackgroundColor: Color.fromARGB(255, 192, 211, 252),
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               haptic: true,
               tabBorderRadius: 025,
               curve: Curves.easeInCubic,
@@ -62,12 +65,24 @@ class _HomePageState extends State<HomePage> {
               onTabChange: _onItemTap,
               tabs: const [
                 GButton(
+                  icon: Icons.home,
+                  //text: "Home",
+                ),
+                GButton(
+                  icon: Icons.school,
+                  //text: "UCampus",
+                ),
+                GButton(
+                  icon: Icons.book,
+                  //text: "ULearn",
+                ),
+                GButton(
                   icon: Icons.apps_outlined,
-                  text: "Apps",
+                  //text: "Apps",
                 ),
                 GButton(
                   icon: Icons.emergency,
-                  //text: "Emergency",
+                  //text: "Hotline",
                 ),
               ]),
         ),
