@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/aboutApp.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
 
 class Home extends StatefulWidget {
@@ -19,13 +20,11 @@ class _HomeState extends State<Home> {
           backgroundColor: Color.fromARGB(255, 224, 234, 255),
           actions: [
             IconButton(
-              icon: Icon(Icons.notifications),
+              icon: Icon(Icons.info_rounded),
               color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() => {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => NotificationPage()))
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AboutApp()))
                   }),
             )
           ],

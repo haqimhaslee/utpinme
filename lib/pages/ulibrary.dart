@@ -1,21 +1,14 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
 
-class exemptionApp extends StatefulWidget {
-  @override
-  _exemptionAppState createState() => _exemptionAppState();
-}
-
-class _exemptionAppState extends State<exemptionApp> {
+class ULibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'Class Exemption',
+          'ULibrary',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,
@@ -33,7 +26,7 @@ class _exemptionAppState extends State<exemptionApp> {
         ],
       ),
       body: Center(
-        child: Text('Class Exemption page'),
+        child: Text('ULibrary Page'),
       ),
     );
   }

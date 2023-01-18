@@ -6,8 +6,13 @@ import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
 import 'package:utp_in_me/pages/settings.dart';
 import 'package:utp_in_me/pages/exemptionApp.dart';
+import 'package:utp_in_me/pages/ubooking.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
+import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
+import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/pages/ulibrary.dart';
+import 'package:utp_in_me/pages/uschedule.dart';
 
 class MoreApp extends StatefulWidget {
   @override
@@ -25,6 +30,16 @@ class _MoreAppState extends State<MoreApp> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.info_rounded),
+            color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AboutApp()))
+                }),
+          )
+        ],
       ),
       body: GridView.count(
         primary: false,
@@ -39,24 +54,24 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 255, 191, 191),
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => hotlineApp()));
+                        MaterialPageRoute(builder: (context) => USchedule()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
-                        Icons.emergency,
+                        Icons.calendar_month_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 30, 79, 185),
+                        color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "Emergency",
+                        "USchedule Course",
                         style: TextStyle(
                             fontSize: 15,
-                            color: Color.fromARGB(255, 30, 79, 185)),
+                            color: Color.fromARGB(255, 79, 110, 175)),
                       ),
                     ],
                   ),
@@ -64,88 +79,34 @@ class _MoreAppState extends State<MoreApp> {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => USchedule()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.calendar_month_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "USchedule Exam",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.calendar_month,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "USchedule Course",
-                    style: TextStyle(
-                        fontSize: 12, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
-                  ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.calendar_month,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "USchedule Exam",
-                    style: TextStyle(
-                        fontSize: 11.5,
-                        color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => NotificationPage()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
-                  ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.notifications,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "Notification",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -166,12 +127,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.app_registration_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "Attendance",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -194,12 +155,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.badge_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "Digital ID",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -222,12 +183,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.people_alt_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "iAttend",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -250,12 +211,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.check_circle_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "Exemption",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -278,12 +239,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.book_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "ULearn",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -306,42 +267,45 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.school_rounded,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "UCampus",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => UCSPortal()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.design_services_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "UCS",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.design_services,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "UCS",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -362,42 +326,45 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.person_add,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "UCareer",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ULibrary()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.my_library_books_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "ULibrary",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.my_library_books,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "ULibrary",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -418,12 +385,12 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.share,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "UResearch",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
@@ -446,70 +413,76 @@ class _MoreAppState extends State<MoreApp> {
                   Icon(
                     Icons.label,
                     size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
+                    color: Color.fromARGB(255, 79, 110, 175),
                   ),
                   Text(
                     "ULab",
                     style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
+                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
                   )
                 ],
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => UBooking()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.edit_calendar_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "UBooking",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.edit_calendar_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "UBooking",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Settings()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.web_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "UTP Nexus",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.web_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "UTP Nexus",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -530,13 +503,44 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.settings,
                         size: 35,
-                        color: Color.fromARGB(255, 30, 79, 185),
+                        color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Settings",
                         style: TextStyle(
                             fontSize: 15,
-                            color: Color.fromARGB(255, 30, 79, 185)),
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AboutApp()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.info_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "About",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
                       ),
                     ],
                   ),

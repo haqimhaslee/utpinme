@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/aboutApp.dart';
 import 'package:utp_in_me/pages/settings.dart';
 
 class Profile extends StatefulWidget {
@@ -22,11 +23,11 @@ class _ProfileState extends State<Profile> {
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.info_rounded),
             color: Color.fromARGB(255, 58, 58, 58),
             onPressed: (() => {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Settings()))
+                      MaterialPageRoute(builder: (context) => AboutApp()))
                 }),
           )
         ],
