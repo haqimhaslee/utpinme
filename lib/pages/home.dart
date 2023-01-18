@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
-import 'package:utp_in_me/widgets/home-widgets/appShortcut.dart';
-import 'package:gridview_menu/gridview_menu.dart';
 
 class Home extends StatefulWidget {
   @override
