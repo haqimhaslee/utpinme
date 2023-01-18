@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class ULearn extends StatelessWidget {
+void main() {
+  runApp(
+    const MaterialApp(
+      home: ULearn(),
+    ),
+  );
+}
+
+class ULearn extends StatefulWidget {
+  const ULearn({super.key});
+
+  @override
+  State<ULearn> createState() => _ULearnState();
+}
+
+class _ULearnState extends State<ULearn> {
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..loadRequest(
+        Uri.parse('https://ulearn.utp.edu.my/login/index.php'),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +52,8 @@ class ULearn extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text('ULearn Page'),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }

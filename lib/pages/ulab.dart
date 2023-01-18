@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: USchedule(),
+      home: Ulab(),
     ),
   );
 }
 
-class USchedule extends StatefulWidget {
-  const USchedule({super.key});
+class Ulab extends StatefulWidget {
+  const Ulab({super.key});
 
   @override
-  State<USchedule> createState() => _UScheduleState();
+  State<Ulab> createState() => _UlabState();
 }
 
-class _UScheduleState extends State<USchedule> {
+class _UlabState extends State<Ulab> {
   late final WebViewController controller;
 
   @override
@@ -25,7 +25,7 @@ class _UScheduleState extends State<USchedule> {
     super.initState();
     controller = WebViewController()
       ..loadRequest(
-        Uri.parse('https://uschedulecourse.utp.edu.my/SWS2023/login.aspx'),
+        Uri.parse('https://ulab.utp.edu.my/landing/4430'),
       );
   }
 
@@ -35,7 +35,7 @@ class _UScheduleState extends State<USchedule> {
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'USchedule',
+          'ULab',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,

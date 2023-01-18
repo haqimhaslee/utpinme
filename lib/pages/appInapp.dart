@@ -9,6 +9,7 @@ import 'package:utp_in_me/pages/exemptionApp.dart';
 import 'package:utp_in_me/pages/ubooking.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ucs.dart';
+import 'package:utp_in_me/pages/ulab.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
 import 'package:utp_in_me/pages/ulibrary.dart';
@@ -110,171 +111,195 @@ class _MoreAppState extends State<MoreApp> {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => attendanceApp()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => attendanceApp()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.app_registration_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "Attendance",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.app_registration_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "Attendance",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => digitalBadge()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => digitalBadge()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.badge_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "Digital ID",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.badge_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "Digital ID",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => iattendApp()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => iattendApp()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.people_alt_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "iAttend",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.people_alt_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "iAttend",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => exemptionApp()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => exemptionApp()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.check_circle_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "Exemption",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.check_circle_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "Exemption",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => ULearn()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ULearn()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.book_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "ULearn",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.book_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "ULearn",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => UCampus()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => UCampus()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.school_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "UCampus",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.school_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "UCampus",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -309,34 +334,6 @@ class _MoreAppState extends State<MoreApp> {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
-                  ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.person_add,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "UCareer",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
-              ),
-            ),
-          ),
           SizedBox.fromSize(
             size: Size(70, 70),
             child: ClipOval(
@@ -368,59 +365,34 @@ class _MoreAppState extends State<MoreApp> {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Ulab()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.label_important_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "ULab",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.share,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "UResearch",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
-                  ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.label,
-                    size: 35,
-                    color: Color.fromARGB(255, 79, 110, 175),
-                  ),
-                  Text(
-                    "ULab",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 79, 110, 175)),
-                  )
-                ],
+                ),
               ),
             ),
           ),

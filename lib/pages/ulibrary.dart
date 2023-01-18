@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class ULibrary extends StatelessWidget {
+void main() {
+  runApp(
+    const MaterialApp(
+      home: ULibrary(),
+    ),
+  );
+}
+
+class ULibrary extends StatefulWidget {
+  const ULibrary({super.key});
+
+  @override
+  State<ULibrary> createState() => _ULibraryState();
+}
+
+class _ULibraryState extends State<ULibrary> {
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..loadRequest(
+        Uri.parse('https://ulibrary.utp.edu.my/'),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +52,8 @@ class ULibrary extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text('ULibrary Page'),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }

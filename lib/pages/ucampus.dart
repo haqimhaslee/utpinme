@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class UCampus extends StatelessWidget {
+void main() {
+  runApp(
+    const MaterialApp(
+      home: UCampus(),
+    ),
+  );
+}
+
+class UCampus extends StatefulWidget {
+  const UCampus({super.key});
+
+  @override
+  State<UCampus> createState() => _UCampusState();
+}
+
+class _UCampusState extends State<UCampus> {
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..loadRequest(
+        Uri.parse('https://ucampus.utp.edu.my/sitsvision/wrd/siw_lgn'),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +52,8 @@ class UCampus extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text('UCampus Page'),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }
