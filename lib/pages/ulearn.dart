@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:webview_flutter/webview_flutter.dart';
 
 class ULearn extends StatefulWidget {
   const ULearn({super.key});
@@ -21,7 +20,6 @@ class _WebViewAppState extends State<ULearn> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
-      //body: const WebView(initialUrl: 'https://ulearn.utp.edu.my',),
     );
   }
 }

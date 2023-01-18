@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/profile.dart';
-import 'package:utp_in_me/pages/settings.dart';
-import 'package:utp_in_me/pages/ucampus.dart';
-import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/pages/appInapp.dart';
 
 const TextStyle _textStyle = TextStyle(
