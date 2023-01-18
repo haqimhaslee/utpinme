@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           NavigationDestination(
             selectedIcon: Icon(Icons.emergency),
             icon: Icon(Icons.emergency_outlined),
-            label: 'Hotline',
+            label: 'Panic Button',
           ),
         ],
       ),
