@@ -28,36 +28,39 @@ class _MoreAppState extends State<MoreApp> {
       ),
       body: GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 7.5,
-        mainAxisSpacing: 7.5,
+        padding: const EdgeInsets.all(15),
+        crossAxisSpacing: 0,
+        mainAxisSpacing: 0,
         crossAxisCount: 3,
         children: [
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => hotlineApp()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 255, 191, 191),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => hotlineApp()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.emergency,
+                        size: 35,
+                        color: Color.fromARGB(255, 30, 79, 185),
+                      ),
+                      Text(
+                        "Emergency",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 30, 79, 185)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.emergency_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "Hotline",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -510,31 +513,34 @@ class _MoreAppState extends State<MoreApp> {
               ),
             ),
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Settings()));
-            },
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  //color: Color.fromARGB(255, 228, 228, 228),
-                  //borderRadius: BorderRadius.circular(50),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Settings()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.settings,
+                        size: 35,
+                        color: Color.fromARGB(255, 30, 79, 185),
+                      ),
+                      Text(
+                        "Settings",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 30, 79, 185)),
+                      ),
+                    ],
                   ),
-              child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(10)),
-                  Icon(
-                    Icons.settings_rounded,
-                    size: 35,
-                    color: Color.fromARGB(255, 30, 79, 185),
-                  ),
-                  Text(
-                    "Settings",
-                    style: TextStyle(
-                        fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
-                  )
-                ],
+                ),
               ),
             ),
           ),
