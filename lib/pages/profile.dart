@@ -23,6 +23,7 @@ class _ProfileState extends State<Profile> {
         actions: [
           IconButton(
             icon: Icon(Icons.settings),
+            color: Color.fromARGB(255, 58, 58, 58),
             onPressed: (() => {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Settings()))
