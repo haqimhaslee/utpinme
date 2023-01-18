@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ULearn extends StatefulWidget {
-  const ULearn({super.key});
-
-  @override
-  State<ULearn> createState() => _WebViewAppState();
-}
-
-class _WebViewAppState extends State<ULearn> {
+class ULearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +12,9 @@ class _WebViewAppState extends State<ULearn> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
+      ),
+      body: Center(
+        child: Text('ULearn Page'),
       ),
     );
   }

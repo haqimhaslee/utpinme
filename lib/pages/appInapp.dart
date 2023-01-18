@@ -53,7 +53,7 @@ class _MoreAppState extends State<MoreApp> {
                     color: Color.fromARGB(255, 30, 79, 185),
                   ),
                   Text(
-                    "Emergency",
+                    "Hotline",
                     style: TextStyle(
                         fontSize: 15, color: Color.fromARGB(255, 30, 79, 185)),
                   )
