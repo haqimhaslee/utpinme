@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> {
             label: 'Home',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.apps_rounded),
-            icon: Icon(Icons.apps_outlined),
+            selectedIcon: Icon(Icons.grid_view_rounded),
+            icon: Icon(Icons.grid_view_outlined),
             label: 'More Apps',
           ),
           NavigationDestination(
