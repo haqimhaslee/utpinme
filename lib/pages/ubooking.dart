@@ -1,7 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class UBooking extends StatelessWidget {
+void main() {
+  runApp(
+    const MaterialApp(
+      home: UBooking(),
+    ),
+  );
+}
+
+class UBooking extends StatefulWidget {
+  const UBooking({super.key});
+
+  @override
+  State<UBooking> createState() => _UBookingState();
+}
+
+class _UBookingState extends State<UBooking> {
+  late final WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
+      ..loadRequest(
+        Uri.parse('https://ubooking.utp.edu.my/'),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +54,8 @@ class UBooking extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text('UBooking Page'),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }

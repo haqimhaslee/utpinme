@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: UCampus(),
+      home: SRCUTP(),
     ),
   );
 }
 
-class UCampus extends StatefulWidget {
-  const UCampus({super.key});
+class SRCUTP extends StatefulWidget {
+  const SRCUTP({super.key});
 
   @override
-  State<UCampus> createState() => _UCampusState();
+  State<SRCUTP> createState() => _SRCUTPState();
 }
 
-class _UCampusState extends State<UCampus> {
+class _SRCUTPState extends State<SRCUTP> {
   late final WebViewController controller;
 
   @override
@@ -27,7 +27,7 @@ class _UCampusState extends State<UCampus> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse('https://ucampus.utp.edu.my/sitsvision/wrd/siw_lgn'),
+        Uri.parse('https://www.srcutp.org'),
       );
   }
 
@@ -37,7 +37,7 @@ class _UCampusState extends State<UCampus> {
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'UCampus',
+          'SRCUTP',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,

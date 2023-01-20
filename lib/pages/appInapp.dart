@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digitalBadge.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
+import 'package:utp_in_me/pages/parcelHub.dart';
 import 'package:utp_in_me/pages/settings.dart';
 import 'package:utp_in_me/pages/exemptionApp.dart';
 import 'package:utp_in_me/pages/ubooking.dart';
@@ -58,18 +60,18 @@ class _MoreAppState extends State<MoreApp> {
                   splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => USchedule()));
+                        MaterialPageRoute(builder: (context) => shuttleBus()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
-                        Icons.calendar_month_rounded,
+                        Icons.directions_transit,
                         size: 35,
                         color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "USchedule Course",
+                        "Shuttle Bus",
                         style: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 79, 110, 175)),
@@ -100,7 +102,7 @@ class _MoreAppState extends State<MoreApp> {
                         color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "USchedule Exam",
+                        "USchedule",
                         style: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 79, 110, 175)),
@@ -167,6 +169,37 @@ class _MoreAppState extends State<MoreApp> {
                       ),
                       Text(
                         "Digital ID",
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Color.fromARGB(255, 79, 110, 175)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox.fromSize(
+            size: Size(70, 70),
+            child: ClipOval(
+              child: Material(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: InkWell(
+                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => parcelHub()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.local_shipping_rounded,
+                        size: 35,
+                        color: Color.fromARGB(255, 79, 110, 175),
+                      ),
+                      Text(
+                        "Parcel Hub",
                         style: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 79, 110, 175)),

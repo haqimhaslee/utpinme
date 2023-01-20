@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: UCampus(),
+      home: parcelHub(),
     ),
   );
 }
 
-class UCampus extends StatefulWidget {
-  const UCampus({super.key});
+class parcelHub extends StatefulWidget {
+  const parcelHub({super.key});
 
   @override
-  State<UCampus> createState() => _UCampusState();
+  State<parcelHub> createState() => _parcelHubState();
 }
 
-class _UCampusState extends State<UCampus> {
+class _parcelHubState extends State<parcelHub> {
   late final WebViewController controller;
 
   @override
@@ -27,7 +27,8 @@ class _UCampusState extends State<UCampus> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse('https://ucampus.utp.edu.my/sitsvision/wrd/siw_lgn'),
+        Uri.parse(
+            'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'),
       );
   }
 
@@ -37,7 +38,7 @@ class _UCampusState extends State<UCampus> {
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'UCampus',
+          'Parcel Hub',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,

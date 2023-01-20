@@ -24,6 +24,8 @@ class _UlabState extends State<Ulab> {
   void initState() {
     super.initState();
     controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://ulab.utp.edu.my/landing/4430'),
       );
