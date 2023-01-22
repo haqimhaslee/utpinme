@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/pages/srcutp.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
@@ -111,7 +112,7 @@ class _UScheduleState extends State<USchedule> {
                                               ),
                                               Text(" "),
                                               Text(
-                                                "This application made by Students Represenative Council UTP with supported by a group of students",
+                                                "This application made by Students Representative Council UTP with supported by a group of students",
                                                 textAlign: TextAlign.center,
                                               ),
                                               Text(" "),
@@ -140,7 +141,7 @@ class _UScheduleState extends State<USchedule> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      AboutApp()))
+                                                      SRCUTP()))
                                         }),
                                     child:
                                         const Text('SRCUTP Official Website'),
@@ -192,7 +193,7 @@ class _UScheduleState extends State<USchedule> {
                                               ),
                                               Text(" "),
                                               Text(
-                                                "This application made by Students Represenative Council UTP with supported by a group of students",
+                                                "This application made by Students Representative Council UTP with supported by a group of students",
                                                 textAlign: TextAlign.center,
                                               ),
                                               Text(" "),
@@ -221,7 +222,7 @@ class _UScheduleState extends State<USchedule> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      AboutApp()))
+                                                      SRCUTP()))
                                         }),
                                     child:
                                         const Text('SRCUTP Official Website'),

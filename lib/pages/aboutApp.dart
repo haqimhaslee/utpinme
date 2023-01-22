@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/srcutp.dart';
 
 class AboutApp extends StatefulWidget {
   @override
@@ -302,7 +303,12 @@ class _AboutAppState extends State<AboutApp> {
                           children: [
                             Text(" "),
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: (() => {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => SRCUTP()))
+                                  }),
                               child: const Text('SRCUTP Official Website'),
                             ),
                             Text(" "),
