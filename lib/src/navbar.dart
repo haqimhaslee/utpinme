@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
-import 'package:utp_in_me/pages/profile.dart';
 import 'package:utp_in_me/pages/appInapp.dart';
+import 'package:utp_in_me/pages/srcutp.dart';
 
 const TextStyle _textStyle = TextStyle(
   fontSize: 40,
@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   List<Widget> _windgetOption = <Widget>[
     Home(),
+    SRCUTP(),
     MoreApp(),
-    Profile(),
     hotlineApp(),
   ];
 
@@ -55,14 +55,14 @@ class _HomePageState extends State<HomePage> {
             label: 'Home',
           ),
           NavigationDestination(
+            selectedIcon: Icon(Icons.groups_rounded),
+            icon: Icon(Icons.groups_outlined),
+            label: 'SRCUTP',
+          ),
+          NavigationDestination(
             selectedIcon: Icon(Icons.grid_view_rounded),
             icon: Icon(Icons.grid_view_outlined),
             label: 'More Apps',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.person),
-            icon: Icon(Icons.person_outlined),
-            label: 'Profile',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.emergency),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
 
 class exemptionApp extends StatefulWidget {
   @override

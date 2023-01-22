@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
+        Uri.parse('https://utpmy.sharepoint.com/sites/dashboard?wa=wsignin1.0'),
       );
   }
 

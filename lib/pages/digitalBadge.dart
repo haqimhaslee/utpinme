@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -15,7 +15,7 @@ class digitalBadge extends StatelessWidget {
         ),
         elevation: 0,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        backgroundColor: Color.fromARGB(0, 255, 255, 255),
         actions: [
           IconButton(
             icon: Icon(Icons.info_rounded),
@@ -47,7 +47,7 @@ class digitalBadge extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 138, 171, 223),
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(15)),
+                                    BorderRadius.all(Radius.circular(30)),
                               ),
                               width: 400,
                               height: 500,
@@ -64,12 +64,13 @@ class digitalBadge extends StatelessWidget {
                                       ),
                                       Text(" "),
                                       Text(
-                                        "This application made by Students Representative Council UTP with supported by a group of students (temp_remove_soon)",
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      Text(" "),
-                                      Text(
                                         "<profile_pic>",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      Text(
+                                        "<student_name>",
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline6,
@@ -94,7 +95,7 @@ class digitalBadge extends StatelessWidget {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(15)),
                                         ),
-                                        width: 280,
+                                        width: 190,
                                         child: Column(children: [
                                           Text(" "),
                                           QrImage(
@@ -103,13 +104,14 @@ class digitalBadge extends StatelessWidget {
                                             version: QrVersions.auto,
                                             size: 150.0,
                                           ),
-                                          Text(
-                                            "muhammad_20000382@utp.edu.my",
-                                            textAlign: TextAlign.center,
-                                          ),
                                           Text(" "),
                                         ]),
-                                      )
+                                      ),
+                                      Text(" "),
+                                      Text(
+                                        "<student_email_azure>",
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ],
                                   )),
                             )),
@@ -134,7 +136,6 @@ class digitalBadge extends StatelessWidget {
                           Text("Universiti Teknologi PETRONAS©️"),
                         ],
                       ),
-                      Row()
                     ]))
           ],
         ),

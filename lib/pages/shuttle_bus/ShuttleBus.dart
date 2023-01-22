@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 
 class shuttleBus extends StatefulWidget {
@@ -11,10 +11,12 @@ class _shuttleBusState extends State<shuttleBus> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
+            leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
             bottom: TabBar(
               isScrollable: false,
               labelColor: Color.fromARGB(255, 73, 73, 73),

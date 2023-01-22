@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
-import 'package:utp_in_me/pages/settings.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/settings.dart';
 
 class Profile extends StatefulWidget {
   @override

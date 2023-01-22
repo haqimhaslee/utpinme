@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:utp_in_me/navbar.dart';
+import 'package:utp_in_me/src/navbar.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Color.fromARGB(255, 224, 234, 255),
-      statusBarIconBrightness: Brightness.light,
-      systemNavigationBarColor: Color.fromARGB(255, 224, 234, 255)));
+      //statusBarColor: Color.fromARGB(255, 224, 234, 255),
+      //statusBarIconBrightness: Brightness.light,
+      //systemNavigationBarColor: Color.fromARGB(255, 224, 234, 255)
+      ));
   runApp(const MyApp());
 }
 

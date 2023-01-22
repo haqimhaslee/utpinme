@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/ShuttleBus.dart';
+import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digitalBadge.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/notificationPage.dart';
 import 'package:utp_in_me/pages/parcelHub.dart';
-import 'package:utp_in_me/pages/settings.dart';
+import 'package:utp_in_me/settings/settings.dart';
 import 'package:utp_in_me/pages/exemptionApp.dart';
 import 'package:utp_in_me/pages/ubooking.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/pages/ulab.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
-import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/ulibrary.dart';
-import 'package:utp_in_me/pages/uschedule.dart';
+import 'package:utp_in_me/pages/uschedule/uschedule_main.dart';
 
 class MoreApp extends StatefulWidget {
   @override
@@ -33,16 +33,6 @@ class _MoreAppState extends State<MoreApp> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: GridView.count(
         primary: false,
