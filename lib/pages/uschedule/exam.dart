@@ -24,7 +24,6 @@ class _examState extends State<exam> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://uscheduleexam.utp.edu.my/ESSWS/Login.aspx'),
       );

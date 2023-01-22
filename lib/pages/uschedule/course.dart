@@ -24,7 +24,6 @@ class _courseState extends State<course> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://www.srcutp.org'),
       );

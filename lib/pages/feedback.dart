@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: SRCUTP(),
+      home: feedback(),
     ),
   );
 }
 
-class SRCUTP extends StatefulWidget {
-  const SRCUTP({super.key});
+class feedback extends StatefulWidget {
+  const feedback({super.key});
 
   @override
-  State<SRCUTP> createState() => _SRCUTPState();
+  State<feedback> createState() => _feedbackState();
 }
 
-class _SRCUTPState extends State<SRCUTP> {
+class _feedbackState extends State<feedback> {
   late final WebViewController controller;
 
   @override
@@ -37,7 +37,7 @@ class _SRCUTPState extends State<SRCUTP> {
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'SRCUTP',
+          'Feedback',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,

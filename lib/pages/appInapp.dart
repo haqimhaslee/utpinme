@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/feedback.dart';
+import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digitalBadge.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
@@ -43,7 +45,8 @@ class _MoreAppState extends State<MoreApp> {
         children: [
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -74,9 +77,10 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
-                color: Color.fromARGB(0, 255, 255, 255),
+                color: Color.fromARGB(0, 237, 237, 237),
                 child: InkWell(
                   splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
@@ -105,7 +109,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -138,7 +143,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -171,7 +177,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -202,7 +209,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -233,7 +241,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -266,7 +275,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -297,7 +307,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -328,7 +339,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -359,7 +371,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -390,7 +403,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -421,7 +435,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -452,14 +467,15 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
                   splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Settings()));
+                        MaterialPageRoute(builder: (context) => Home()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -483,7 +499,8 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
@@ -514,25 +531,26 @@ class _MoreAppState extends State<MoreApp> {
           ),
           SizedBox.fromSize(
             size: Size(70, 70),
-            child: ClipOval(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
                   splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AboutApp()));
+                        MaterialPageRoute(builder: (context) => feedback()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
-                        Icons.info_rounded,
+                        Icons.feedback_rounded,
                         size: 35,
                         color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "About",
+                        "Feedback",
                         style: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 79, 110, 175)),

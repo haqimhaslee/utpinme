@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 
@@ -115,7 +116,12 @@ class _hotlineAppState extends State<hotlineApp> {
                           children: [
                             Text(" "),
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => UCSPortal()));
+                              },
                               child: const Text(
                                   'Unified Customer Services Portal (UCS)'),
                             ),
