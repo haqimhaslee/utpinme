@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/aboutApp.dart';
+import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class digitalBadge extends StatelessWidget {
   @override
@@ -25,9 +27,118 @@ class digitalBadge extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-        child: Text('Digital ID page'),
-      ),
+      body: ListView(children: [
+        Column(
+          children: [
+            Container(
+                color: Color.fromARGB(0, 255, 255, 255),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(children: [
+                        Padding(
+                            padding: const EdgeInsets.only(
+                              top: 30,
+                              left: 15,
+                              right: 15,
+                              bottom: 50,
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 138, 171, 223),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15)),
+                              ),
+                              width: 400,
+                              height: 500,
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      Text(" "),
+                                      Text(
+                                        "⚠️ DEVELOPERS KEYNOTE ⚠️",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      Text(" "),
+                                      Text(
+                                        "This application made by Students Representative Council UTP with supported by a group of students (temp_remove_soon)",
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      Text(" "),
+                                      Text(
+                                        "<profile_pic>",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      Text(
+                                        "<course>",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      Text(
+                                        "<student_id>",
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headline6,
+                                      ),
+                                      Text(" "),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Color.fromARGB(
+                                              255, 255, 255, 255),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(15)),
+                                        ),
+                                        width: 280,
+                                        child: Column(children: [
+                                          Text(" "),
+                                          QrImage(
+                                            data:
+                                                "muhammad_20000382@utp.edu.my",
+                                            version: QrVersions.auto,
+                                            size: 150.0,
+                                          ),
+                                          Text(
+                                            "muhammad_20000382@utp.edu.my",
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          Text(" "),
+                                        ]),
+                                      )
+                                    ],
+                                  )),
+                            )),
+                      ]),
+                      Column(
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: const Text(
+                                'Add to Google Wallet / Apple Wallet'),
+                          ),
+                          TextButton(
+                            onPressed: (() => {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SRCUTP()))
+                                }),
+                            child: Text('SRCUTP Official Website'),
+                          ),
+                          Text(" "),
+                          Text("Universiti Teknologi PETRONAS©️"),
+                        ],
+                      ),
+                      Row()
+                    ]))
+          ],
+        ),
+      ]),
     );
   }
 }
