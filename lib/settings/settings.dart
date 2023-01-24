@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/feedback.dart';
+import 'package:utp_in_me/settings/Licenses.dart';
+import 'package:utp_in_me/settings/Privacy_Policy.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/settings/profile.dart';
+import 'package:utp_in_me/settings/theme_selector.dart';
 
 class Settings extends StatelessWidget {
   @override
@@ -15,16 +20,6 @@ class Settings extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: ListView(children: [
         Column(
@@ -49,18 +44,12 @@ class Settings extends StatelessWidget {
                                     BorderRadius.all(Radius.circular(30)),
                               ),
                               width: 400,
-                              height: 180,
+                              //height: 180,
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Column(
                                     children: [
                                       Text(" "),
-                                      Text(
-                                        "⚠️ DEVELOPERS KEYNOTE ⚠️",
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline6,
-                                      ),
                                       Text(" "),
                                       Text(
                                         "<profile_pic>",
@@ -68,14 +57,16 @@ class Settings extends StatelessWidget {
                                             .textTheme
                                             .headline6,
                                       ),
+                                      Text(" "),
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Color.fromARGB(
                                               255, 255, 255, 255),
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(15)),
+                                              Radius.circular(100)),
                                         ),
-                                        width: 190,
+                                        width: 100,
+                                        height: 100,
                                         child: Column(children: [
                                           Text(" "),
                                           Text(" "),
@@ -86,6 +77,8 @@ class Settings extends StatelessWidget {
                                         "<student_email_azure>",
                                         textAlign: TextAlign.center,
                                       ),
+                                      Text(" "),
+                                      Text(" "),
                                     ],
                                   )),
                             )),
@@ -122,34 +115,23 @@ class Settings extends StatelessWidget {
                                             child: InkWell(
                                               splashColor: Color.fromARGB(
                                                   255, 191, 217, 255),
-                                              onTap: () {},
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            ThemeSelector()));
+                                              },
                                               child: Row(
-                                                //mainAxisAlignment:MainAxisAlignment.center,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
                                                 children: <Widget>[
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                      left: 40,
-                                                    ),
-                                                  ),
-                                                  Icon(
-                                                    Icons.directions_transit,
-                                                    size: 35,
-                                                    color: Color.fromARGB(
-                                                        255, 79, 110, 175),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                      left: 25,
-                                                    ),
-                                                  ),
                                                   Text(
                                                     "Theme",
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
-                                                            255, 79, 110, 175)),
+                                                            255, 85, 85, 85)),
                                                   ),
                                                 ],
                                               ),
@@ -167,7 +149,13 @@ class Settings extends StatelessWidget {
                                             child: InkWell(
                                               splashColor: Color.fromARGB(
                                                   255, 191, 217, 255),
-                                              onTap: () {},
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Profile()));
+                                              },
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -177,7 +165,7 @@ class Settings extends StatelessWidget {
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
-                                                            255, 79, 110, 175)),
+                                                            255, 85, 85, 85)),
                                                   ),
                                                 ],
                                               ),
@@ -201,11 +189,11 @@ class Settings extends StatelessWidget {
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Text(
-                                                    "Profile settings",
+                                                    "Microsoft profile settings",
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
-                                                            255, 79, 110, 175)),
+                                                            255, 85, 85, 85)),
                                                   ),
                                                 ],
                                               ),
@@ -226,7 +214,13 @@ class Settings extends StatelessWidget {
                                             child: InkWell(
                                               splashColor: Color.fromARGB(
                                                   255, 191, 217, 255),
-                                              onTap: () {},
+                                              onTap: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            feedback()));
+                                              },
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -236,7 +230,7 @@ class Settings extends StatelessWidget {
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
-                                                            255, 79, 110, 175)),
+                                                            255, 85, 85, 85)),
                                                   ),
                                                 ],
                                               ),
@@ -278,17 +272,56 @@ class Settings extends StatelessWidget {
                                         child: InkWell(
                                           splashColor: Color.fromARGB(
                                               255, 191, 217, 255),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        PrivacyPolicy()));
+                                          },
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text(
-                                                "Privacy Policy",
+                                                "Privacy policy",
                                                 style: TextStyle(
                                                     fontSize: 16,
                                                     color: Color.fromARGB(
-                                                        255, 79, 110, 175)),
+                                                        255, 85, 85, 85)),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox.fromSize(
+                                    size: Size(400, 60),
+                                    child: ClipRRect(
+                                      //borderRadius:BorderRadius.circular(30),
+                                      child: Material(
+                                        color: Color.fromARGB(0, 255, 255, 255),
+                                        child: InkWell(
+                                          splashColor: Color.fromARGB(
+                                              255, 191, 217, 255),
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Licenses()));
+                                          },
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: <Widget>[
+                                              Text(
+                                                "Licenses",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    color: Color.fromARGB(
+                                                        255, 85, 85, 85)),
                                               ),
                                             ],
                                           ),
@@ -308,7 +341,13 @@ class Settings extends StatelessWidget {
                                         child: InkWell(
                                           splashColor: Color.fromARGB(
                                               255, 191, 217, 255),
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        AboutApp()));
+                                          },
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
@@ -335,6 +374,8 @@ class Settings extends StatelessWidget {
                           Text(" "),
                           Text(" "),
                           Text("Universiti Teknologi PETRONAS©️"),
+                          Text("Version: 23.1.24030115"),
+                          Text(" "),
                         ],
                       ),
                     ]))

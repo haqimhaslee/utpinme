@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 
-class AboutApp extends StatefulWidget {
+class Licenses extends StatefulWidget {
   @override
-  _AboutAppState createState() => _AboutAppState();
+  _LicensesState createState() => _LicensesState();
 }
 
-class _AboutAppState extends State<AboutApp> {
+class _LicensesState extends State<Licenses> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
           title: Text(
-            'About This App',
+            'Licenses',
             style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
           ),
           elevation: 0,
@@ -312,7 +312,6 @@ class _AboutAppState extends State<AboutApp> {
                               child: const Text('SRCUTP Official Website'),
                             ),
                             Text(" "),
-                            Text("Version: 23.1.24030115"),
                             Text(" "),
                           ],
                         ),

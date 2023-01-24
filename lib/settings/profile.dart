@@ -13,6 +13,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
           'Profile',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
@@ -24,10 +25,7 @@ class _ProfileState extends State<Profile> {
           IconButton(
             icon: Icon(Icons.info_rounded),
             color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
+            onPressed: (() {}),
           )
         ],
       ),

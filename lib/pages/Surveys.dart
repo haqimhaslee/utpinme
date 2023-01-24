@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
 
-class ThemeSelector extends StatefulWidget {
+class Surveys extends StatefulWidget {
   @override
-  _ThemeSelectorState createState() => _ThemeSelectorState();
+  _SurveysState createState() => _SurveysState();
 }
 
-class _ThemeSelectorState extends State<ThemeSelector> {
+class _SurveysState extends State<Surveys> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'Theme Settings',
+          'Surveys',
           style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,
@@ -23,12 +23,15 @@ class _ThemeSelectorState extends State<ThemeSelector> {
           IconButton(
             icon: Icon(Icons.info_rounded),
             color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() {}),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AboutApp()))
+                }),
           )
         ],
       ),
       body: Center(
-        child: Text('Theme Settings'),
+        child: Text('No upcoming surveys'),
       ),
     );
   }
