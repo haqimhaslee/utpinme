@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
 import 'package:utp_in_me/pages/uschedule/course.dart';
 import 'package:utp_in_me/pages/uschedule/exam.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -77,6 +76,7 @@ class _UScheduleState extends State<USchedule> {
             ],
           ),
           body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: [
               course(),
               exam(),

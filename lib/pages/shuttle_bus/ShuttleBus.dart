@@ -45,6 +45,7 @@ class _shuttleBusState extends State<shuttleBus> {
             backgroundColor: Color.fromARGB(255, 224, 234, 255),
           ),
           body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: [
               Container(
                   color: Color.fromARGB(0, 255, 255, 255),

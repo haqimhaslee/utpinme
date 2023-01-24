@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/hotlineApp.dart';
-import 'package:utp_in_me/pages/appInapp.dart';
+import 'package:utp_in_me/pages/more_app/MoreApp_main.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 
 const TextStyle _textStyle = TextStyle(

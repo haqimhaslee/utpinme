@@ -3,10 +3,8 @@ import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digitalBadge.dart';
-import 'package:utp_in_me/pages/hotlineApp.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
-import 'package:utp_in_me/pages/notificationPage.dart';
 import 'package:utp_in_me/pages/parcelHub.dart';
 import 'package:utp_in_me/settings/settings.dart';
 import 'package:utp_in_me/pages/exemptionApp.dart';
@@ -15,7 +13,6 @@ import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/pages/ulab.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
 import 'package:utp_in_me/pages/ulibrary.dart';
 import 'package:utp_in_me/pages/uschedule/uschedule_main.dart';
 
