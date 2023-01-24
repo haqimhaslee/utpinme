@@ -12,7 +12,6 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //<--------------------APP BAR------------------------>
       appBar: AppBar(
         title: Text(
           'Profile',
@@ -32,7 +31,6 @@ class _ProfileState extends State<Profile> {
           )
         ],
       ),
-      //<--------------------BODY------------------------>
       body: Column(
         children: [
           Container(

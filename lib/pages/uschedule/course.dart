@@ -25,7 +25,7 @@ class _courseState extends State<course> {
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
+        Uri.parse('https://uschedulecourse.utp.edu.my/SWS2023/login.aspx'),
       );
   }
 

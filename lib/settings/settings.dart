@@ -201,7 +201,7 @@ class Settings extends StatelessWidget {
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Text(
-                                                    "Shuttle Bus",
+                                                    "Profile settings",
                                                     style: TextStyle(
                                                         fontSize: 16,
                                                         color: Color.fromARGB(
@@ -332,6 +332,7 @@ class Settings extends StatelessWidget {
                       ]),
                       Column(
                         children: [
+                          Text(" "),
                           Text(" "),
                           Text("Universiti Teknologi PETRONAS©️"),
                         ],

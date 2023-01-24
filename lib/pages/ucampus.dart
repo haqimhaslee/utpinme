@@ -25,7 +25,6 @@ class _UCampusState extends State<UCampus> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://ucampus.utp.edu.my/sitsvision/wrd/siw_lgn'),
       );

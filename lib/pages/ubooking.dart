@@ -25,7 +25,6 @@ class _UBookingState extends State<UBooking> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://ubooking.utp.edu.my/'),
       );

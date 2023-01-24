@@ -25,7 +25,6 @@ class _ULearnState extends State<ULearn> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://ulearn.utp.edu.my/login/index.php'),
       );

@@ -25,7 +25,6 @@ class _UCSPortalState extends State<UCSPortal> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://ucs.utp.edu.my/'),
       );

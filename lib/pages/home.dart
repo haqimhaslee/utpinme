@@ -25,7 +25,6 @@ class _HomeState extends State<Home> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse('https://utpmy.sharepoint.com/sites/dashboard?wa=wsignin1.0'),
       );
