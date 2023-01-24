@@ -57,7 +57,7 @@ class digitalBadge extends StatelessWidget {
                                     children: [
                                       Text(" "),
                                       Text(
-                                        "⚠️ DEVELOPERS KEYNOTE ⚠️",
+                                        "DIGITAL ID/CARD FRAMEWORK",
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline6,
