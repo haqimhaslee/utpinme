@@ -27,7 +27,7 @@ class _feedbackState extends State<feedback> {
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
+        Uri.parse('https://forms.office.com/r/GV0Hn0VxP5'),
       );
   }
 
