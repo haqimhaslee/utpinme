@@ -312,7 +312,7 @@ class _AboutAppState extends State<AboutApp> {
                               child: const Text('SRCUTP Official Website'),
                             ),
                             Text(" "),
-                            Text("Version: 23.1.24040214"),
+                            Text("Version: 23.1.25060315"),
                             Text(" "),
                           ],
                         ),

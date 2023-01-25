@@ -374,7 +374,7 @@ class Settings extends StatelessWidget {
                           Text(" "),
                           Text(" "),
                           Text("Universiti Teknologi PETRONAS©️"),
-                          Text("Version: 23.1.24040214"),
+                          Text("Version: 23.1.25060315"),
                           Text(" "),
                         ],
                       ),
