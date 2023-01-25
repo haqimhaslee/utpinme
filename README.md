@@ -34,12 +34,8 @@ immediately when first run, as it is used to execute the `flutter` tool itself.
 This will also occur when Flutter is upgraded (e.g. by running the `flutter
 upgrade` command).
 
-# Project preview
-<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/1.png?raw=true" alt="Reflectly hero image"></p>
-<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/2.png?raw=true" alt="Reflectly hero image"></p>
-<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/3.png?raw=true" alt="Reflectly hero image"></p>
-<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/4.png?raw=true" alt="Reflectly hero image"></p>
-<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/5.png?raw=true" alt="Reflectly hero image"></p>
+# Project preview (version 23.1.25060315)
+<p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
 
 [flutter.dev]: https://flutter.dev
