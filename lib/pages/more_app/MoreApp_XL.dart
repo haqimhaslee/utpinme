@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
-import 'package:utp_in_me/pages/digitalBadge.dart';
+import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/parcelHub.dart';

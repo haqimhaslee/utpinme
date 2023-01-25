@@ -3,7 +3,7 @@ import 'package:utp_in_me/pages/Surveys.dart';
 import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
-import 'package:utp_in_me/pages/digitalBadge.dart';
+import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/parcelHub.dart';
@@ -36,7 +36,12 @@ class _MoreAppState extends State<MoreApp> {
       ),
       body: GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.only(
+          top: 0,
+          left: 15,
+          right: 15,
+          bottom: 0,
+        ),
         crossAxisSpacing: 0,
         mainAxisSpacing: 0,
         crossAxisCount: 3,

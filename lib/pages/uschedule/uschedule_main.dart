@@ -39,7 +39,7 @@ class _UScheduleState extends State<USchedule> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+            //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
             bottom: TabBar(
               isScrollable: false,
               labelColor: Color.fromARGB(255, 73, 73, 73),

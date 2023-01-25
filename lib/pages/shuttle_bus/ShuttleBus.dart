@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/shuttle_bus/LiveMapServices.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
 
 class shuttleBus extends StatefulWidget {
@@ -18,7 +19,7 @@ class _shuttleBusState extends State<shuttleBus> {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+            //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
             bottom: TabBar(
               isScrollable: false,
               labelColor: Color.fromARGB(255, 73, 73, 73),
@@ -40,7 +41,7 @@ class _shuttleBusState extends State<shuttleBus> {
               'Shuttle Bus',
               style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
             ),
-            elevation: 0,
+            elevation: 5,
             centerTitle: true,
             backgroundColor: Color.fromARGB(255, 224, 234, 255),
           ),
@@ -116,87 +117,245 @@ class _shuttleBusState extends State<shuttleBus> {
                               )),
                         ]),
                       ])),
-              ListView(children: [
-                Column(
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                        color: Color.fromARGB(0, 255, 255, 255),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Column(children: [
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 224, 234, 255),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color.fromARGB(80, 0, 0, 0),
+                            offset: const Offset(
+                              1.0,
+                              1.0,
+                            ),
+                            blurRadius: 20.0,
+                            spreadRadius: 2.0,
+                          ), //BoxShadow
+                        ],
+                      ),
+                      child: Align(
+                          alignment: Alignment.center,
+                          child: Column(children: [
+                            Column(
+                              children: [
                                 Padding(
                                     padding: const EdgeInsets.only(
-                                      top: 30,
-                                      left: 15,
-                                      right: 15,
-                                      bottom: 50,
+                                      top: 15,
+                                      left: 20,
+                                      right: 20,
+                                      bottom: 10,
                                     ),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color:
-                                            Color.fromARGB(255, 255, 243, 135),
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(15)),
-                                      ),
-                                      width: 400,
-                                      height: 210,
-                                      child: Align(
-                                          alignment: Alignment.center,
-                                          child: Column(
-                                            children: [
-                                              Text(" "),
-                                              Text(
-                                                "⚠️ DEVELOPERS KEYNOTE ⚠️",
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .headline6,
+                                    child: Row(
+                                      children: [
+                                        SizedBox.fromSize(
+                                          size: Size(60, 60),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Material(
+                                              color: Color.fromARGB(
+                                                  85, 207, 207, 207),
+                                              child: InkWell(
+                                                splashColor: Color.fromARGB(
+                                                    111, 77, 77, 77),
+                                                onTap: () {},
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Icon(
+                                                      Icons.directions_transit,
+                                                      size: 50,
+                                                      color: Color.fromARGB(
+                                                          255, 77, 77, 77),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
-                                              Text(" "),
-                                              Text(
-                                                "This application made by Students Representative Council UTP with supported by a group of students",
-                                                textAlign: TextAlign.center,
-                                              ),
-                                              Text(" "),
-                                              Text(
-                                                  "Really impressed with development milestone."),
-                                              Text(" "),
-                                              Text(
-                                                "Way to go!",
-                                                textAlign: TextAlign.center,
-                                              ),
-                                              Text(" "),
-                                              Text(
-                                                "Were working to bring live tracking bus location",
-                                                textAlign: TextAlign.center,
-                                              ),
-                                            ],
-                                          )),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 0,
+                                              left: 15,
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Text(
+                                                  "Internal Bus",
+                                                  style: TextStyle(
+                                                      fontSize: 15,
+                                                      color: Color.fromARGB(
+                                                          255, 79, 110, 175)),
+                                                ),
+                                                Text(
+                                                  "Not Available",
+                                                  style: TextStyle(
+                                                      fontSize: 15,
+                                                      color: Color.fromARGB(
+                                                          255, 79, 110, 175)),
+                                                ),
+                                              ],
+                                            ))
+                                      ],
                                     )),
-                              ]),
-                              Column(
-                                children: [
-                                  Text(" "),
-                                  ElevatedButton(
-                                    onPressed: (() => {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      SRCUTP()))
-                                        }),
-                                    child:
-                                        const Text('SRCUTP Official Website'),
-                                  ),
-                                  Text(" "),
-                                  Text(" "),
-                                ],
-                              ),
-                              Row()
-                            ]))
+                                Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 0,
+                                      left: 20,
+                                      right: 20,
+                                      bottom: 10,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox.fromSize(
+                                          size: Size(60, 60),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Material(
+                                              color: Color.fromARGB(
+                                                  85, 207, 207, 207),
+                                              child: InkWell(
+                                                splashColor: Color.fromARGB(
+                                                    111, 77, 77, 77),
+                                                onTap: () {},
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Icon(
+                                                      Icons
+                                                          .directions_transit_filled_rounded,
+                                                      size: 50,
+                                                      color: Color.fromARGB(
+                                                          255, 77, 77, 77),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Padding(
+                                                padding: const EdgeInsets.only(
+                                                  top: 0,
+                                                  left: 20,
+                                                ),
+                                                child: Column(
+                                                  children: [
+                                                    Text(
+                                                      "External Bus",
+                                                      style: TextStyle(
+                                                          fontSize: 15,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              79,
+                                                              110,
+                                                              175)),
+                                                    ),
+                                                    Text(
+                                                      "Not Available",
+                                                      style: TextStyle(
+                                                          fontSize: 15,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              79,
+                                                              110,
+                                                              175)),
+                                                    ),
+                                                  ],
+                                                ))
+                                          ],
+                                        )
+                                      ],
+                                    )),
+                                Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 0,
+                                      left: 20,
+                                      right: 20,
+                                      bottom: 10,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        SizedBox.fromSize(
+                                          size: Size(60, 60),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            child: Material(
+                                              color: Color.fromARGB(
+                                                  85, 207, 207, 207),
+                                              child: InkWell(
+                                                splashColor: Color.fromARGB(
+                                                    111, 77, 77, 77),
+                                                onTap: () {},
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Icon(
+                                                      Icons
+                                                          .directions_transit_filled_rounded,
+                                                      size: 50,
+                                                      color: Color.fromARGB(
+                                                          255, 77, 77, 77),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Padding(
+                                                padding: const EdgeInsets.only(
+                                                  top: 0,
+                                                  left: 20,
+                                                ),
+                                                child: Column(
+                                                  children: [
+                                                    Text(
+                                                      "Weekend Bus",
+                                                      style: TextStyle(
+                                                          fontSize: 15,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              79,
+                                                              110,
+                                                              175)),
+                                                    ),
+                                                    Text(
+                                                      "Not Available",
+                                                      style: TextStyle(
+                                                          fontSize: 15,
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              79,
+                                                              110,
+                                                              175)),
+                                                    ),
+                                                  ],
+                                                ))
+                                          ],
+                                        )
+                                      ],
+                                    ))
+                              ],
+                            )
+                          ])),
+                    )
                   ],
                 ),
-              ])
+              ),
             ],
           ),
         ),
