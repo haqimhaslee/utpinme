@@ -37,6 +37,10 @@ upgrade` command).
 # Project preview (version 23.1.25060315)
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
+# Join us in BETA Testing
+Starting to join developers preview and try out by run `gh repo clone haqimhaslee/UTPinMe-flutter`
+Do remind to run `flutter pub get` to import all the others public package before debugging
+*Key/Token authentication will not be upload OR share on public branch
 
 [flutter.dev]: https://flutter.dev
 [Build Status - Cirrus]: https://api.cirrus-ci.com/github/flutter/flutter.svg
