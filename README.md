@@ -1,23 +1,20 @@
 # UTPinMe
 
 [![Build Status - Cirrus][]][Build status]
-[![Discord badge][]][Discord instructions]
-[![Twitter handle][]][Twitter badge]
 [![codecov](https://codecov.io/gh/flutter/flutter/branch/master/graph/badge.svg?token=11yDrJU2M2)](https://codecov.io/gh/flutter/flutter)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5631/badge)](https://bestpractices.coreinfrastructure.org/projects/5631)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/flutter/flutter/badge)](https://deps.dev/project/github/flutter%2Fflutter)
 
 UTP Student Experience Application
 
-## Flutter
-###Getting Started
-
+# Flutter
 This project is a starting point for a Flutter application.
 
+## Getting Started
 A few resources to get you started if you interested of this project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+* [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 * [Install Flutter](https://flutter.dev/get-started/)
 * [Flutter documentation](https://docs.flutter.dev/)
 * [Development wiki](https://github.com/flutter/flutter/wiki)
@@ -26,8 +23,7 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-### Terms of service
-
+## Terms of service
 The Flutter tool may occasionally download resources from Google servers. By
 downloading or using the Flutter SDK, you agree to the Google Terms of Service:
 https://policies.google.com/terms
@@ -38,7 +34,7 @@ immediately when first run, as it is used to execute the `flutter` tool itself.
 This will also occur when Flutter is upgraded (e.g. by running the `flutter
 upgrade` command).
 
-## Project preview
+# Project preview
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/1.png?raw=true" alt="Reflectly hero image"></p>
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/2.png?raw=true" alt="Reflectly hero image"></p>
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/3.png?raw=true" alt="Reflectly hero image"></p>
