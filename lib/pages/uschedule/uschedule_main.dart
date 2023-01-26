@@ -34,6 +34,7 @@ class _UScheduleState extends State<USchedule> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 2,
@@ -42,10 +43,10 @@ class _UScheduleState extends State<USchedule> {
             //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
             bottom: TabBar(
               isScrollable: false,
-              labelColor: Color.fromARGB(255, 73, 73, 73),
-              indicatorColor: Color.fromARGB(255, 73, 73, 73),
-              indicatorWeight: 3,
-              unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
+              //labelColor: Color.fromARGB(255, 73, 73, 73),
+              //indicatorColor: Color.fromARGB(255, 73, 73, 73),
+              //indicatorWeight: 3,
+              //unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
               tabs: [
                 Tab(
                   icon: Icon(Icons.book_rounded),
@@ -61,13 +62,13 @@ class _UScheduleState extends State<USchedule> {
               'USchedule',
               style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
             ),
-            elevation: 0,
-            centerTitle: true,
-            backgroundColor: Color.fromARGB(255, 224, 234, 255),
+            elevation: 1,
+            //centerTitle: true,
+            //backgroundColor: Color.fromARGB(255, 224, 234, 255),
             actions: [
               IconButton(
                 icon: Icon(Icons.info_rounded),
-                color: Color.fromARGB(255, 58, 58, 58),
+                //color: Color.fromARGB(255, 58, 58, 58),
                 onPressed: (() => {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => AboutApp()))

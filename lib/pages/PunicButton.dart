@@ -15,11 +15,11 @@ class _hotlineAppState extends State<hotlineApp> {
         appBar: AppBar(
           title: Text(
             'Panic Button',
-            style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
+            //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
           ),
-          elevation: 0,
+          //elevation: 0,
           centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 224, 234, 255),
+          //backgroundColor: Color.fromARGB(255, 224, 234, 255),
           actions: [
             IconButton(
               icon: Icon(Icons.info_rounded),

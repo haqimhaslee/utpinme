@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
         ),
         elevation: 0,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [
           IconButton(
             icon: Icon(Icons.info_rounded),

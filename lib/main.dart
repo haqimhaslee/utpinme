@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
+        theme: ThemeData(useMaterial3: true),
         debugShowCheckedModeBanner: false,
         home: HomePage(),
       );

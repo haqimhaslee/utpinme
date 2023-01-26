@@ -14,6 +14,7 @@ class _shuttleBusState extends State<shuttleBus> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 2,
@@ -22,10 +23,10 @@ class _shuttleBusState extends State<shuttleBus> {
             //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
             bottom: TabBar(
               isScrollable: false,
-              labelColor: Color.fromARGB(255, 73, 73, 73),
-              indicatorColor: Color.fromARGB(255, 73, 73, 73),
-              indicatorWeight: 3,
-              unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
+              //labelColor: Color.fromARGB(255, 73, 73, 73),
+              //indicatorColor: Color.fromARGB(255, 73, 73, 73),
+              //indicatorWeight: 3,
+              //unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
               tabs: [
                 Tab(
                   icon: Icon(Icons.table_chart_rounded),
@@ -41,9 +42,9 @@ class _shuttleBusState extends State<shuttleBus> {
               'Shuttle Bus',
               style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
             ),
-            elevation: 5,
-            centerTitle: true,
-            backgroundColor: Color.fromARGB(255, 224, 234, 255),
+            elevation: 1,
+            //centerTitle: true,
+            //backgroundColor: Color.fromARGB(255, 224, 234, 255),
           ),
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),

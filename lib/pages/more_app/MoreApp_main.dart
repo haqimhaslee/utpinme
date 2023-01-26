@@ -28,11 +28,11 @@ class _MoreAppState extends State<MoreApp> {
       appBar: AppBar(
         title: Text(
           'More Application',
-          style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
+          //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        elevation: 0,
+        //elevation: 0,
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        //backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
       body: GridView.count(
         primary: false,
@@ -53,7 +53,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => shuttleBus()));
@@ -85,7 +85,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 237, 237, 237),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => USchedule()));
@@ -117,7 +117,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(
                         context,
@@ -151,7 +151,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(
                         context,
@@ -185,7 +185,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => parcelHub()));
@@ -217,7 +217,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Surveys()));
@@ -249,7 +249,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => iattendApp()));
@@ -281,7 +281,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(
                         context,
@@ -315,7 +315,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ULearn()));
@@ -347,7 +347,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => UCampus()));
@@ -379,7 +379,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => UCSPortal()));
@@ -411,7 +411,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ULibrary()));
@@ -443,7 +443,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Ulab()));
@@ -475,7 +475,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => UBooking()));
@@ -507,7 +507,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
@@ -539,7 +539,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Settings()));
@@ -571,7 +571,7 @@ class _MoreAppState extends State<MoreApp> {
               child: Material(
                 color: Color.fromARGB(0, 255, 255, 255),
                 child: InkWell(
-                  splashColor: Color.fromARGB(255, 191, 217, 255),
+                  //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => feedback()));

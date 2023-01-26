@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/home.dart';
-import 'package:utp_in_me/pages/hotlineApp.dart';
+import 'package:utp_in_me/pages/PunicButton.dart';
 import 'package:utp_in_me/pages/more_app/MoreApp_main.dart';
 import 'package:utp_in_me/pages/srcutp.dart';
-
-const TextStyle _textStyle = TextStyle(
-  fontSize: 40,
-  fontWeight: FontWeight.bold,
-  letterSpacing: 2,
-);
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,9 +33,9 @@ class _HomePageState extends State<HomePage> {
         child: _windgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        //backgroundColor: Color.fromARGB(120, 224, 234, 255),
         animationDuration: const Duration(milliseconds: 600),
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+        //labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         selectedIndex: _selectedIndex,
         onDestinationSelected: (int newIndex) {
           setState(() {
