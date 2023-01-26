@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 
 class AboutApp extends StatefulWidget {
   @override
@@ -299,12 +300,12 @@ class _AboutAppState extends State<AboutApp> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => SRCUTP()))
+                                        builder: (context) => SRCUTP_POPUP()))
                               }),
                           child: const Text('SRCUTP Official Website'),
                         ),
                         Text(" "),
-                        Text("Version: 23.1.26070416"),
+                        Text("Version: 23.1.26070517"),
                         Text(" "),
                       ],
                     ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 
 class LiveViewPage extends StatefulWidget {
   @override

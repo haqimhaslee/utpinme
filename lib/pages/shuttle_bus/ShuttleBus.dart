@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/shuttle_bus/LiveMapServices.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 
 class shuttleBus extends StatefulWidget {
   @override
@@ -13,10 +13,7 @@ class _shuttleBusState extends State<shuttleBus> {
   String dropdownValue = list.first;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
+    return DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
@@ -40,7 +37,7 @@ class _shuttleBusState extends State<shuttleBus> {
             ),
             title: Text(
               'Shuttle Bus',
-              style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
+              //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
             ),
             elevation: 1,
             //centerTitle: true,
@@ -85,16 +82,16 @@ class _shuttleBusState extends State<shuttleBus> {
                                           value: dropdownValue,
                                           icon: const Icon(
                                               Icons.expand_more_rounded),
-                                          elevation: 16,
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(10)),
-                                          style: const TextStyle(
-                                            color:
-                                                Color.fromARGB(255, 58, 58, 58),
-                                          ),
+                                          //elevation: 16,
+                                          //borderRadius: BorderRadius.all(
+                                          //    Radius.circular()),
+                                          //style: const TextStyle(
+                                          //  color:
+                                          //      Color.fromARGB(255, 58, 58, 58),
+                                          //),
                                           isExpanded: true,
                                           underline: Container(
-                                            height: 0,
+                                            height: 2,
                                             color:
                                                 Color.fromARGB(255, 58, 58, 58),
                                           ),
@@ -127,14 +124,14 @@ class _shuttleBusState extends State<shuttleBus> {
                         color: Color.fromARGB(255, 224, 234, 255),
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(80, 0, 0, 0),
-                            offset: const Offset(
-                              1.0,
-                              1.0,
-                            ),
-                            blurRadius: 20.0,
-                            spreadRadius: 2.0,
-                          ), //BoxShadow
+                              //color: Color.fromARGB(80, 0, 0, 0),
+                              //offset: const Offset(
+                              //1.0,
+                              //1.0,
+                              //),
+                              //blurRadius: 20.0,
+                              //spreadRadius: 2.0,
+                              ), //BoxShadow
                         ],
                       ),
                       child: Align(
@@ -359,8 +356,14 @@ class _shuttleBusState extends State<shuttleBus> {
               ),
             ],
           ),
-        ),
-      ),
-    );
+        ));
+    MaterialApp(
+        //theme: ThemeData(useMaterial3: true),
+        //darkTheme: ThemeData.dark(useMaterial3: true), // standard dark theme
+        //themeMode: ThemeMode.system,
+
+        //debugShowCheckedModeBanner: false,
+        //home:
+        );
   }
 }

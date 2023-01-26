@@ -3,7 +3,7 @@ import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/settings/Licenses.dart';
 import 'package:utp_in_me/settings/Privacy_Policy.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 import 'package:utp_in_me/settings/profile.dart';
 
 class Settings extends StatelessWidget {
@@ -355,7 +355,7 @@ class Settings extends StatelessWidget {
                       Text(" "),
                       Text(" "),
                       Text("Universiti Teknologi PETRONAS©️"),
-                      Text("Version: 23.1.26070416"),
+                      Text("Version: 23.1.26070517"),
                       Text(" "),
                     ],
                   ),

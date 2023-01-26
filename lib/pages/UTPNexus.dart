@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: parcelHub(),
+      home: UTPNexus(),
     ),
   );
 }
 
-class parcelHub extends StatefulWidget {
-  const parcelHub({super.key});
+class UTPNexus extends StatefulWidget {
+  const UTPNexus({super.key});
 
   @override
-  State<parcelHub> createState() => _parcelHubState();
+  State<UTPNexus> createState() => _UTPNexusState();
 }
 
-class _parcelHubState extends State<parcelHub> {
+class _UTPNexusState extends State<UTPNexus> {
   late final WebViewController controller;
 
   @override
@@ -25,10 +25,8 @@ class _parcelHubState extends State<parcelHub> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse(
-            'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'),
+        Uri.parse('https://utpmy.sharepoint.com/sites/dashboard?wa=wsignin1.0'),
       );
   }
 
@@ -36,9 +34,8 @@ class _parcelHubState extends State<parcelHub> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'Parcel Hub',
+          'UTP Nexus',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

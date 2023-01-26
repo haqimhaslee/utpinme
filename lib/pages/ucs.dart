@@ -39,7 +39,7 @@ class _UCSPortalState extends State<UCSPortal> {
           'UCSPortal',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        //elevation: 0,
+        elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [

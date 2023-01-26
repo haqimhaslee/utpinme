@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           'UTPinMe',
-          style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
+          //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,
         centerTitle: true,
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
         actions: [
           IconButton(
             icon: Icon(Icons.info_rounded),
-            color: Color.fromARGB(255, 58, 58, 58),
+            //color: Color.fromARGB(255, 58, 58, 58),
             onPressed: (() => {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AboutApp()))

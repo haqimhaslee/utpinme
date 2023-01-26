@@ -4,14 +4,6 @@ import 'package:utp_in_me/pages/uschedule/course.dart';
 import 'package:utp_in_me/pages/uschedule/exam.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: USchedule(),
-    ),
-  );
-}
-
 class USchedule extends StatefulWidget {
   const USchedule({super.key});
 
@@ -33,56 +25,52 @@ class _UScheduleState extends State<USchedule> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-            bottom: TabBar(
-              isScrollable: false,
-              //labelColor: Color.fromARGB(255, 73, 73, 73),
-              //indicatorColor: Color.fromARGB(255, 73, 73, 73),
-              //indicatorWeight: 3,
-              //unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
-              tabs: [
-                Tab(
-                  icon: Icon(Icons.book_rounded),
-                  text: "Course",
-                ),
-                Tab(
-                  icon: Icon(Icons.border_color_rounded),
-                  text: "Exam",
-                ),
-              ],
-            ),
-            title: Text(
-              'USchedule',
-              style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
-            ),
-            elevation: 1,
-            //centerTitle: true,
-            //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.info_rounded),
-                //color: Color.fromARGB(255, 58, 58, 58),
-                onPressed: (() => {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => AboutApp()))
-                    }),
-              )
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+          bottom: TabBar(
+            isScrollable: false,
+            //labelColor: Color.fromARGB(255, 73, 73, 73),
+            //indicatorColor: Color.fromARGB(255, 73, 73, 73),
+            //indicatorWeight: 3,
+            //unselectedLabelColor: Color.fromARGB(255, 116, 116, 116),
+            tabs: [
+              Tab(
+                icon: Icon(Icons.book_rounded),
+                text: "Course",
+              ),
+              Tab(
+                icon: Icon(Icons.border_color_rounded),
+                text: "Exam",
+              ),
             ],
           ),
-          body: TabBarView(
-            physics: NeverScrollableScrollPhysics(),
-            children: [
-              course(),
-              exam(),
-            ],
+          title: Text(
+            'USchedule',
+            //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
           ),
+          elevation: 1,
+          //centerTitle: true,
+          //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.info_rounded),
+              //color: Color.fromARGB(255, 58, 58, 58),
+              onPressed: (() => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AboutApp()))
+                  }),
+            )
+          ],
+        ),
+        body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            course(),
+            exam(),
+          ],
         ),
       ),
     );

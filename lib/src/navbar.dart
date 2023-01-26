@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/PunicButton.dart';
 import 'package:utp_in_me/pages/more_app/MoreApp_main.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: NavigationBar(
         //backgroundColor: Color.fromARGB(120, 224, 234, 255),
-        animationDuration: const Duration(milliseconds: 600),
-        //labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+        animationDuration: const Duration(milliseconds: 500),
+        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         selectedIndex: _selectedIndex,
         onDestinationSelected: (int newIndex) {
           setState(() {

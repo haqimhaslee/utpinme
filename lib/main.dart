@@ -3,11 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:utp_in_me/src/navbar.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      //statusBarColor: Color.fromARGB(255, 224, 234, 255),
-      //statusBarIconBrightness: Brightness.light,
-      //systemNavigationBarColor: Color.fromARGB(255, 224, 234, 255)
-      ));
+  //SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  //statusBarColor: Color.fromARGB(255, 224, 234, 255),
+  //statusBarIconBrightness: Brightness.light,
+  //systemNavigationBarColor: Color.fromARGB(255, 224, 234, 255)
+  //));
   runApp(const MyApp());
 }
 
@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         theme: ThemeData(useMaterial3: true),
+        darkTheme: ThemeData.dark(useMaterial3: true), // standard dark theme
+        themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
         home: HomePage(),
       );

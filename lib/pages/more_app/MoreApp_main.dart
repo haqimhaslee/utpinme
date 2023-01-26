@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/Surveys.dart';
+import 'package:utp_in_me/pages/UTPNexus.dart';
 import 'package:utp_in_me/pages/feedback.dart';
-import 'package:utp_in_me/pages/home.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/attendanceApp.dart';
@@ -30,7 +30,7 @@ class _MoreAppState extends State<MoreApp> {
           'More Application',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        //elevation: 0,
+        //elevation: 1,
         centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
@@ -510,7 +510,7 @@ class _MoreAppState extends State<MoreApp> {
                   //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                        MaterialPageRoute(builder: (context) => UTPNexus()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

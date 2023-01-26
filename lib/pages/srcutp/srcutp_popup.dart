@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: parcelHub(),
+      home: SRCUTP_POPUP(),
     ),
   );
 }
 
-class parcelHub extends StatefulWidget {
-  const parcelHub({super.key});
+class SRCUTP_POPUP extends StatefulWidget {
+  const SRCUTP_POPUP({super.key});
 
   @override
-  State<parcelHub> createState() => _parcelHubState();
+  State<SRCUTP_POPUP> createState() => _SRCUTP_POPUPState();
 }
 
-class _parcelHubState extends State<parcelHub> {
+class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
   late final WebViewController controller;
 
   @override
@@ -25,10 +25,8 @@ class _parcelHubState extends State<parcelHub> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
-        Uri.parse(
-            'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'),
+        Uri.parse('https://www.srcutp.org'),
       );
   }
 
@@ -38,7 +36,7 @@ class _parcelHubState extends State<parcelHub> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
-          'Parcel Hub',
+          'SRCUTP',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

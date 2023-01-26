@@ -11,7 +11,7 @@ class _attendanceAppState extends State<attendanceApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+        //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
           'Attandence',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),

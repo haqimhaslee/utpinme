@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 
 class hotlineApp extends StatefulWidget {
   @override
@@ -23,7 +24,7 @@ class _hotlineAppState extends State<hotlineApp> {
           actions: [
             IconButton(
               icon: Icon(Icons.info_rounded),
-              color: Color.fromARGB(255, 58, 58, 58),
+              //color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() => {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => AboutApp()))
@@ -54,7 +55,7 @@ class _hotlineAppState extends State<hotlineApp> {
                                       BorderRadius.all(Radius.circular(15)),
                                 ),
                                 width: 400,
-                                height: 150,
+                                //height: 150,
                                 child: Align(
                                     alignment: Alignment.center,
                                     child: Column(
@@ -75,6 +76,7 @@ class _hotlineAppState extends State<hotlineApp> {
                                           "Fire / Gas lleak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
                                           textAlign: TextAlign.center,
                                         ),
+                                        Text(" "),
                                       ],
                                     )),
                               )),
@@ -130,10 +132,20 @@ class _hotlineAppState extends State<hotlineApp> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => SRCUTP()))
+                                            builder: (context) =>
+                                                SRCUTP_POPUP()))
                                   }),
                               child: Text('SRCUTP Official Website'),
                             )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Text(" "),
+                            Text(" "),
+                            Text("Universiti Teknologi PETRONAS©️"),
+                            Text("Version: 23.1.26070517"),
+                            Text(" "),
                           ],
                         ),
                         Row()

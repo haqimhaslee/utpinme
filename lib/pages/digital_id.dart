@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/aboutApp.dart';
-import 'package:utp_in_me/pages/srcutp.dart';
+import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class digitalBadge extends StatelessWidget {
@@ -8,7 +8,7 @@ class digitalBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+        //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: Text(
           'Digital ID',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
@@ -39,7 +39,7 @@ class digitalBadge extends StatelessWidget {
                       Column(children: [
                         Padding(
                             padding: const EdgeInsets.only(
-                              top: 15,
+                              top: 30,
                               bottom: 20,
                             ),
                             child: Container(
@@ -119,16 +119,21 @@ class digitalBadge extends StatelessWidget {
                                           top: 0,
                                           left: 0,
                                           right: 0,
-                                          bottom: 10,
+                                          bottom: 5,
                                         ),
                                         child: Column(
                                           children: [
-                                            Text("Name"),
                                             Text(
-                                              "<student_name>",
+                                              "Name",
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline6,
+                                                  .bodySmall,
+                                            ),
+                                            Text(
+                                              "<name>",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .titleLarge,
                                             ),
                                           ],
                                         ),
@@ -153,34 +158,44 @@ class digitalBadge extends StatelessWidget {
                                           children: <Widget>[
                                             Padding(
                                               padding: const EdgeInsets.only(
-                                                top: 10,
-                                                bottom: 10,
+                                                top: 5,
+                                                bottom: 8,
                                               ),
                                               child: Column(
                                                 children: [
-                                                  Text("Course"),
+                                                  Text(
+                                                    "Course",
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodySmall,
+                                                  ),
                                                   Text(
                                                     "<course>",
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline6,
+                                                        .bodyLarge,
                                                   ),
                                                 ],
                                               ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(
-                                                top: 10,
-                                                bottom: 10,
+                                                top: 5,
+                                                bottom: 8,
                                               ),
                                               child: Column(
                                                 children: [
-                                                  Text("ID"),
                                                   Text(
-                                                    "<id>",
+                                                    "ID",
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .headline6,
+                                                        .bodySmall,
+                                                  ),
+                                                  Text(
+                                                    "<ID>",
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyLarge,
                                                   ),
                                                 ],
                                               ),
@@ -212,10 +227,10 @@ class digitalBadge extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                          top: 8,
+                                          top: 5,
                                           left: 10,
                                           right: 10,
-                                          bottom: 8,
+                                          bottom: 5,
                                         ),
                                         child: Text(
                                           "<student_email_azure>",
@@ -224,7 +239,7 @@ class digitalBadge extends StatelessWidget {
                                       ),
                                       Padding(
                                           padding: const EdgeInsets.only(
-                                            top: 5,
+                                            top: 0,
                                             left: 0,
                                             right: 0,
                                             bottom: 0,
@@ -247,7 +262,7 @@ class digitalBadge extends StatelessWidget {
                                                 child: Column(
                                                   children: [
                                                     SizedBox.fromSize(
-                                                      size: Size(500, 20),
+                                                      size: Size(500, 25),
                                                       child: ClipRRect(
                                                         child: Material(
                                                           color: Color.fromARGB(
@@ -373,38 +388,8 @@ class digitalBadge extends StatelessWidget {
                             )),
                       ]),
                       Text(" "),
-                      SizedBox.fromSize(
-                        size: Size(70, 70),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(50),
-                          child: Material(
-                            color: Color.fromARGB(85, 207, 207, 207),
-                            child: InkWell(
-                              splashColor: Color.fromARGB(111, 77, 77, 77),
-                              onTap: () {},
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.nfc_rounded,
-                                    size: 35,
-                                    color: Color.fromARGB(255, 77, 77, 77),
-                                  ),
-                                  Text(
-                                    "NFC",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 77, 77, 77)),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
                       Column(
                         children: [
-                          Text(""),
                           Text("Universiti Teknologi PETRONAS©️"),
                         ],
                       ),

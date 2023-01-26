@@ -39,8 +39,8 @@ class _ULearnState extends State<ULearn> {
           'ULearn',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        elevation: 0,
-        centerTitle: true,
+        elevation: 1,
+        //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [
           IconButton(
