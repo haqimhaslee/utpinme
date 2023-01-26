@@ -7,9 +7,6 @@
 
 UTP Student Experience Application
 
-# Flutter
-This project is a starting point for a Flutter application.
-
 ## Getting Started
 A few resources to get you started if you interested of this project:
 
