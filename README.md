@@ -1,4 +1,4 @@
-# UTPinMe
+# UTPinMe -DEV_PREV
 
 [![Build Status - Cirrus][]][Build status]
 [![codecov](https://codecov.io/gh/flutter/flutter/branch/master/graph/badge.svg?token=11yDrJU2M2)](https://codecov.io/gh/flutter/flutter)
@@ -38,7 +38,7 @@ upgrade` command).
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
 # Join us in BETA Testing
-Starting to join developers preview and try out by run `gh repo clone haqimhaslee/UTPinMe-flutter`
+Starting to join developers preview and try out by run `gh repo clone haqimhaslee/UTPinMe-DEV_PREV`
 Do remind to run `flutter pub get` to import all the others public package before debugging
 *Key/Token authentication will not be upload OR share on public branch
 
