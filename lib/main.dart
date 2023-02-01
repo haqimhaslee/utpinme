@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         theme: ThemeData(useMaterial3: true),
-        darkTheme: ThemeData.dark(useMaterial3: true), // standard dark theme
+        darkTheme: ThemeData.dark(useMaterial3: true), // standardasd dark theme
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
         home: HomePage(),
