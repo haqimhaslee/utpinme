@@ -19,16 +19,6 @@ class _NotificationPageState extends State<NotificationPage> {
         //elevation: 0,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.volume_mute_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: const Center(
         child: Text('Notification page'),

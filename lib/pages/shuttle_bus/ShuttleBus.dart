@@ -83,15 +83,15 @@ class _shuttleBusState extends State<shuttleBus> {
                                           icon: const Icon(
                                               Icons.expand_more_rounded),
                                           //elevation: 16,
-                                          //borderRadius: BorderRadius.all(
-                                          //    Radius.circular()),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5)),
                                           //style: const TextStyle(
                                           //  color:
                                           //      Color.fromARGB(255, 58, 58, 58),
                                           //),
                                           isExpanded: true,
                                           underline: Container(
-                                            height: 2,
+                                            height: 1,
                                             color:
                                                 Color.fromARGB(255, 58, 58, 58),
                                           ),

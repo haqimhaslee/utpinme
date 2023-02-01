@@ -25,6 +25,17 @@ class _UTPNexusState extends State<UTPNexus> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // Update loading bar.
+          },
+          onPageStarted: (String url) {},
+          onPageFinished: (String url) {},
+          onWebResourceError: (WebResourceError error) {},
+        ),
+      )
       ..loadRequest(
         Uri.parse('https://utpmy.sharepoint.com/sites/dashboard?wa=wsignin1.0'),
       );
@@ -41,16 +52,6 @@ class _UTPNexusState extends State<UTPNexus> {
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: WebViewWidget(
         controller: controller,

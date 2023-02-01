@@ -14,23 +14,13 @@ class _hotlineAppState extends State<hotlineApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Panic Button',
             //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
           ),
           //elevation: 0,
           centerTitle: true,
           //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.info_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
-              onPressed: (() => {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AboutApp()))
-                  }),
-            )
-          ],
         ),
         body: ListView(children: [
           Column(
@@ -60,23 +50,23 @@ class _hotlineAppState extends State<hotlineApp> {
                                     alignment: Alignment.center,
                                     child: Column(
                                       children: [
-                                        Text(" "),
+                                        const Text(" "),
                                         Text(
                                           "⚠️ IMPORTANT ⚠️",
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline6,
                                         ),
-                                        Text(" "),
-                                        Text(
+                                        const Text(" "),
+                                        const Text(
                                           "This Emergency Call is specifically used to report emergency case only such as:-",
                                           textAlign: TextAlign.center,
                                         ),
-                                        Text(
-                                          "Fire / Gas lleak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
+                                        const Text(
+                                          "Fire / Gas leak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
                                           textAlign: TextAlign.center,
                                         ),
-                                        Text(" "),
+                                        const Text(" "),
                                       ],
                                     )),
                               )),

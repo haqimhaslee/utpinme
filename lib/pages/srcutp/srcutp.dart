@@ -25,9 +25,18 @@ class _SRCUTPState extends State<SRCUTP> {
     super.initState();
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
-      );
+      ..setBackgroundColor(const Color(0x00000000))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // Update loading bar.
+          },
+          onPageStarted: (String url) {},
+          onPageFinished: (String url) {},
+          onWebResourceError: (WebResourceError error) {},
+        ),
+      )
+      ..loadRequest(Uri.parse('https://www.srcutp.org'));
   }
 
   @override
@@ -42,16 +51,6 @@ class _SRCUTPState extends State<SRCUTP> {
         elevation: 0,
         centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: WebViewWidget(
         controller: controller,
