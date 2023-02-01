@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
-void main() {
-  runApp(
-    const MaterialApp(
-      home: ULearn(),
-    ),
-  );
-}
 
 class ULearn extends StatefulWidget {
   const ULearn({super.key});
@@ -36,9 +28,7 @@ class _ULearnState extends State<ULearn> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse('https://ulearn.utp.edu.my/login/index.php'),
-      );
+      ..loadRequest(Uri.parse('https://ulearn.utp.edu.my/login/index.php'));
   }
 
   @override
@@ -46,13 +36,23 @@ class _ULearnState extends State<ULearn> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
+        title: const Text(
           'ULearn',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

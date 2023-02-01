@@ -2,22 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: ULibrary(),
-    ),
-  );
-}
-
-class ULibrary extends StatefulWidget {
-  const ULibrary({super.key});
+class Surveys extends StatefulWidget {
+  const Surveys({super.key});
 
   @override
-  State<ULibrary> createState() => _ULibraryState();
+  State<Surveys> createState() => _SurveysState();
 }
 
-class _ULibraryState extends State<ULibrary> {
+class _SurveysState extends State<Surveys> {
   late final WebViewController controller;
 
   @override
@@ -36,7 +28,7 @@ class _ULibraryState extends State<ULibrary> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(Uri.parse('https://ulibrary.utp.edu.my/'));
+      ..loadRequest(Uri.parse('https://www.srcutp.org/surveys'));
   }
 
   @override
@@ -45,7 +37,7 @@ class _ULibraryState extends State<ULibrary> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'ULibrary',
+          'Surveys',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: UTPNexus(),
-    ),
-  );
-}
-
-class UTPNexus extends StatefulWidget {
-  const UTPNexus({super.key});
+class UscheduleExam extends StatefulWidget {
+  const UscheduleExam({super.key});
 
   @override
-  State<UTPNexus> createState() => _UTPNexusState();
+  State<UscheduleExam> createState() => _UscheduleExamState();
 }
 
-class _UTPNexusState extends State<UTPNexus> {
+class _UscheduleExamState extends State<UscheduleExam> {
   late final WebViewController controller;
 
   @override
@@ -36,22 +28,31 @@ class _UTPNexusState extends State<UTPNexus> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse('https://utpmy.sharepoint.com/sites/dashboard?wa=wsignin1.0'),
-      );
+      ..loadRequest(Uri.parse('https://www.srcutp.org'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'UTP Nexus',
+        //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
+        title: const Text(
+          'Uschedule Exam',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

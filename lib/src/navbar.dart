@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/home.dart';
-import 'package:utp_in_me/pages/PunicButton.dart';
-import 'package:utp_in_me/pages/more_app/MoreApp_main.dart';
+import 'package:utp_in_me/pages/panic_button.dart';
+import 'package:utp_in_me/pages/more_app/more_app_mainsize.dart';
 import 'package:utp_in_me/pages/srcutp/srcutp.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,18 +13,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  List<Widget> _windgetOption = <Widget>[
-    Home(),
-    SRCUTP(),
-    MoreApp(),
-    hotlineApp(),
+  final List<Widget> _windgetOption = <Widget>[
+    const Home(),
+    const SRCUTP(),
+    const MoreApp(),
+    const HotlineApp(),
   ];
-
-  void _onItemTap(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         child: _windgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: NavigationBar(
-        //backgroundColor: Color.fromARGB(120, 224, 234, 255),
+        //backgroundColor: Theme.of(context).colorScheme.onSecondary,
         animationDuration: const Duration(milliseconds: 500),
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         selectedIndex: _selectedIndex,

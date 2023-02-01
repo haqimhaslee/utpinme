@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: SRCUTP_POPUP(),
-    ),
-  );
-}
-
-class SRCUTP_POPUP extends StatefulWidget {
-  const SRCUTP_POPUP({super.key});
+class SrcutpPopupPage extends StatefulWidget {
+  const SrcutpPopupPage({super.key});
 
   @override
-  State<SRCUTP_POPUP> createState() => _SRCUTP_POPUPState();
+  State<SrcutpPopupPage> createState() => _SrcutpPopupPageState();
 }
 
-class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
+class _SrcutpPopupPageState extends State<SrcutpPopupPage> {
   late final WebViewController controller;
 
   @override
@@ -36,9 +28,7 @@ class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
-      );
+      ..loadRequest(Uri.parse('https://www.srcutp.org'));
   }
 
   @override
@@ -46,13 +36,23 @@ class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
+        title: const Text(
           'SRCUTP',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

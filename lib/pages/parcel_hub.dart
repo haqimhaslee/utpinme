@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: UScheduleExam(),
-    ),
-  );
-}
-
-class UScheduleExam extends StatefulWidget {
-  const UScheduleExam({super.key});
+class ParcelHub extends StatefulWidget {
+  const ParcelHub({super.key});
 
   @override
-  State<UScheduleExam> createState() => _UScheduleExamState();
+  State<ParcelHub> createState() => _ParcelHubState();
 }
 
-class _UScheduleExamState extends State<UScheduleExam> {
+class _ParcelHubState extends State<ParcelHub> {
   late final WebViewController controller;
 
   @override
@@ -36,9 +28,8 @@ class _UScheduleExamState extends State<UScheduleExam> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse('https://uscheduleexam.utp.edu.my/ESSWS/Login.aspx'),
-      );
+      ..loadRequest(Uri.parse(
+          'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'));
   }
 
   @override
@@ -47,12 +38,22 @@ class _UScheduleExamState extends State<UScheduleExam> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'USchedule Exam',
+          'Parcel Hub',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

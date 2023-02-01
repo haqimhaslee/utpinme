@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: parcelHub(),
-    ),
-  );
-}
-
-class parcelHub extends StatefulWidget {
-  const parcelHub({super.key});
+class UscheduleCourse extends StatefulWidget {
+  const UscheduleCourse({super.key});
 
   @override
-  State<parcelHub> createState() => _parcelHubState();
+  State<UscheduleCourse> createState() => _UscheduleCourseState();
 }
 
-class _parcelHubState extends State<parcelHub> {
+class _UscheduleCourseState extends State<UscheduleCourse> {
   late final WebViewController controller;
 
   @override
@@ -36,10 +28,7 @@ class _parcelHubState extends State<parcelHub> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse(
-            'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'),
-      );
+      ..loadRequest(Uri.parse('https://www.srcutp.org'));
   }
 
   @override
@@ -48,12 +37,22 @@ class _parcelHubState extends State<parcelHub> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'Parcel Hub',
+          'Uschedule Course',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

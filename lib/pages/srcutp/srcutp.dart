@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
-void main() {
-  runApp(
-    const MaterialApp(
-      home: SRCUTP(),
-    ),
-  );
-}
 
 class SRCUTP extends StatefulWidget {
   const SRCUTP({super.key});
@@ -44,13 +36,23 @@ class _SRCUTPState extends State<SRCUTP> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
+        title: const Text(
           'SRCUTP',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 0,
         centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,

@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/aboutApp.dart';
+import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() {
-  runApp(
-    const MaterialApp(
-      home: feedback(),
-    ),
-  );
-}
-
-class feedback extends StatefulWidget {
-  const feedback({super.key});
+class FeedbackForm extends StatefulWidget {
+  const FeedbackForm({super.key});
 
   @override
-  State<feedback> createState() => _feedbackState();
+  State<FeedbackForm> createState() => _FeedbackFormState();
 }
 
-class _feedbackState extends State<feedback> {
+class _FeedbackFormState extends State<FeedbackForm> {
   late final WebViewController controller;
 
   @override
@@ -36,9 +28,7 @@ class _feedbackState extends State<feedback> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(
-        Uri.parse('https://forms.office.com/r/GV0Hn0VxP5'),
-      );
+      ..loadRequest(Uri.parse('https://forms.office.com/r/GV0Hn0VxP5'));
   }
 
   @override
@@ -46,13 +36,23 @@ class _feedbackState extends State<feedback> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
+        title: const Text(
           'Feedback',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AboutApp()))
+                }),
+          )
+        ],
       ),
       body: WebViewWidget(
         controller: controller,
