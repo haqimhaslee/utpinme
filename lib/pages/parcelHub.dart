@@ -26,6 +26,16 @@ class _parcelHubState extends State<parcelHub> {
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            // Update loading bar.
+          },
+          onPageStarted: (String url) {},
+          onPageFinished: (String url) {},
+          onWebResourceError: (WebResourceError error) {},
+        ),
+      )
       ..loadRequest(
         Uri.parse(
             'https://script.google.com/macros/s/AKfycbzWW4elUCZzOzDujM6xiNIutPMwC34h2Poz_Zy6blRR83HEPjyniaeMSKmQCnFrJhl_/exec'),
@@ -37,23 +47,13 @@ class _parcelHubState extends State<parcelHub> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
+        title: const Text(
           'Parcel Hub',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: WebViewWidget(
         controller: controller,

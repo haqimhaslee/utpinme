@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: NavigationBar(
         //backgroundColor: Color.fromARGB(120, 224, 234, 255),
         animationDuration: const Duration(milliseconds: 500),
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         selectedIndex: _selectedIndex,
         onDestinationSelected: (int newIndex) {
           setState(() {

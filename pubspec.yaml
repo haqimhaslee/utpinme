@@ -12,13 +12,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
   gridview_menu: ^1.0.6
   nfc_manager: ^3.2.0
-  webview_flutter: ^4.0.1
+  webview_flutter: ^4.0.2
   flutter_launcher_icons: "^0.9.0"
   google_maps_flutter: ^2.2.3
   qr_flutter: ^4.0.0
+  google_fonts: ^3.0.1
+  material_color_utilities: ^0.2.0
+  desktop_window: ^0.4.0
+  dynamic_color: ^1.5.4
+  url_launcher: ^6.1.8
+  
 
 
 dev_dependencies:

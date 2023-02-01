@@ -16,16 +16,6 @@ class digitalBadge extends StatelessWidget {
         //elevation: 0,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(0, 255, 255, 255),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutApp()))
-                }),
-          )
-        ],
       ),
       body: ListView(children: [
         Column(

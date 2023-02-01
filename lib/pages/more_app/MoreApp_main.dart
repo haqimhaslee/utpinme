@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/Surveys.dart';
+import 'package:utp_in_me/pages/UScheduleCourse.dart';
 import 'package:utp_in_me/pages/UTPNexus.dart';
 import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/pages/shuttle_bus/ShuttleBus.dart';
 import 'package:utp_in_me/pages/digital_id.dart';
-import 'package:utp_in_me/pages/attendanceApp.dart';
+import 'package:utp_in_me/pages/UScheduleExam.dart';
 import 'package:utp_in_me/pages/iattendApp.dart';
 import 'package:utp_in_me/pages/parcelHub.dart';
 import 'package:utp_in_me/settings/settings.dart';
@@ -15,7 +16,6 @@ import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/pages/ulab.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/pages/ulibrary.dart';
-import 'package:utp_in_me/pages/uschedule/uschedule_main.dart';
 
 class MoreApp extends StatefulWidget {
   @override
@@ -30,7 +30,7 @@ class _MoreAppState extends State<MoreApp> {
           'More Application',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
-        //elevation: 1,
+        elevation: 1,
         centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
@@ -64,13 +64,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.directions_transit,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Shuttle Bus",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -87,8 +88,10 @@ class _MoreAppState extends State<MoreApp> {
                 child: InkWell(
                   //splashColor: Color.fromARGB(255, 191, 217, 255),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => USchedule()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => UScheduleCourse()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -96,13 +99,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.calendar_month_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "USchedule",
+                        "USchedule Course",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 13,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -122,21 +126,22 @@ class _MoreAppState extends State<MoreApp> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => attendanceApp()));
+                            builder: (context) => UScheduleExam()));
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(
-                        Icons.app_registration_rounded,
+                        Icons.calendar_month_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
-                        "Attendance",
+                        "USchedule Exam",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 13,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -164,13 +169,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.badge_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Digital ID",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -196,13 +202,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.local_shipping_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Parcel Hub",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -228,79 +235,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.edit_note_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Surveys",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox.fromSize(
-            size: Size(70, 70),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Material(
-                color: Color.fromARGB(0, 255, 255, 255),
-                child: InkWell(
-                  //splashColor: Color.fromARGB(255, 191, 217, 255),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => iattendApp()));
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.people_alt_rounded,
-                        size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
-                      ),
-                      Text(
-                        "iAttend",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox.fromSize(
-            size: Size(70, 70),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Material(
-                color: Color.fromARGB(0, 255, 255, 255),
-                child: InkWell(
-                  //splashColor: Color.fromARGB(255, 191, 217, 255),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => exemptionApp()));
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.check_circle_rounded,
-                        size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
-                      ),
-                      Text(
-                        "Exemption",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -326,13 +268,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.book_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "ULearn",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -358,13 +301,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.school_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "UCampus",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -390,13 +334,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.design_services_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "UCS",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -422,13 +367,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.my_library_books_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "ULibrary",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -454,13 +400,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.label_important_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "ULab",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -486,13 +433,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.edit_calendar_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "UBooking",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -518,45 +466,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.web_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "UTP Nexus",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox.fromSize(
-            size: Size(70, 70),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Material(
-                color: Color.fromARGB(0, 255, 255, 255),
-                child: InkWell(
-                  //splashColor: Color.fromARGB(255, 191, 217, 255),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Settings()));
-                  },
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(
-                        Icons.settings,
-                        size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
-                      ),
-                      Text(
-                        "Settings",
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),
@@ -582,13 +499,14 @@ class _MoreAppState extends State<MoreApp> {
                       Icon(
                         Icons.feedback_rounded,
                         size: 35,
-                        color: Color.fromARGB(255, 79, 110, 175),
+                        //color: Color.fromARGB(255, 79, 110, 175),
                       ),
                       Text(
                         "Feedback",
                         style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromARGB(255, 79, 110, 175)),
+                          fontSize: 15,
+                          //color: Color.fromARGB(255, 79, 110, 175)
+                        ),
                       ),
                     ],
                   ),

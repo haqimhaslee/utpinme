@@ -5,19 +5,19 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: SRCUTP_POPUP(),
+      home: UScheduleExam(),
     ),
   );
 }
 
-class SRCUTP_POPUP extends StatefulWidget {
-  const SRCUTP_POPUP({super.key});
+class UScheduleExam extends StatefulWidget {
+  const UScheduleExam({super.key});
 
   @override
-  State<SRCUTP_POPUP> createState() => _SRCUTP_POPUPState();
+  State<UScheduleExam> createState() => _UScheduleExamState();
 }
 
-class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
+class _UScheduleExamState extends State<UScheduleExam> {
   late final WebViewController controller;
 
   @override
@@ -37,7 +37,7 @@ class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
         ),
       )
       ..loadRequest(
-        Uri.parse('https://www.srcutp.org'),
+        Uri.parse('https://uscheduleexam.utp.edu.my/ESSWS/Login.aspx'),
       );
   }
 
@@ -46,8 +46,8 @@ class _SRCUTP_POPUPState extends State<SRCUTP_POPUP> {
     return Scaffold(
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
-        title: Text(
-          'SRCUTP',
+        title: const Text(
+          'USchedule Exam',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
