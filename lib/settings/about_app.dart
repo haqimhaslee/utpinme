@@ -241,7 +241,7 @@ class _AboutAppState extends State<AboutApp> {
                                     child: Column(children: [
                                       const Text(" "),
                                       Text(
-                                        "API/Token Management",
+                                        "Packages & Plugins Manager",
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: Theme.of(context)
@@ -251,7 +251,7 @@ class _AboutAppState extends State<AboutApp> {
                                       ),
                                       const Text(" "),
                                       Text(
-                                        "ITMS",
+                                        "Haqim Haslee",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           color: Theme.of(context)
@@ -260,7 +260,184 @@ class _AboutAppState extends State<AboutApp> {
                                         ),
                                       ),
                                       Text(
-                                        "Universiti Teknologi PETRONAS",
+                                        "Vice President Students Experience",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "SRCUTP 22/23",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                    ])),
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5,
+                                left: 15,
+                                right: 15,
+                                bottom: 5,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15)),
+                                ),
+                                width: 400,
+                                //height: 120,
+                                child: Align(
+                                    alignment: Alignment.center,
+                                    child: Column(children: [
+                                      const Text(" "),
+                                      Text(
+                                        "API/Token/Azure Auth",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                      Text(
+                                        "-",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "-",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                    ])),
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5,
+                                left: 15,
+                                right: 15,
+                                bottom: 5,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15)),
+                                ),
+                                width: 400,
+                                //height: 120,
+                                child: Align(
+                                    alignment: Alignment.center,
+                                    child: Column(children: [
+                                      const Text(" "),
+                                      Text(
+                                        "Android OS Optimisation Manager",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                      Text(
+                                        "Haqim Haslee",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Vice President Students Experience",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "SRCUTP 22/23",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                    ])),
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5,
+                                left: 15,
+                                right: 15,
+                                bottom: 5,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15)),
+                                ),
+                                width: 400,
+                                //height: 120,
+                                child: Align(
+                                    alignment: Alignment.center,
+                                    child: Column(children: [
+                                      const Text(" "),
+                                      Text(
+                                        "iOS Optimisation Manager",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      const Text(" "),
+                                      Text(
+                                        "-",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "-",
+                                        style: TextStyle(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                        ),
+                                      ),
+                                      Text(
+                                        "-",
                                         style: TextStyle(
                                           color: Theme.of(context)
                                               .colorScheme
@@ -472,7 +649,8 @@ class _AboutAppState extends State<AboutApp> {
                               child: const Text('SRCUTP Official Website'),
                             ),
                             const Text(" "),
-                            const Text("Version : 23.2.02380617"),
+                            const Text("Universiti Teknologi PETRONAS ©️"),
+                            const Text("Version : 23.2.4210925"),
                             const Text(" "),
                           ],
                         ),

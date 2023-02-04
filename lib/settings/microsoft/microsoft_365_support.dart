@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class UscheduleExam extends StatefulWidget {
-  const UscheduleExam({super.key});
+class MicrosofOfficeSupport extends StatefulWidget {
+  const MicrosofOfficeSupport({super.key});
 
   @override
-  State<UscheduleExam> createState() => _UscheduleExamState();
+  State<MicrosofOfficeSupport> createState() => _MicrosofOfficeSupportState();
 }
 
-class _UscheduleExamState extends State<UscheduleExam> {
+class _MicrosofOfficeSupportState extends State<MicrosofOfficeSupport> {
   late final WebViewController controller;
 
   @override
@@ -28,7 +28,8 @@ class _UscheduleExamState extends State<UscheduleExam> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(Uri.parse('https://uscheduleexam.utp.edu.my/ESSWS/'));
+      ..loadRequest(
+          Uri.parse('https://support.microsoft.com/en-us/microsoft-365'));
   }
 
   @override
@@ -37,7 +38,7 @@ class _UscheduleExamState extends State<UscheduleExam> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'Uschedule Exam',
+          'Microsoft 365 Support',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

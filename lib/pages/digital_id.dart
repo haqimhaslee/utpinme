@@ -35,8 +35,8 @@ class _DigitalIdState extends State<DigitalId> {
             )
           ],
         ),
-        body: Center(
-          child: Column(children: [
+        body: ListView(children: [
+          Column(children: [
             Padding(
                 padding: const EdgeInsets.only(
                   top: 30,
@@ -366,6 +366,6 @@ class _DigitalIdState extends State<DigitalId> {
                 )),
             const Text("Universiti Teknologi PETRONAS©️"),
           ]),
-        ));
+        ]));
   }
 }

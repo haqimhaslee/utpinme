@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 
 class Licenses extends StatefulWidget {
   const Licenses({super.key});
@@ -586,19 +585,9 @@ class _LicensesState extends State<Licenses> {
                               )),
                         ]),
                         Column(
-                          children: [
-                            const Text(" "),
-                            ElevatedButton(
-                              onPressed: (() => {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const SrcutpPopupPage()))
-                                  }),
-                              child: const Text('SRCUTP Official Website'),
-                            ),
-                            const Text(" "),
+                          children: const [
+                            Text(" "),
+                            Text(" "),
                           ],
                         ),
                       ]))

@@ -72,6 +72,7 @@ class _MoreAppState extends State<MoreApp> {
                       ),
                       Text(
                         "Shuttle Bus",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 15,
                           color: Theme.of(context).colorScheme.primary,

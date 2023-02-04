@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class UscheduleExam extends StatefulWidget {
-  const UscheduleExam({super.key});
+class UtpNetId extends StatefulWidget {
+  const UtpNetId({super.key});
 
   @override
-  State<UscheduleExam> createState() => _UscheduleExamState();
+  State<UtpNetId> createState() => _UtpNetIdState();
 }
 
-class _UscheduleExamState extends State<UscheduleExam> {
+class _UtpNetIdState extends State<UtpNetId> {
   late final WebViewController controller;
 
   @override
@@ -28,7 +28,7 @@ class _UscheduleExamState extends State<UscheduleExam> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(Uri.parse('https://uscheduleexam.utp.edu.my/ESSWS/'));
+      ..loadRequest(Uri.parse('https://netid.utp.edu.my/'));
   }
 
   @override
@@ -37,7 +37,7 @@ class _UscheduleExamState extends State<UscheduleExam> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'Uschedule Exam',
+          'UTP Net ID',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

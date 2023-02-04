@@ -28,7 +28,8 @@ class _UscheduleCourseState extends State<UscheduleCourse> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(Uri.parse('https://www.srcutp.org'));
+      ..loadRequest(
+          Uri.parse('https://uschedulecourse.utp.edu.my/SWS2023/login.aspx'));
   }
 
   @override

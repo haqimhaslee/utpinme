@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/feedback.dart';
-import 'package:utp_in_me/settings/theme_test_page.dart';
-import 'package:utp_in_me/settings/app_licenses.dart';
-import 'package:utp_in_me/settings/app_privacy_policy.dart';
-import 'package:utp_in_me/settings/about_app.dart';
-import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
-import 'package:utp_in_me/settings/utp_net_id.dart';
+import 'package:utp_in_me/settings/microsoft/microsoft_365_support.dart';
+import 'package:utp_in_me/settings/microsoft/microsoft_delve_account.dart';
+import 'package:utp_in_me/settings/microsoft/microsoft_licenses.dart';
+import 'package:utp_in_me/settings/microsoft/microsoft_official.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({super.key});
+class MicrosoftProfileViewer extends StatefulWidget {
+  const MicrosoftProfileViewer({super.key});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<MicrosoftProfileViewer> createState() => _MicrosoftProfileViewerState();
 }
 
-class _SettingsState extends State<Settings> {
+class _MicrosoftProfileViewerState extends State<MicrosoftProfileViewer> {
+  bool theme = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'Settings',
+          'Microsoft Profile',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
+        //elevation: 0,
         //centerTitle: true,
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
       ),
@@ -125,84 +125,14 @@ class _SettingsState extends State<Settings> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const ThemeTestPage()));
+                                                            const MicrosoftDelveAccount()));
                                               },
                                               child: Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Text(
-                                                    "Theme Test Page",
-                                                    style: TextStyle(
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .onSecondaryContainer,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox.fromSize(
-                                        size: const Size(400, 60),
-                                        child: ClipRRect(
-                                          //borderRadius:BorderRadius.circular(30),
-                                          child: Material(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .secondaryContainer,
-                                            child: InkWell(
-                                              //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                              onTap: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const MicrosoftProfileViewer()));
-                                              },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Text(
-                                                    "Microsoft Profile",
-                                                    style: TextStyle(
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .onSecondaryContainer,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox.fromSize(
-                                        size: const Size(400, 60),
-                                        child: ClipRRect(
-                                          //borderRadius:BorderRadius.circular(30),
-                                          child: Material(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .secondaryContainer,
-                                            child: InkWell(
-                                              //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                              onTap: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const UtpNetId()));
-                                              },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Text(
-                                                    "Net ID",
+                                                    "Microsoft Delve Account",
                                                     style: TextStyle(
                                                       color: Theme.of(context)
                                                           .colorScheme
@@ -233,14 +163,14 @@ class _SettingsState extends State<Settings> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const FeedbackForm()));
+                                                            const MicrosoftMyAccount()));
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Text(
-                                                    "Feedback",
+                                                    "Microsoft My Account",
                                                     style: TextStyle(
                                                       color: Theme.of(context)
                                                           .colorScheme
@@ -293,49 +223,14 @@ class _SettingsState extends State<Settings> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const PrivacyPolicy()));
+                                                        const MicrosofOfficial()));
                                           },
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text(
-                                                "Privacy policy",
-                                                style: TextStyle(
-                                                  color: Theme.of(context)
-                                                      .colorScheme
-                                                      .onSecondaryContainer,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox.fromSize(
-                                    size: const Size(400, 60),
-                                    child: ClipRRect(
-                                      //borderRadius:BorderRadius.circular(30),
-                                      child: Material(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .secondaryContainer,
-                                        child: InkWell(
-                                          //splashColor:Color.fromARGB(255, 191, 217, 255),
-                                          onTap: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        const Licenses()));
-                                          },
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              Text(
-                                                "Licenses",
+                                                "Microsoft Official Website",
                                                 style: TextStyle(
                                                   color: Theme.of(context)
                                                       .colorScheme
@@ -366,14 +261,14 @@ class _SettingsState extends State<Settings> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        const AboutApp()));
+                                                        const MicrosofOfficeSupport()));
                                           },
                                           child: Column(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text(
-                                                "About this app",
+                                                "Microsoft 365 Support",
                                                 style: TextStyle(
                                                   color: Theme.of(context)
                                                       .colorScheme
@@ -391,7 +286,7 @@ class _SettingsState extends State<Settings> {
                             )),
                         const Text(" "),
                         const Text("Universiti Teknologi PETRONAS ©️"),
-                        const Text("Version : 23.2.4210925"),
+                        const Text(" "),
                       ]),
                     ]))
           ],
