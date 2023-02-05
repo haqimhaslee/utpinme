@@ -196,7 +196,7 @@ class _ThemeTestPageState extends State<ThemeTestPage> {
                         const Text(" "),
                         const Text("Universiti Teknologi PETRONAS©️"),
                         const Text("Developers Preview"),
-                        const Text("Version: 23.2.5211025+1"),
+                        const Text("Version : 23.2.90231216"),
                         const Text(" "),
                         const Text(" "),
                       ],

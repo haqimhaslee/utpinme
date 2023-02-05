@@ -13,7 +13,7 @@ class _ExternalBusScheduleState extends State<ExternalBusSchedule> {
     return Column(children: [
       const Text(' '),
       Text(
-        "*Bus will NOT deployed on PUBLIC HOLIDAY",
+        "*Bus will NOT deploy on PUBLIC HOLIDAY",
         style: TextStyle(
           color: Theme.of(context).colorScheme.error,
         ),

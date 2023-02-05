@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/src/navbar.dart';
+import 'package:utp_in_me/pages/auth/login_page.dart';
 
 void main() {
   runApp(const UtpInMe());
@@ -82,6 +82,6 @@ class UtpInMe extends StatelessWidget {
             )),
         themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
-        home: const HomePage(),
+        home: const LoginPage(),
       );
 }

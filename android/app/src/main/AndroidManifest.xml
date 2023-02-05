@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.utp_in_me">
+
    <application
         android:label="UTPinMe"
         android:name="${applicationName}"

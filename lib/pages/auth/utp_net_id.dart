@@ -2,22 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class AttendanceApp extends StatefulWidget {
-  const AttendanceApp({super.key});
+class UtpNetIdLogin extends StatefulWidget {
+  const UtpNetIdLogin({super.key});
 
   @override
-  State<AttendanceApp> createState() => _AttendanceAppState();
+  State<UtpNetIdLogin> createState() => _UtpNetIdLoginState();
 }
 
-class _AttendanceAppState extends State<AttendanceApp> {
+class _UtpNetIdLoginState extends State<UtpNetIdLogin> {
   late final WebViewController controller;
 
   @override
   void initState() {
     super.initState();
     controller = WebViewController()
-      ..runJavaScript(
-          "document.getElementByTagName('shellHeaderContainer')[0].style.display='none'")
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
       ..setNavigationDelegate(
@@ -30,8 +28,7 @@ class _AttendanceAppState extends State<AttendanceApp> {
           onWebResourceError: (WebResourceError error) {},
         ),
       )
-      ..loadRequest(Uri.parse(
-          'https://apps.powerapps.com/play/e/default-84187be3-037e-41ec-889c-a150fe476432/a/afab9b41-ef46-4e5d-988b-2d0dce08234d?tenantId=84187be3-037e-41ec-889c-a150fe476432&source=portal'));
+      ..loadRequest(Uri.parse('https://netid.utp.edu.my/'));
   }
 
   @override
@@ -40,7 +37,7 @@ class _AttendanceAppState extends State<AttendanceApp> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'iAttend',
+          'UTP Net ID',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,
