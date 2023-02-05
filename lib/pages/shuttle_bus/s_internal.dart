@@ -65,6 +65,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ])),
               Column(
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
                     "PMMD / V2",
@@ -2766,24 +2767,6 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               ),
                               child: Text('Trip 7 : 17.50'),
                             )),
-                        Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Theme.of(context).colorScheme.primary,
-                                width: 1,
-                              ),
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(6)),
-                            ),
-                            child: const Padding(
-                              padding: EdgeInsets.only(
-                                top: 1,
-                                left: 5,
-                                right: 5,
-                                bottom: 1,
-                              ),
-                              child: Text('Trip 8 : 17:45'),
-                            ))
                       ],
                     ),
                   ),

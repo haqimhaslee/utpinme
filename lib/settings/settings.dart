@@ -391,7 +391,7 @@ class _SettingsState extends State<Settings> {
                             )),
                         const Text(" "),
                         const Text("Universiti Teknologi PETRONAS ©️"),
-                        const Text("Version : 23.2.4210925"),
+                        const Text("Version : 23.2.5211025+1"),
                       ]),
                     ]))
           ],

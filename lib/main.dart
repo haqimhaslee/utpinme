@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/src/navbar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const UtpInMe());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class UtpInMe extends StatelessWidget {
+  const UtpInMe({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => MaterialApp(

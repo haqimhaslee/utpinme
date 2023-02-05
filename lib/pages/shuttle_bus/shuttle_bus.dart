@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/shuttle_bus/bus_live_location.dart';
+import 'package:utp_in_me/pages/shuttle_bus/bus_live_location_page.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_external.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_internal.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_weekend.dart';
@@ -21,30 +21,30 @@ class _ShuttleBusState extends State<ShuttleBus> {
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  icon: Icon(Icons.calendar_view_day_rounded),
+                  //icon: Icon(Icons.calendar_view_day_rounded),
                   text: "Internal",
                 ),
                 Tab(
-                  icon: Icon(Icons.calendar_view_day_rounded),
+                  //icon: Icon(Icons.calendar_view_day_rounded),
                   text: "External",
                 ),
                 Tab(
-                  icon: Icon(Icons.calendar_view_day_rounded),
+                  //icon: Icon(Icons.calendar_view_day_rounded),
                   text: "Weekend",
                 ),
                 Tab(
                   icon: Icon(Icons.pin_drop_rounded),
-                  text: "Live Bus",
+                  //text: "Live Bus",
                 )
               ],
             ),
             title: const Text(
               'Shuttle Bus',
             ),
-            // elevation: 1,
+            elevation: 5,
           ),
           body: TabBarView(
-            //physics: const NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               ListView(children: [
                 Column(
