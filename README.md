@@ -37,6 +37,9 @@ upgrade` command).
 # Join us in BETA Testing
 Starting to join developers preview and try out by run `gh repo clone haqimhaslee/UTPinMe-DEV_PREV`
 Do remind to run `flutter pub get` to import all the others public package before debugging
+
+* [DOWNLOAD APK (Android only)](https://drive.google.com/file/d/1ONDZZJbdm02FgEv5NXLraNxxi6gSdWBf/view?usp=sharing)
+
 *Key/Token authentication will not be upload OR share on public branch
 
 [flutter.dev]: https://flutter.dev
