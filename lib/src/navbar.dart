@@ -27,9 +27,6 @@ class _HomePageState extends State<HomePage> {
         child: _windgetOption.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: NavigationBar(
-        //backgroundColor: Theme.of(context).colorScheme.onSecondary,
-        animationDuration: const Duration(milliseconds: 500),
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         selectedIndex: _selectedIndex,
         onDestinationSelected: (int newIndex) {
           setState(() {
@@ -38,23 +35,23 @@ class _HomePageState extends State<HomePage> {
         },
         destinations: const [
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home_rounded),
+            icon: Icon(Icons.home_rounded),
             label: 'Home',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.groups_rounded),
-            icon: Icon(Icons.groups_outlined),
+            selectedIcon: Icon(Icons.diversity_3_rounded),
+            icon: Icon(Icons.diversity_3_rounded),
             label: 'SRCUTP',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.grid_view_rounded),
-            icon: Icon(Icons.grid_view_outlined),
+            icon: Icon(Icons.grid_view_rounded),
             label: 'More Apps',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.emergency),
-            icon: Icon(Icons.emergency_outlined),
+            selectedIcon: Icon(Icons.emergency_rounded),
+            icon: Icon(Icons.emergency_rounded),
             label: 'Panic Button',
           ),
         ],

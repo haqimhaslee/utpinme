@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/feedback.dart';
-import 'package:utp_in_me/settings/theme_test_page.dart';
 import 'package:utp_in_me/settings/app_licenses.dart';
 import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
+import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
 import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
 import 'package:utp_in_me/settings/utp_net_id.dart';
 
@@ -125,14 +125,14 @@ class _SettingsState extends State<Settings> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const ThemeTestPage()));
+                                                            const MaterialTestPage()));
                                               },
                                               child: Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
                                                 children: <Widget>[
                                                   Text(
-                                                    "Theme Test Page",
+                                                    "Material Library (Developers)",
                                                     style: TextStyle(
                                                       color: Theme.of(context)
                                                           .colorScheme
@@ -391,7 +391,7 @@ class _SettingsState extends State<Settings> {
                             )),
                         const Text(" "),
                         const Text("Universiti Teknologi PETRONAS ©️"),
-                        const Text("Version : 23.2.90231216"),
+                        const Text("Version : 23.2.90271620"),
                       ]),
                     ]))
           ],

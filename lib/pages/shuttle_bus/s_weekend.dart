@@ -11,7 +11,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const Text(' '),
       Text(
         "*Bus will NOT deploy on PUBLIC HOLIDAY",
         style: TextStyle(

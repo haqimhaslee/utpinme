@@ -74,12 +74,12 @@ class MyStatelessWidget extends StatelessWidget {
           Scaffold.of(context).showBottomSheet<void>(
             (BuildContext context) {
               return SizedBox(
-                height: 300,
+                height: 325,
                 //color: Colors.amber,
                 child: Center(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
+                    //mainAxisAlignment: MainAxisAlignment.center,
+                    //mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Padding(
                           padding: const EdgeInsets.only(
@@ -91,24 +91,23 @@ class MyStatelessWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               SizedBox.fromSize(
-                                size: const Size(60, 60),
+                                size: const Size(55, 55),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(50),
                                   child: Material(
-                                    color:
-                                        const Color.fromARGB(255, 99, 0, 165),
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onPrimaryContainer,
                                     child: InkWell(
-                                      splashColor: const Color.fromARGB(
-                                          255, 137, 1, 228),
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
+                                      splashColor:
+                                          Theme.of(context).colorScheme.primary,
+                                      onTap: () {},
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
                                           Icon(
-                                            Icons.directions_transit,
+                                            Icons.directions_bus_filled_rounded,
                                             size: 40,
                                             color: Theme.of(context)
                                                 .colorScheme
@@ -127,16 +126,40 @@ class MyStatelessWidget extends StatelessWidget {
                                   ),
                                   child: Column(
                                     children: [
-                                      Text(
-                                        "Internal Bus",
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondary,
-                                        ),
-                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Internal",
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
+                                            ),
+                                          ),
+                                          Text(
+                                            "  ",
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .secondary,
+                                            ),
+                                          ),
+                                          Text(
+                                            "[ NOT AVAILABLE ]",
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .primary,
+                                            ),
+                                          ),
+                                        ],
+                                      )
                                     ],
                                   ))
                             ],
@@ -151,24 +174,22 @@ class MyStatelessWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               SizedBox.fromSize(
-                                size: const Size(60, 60),
+                                size: const Size(55, 55),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(50),
                                   child: Material(
-                                    color: const Color.fromARGB(255, 0, 85, 11),
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
                                     child: InkWell(
                                       splashColor:
-                                          const Color.fromARGB(255, 0, 194, 26),
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
+                                          Theme.of(context).colorScheme.primary,
+                                      onTap: () {},
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
                                           Icon(
-                                            Icons
-                                                .directions_transit_filled_rounded,
+                                            Icons.directions_bus_filled_rounded,
                                             size: 40,
                                             color: Theme.of(context)
                                                 .colorScheme
@@ -189,16 +210,40 @@ class MyStatelessWidget extends StatelessWidget {
                                       ),
                                       child: Column(
                                         children: [
-                                          Text(
-                                            "External Bus",
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .secondary,
-                                            ),
-                                          ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "External",
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary,
+                                                ),
+                                              ),
+                                              Text(
+                                                "  ",
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .secondary,
+                                                ),
+                                              ),
+                                              Text(
+                                                "[ NOT AVAILABLE ]",
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .primary,
+                                                ),
+                                              ),
+                                            ],
+                                          )
                                         ],
                                       ))
                                 ],
@@ -215,25 +260,22 @@ class MyStatelessWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               SizedBox.fromSize(
-                                size: const Size(60, 60),
+                                size: const Size(55, 55),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(50),
                                   child: Material(
                                     color:
-                                        const Color.fromARGB(255, 179, 182, 0),
+                                        Theme.of(context).colorScheme.tertiary,
                                     child: InkWell(
                                       splashColor:
-                                          const Color.fromARGB(255, 83, 85, 0),
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
+                                          Theme.of(context).colorScheme.primary,
+                                      onTap: () {},
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
                                           Icon(
-                                            Icons
-                                                .directions_transit_filled_rounded,
+                                            Icons.directions_bus_filled_rounded,
                                             size: 40,
                                             color: Theme.of(context)
                                                 .colorScheme
@@ -252,29 +294,53 @@ class MyStatelessWidget extends StatelessWidget {
                                         top: 0,
                                         left: 20,
                                       ),
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                            "Weekend Bus",
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .secondary,
+                                      child: Column(children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Weekend Bus",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
+                                              ),
                                             ),
-                                          ),
-                                        ],
-                                      ))
+                                            Text(
+                                              "  ",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
+                                              ),
+                                            ),
+                                            Text(
+                                              "[ NOT AVAILABLE ]",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 15,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ]))
                                 ],
                               )
                             ],
                           )),
                       //const Text('BottomSheet'),
-
-                      OutlinedButton(
-                        child: const Text(
-                            '                    Close                     '),
+                      OutlinedButton.icon(
+                        icon: const Icon(
+                          Icons.close_rounded,
+                        ),
+                        label: const Text(
+                            '                  Close panel                   '),
                         onPressed: () {
                           Navigator.pop(context);
                         },

@@ -13,36 +13,39 @@ class ShuttleBus extends StatefulWidget {
 
 class _ShuttleBusState extends State<ShuttleBus> {
   @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 4,
-        child: Scaffold(
-          appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(
-                  //icon: Icon(Icons.calendar_view_day_rounded),
-                  text: "Internal",
-                ),
-                Tab(
-                  //icon: Icon(Icons.calendar_view_day_rounded),
-                  text: "External",
-                ),
-                Tab(
-                  //icon: Icon(Icons.calendar_view_day_rounded),
-                  text: "Weekend",
-                ),
-                Tab(
-                  icon: Icon(Icons.pin_drop_rounded),
-                  //text: "Live Bus",
-                )
-              ],
-            ),
-            title: const Text(
-              'Shuttle Bus',
-            ),
-            elevation: 5,
-          ),
+  Widget build(BuildContext context) => DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        body: NestedScrollView(
+          floatHeaderSlivers: true,
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+            const SliverAppBar(
+              pinned: true,
+              floating: true,
+              snap: true,
+              title: Text('Shuttle Bus'),
+              bottom: TabBar(
+                tabs: [
+                  Tab(
+                    icon: Icon(Icons.directions_bus_filled_rounded),
+                    text: "Internal",
+                  ),
+                  Tab(
+                    icon: Icon(Icons.directions_bus_filled_rounded),
+                    text: "External",
+                  ),
+                  Tab(
+                    icon: Icon(Icons.directions_bus_filled_rounded),
+                    text: "Weekend",
+                  ),
+                  Tab(
+                    icon: Icon(Icons.pin_drop_rounded),
+                    text: "LiveBus™️",
+                  )
+                ],
+              ),
+            )
+          ],
           body: TabBarView(
             physics: const NeverScrollableScrollPhysics(),
             children: [
@@ -70,6 +73,6 @@ class _ShuttleBusState extends State<ShuttleBus> {
               const BusLiveLocation(),
             ],
           ),
-        ));
-  }
+        ),
+      ));
 }
