@@ -11,15 +11,13 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Licenses',
-            //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
-          ),
-          //backgroundColor: Color.fromARGB(255, 224, 234, 255),
+        body: CustomScrollView(
+      slivers: [
+        SliverAppBar.large(
+          title: const Text('Privacy & Policy'),
         ),
-        body: ListView(children: [
-          Column(
+        SliverToBoxAdapter(
+          child: Column(
             children: [
               Container(
                   color: const Color.fromARGB(0, 255, 255, 255),
@@ -593,6 +591,8 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                       ]))
             ],
           ),
-        ]));
+        )
+      ],
+    ));
   }
 }

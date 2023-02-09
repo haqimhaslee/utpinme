@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Theme.of(context).colorScheme.tertiaryContainer,
                   borderRadius: const BorderRadius.all(Radius.circular(15)),
                 ),
-                width: 400,
+                width: 410,
                 //height: 150,
                 child: Align(
                     alignment: Alignment.center,
@@ -87,10 +87,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          const Text(' '),
           Container(
-              height: 100,
-              padding: const EdgeInsets.all(20),
+              height: 80,
+              padding: const EdgeInsets.all(15),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size.fromHeight(80),
@@ -103,14 +102,20 @@ class _LoginPageState extends State<LoginPage> {
                           builder: (context) => const HomePage()));
                 },
               )),
-          TextButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ForgotPass()));
-            },
-            child: const Text(
-              'Forgot Password?',
-              //style: TextStyle(color: Colors.grey[600]),
+          Container(
+            height: 50,
+            padding: const EdgeInsets.all(5),
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ForgotPass()));
+              },
+              child: const Text(
+                'Forgot Password?',
+                //style: TextStyle(color: Colors.grey[600]),
+              ),
             ),
           ),
         ],

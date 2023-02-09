@@ -397,7 +397,7 @@ class _MaterialThemeColorState extends State<MaterialThemeColor> {
             const Text(" "),
             const Text("Universiti Teknologi PETRONAS©️"),
             const Text("Developers Preview"),
-            const Text("Version : 23.2.90271620"),
+            const Text("Version : 23.2.90281925"),
             const Text(" "),
             const Text(" "),
           ])

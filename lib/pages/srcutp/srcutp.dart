@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class SRCUTP extends StatefulWidget {
@@ -34,7 +33,7 @@ class _SRCUTPState extends State<SRCUTP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
           'SRCUTP',
@@ -53,7 +52,7 @@ class _SRCUTPState extends State<SRCUTP> {
                 }),
           )
         ],
-      ),
+      ),*/
       body: WebViewWidget(
         controller: controller,
       ),

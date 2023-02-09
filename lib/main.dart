@@ -29,10 +29,12 @@ class UtpInMe extends StatelessWidget {
     return DynamicColorBuilder(builder: (lightColorScheme, darkColorScheme) {
       return MaterialApp(
           theme: ThemeData(
+            fontFamily: 'GoogleSans',
             colorScheme: lightColorScheme ?? _defaultLightColorScheme,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
+            fontFamily: 'GoogleSans',
             colorScheme: darkColorScheme ?? _defaultDarkColorScheme,
             useMaterial3: true,
           ),

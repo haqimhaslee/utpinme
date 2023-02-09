@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/about_app.dart';
+
 import 'package:webview_flutter/webview_flutter.dart';
 
 class Home extends StatefulWidget {
@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         title: const Text(
           'UTPinMe',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
                 }),
           )
         ],
-      ),
+      ),*/
       body: WebViewWidget(
         controller: controller,
       ),
