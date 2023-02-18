@@ -10,6 +10,8 @@ class InternalBusSchedule extends StatefulWidget {
 class _InternalBusScheduleState extends State<InternalBusSchedule> {
   @override
   Widget build(BuildContext context) {
+    double screenSize = MediaQuery.of(context).size.width;
+    double wrapSize = screenSize - 100;
     return Column(children: [
       Text(
         "*Bus will NOT deploy on PUBLIC HOLIDAY",
@@ -74,12 +76,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -98,6 +101,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.00'),
                             )),
                         Container(
+                            width: 96,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -116,6 +120,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -134,6 +139,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -152,6 +158,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -170,6 +177,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -188,6 +196,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -271,12 +280,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -295,6 +305,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -313,6 +324,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -331,6 +343,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -349,6 +362,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -367,6 +381,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -385,6 +400,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.03'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -468,12 +484,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -492,6 +509,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -510,6 +528,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -528,6 +547,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -546,6 +566,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -564,6 +585,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -582,6 +604,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.05'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -665,12 +688,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -689,6 +713,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -707,6 +732,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -725,6 +751,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -743,6 +770,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -761,6 +789,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -779,6 +808,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.10'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -862,12 +892,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -886,6 +917,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -904,6 +936,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -922,6 +955,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -940,6 +974,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -958,6 +993,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -976,6 +1012,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.13'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1059,12 +1096,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1083,6 +1121,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1101,6 +1140,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1119,6 +1159,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1137,6 +1178,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1155,6 +1197,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1173,6 +1216,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.20'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1256,12 +1300,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1280,6 +1325,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1298,6 +1344,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1316,6 +1363,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1334,6 +1382,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1352,6 +1401,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1370,6 +1420,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.23'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1453,12 +1504,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1477,6 +1529,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1495,6 +1548,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1513,6 +1567,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1531,6 +1586,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1549,6 +1605,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1567,6 +1624,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.25'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1650,12 +1708,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1674,6 +1733,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1692,6 +1752,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1710,6 +1771,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1728,6 +1790,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1746,6 +1809,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1764,6 +1828,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.35'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1847,12 +1912,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1871,6 +1937,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.40'),
                             )),
                         Container(
+                            width: 96,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1889,6 +1956,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1907,6 +1975,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1925,6 +1994,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1943,6 +2013,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -1961,6 +2032,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2044,12 +2116,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2068,6 +2141,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2086,6 +2160,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2104,6 +2179,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2122,6 +2198,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2140,6 +2217,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2158,6 +2236,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.43'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2241,12 +2320,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2265,6 +2345,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2283,6 +2364,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2301,6 +2383,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2319,6 +2402,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2337,6 +2421,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2355,6 +2440,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.45'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2438,12 +2524,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2462,6 +2549,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2480,6 +2568,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2498,6 +2587,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2516,6 +2606,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2534,6 +2625,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2552,6 +2644,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.48'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2635,12 +2728,13 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2659,6 +2753,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 1 : 07.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2677,6 +2772,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 2 : 08.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2695,6 +2791,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 3 : 12.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2713,6 +2810,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 4 : 13.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2731,6 +2829,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 5 : 14.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -2749,6 +2848,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                               child: Text('Trip 6 : 16.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,

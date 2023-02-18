@@ -161,11 +161,12 @@ packages:
   flutter_map:
     dependency: "direct main"
     description:
-      name: flutter_map
-      sha256: "59dfd14267b691bea55760786b47d3172d47cdcc0d79ff930746a5ad123491b8"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.0"
+      path: "."
+      ref: HEAD
+      resolved-ref: "3e8368d85d45e1431ed78488f0df102cef81b925"
+      url: "https://github.com/fleaflet/flutter_map.git"
+    source: git
+    version: "3.2.0"
   flutter_polyline_points:
     dependency: "direct main"
     description:
@@ -244,7 +245,7 @@ packages:
     source: hosted
     version: "0.6.5"
   latlong2:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: latlong2
       sha256: "408993a0e3f46e79ce1f129e4cb0386eef6d48dfa6394939ecacfbd7049154ec"

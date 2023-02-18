@@ -3,6 +3,7 @@ import 'package:utp_in_me/pages/attendance_app.dart';
 import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/exemption.dart';
 import 'package:utp_in_me/pages/parcel_hub.dart';
+import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/settings/profile.dart';
@@ -513,14 +514,22 @@ class _HomeState extends State<Home> {
                                                               Theme.of(context)
                                                                   .colorScheme
                                                                   .primary,
-                                                          onTap: () {},
+                                                          onTap: () {
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            const ShuttleBus()));
+                                                          },
                                                           child: Column(
                                                             mainAxisAlignment:
                                                                 MainAxisAlignment
                                                                     .center,
                                                             children: <Widget>[
                                                               Icon(
-                                                                Icons.settings,
+                                                                Icons
+                                                                    .directions_bus_filled_rounded,
                                                                 size: 30,
                                                                 color: Theme.of(
                                                                         context)

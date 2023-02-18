@@ -22,7 +22,7 @@ class _ShuttleBusState extends State<ShuttleBus> {
             const SliverAppBar(
               pinned: true,
               floating: true,
-              snap: true,
+              snap: false,
               title: Text('Shuttle Bus'),
               bottom: TabBar(
                 tabs: [

@@ -10,6 +10,8 @@ class WeekendBusSchedule extends StatefulWidget {
 class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
   @override
   Widget build(BuildContext context) {
+    double screenSize = MediaQuery.of(context).size.width;
+    double wrapSize = screenSize - 100;
     return Column(children: [
       Text(
         "*Bus will NOT deploy on PUBLIC HOLIDAY",
@@ -79,12 +81,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
+                      alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -103,6 +107,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 09.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -121,6 +126,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -139,6 +145,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -222,12 +229,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
+                      alignment: WrapAlignment.center,
                       spacing: 5,
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.error,
@@ -244,13 +253,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                                 bottom: 1,
                               ),
                               child: Text(
-                                'Trip 1 : ---------',
+                                'Trip 1 : -------',
                                 style: TextStyle(
                                   color: Theme.of(context).colorScheme.error,
                                 ),
                               ),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -269,6 +279,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.15'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -287,6 +298,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.15'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -370,12 +382,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
+                      alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -394,6 +408,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 09.30'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -412,6 +427,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -430,6 +446,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -513,12 +530,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
+                      alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -537,6 +556,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -555,6 +575,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -573,6 +594,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.00'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -656,12 +678,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
+                      alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -680,6 +704,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -698,6 +723,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -716,6 +742,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.40'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -799,12 +826,14 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                     ),
                   ),
                   SizedBox(
-                    width: 310,
+                    width: wrapSize,
                     child: Wrap(
                       spacing: 5,
                       runSpacing: 5,
+                      alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -823,6 +852,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -841,6 +871,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -859,6 +890,7 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.50'),
                             )),
                         Container(
+                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,

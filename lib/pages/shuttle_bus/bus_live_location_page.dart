@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/shuttle_bus/map_live_location_services.dart';
 
 class BusLiveLocation extends StatelessWidget {
   const BusLiveLocation({super.key});
@@ -6,75 +7,13 @@ class BusLiveLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        /*appBar: AppBar(
-        title: const Text(_title),
-        elevation: 1,
-      ),*/
-        body: Column(children: [
-      Padding(
-          padding: const EdgeInsets.only(
-            top: 15,
-            left: 15,
-            right: 15,
-            bottom: 25,
-          ),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.tertiaryContainer,
-              borderRadius: const BorderRadius.all(Radius.circular(15)),
-            ),
-            width: 400,
-            //height: 150,
-            child: Align(
-                alignment: Alignment.center,
-                child: Column(
-                  children: [
-                    const Text(" "),
-                    Text(
-                      "COMING SOON !",
-                      style: TextStyle(
-                        fontSize: 25,
-                        color: Theme.of(context).colorScheme.tertiary,
-                      ),
-                    ),
-                    const Text(" "),
-                    Text(
-                      "We are currently running this feature in pilot test and will roll out to everyone soon",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.tertiary,
-                      ),
-                    ),
-                    const Text(" "),
-                    Text(
-                      "Stay tuned!",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.tertiary,
-                      ),
-                    ),
-                    const Text(" "),
-                  ],
-                )),
-          )),
-      const MyStatelessWidget(),
-    ]));
-  }
-}
-
-class MyStatelessWidget extends StatelessWidget {
-  const MyStatelessWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        child: const Text('               Show Legend               '),
+      body: const LiveBusPage(),
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
           Scaffold.of(context).showBottomSheet<void>(
             (BuildContext context) {
               return SizedBox(
-                height: 325,
+                height: 300,
                 //color: Colors.amber,
                 child: Center(
                   child: Column(
@@ -352,6 +291,21 @@ class MyStatelessWidget extends StatelessWidget {
             },
           );
         },
+        child: const Icon(Icons.directions_bus_filled_rounded),
+      ),
+    );
+  }
+}
+
+class MyStatelessWidget extends StatelessWidget {
+  const MyStatelessWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ElevatedButton(
+        child: const Text('               Show Legend               '),
+        onPressed: () {},
       ),
     );
   }
