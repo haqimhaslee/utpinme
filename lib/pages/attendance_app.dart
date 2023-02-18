@@ -40,7 +40,7 @@ class _AttendanceAppState extends State<AttendanceApp> {
       appBar: AppBar(
         //leading: BackButton(color: Color.fromARGB(255, 73, 73, 73)),
         title: const Text(
-          'iAttend',
+          'Attendance',
           //style: TextStyle(color: Color.fromARGB(255, 73, 73, 73)),
         ),
         elevation: 1,

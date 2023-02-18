@@ -113,7 +113,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -172,7 +172,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -231,7 +231,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -290,7 +290,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -341,7 +341,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -400,7 +400,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -469,7 +469,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -528,7 +528,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -587,7 +587,7 @@ class _AboutAppState extends State<AboutApp> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 120,
                                 child: Align(
                                     alignment: Alignment.center,

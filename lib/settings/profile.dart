@@ -3,25 +3,24 @@ import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/settings/app_licenses.dart';
 import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
-import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
 import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
 import 'package:utp_in_me/settings/utp_net_id.dart';
 
-class Settings extends StatefulWidget {
-  const Settings({super.key});
+class Profile extends StatefulWidget {
+  const Profile({super.key});
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<Profile> createState() => _ProfileState();
 }
 
-class _SettingsState extends State<Settings> {
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: CustomScrollView(
       slivers: [
         SliverAppBar.large(
-          title: const Text('Settings'),
+          title: const Text('Profile'),
         ),
         SliverToBoxAdapter(
           child: Column(
@@ -37,7 +36,7 @@ class _SettingsState extends State<Settings> {
                                 top: 30,
                                 left: 15,
                                 right: 15,
-                                bottom: 30,
+                                bottom: 7.5,
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
@@ -47,7 +46,7 @@ class _SettingsState extends State<Settings> {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(30)),
                                 ),
-                                width: 400,
+                                //width: 400,
                                 //height: 180,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -87,6 +86,130 @@ class _SettingsState extends State<Settings> {
                               )),
                           Padding(
                               padding: const EdgeInsets.only(
+                                top: 7.5,
+                                left: 15,
+                                right: 15,
+                                bottom: 50,
+                              ),
+                              child: Wrap(
+                                  spacing: 10,
+                                  runSpacing: 10,
+                                  alignment: WrapAlignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .tertiaryContainer,
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(30)),
+                                      ),
+                                      width: 120,
+                                      //height: 180,
+                                      child: Align(
+                                          alignment: Alignment.center,
+                                          child: Column(
+                                            children: [
+                                              const Text(" "),
+                                              Text(
+                                                "Course",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              Text(
+                                                "<course>",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              const Text(" "),
+                                            ],
+                                          )),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .tertiaryContainer,
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(30)),
+                                      ),
+                                      width: 120,
+                                      //height: 180,
+                                      child: Align(
+                                          alignment: Alignment.center,
+                                          child: Column(
+                                            children: [
+                                              const Text(" "),
+                                              Text(
+                                                "CGPA",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              Text(
+                                                "<results>",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              const Text(" "),
+                                            ],
+                                          )),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .tertiaryContainer,
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(30)),
+                                      ),
+                                      width: 120,
+                                      //height: 180,
+                                      child: Align(
+                                          alignment: Alignment.center,
+                                          child: Column(
+                                            children: [
+                                              const Text(" "),
+                                              Text(
+                                                "Village",
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              Text(
+                                                "<village_ad>",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              const Text(" "),
+                                            ],
+                                          )),
+                                    ),
+                                  ])),
+                          Padding(
+                              padding: const EdgeInsets.only(
                                 top: 5,
                                 left: 15,
                                 right: 15,
@@ -98,7 +221,7 @@ class _SettingsState extends State<Settings> {
                                       BorderRadius.all(Radius.circular(30)),
                                 ),
 
-                                width: 400,
+                                //width: 400,
                                 //height: 180,
                                 child: Align(
                                     alignment: Alignment.center,
@@ -115,42 +238,7 @@ class _SettingsState extends State<Settings> {
                                             child: Material(
                                               color: Theme.of(context)
                                                   .colorScheme
-                                                  .secondaryContainer,
-                                              child: InkWell(
-                                                //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              const MaterialTestPage()));
-                                                },
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: <Widget>[
-                                                    Text(
-                                                      "Material Library (Developers)",
-                                                      style: TextStyle(
-                                                        color: Theme.of(context)
-                                                            .colorScheme
-                                                            .onSecondaryContainer,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox.fromSize(
-                                          size: const Size(400, 60),
-                                          child: ClipRRect(
-                                            //borderRadius:BorderRadius.circular(30),
-                                            child: Material(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .secondaryContainer,
+                                                  .primaryContainer,
                                               child: InkWell(
                                                 //splashColor: Color.fromARGB(255, 191, 217, 255),
                                                 onTap: () {
@@ -160,7 +248,7 @@ class _SettingsState extends State<Settings> {
                                                           builder: (context) =>
                                                               const MicrosoftProfileViewer()));
                                                 },
-                                                child: Column(
+                                                child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   children: <Widget>[
@@ -169,7 +257,7 @@ class _SettingsState extends State<Settings> {
                                                       style: TextStyle(
                                                         color: Theme.of(context)
                                                             .colorScheme
-                                                            .onSecondaryContainer,
+                                                            .onPrimaryContainer,
                                                       ),
                                                     ),
                                                   ],
@@ -227,19 +315,13 @@ class _SettingsState extends State<Settings> {
                                                   .secondaryContainer,
                                               child: InkWell(
                                                 //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              const FeedbackForm()));
-                                                },
+                                                onTap: () {},
                                                 child: Column(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   children: <Widget>[
                                                     Text(
-                                                      "Feedback",
+                                                      "Settings",
                                                       style: TextStyle(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -350,6 +432,41 @@ class _SettingsState extends State<Settings> {
                                     SizedBox.fromSize(
                                       size: const Size(400, 60),
                                       child: ClipRRect(
+                                        //borderRadius:BorderRadius.circular(30),
+                                        child: Material(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondaryContainer,
+                                          child: InkWell(
+                                            //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const FeedbackForm()));
+                                            },
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Text(
+                                                  "Feedback",
+                                                  style: TextStyle(
+                                                    color: Theme.of(context)
+                                                        .colorScheme
+                                                        .onSecondaryContainer,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox.fromSize(
+                                      size: const Size(400, 60),
+                                      child: ClipRRect(
                                         borderRadius: const BorderRadius.only(
                                           bottomRight: Radius.circular(30),
                                           bottomLeft: Radius.circular(30),
@@ -390,8 +507,6 @@ class _SettingsState extends State<Settings> {
                               )),
                           const Text(" "),
                           const Text("Universiti Teknologi PETRONAS ©️"),
-                          const Text("Version : 23.2.90281925"),
-                          const Text(" "),
                           const Text(" "),
                           const Text(" "),
                         ]),

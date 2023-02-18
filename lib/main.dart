@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:utp_in_me/pages/auth/login_page.dart';
+import 'package:utp_in_me/src/navbar.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 
 void main() {
@@ -40,7 +40,7 @@ class UtpInMe extends StatelessWidget {
           ),
           themeMode: ThemeMode.system,
           debugShowCheckedModeBanner: false,
-          home: const LoginPage());
+          home: const HomePage());
     });
   }
 }

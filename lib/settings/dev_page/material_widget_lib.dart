@@ -214,7 +214,6 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
             const Text(" "),
             const Text("Universiti Teknologi PETRONAS©️"),
             const Text("Developers Preview"),
-            const Text("Version : 23.2.90281925"),
             const Text(" "),
             const Text(" "),
           ],
