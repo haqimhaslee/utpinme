@@ -238,7 +238,7 @@ class _ProfileState extends State<Profile> {
                                             child: Material(
                                               color: Theme.of(context)
                                                   .colorScheme
-                                                  .primaryContainer,
+                                                  .secondaryContainer,
                                               child: InkWell(
                                                 //splashColor: Color.fromARGB(255, 191, 217, 255),
                                                 onTap: () {
@@ -257,7 +257,7 @@ class _ProfileState extends State<Profile> {
                                                       style: TextStyle(
                                                         color: Theme.of(context)
                                                             .colorScheme
-                                                            .onPrimaryContainer,
+                                                            .onSecondaryContainer,
                                                       ),
                                                     ),
                                                   ],

@@ -105,11 +105,6 @@ class _HomePageState extends State<HomePage> {
                 label: Text('Home'),
               ),
               NavigationRailDestination(
-                selectedIcon: Icon(Icons.diversity_3_rounded),
-                icon: Icon(Icons.diversity_3_rounded),
-                label: Text('SRCUTP'),
-              ),
-              NavigationRailDestination(
                 selectedIcon: Icon(Icons.grid_view_rounded),
                 icon: Icon(Icons.grid_view_rounded),
                 label: Text('More Apps'),

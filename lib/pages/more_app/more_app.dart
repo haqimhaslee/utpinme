@@ -933,6 +933,47 @@ class _MoreAppState extends State<MoreApp> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
+                                          const LicensePage()));
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.fact_check_rounded,
+                                  size: 35,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onPrimaryContainer,
+                                ),
+                                Text(
+                                  "App License",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimaryContainer),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 125,
+                      height: 125,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Material(
+                          color:
+                              Theme.of(context).colorScheme.secondaryContainer,
+                          child: InkWell(
+                            splashColor: Theme.of(context).colorScheme.tertiary,
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
                                           const PrivacyPolicy()));
                             },
                             child: Column(

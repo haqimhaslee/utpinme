@@ -237,7 +237,7 @@ class BusLiveLocation extends StatelessWidget {
                                         Row(
                                           children: [
                                             Text(
-                                              "Weekend Bus",
+                                              "Weekend",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                 fontSize: 15,

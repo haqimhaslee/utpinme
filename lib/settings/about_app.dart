@@ -647,7 +647,7 @@ class _AboutAppState extends State<AboutApp> {
                             ),
                             const Text(" "),
                             const Text("Universiti Teknologi PETRONAS ©️"),
-                            const Text("Version : 23.2.672019362954"),
+                            const Text("Version : 23.2.672021413358"),
                             const Text(" "),
                           ],
                         ),

@@ -3,7 +3,7 @@ description: An Universiti Teknologi PETRONAS application
 
 publish_to: 'none'
 
-version: 23.2.672019362954
+version: 23.2.672021413358
 
 environment:
   sdk: '>=2.18.5 <3.0.0'

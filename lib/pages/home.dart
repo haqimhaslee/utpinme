@@ -41,40 +41,64 @@ class _HomeState extends State<Home> {
                                 bottom: 15,
                               ),
                               child: Container(
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .tertiaryContainer,
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(50)),
-                                ),
-                                child: Align(
-                                    alignment: Alignment.center,
-                                    child: Column(
-                                      children: [
-                                        const Text(" "),
-                                        Text(
-                                          "Welcome <name>!",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .onTertiaryContainer,
+                                  decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .primaryContainer,
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(50)),
+                                  ),
+                                  child: Row(children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                        top: 0,
+                                        left: 30,
+                                        right: 0,
+                                        bottom: 0,
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const Text(" "),
+                                          Text(
+                                            "Welcome Haqim Haslee!",
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .onPrimaryContainer,
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          "<deparment>",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .onTertiaryContainer,
+                                          Text(
+                                            "Computer Engineering",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .onPrimaryContainer,
+                                            ),
                                           ),
-                                        ),
-                                        const Text(" "),
-                                      ],
-                                    )),
-                              )),
+                                          const Text(" "),
+                                        ],
+                                      ),
+                                    ),
+                                    const Flexible(
+                                        fit: FlexFit.tight, child: SizedBox()),
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 0,
+                                        left: 0,
+                                        right: 25,
+                                        bottom: 0,
+                                      ),
+                                      child: CircleAvatar(
+                                        radius: 30,
+                                        backgroundImage: AssetImage(
+                                            "assets/profile_pic.png"),
+                                      ),
+                                    )
+                                  ]))),
                           const Padding(
                             padding: EdgeInsets.only(
                               top: 15,
@@ -559,47 +583,475 @@ class _HomeState extends State<Home> {
                           ),
                           Padding(
                               padding: const EdgeInsets.only(
-                                top: 15,
+                                top: 10,
                                 left: 15,
                                 right: 15,
-                                bottom: 15,
+                                bottom: 5,
                               ),
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: Theme.of(context)
                                       .colorScheme
-                                      .secondaryContainer,
+                                      .onInverseSurface,
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(15)),
                                 ),
                                 child: Align(
+                                    alignment: Alignment.centerLeft,
                                     child: Column(
-                                  children: [
-                                    Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 20,
-                                          left: 20,
-                                          right: 20,
-                                          bottom: 20,
-                                        ),
-                                        child: Container(
-                                          decoration: const BoxDecoration(),
-                                          child: Align(
-                                              child: Column(
-                                            children: [
-                                              Text(
-                                                "This is free software, and you are welcome to redistribute it under certain conditions; type `show c' for details.",
-                                                style: TextStyle(
-                                                  color: Theme.of(context)
-                                                      .colorScheme
-                                                      .onPrimaryContainer,
-                                                ),
-                                              ),
-                                            ],
-                                          )),
-                                        )),
-                                  ],
-                                )),
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 15,
+                                              left: 15,
+                                              right: 15,
+                                              bottom: 15,
+                                            ),
+                                            child: Container(
+                                              decoration: const BoxDecoration(),
+                                              child: Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: <Widget>[
+                                                      Row(
+                                                        children: [
+                                                          const CircleAvatar(
+                                                            radius: 18,
+                                                            backgroundImage:
+                                                                AssetImage(
+                                                                    "assets/profile_pic.png"),
+                                                          ),
+                                                          Align(
+                                                            alignment: Alignment
+                                                                .centerLeft,
+                                                            child: Column(
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: <
+                                                                  Widget>[
+                                                                Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                    top: 0,
+                                                                    left: 10,
+                                                                    right: 0,
+                                                                    bottom: 0,
+                                                                  ),
+                                                                  child: Text(
+                                                                    "Developer Update",
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .left,
+                                                                    style:
+                                                                        TextStyle(
+                                                                      color: Theme.of(
+                                                                              context)
+                                                                          .colorScheme
+                                                                          .inverseSurface,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                    top: 0,
+                                                                    left: 10,
+                                                                    right: 0,
+                                                                    bottom: 0,
+                                                                  ),
+                                                                  child: Text(
+                                                                    "01 Jan 2023, 10:10am",
+                                                                    style: TextStyle(
+                                                                        color: Theme.of(context)
+                                                                            .colorScheme
+                                                                            .inverseSurface,
+                                                                        fontSize:
+                                                                            10),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          const Flexible(
+                                                              fit:
+                                                                  FlexFit.tight,
+                                                              child:
+                                                                  SizedBox()),
+                                                          IconButton(
+                                                              onPressed: () {},
+                                                              icon: const Icon(Icons
+                                                                  .more_vert_rounded))
+                                                        ],
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(
+                                                          top: 15,
+                                                          left: 0,
+                                                          right: 0,
+                                                          bottom: 10,
+                                                        ),
+                                                        child: Column(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Text(
+                                                              "UPDATE NEWSLETTER",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: TextStyle(
+                                                                color: Theme.of(
+                                                                        context)
+                                                                    .colorScheme
+                                                                    .inverseSurface,
+                                                                fontSize: 16,
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              "This is news detail for UTPinMe application news function",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: TextStyle(
+                                                                color: Theme.of(
+                                                                        context)
+                                                                    .colorScheme
+                                                                    .inverseSurface,
+                                                                fontSize: 13,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                            top: 10,
+                                                            left: 0,
+                                                            right: 0,
+                                                            bottom: 10,
+                                                          ),
+                                                          child: Container(
+                                                            constraints:
+                                                                const BoxConstraints
+                                                                        .expand(
+                                                                    height:
+                                                                        200.0),
+                                                            child: FittedBox(
+                                                              fit: BoxFit
+                                                                  .fitWidth,
+                                                              child: ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              10.0),
+                                                                  child: Image
+                                                                      .asset(
+                                                                    "assets/ch.jpg",
+                                                                    fit: BoxFit
+                                                                        .fill,
+                                                                  )),
+                                                            ),
+                                                          )),
+                                                      Container(
+                                                          height: 40,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .onInverseSurface,
+                                                          ),
+                                                          child: Row(
+                                                            children: [
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .thumb_up_alt_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .thumb_down_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .share_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .bookmark_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                            ],
+                                                          ))
+                                                    ],
+                                                  )),
+                                            )),
+                                      ],
+                                    )),
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                top: 10,
+                                left: 15,
+                                right: 15,
+                                bottom: 5,
+                              ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onInverseSurface,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(15)),
+                                ),
+                                child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 15,
+                                              left: 15,
+                                              right: 15,
+                                              bottom: 15,
+                                            ),
+                                            child: Container(
+                                              decoration: const BoxDecoration(),
+                                              child: Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: <Widget>[
+                                                      Row(
+                                                        children: [
+                                                          const CircleAvatar(
+                                                            radius: 18,
+                                                            backgroundImage:
+                                                                AssetImage(
+                                                                    "assets/profile_pic.png"),
+                                                          ),
+                                                          Align(
+                                                            alignment: Alignment
+                                                                .centerLeft,
+                                                            child: Column(
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: <
+                                                                  Widget>[
+                                                                Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                    top: 0,
+                                                                    left: 10,
+                                                                    right: 0,
+                                                                    bottom: 0,
+                                                                  ),
+                                                                  child: Text(
+                                                                    "Developer Update",
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .left,
+                                                                    style:
+                                                                        TextStyle(
+                                                                      color: Theme.of(
+                                                                              context)
+                                                                          .colorScheme
+                                                                          .inverseSurface,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                    top: 0,
+                                                                    left: 10,
+                                                                    right: 0,
+                                                                    bottom: 0,
+                                                                  ),
+                                                                  child: Text(
+                                                                    "02 Jan 2023, 10:10am",
+                                                                    style: TextStyle(
+                                                                        color: Theme.of(context)
+                                                                            .colorScheme
+                                                                            .inverseSurface,
+                                                                        fontSize:
+                                                                            10),
+                                                                  ),
+                                                                )
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          const Flexible(
+                                                              fit:
+                                                                  FlexFit.tight,
+                                                              child:
+                                                                  SizedBox()),
+                                                          IconButton(
+                                                              onPressed: () {},
+                                                              icon: const Icon(Icons
+                                                                  .more_vert_rounded))
+                                                        ],
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(
+                                                          top: 15,
+                                                          left: 0,
+                                                          right: 0,
+                                                          bottom: 10,
+                                                        ),
+                                                        child: Column(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Text(
+                                                              "UPDATE NEWSLETTER",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: TextStyle(
+                                                                color: Theme.of(
+                                                                        context)
+                                                                    .colorScheme
+                                                                    .inverseSurface,
+                                                                fontSize: 16,
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              "This is news detail for UTPinMe application news function",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .left,
+                                                              style: TextStyle(
+                                                                color: Theme.of(
+                                                                        context)
+                                                                    .colorScheme
+                                                                    .inverseSurface,
+                                                                fontSize: 13,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                            top: 10,
+                                                            left: 0,
+                                                            right: 0,
+                                                            bottom: 10,
+                                                          ),
+                                                          child: Container(
+                                                            constraints:
+                                                                const BoxConstraints
+                                                                        .expand(
+                                                                    height:
+                                                                        200.0),
+                                                            child: FittedBox(
+                                                              fit: BoxFit
+                                                                  .fitWidth,
+                                                              child: ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              10.0),
+                                                                  child: Image
+                                                                      .asset(
+                                                                    "assets/ch.jpg",
+                                                                    fit: BoxFit
+                                                                        .fill,
+                                                                  )),
+                                                            ),
+                                                          )),
+                                                      Container(
+                                                          height: 40,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .onInverseSurface,
+                                                          ),
+                                                          child: Row(
+                                                            children: [
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .thumb_up_alt_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .thumb_down_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .share_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .bookmark_rounded),
+                                                                iconSize: 20,
+                                                              ),
+                                                            ],
+                                                          ))
+                                                    ],
+                                                  )),
+                                            )),
+                                      ],
+                                    )),
                               )),
                         ]),
                         Column(
