@@ -582,8 +582,8 @@ class _LicensesState extends State<Licenses> {
                                 )),
                               )),
                         ]),
-                        Column(
-                          children: const [
+                        const Column(
+                          children: [
                             Text(" "),
                             Text(" "),
                           ],

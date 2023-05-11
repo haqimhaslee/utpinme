@@ -47,15 +47,15 @@ class _DigitalIdState extends State<DigitalId> {
                     alignment: Alignment.center,
                     child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
+                        const Padding(
+                          padding: EdgeInsets.only(
                             top: 15,
                             left: 0,
                             right: 0,
                             bottom: 15,
                           ),
                           child: Column(
-                            children: const [
+                            children: [
                               Text(
                                 "Universiti Teknologi PETRONAS",
                                 style: TextStyle(
@@ -68,24 +68,24 @@ class _DigitalIdState extends State<DigitalId> {
                         ),
                         SizedBox.fromSize(
                           size: const Size(300, 1),
-                          child: ClipRRect(
+                          child: const ClipRRect(
                             child: Material(
-                              color: const Color.fromARGB(75, 255, 255, 255),
+                              color: Color.fromARGB(75, 255, 255, 255),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                               ),
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
+                        const Padding(
+                          padding: EdgeInsets.only(
                             top: 10,
                             left: 00,
                             right: 00,
                             bottom: 10,
                           ),
                           child: Column(
-                            children: const [
+                            children: [
                               CircleAvatar(
                                 radius: 50,
                                 backgroundImage:
@@ -116,9 +116,9 @@ class _DigitalIdState extends State<DigitalId> {
                         ),
                         SizedBox.fromSize(
                           size: const Size(300, 0.5),
-                          child: ClipRRect(
+                          child: const ClipRRect(
                             child: Material(
-                              color: const Color.fromARGB(97, 255, 255, 255),
+                              color: Color.fromARGB(97, 255, 255, 255),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                               ),
@@ -228,14 +228,14 @@ class _DigitalIdState extends State<DigitalId> {
                                     children: [
                                       SizedBox.fromSize(
                                         size: const Size(500, 25),
-                                        child: ClipRRect(
+                                        child: const ClipRRect(
                                           child: Material(
-                                            color: const Color.fromARGB(
-                                                255, 4, 76, 172),
+                                            color:
+                                                Color.fromARGB(255, 4, 76, 172),
                                             child: Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
-                                              children: const <Widget>[
+                                              children: <Widget>[
                                                 Text(
                                                   "STUDENT",
                                                   style: TextStyle(

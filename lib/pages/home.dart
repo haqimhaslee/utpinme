@@ -634,8 +634,7 @@ class _HomeState extends State<Home> {
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment
                                                                       .start,
-                                                              children: <
-                                                                  Widget>[
+                                                              children: <Widget>[
                                                                 Padding(
                                                                   padding:
                                                                       const EdgeInsets
@@ -870,8 +869,7 @@ class _HomeState extends State<Home> {
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment
                                                                       .start,
-                                                              children: <
-                                                                  Widget>[
+                                                              children: <Widget>[
                                                                 Padding(
                                                                   padding:
                                                                       const EdgeInsets
@@ -1054,8 +1052,8 @@ class _HomeState extends State<Home> {
                                     )),
                               )),
                         ]),
-                        Column(
-                          children: const [
+                        const Column(
+                          children: [
                             Text(" "),
                             Text(" "),
                           ],

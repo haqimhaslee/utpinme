@@ -49,25 +49,25 @@ class _ShuttleBusState extends State<ShuttleBus> {
           body: TabBarView(
             physics: const NeverScrollableScrollPhysics(),
             children: [
-              ListView(children: [
+              ListView(children: const [
                 Column(
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(children: const [InternalBusSchedule()]),
+                      Column(children: [InternalBusSchedule()]),
                     ]),
               ]),
-              ListView(children: [
+              ListView(children: const [
                 Column(
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(children: const [ExternalBusSchedule()]),
+                      Column(children: [ExternalBusSchedule()]),
                     ]),
               ]),
-              ListView(children: [
+              ListView(children: const [
                 Column(
                     //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Column(children: const [WeekendBusSchedule()]),
+                      Column(children: [WeekendBusSchedule()]),
                     ]),
               ]),
               const BusLiveLocation(),

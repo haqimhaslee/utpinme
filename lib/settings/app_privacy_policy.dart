@@ -582,8 +582,8 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                                 )),
                               )),
                         ]),
-                        Column(
-                          children: const [
+                        const Column(
+                          children: [
                             Text(" "),
                             Text(" "),
                           ],
