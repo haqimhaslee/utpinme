@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+enum TripFilter { Trip1, Trip2, Trip3, Trip4, Trip5, Trip6, Trip7, Trip8 }
+
 class ExternalBusSchedule extends StatefulWidget {
   const ExternalBusSchedule({super.key});
 
@@ -7,23 +9,107 @@ class ExternalBusSchedule extends StatefulWidget {
   State<ExternalBusSchedule> createState() => _ExternalBusScheduleState();
 }
 
+final List<String> _filters = <String>[];
+
 class _ExternalBusScheduleState extends State<ExternalBusSchedule> {
   @override
   Widget build(BuildContext context) {
     double screenSize = MediaQuery.of(context).size.width;
     double wrapSize = screenSize - 100;
     return Column(children: [
-      Text(
-        "*Bus will NOT deploy on PUBLIC HOLIDAY",
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.error,
-        ),
-      ),
-      Text(
-        "**Trip 4 and 5 will not deploy on Friday due to Friday Prayer",
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.error,
-        ),
+      Padding(
+          padding: const EdgeInsets.only(
+            top: 15,
+            left: 15,
+            right: 15,
+            bottom: 5,
+          ),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.tertiaryContainer,
+              borderRadius: const BorderRadius.all(Radius.circular(15)),
+            ),
+            //width: 400,
+            //height: 150,
+            child: Align(
+                alignment: Alignment.center,
+                child: Column(
+                  children: [
+                    const Text(
+                      "",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 5,
+                      ),
+                    ),
+                    Text(
+                      "⚠️ NOTE ⚠️",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color:
+                            Theme.of(context).colorScheme.onTertiaryContainer,
+                      ),
+                    ),
+                    Text(
+                      "*Bus will NOT deploy on PUBLIC HOLIDAY",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color:
+                            Theme.of(context).colorScheme.onTertiaryContainer,
+                      ),
+                    ),
+                    Text(
+                      "**Trip 4 and Trip 5 will not deploy on Friday due to Friday Prayer",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color:
+                            Theme.of(context).colorScheme.onTertiaryContainer,
+                      ),
+                    ),
+                    const Text(
+                      "",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 5,
+                      ),
+                    ),
+                  ],
+                )),
+          )),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Text(' '),
+          const Text(
+            'Choose trip :',
+          ),
+          const SizedBox(height: 5.0),
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 5.0,
+            children: TripFilter.values.map((TripFilter trip) {
+              return FilterChip(
+                label: Text(trip.name),
+                selected: _filters.contains(trip.name),
+                onSelected: (bool value) {
+                  setState(() {
+                    if (value) {
+                      if (!_filters.contains(trip.name)) {
+                        _filters.add(trip.name);
+                      }
+                    } else {
+                      _filters.removeWhere((String name) {
+                        return name == trip.name;
+                      });
+                    }
+                  });
+                },
+              );
+            }).toList(),
+          ),
+        ],
       ),
       Padding(
         padding: const EdgeInsets.only(

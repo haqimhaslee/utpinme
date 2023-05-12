@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/feedback.dart';
-import 'package:utp_in_me/settings/app_licenses.dart';
+//import 'package:utp_in_me/settings/app_licenses.dart';
 import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
+import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
 import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
 import 'package:utp_in_me/settings/utp_net_id.dart';
 
@@ -409,7 +410,7 @@ class _ProfileState extends State<Profile> {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          const Licenses()));
+                                                          const LicensePage()));
                                             },
                                             child: Column(
                                               mainAxisAlignment:
@@ -452,6 +453,41 @@ class _ProfileState extends State<Profile> {
                                               children: <Widget>[
                                                 Text(
                                                   "Feedback",
+                                                  style: TextStyle(
+                                                    color: Theme.of(context)
+                                                        .colorScheme
+                                                        .onSecondaryContainer,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox.fromSize(
+                                      size: const Size(400, 60),
+                                      child: ClipRRect(
+                                        //borderRadius:BorderRadius.circular(30),
+                                        child: Material(
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .secondaryContainer,
+                                          child: InkWell(
+                                            //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          const MaterialTestPage()));
+                                            },
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Text(
+                                                  "Developers Page",
                                                   style: TextStyle(
                                                     color: Theme.of(context)
                                                         .colorScheme

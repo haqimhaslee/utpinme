@@ -41,7 +41,7 @@ class _HotlineAppState extends State<HotlineApp> {
                                 borderRadius:
                                     const BorderRadius.all(Radius.circular(10)),
                               ),
-                              //width: 400,
+                              width: 400,
                               //height: 150,
                               child: Align(
                                   alignment: Alignment.center,
@@ -140,6 +140,7 @@ class _HotlineAppState extends State<HotlineApp> {
                                 bottom: 5,
                               ),
                               child: Container(
+                                width: 450,
                                 decoration: BoxDecoration(
                                   color: Theme.of(context)
                                       .colorScheme

@@ -161,18 +161,6 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
                 });
               },
             ),
-            /*Stepper(
-                          steps: <Step>[
-                            Step(
-                              title: const Text('Step 1 title'),
-                              content: Container(),
-                            ),
-                            Step(
-                              title: const Text('Step 2 title'),
-                              content: Container(),
-                            ),
-                          ],
-                        ),*/
             const Text("       "),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,

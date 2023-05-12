@@ -23,13 +23,13 @@ dependencies:
   #google_maps_flutter: ^2.2.3
   qr_flutter: ^4.0.0
   google_fonts: ^3.0.1
-  material_color_utilities: ^0.2.0
+  #material_color_utilities: ^0.2.0
   #location: ^4.4.0
   flutter_svg: ^2.0.0+1
   #permission_handler: ^10.2.0
-  dynamic_color: ^1.5.4
+  #dynamic_color: ^1.5.4
   quick_actions: ^1.0.1
-  adaptive_navigation: ^0.0.9
+  #adaptive_navigation: ^0.0.9
   latlong2: ^0.8.1
 
   

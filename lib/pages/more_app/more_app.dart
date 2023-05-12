@@ -8,7 +8,7 @@ import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/attendance_app.dart';
 import 'package:utp_in_me/pages/iattend.dart';
 import 'package:utp_in_me/pages/parcel_hub.dart';
-import 'package:utp_in_me/settings/app_privacy_policy.dart';
+//import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:utp_in_me/pages/exemption.dart';
@@ -824,7 +824,7 @@ class _MoreAppState extends State<MoreApp> {
                                       .onPrimaryContainer,
                                 ),
                                 Text(
-                                  "Settings",
+                                  "Settings [Pilot]",
                                   style: TextStyle(
                                       fontSize: 15,
                                       color: Theme.of(context)
@@ -947,47 +947,6 @@ class _MoreAppState extends State<MoreApp> {
                                 ),
                                 Text(
                                   "App License",
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onPrimaryContainer),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 125,
-                      height: 125,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
-                        child: Material(
-                          color:
-                              Theme.of(context).colorScheme.secondaryContainer,
-                          child: InkWell(
-                            splashColor: Theme.of(context).colorScheme.tertiary,
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const PrivacyPolicy()));
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Icon(
-                                  Icons.policy_rounded,
-                                  size: 35,
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onPrimaryContainer,
-                                ),
-                                Text(
-                                  "Privacy Policy",
                                   style: TextStyle(
                                       fontSize: 15,
                                       color: Theme.of(context)
