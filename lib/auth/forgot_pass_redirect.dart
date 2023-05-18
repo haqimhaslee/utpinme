@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/auth/login_page.dart';
-import 'package:utp_in_me/pages/auth/microsoft_account_portal.dart';
-import 'package:utp_in_me/pages/auth/utp_net_id.dart';
+import 'package:utp_in_me/auth/login_page.dart';
+import 'package:utp_in_me/auth/microsoft_account_portal.dart';
+import 'package:utp_in_me/auth/utp_net_id.dart';
 
 class ForgotPass extends StatefulWidget {
   const ForgotPass({super.key});

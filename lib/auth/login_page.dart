@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/auth/forgot_pass_redirect.dart';
+import 'package:utp_in_me/auth/forgot_pass_redirect.dart';
 import 'package:utp_in_me/src/navbar.dart';
 
 class LoginPage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum TripFilter { Trip1, Trip2, Trip3, Trip4 }
+enum Trips { trip1, trip2, trip3, trip4 }
 
 class WeekendBusSchedule extends StatefulWidget {
   const WeekendBusSchedule({super.key});
@@ -9,9 +9,8 @@ class WeekendBusSchedule extends StatefulWidget {
   State<WeekendBusSchedule> createState() => _WeekendBusScheduleState();
 }
 
-final List<String> _filters = <String>[];
-
 class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
+  Set<Trips> selection = <Trips>{Trips.trip1};
   @override
   Widget build(BuildContext context) {
     double screenSize = MediaQuery.of(context).size.width;
@@ -36,11 +35,8 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                 child: Column(
                   children: [
                     const Text(
-                      "",
+                      " ",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 5,
-                      ),
                     ),
                     Text(
                       "⚠️ NOTE ⚠️",
@@ -69,50 +65,19 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       ),
                     ),
                     const Text(
-                      "",
+                      " ",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 5,
-                      ),
                     ),
                   ],
                 )),
           )),
-      Column(
+      const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text(' '),
-          const Text(
-            'Choose trip :',
-          ),
-          const SizedBox(height: 5.0),
-          Wrap(
-            spacing: 5.0,
-            children: TripFilter.values.map((TripFilter trip) {
-              return FilterChip(
-                label: Text(trip.name),
-                selected: _filters.contains(trip.name),
-                onSelected: (bool value) {
-                  setState(() {
-                    if (value) {
-                      if (!_filters.contains(trip.name)) {
-                        _filters.add(trip.name);
-                      }
-                    } else {
-                      _filters.removeWhere((String name) {
-                        return name == trip.name;
-                      });
-                    }
-                  });
-                },
-              );
-            }).toList(),
-          ),
-        ],
+        children: <Widget>[],
       ),
       Padding(
         padding: const EdgeInsets.only(
-          top: 20,
+          top: 10,
           left: 10,
           right: 10,
           bottom: 0,

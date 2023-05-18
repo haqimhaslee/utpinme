@@ -13,29 +13,31 @@ class ShuttleBus extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 3,
           title: const Text('Shuttle Bus'),
           bottom: const TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
+                //icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Internal",
               ),
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
+                //icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "External",
               ),
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
+                //icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Weekend",
               ),
               Tab(
-                icon: Icon(Icons.pin_drop_rounded),
+                //icon: Icon(Icons.pin_drop_rounded),
                 text: "LiveBus™️",
               )
             ],
           ),
         ),
         body: TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             ListView(children: const [
               Column(

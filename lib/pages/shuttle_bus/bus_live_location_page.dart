@@ -296,17 +296,3 @@ class BusLiveLocation extends StatelessWidget {
     );
   }
 }
-
-class MyStatelessWidget extends StatelessWidget {
-  const MyStatelessWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        child: const Text('               Show Legend               '),
-        onPressed: () {},
-      ),
-    );
-  }
-}
