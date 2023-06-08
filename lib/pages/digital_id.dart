@@ -190,7 +190,7 @@ class DigitalId extends StatelessWidget {
                                   right: 1,
                                   bottom: 1,
                                 ),
-                                child: QrImage(
+                                child: QrImageView(
                                   data: '<email_azure_aad>',
                                   version: QrVersions.auto,
                                   size: 100,
