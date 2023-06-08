@@ -15,6 +15,18 @@ class ShuttleBus extends StatelessWidget {
         appBar: AppBar(
           elevation: 3,
           title: const Text('Shuttle Bus'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.more_vert_rounded),
+              //color: Color.fromARGB(255, 58, 58, 58),
+              onPressed: (() {}),
+            ),
+            IconButton(
+              icon: const Icon(Icons.info_rounded),
+              //color: Color.fromARGB(255, 58, 58, 58),
+              onPressed: (() => {}),
+            )
+          ],
           bottom: const TabBar(
             tabs: [
               Tab(

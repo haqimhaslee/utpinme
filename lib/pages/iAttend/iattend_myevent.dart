@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
-//import 'package:utp_in_me/pages/ucs.dart';
 
 class MyEvent extends StatelessWidget {
   const MyEvent({super.key});
@@ -54,20 +52,23 @@ class MyEvent extends StatelessWidget {
                         top: 15,
                         left: 15,
                         right: 15,
-                        bottom: 25,
+                        bottom: 5,
                       ),
                       child: Card(
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
                         elevation: 0,
-                        color: Theme.of(context).colorScheme.primaryContainer,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20)),
+                        ),
                         child: const SizedBox(
                           width: 500,
-                          height: 100,
+                          height: 200,
                           child: Center(child: Text('Program/Event details')),
                         ),
-                      ))
+                      )),
                 ]),
           )
         ],

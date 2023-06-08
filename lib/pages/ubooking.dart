@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/about_app.dart';
+//import 'package:utp_in_me/settings/about_app.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class UBooking extends StatefulWidget {
@@ -45,12 +45,14 @@ class _UBookingState extends State<UBooking> {
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [
           IconButton(
+            icon: const Icon(Icons.more_vert_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() {}),
+          ),
+          IconButton(
             icon: const Icon(Icons.info_rounded),
             //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const AboutApp()))
-                }),
+            onPressed: (() => {}),
           )
         ],
       ),

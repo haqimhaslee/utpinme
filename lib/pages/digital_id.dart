@@ -16,7 +16,13 @@ class DigitalId extends StatelessWidget {
               //color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() {}),
             ),
+            IconButton(
+              icon: const Icon(Icons.info_rounded),
+              //color: Color.fromARGB(255, 58, 58, 58),
+              onPressed: (() => {}),
+            )
           ],
+
           //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         ),
         body: Center(

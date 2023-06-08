@@ -17,7 +17,9 @@ class USchedule extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: const Text('USchedule'),
+
             elevation: 3,
+
             bottom: const TabBar(
               tabs: [
                 Tab(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/about_app.dart';
+//import 'package:utp_in_me/settings/about_app.dart';
 
 class NotificationPage extends StatefulWidget {
   const NotificationPage({super.key});
@@ -23,12 +23,14 @@ class _NotificationPageState extends State<NotificationPage> {
         //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         actions: [
           IconButton(
-            icon: const Icon(Icons.volume_mute_rounded),
+            icon: const Icon(Icons.more_vert_rounded),
             //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const AboutApp()))
-                }),
+            onPressed: (() {}),
+          ),
+          IconButton(
+            icon: const Icon(Icons.info_rounded),
+            //color: Color.fromARGB(255, 58, 58, 58),
+            onPressed: (() => {}),
           )
         ],
       ),

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/iAttend/iattend_qr.dart';
 import 'package:utp_in_me/pages/iAttend/iattend_myevent.dart';
 import 'package:utp_in_me/pages/iAttend/iattend_mystats.dart';
-//import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
-//import 'package:utp_in_me/pages/ucs.dart';
 
 class IattendApp extends StatelessWidget {
   const IattendApp({super.key});
@@ -21,11 +19,11 @@ class IattendApp extends StatelessWidget {
               tabs: [
                 Tab(
                   //icon: Icon(Icons.directions_bus_filled_rounded),
-                  text: "My Events",
+                  text: "Events",
                 ),
                 Tab(
                   //icon: Icon(Icons.directions_bus_filled_rounded),
-                  text: "My Stats",
+                  text: "Statistics",
                 ),
               ],
             ),

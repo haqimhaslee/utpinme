@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
-//import 'package:utp_in_me/pages/ucs.dart';
 
 class MyStats extends StatelessWidget {
   const MyStats({super.key});

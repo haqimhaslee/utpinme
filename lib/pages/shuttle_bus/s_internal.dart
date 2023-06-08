@@ -58,9 +58,6 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
                     const Text(
                       "",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 5,
-                      ),
                     ),
                   ],
                 )),
