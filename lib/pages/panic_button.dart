@@ -8,54 +8,6 @@ class HotlineApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        title: Padding(
-            padding: const EdgeInsets.only(
-              //top: 30,
-              left: 5,
-              right: 5,
-              //bottom: 60,
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondaryContainer,
-                borderRadius: const BorderRadius.all(Radius.circular(50)),
-              ),
-              child: const Padding(
-                  padding: EdgeInsets.only(
-                    top: 9,
-                    left: 20,
-                    //right: ,
-                    bottom: 9,
-                  ),
-                  child: Column(children: [
-                    Text(
-                      'Hi, <name>!                     ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        //color: Color.fromARGB(186, 0, 0, 0),
-                      ),
-                    )
-                  ])),
-            )),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() {}),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage("assets/profile_pic.png"),
-            ),
-          )
-        ],
-        //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-      ),
       body: Column(
         children: [
           Container(

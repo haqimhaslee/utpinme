@@ -13,54 +13,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        title: Padding(
-            padding: const EdgeInsets.only(
-              //top: 30,
-              left: 5,
-              right: 5,
-              //bottom: 60,
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondaryContainer,
-                borderRadius: const BorderRadius.all(Radius.circular(50)),
-              ),
-              child: const Padding(
-                  padding: EdgeInsets.only(
-                    top: 9,
-                    left: 20,
-                    //right: ,
-                    bottom: 9,
-                  ),
-                  child: Column(children: [
-                    Text(
-                      'Hi, <name>!                     ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        //color: Color.fromARGB(186, 0, 0, 0),
-                      ),
-                    ),
-                  ])),
-            )),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() {}),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage("assets/profile_pic.png"),
-            ),
-          )
-        ],
-        //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-      ),
       body: ListView(
         children: [
           Padding(
@@ -89,19 +41,17 @@ class Home extends StatelessWidget {
                           Padding(
                               padding: const EdgeInsets.only(
                                 top: 15,
-                                //left: 15,
-                                //right: 15,
                                 bottom: 15,
                               ),
                               child: Container(
                                 alignment: Alignment.center,
-                                //width: 350,
+                                width: 450,
                                 decoration: BoxDecoration(
                                   color: Theme.of(context)
                                       .colorScheme
                                       .secondaryContainer,
                                   borderRadius: const BorderRadius.all(
-                                      Radius.circular(15)),
+                                      Radius.circular(20)),
                                 ),
                                 child: Align(
                                     alignment: Alignment.center,
@@ -117,7 +67,9 @@ class Home extends StatelessWidget {
                                               bottom: 0,
                                             ),
                                             child: Row(
-                                              children: [
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
                                                 Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -131,7 +83,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -183,7 +135,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -235,7 +187,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -287,7 +239,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -336,7 +288,9 @@ class Home extends StatelessWidget {
                                               bottom: 0,
                                             ),
                                             child: Row(
-                                              children: [
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
                                                 Padding(
                                                   padding:
                                                       const EdgeInsets.only(
@@ -350,7 +304,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -402,7 +356,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -454,7 +408,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -506,7 +460,7 @@ class Home extends StatelessWidget {
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
-                                                              50),
+                                                              20),
                                                       child: Material(
                                                         color: Theme.of(context)
                                                             .colorScheme
@@ -562,8 +516,8 @@ class Home extends StatelessWidget {
                           Padding(
                               padding: const EdgeInsets.only(
                                 top: 10,
-                                left: 15,
-                                right: 15,
+                                left: 5,
+                                right: 5,
                                 bottom: 5,
                               ),
                               child: Container(
@@ -573,7 +527,7 @@ class Home extends StatelessWidget {
                                       .colorScheme
                                       .onInverseSurface,
                                   borderRadius: const BorderRadius.all(
-                                      Radius.circular(15)),
+                                      Radius.circular(8)),
                                 ),
                                 child: Align(
                                     alignment: Alignment.centerLeft,
@@ -583,9 +537,9 @@ class Home extends StatelessWidget {
                                       children: <Widget>[
                                         Padding(
                                             padding: const EdgeInsets.only(
-                                              top: 15,
-                                              left: 15,
-                                              right: 15,
+                                              top: 10,
+                                              left: 10,
+                                              right: 10,
                                               bottom: 15,
                                             ),
                                             child: Container(
@@ -800,8 +754,8 @@ class Home extends StatelessWidget {
                           Padding(
                               padding: const EdgeInsets.only(
                                 top: 10,
-                                left: 15,
-                                right: 15,
+                                left: 5,
+                                right: 5,
                                 bottom: 5,
                               ),
                               child: Container(
@@ -821,9 +775,9 @@ class Home extends StatelessWidget {
                                       children: <Widget>[
                                         Padding(
                                             padding: const EdgeInsets.only(
-                                              top: 15,
-                                              left: 15,
-                                              right: 15,
+                                              top: 10,
+                                              left: 10,
+                                              right: 10,
                                               bottom: 15,
                                             ),
                                             child: Container(

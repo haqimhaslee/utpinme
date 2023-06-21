@@ -28,7 +28,7 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
               color: Theme.of(context).colorScheme.tertiaryContainer,
               borderRadius: const BorderRadius.all(Radius.circular(15)),
             ),
-            //width: 400,
+            width: 500,
             //height: 150,
             child: Align(
                 alignment: Alignment.center,

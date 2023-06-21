@@ -13,7 +13,7 @@ class BusLiveLocation extends StatelessWidget {
           Scaffold.of(context).showBottomSheet<void>(
             (BuildContext context) {
               return SizedBox(
-                height: 300,
+                height: 230,
                 //color: Colors.amber,
                 child: Center(
                   child: Column(
@@ -273,17 +273,6 @@ class BusLiveLocation extends StatelessWidget {
                               )
                             ],
                           )),
-                      //const Text('BottomSheet'),
-                      OutlinedButton.icon(
-                        icon: const Icon(
-                          Icons.close_rounded,
-                        ),
-                        label: const Text(
-                            '                  Close panel                   '),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
                     ],
                   ),
                 ),

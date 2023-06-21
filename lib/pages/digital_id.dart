@@ -56,8 +56,8 @@ class DigitalId extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Column(
                         children: [
-                          const Padding(
-                            padding: EdgeInsets.only(
+                          Padding(
+                            padding: const EdgeInsets.only(
                               top: 15,
                               left: 0,
                               right: 0,
@@ -67,10 +67,7 @@ class DigitalId extends StatelessWidget {
                               children: [
                                 Text(
                                   "Universiti Teknologi PETRONAS",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                  ),
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ],
                             ),
@@ -231,43 +228,6 @@ class DigitalId extends StatelessWidget {
                                       BorderRadius.all(Radius.circular(0)),
                                 ),
                                 child: Column(children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 5,
-                                      left: 0,
-                                      right: 0,
-                                      bottom: 0,
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        SizedBox.fromSize(
-                                          size: const Size(500, 25),
-                                          child: ClipRRect(
-                                            child: Material(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .secondary,
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Text(
-                                                    "STUDENT",
-                                                    style: TextStyle(
-                                                      fontSize: 17,
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .onSecondary,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                   ClipRRect(
                                     borderRadius: const BorderRadius.only(
                                       bottomRight: Radius.circular(30),
