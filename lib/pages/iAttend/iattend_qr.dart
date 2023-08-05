@@ -33,7 +33,7 @@ class _QRViewExampleState extends State<QRViewExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //backgroundColor: Color.fromARGB(34, 47, 47, 47),
+        title: const Text("Scan a code"),
         elevation: 0,
       ),
       body: Column(
@@ -51,7 +51,7 @@ class _QRViewExampleState extends State<QRViewExample> {
                     Text(
                         'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
                   else
-                    const Text('Scan a code'),
+                    const Text(' '),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -88,24 +88,6 @@ class _QRViewExampleState extends State<QRViewExample> {
                               },
                             )),
                       ),
-                      Container(
-                        margin: const EdgeInsets.all(8),
-                        child: ElevatedButton(
-                          onPressed: () async {
-                            await controller?.pauseCamera();
-                          },
-                          child: const Icon(Icons.no_photography_rounded),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(8),
-                        child: ElevatedButton(
-                          onPressed: () async {
-                            await controller?.resumeCamera();
-                          },
-                          child: const Icon(Icons.photo_camera_rounded),
-                        ),
-                      )
                     ],
                   ),
                   const Text(''),

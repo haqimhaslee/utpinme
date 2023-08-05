@@ -19,9 +19,9 @@ class ExemptionNewSubmition extends StatelessWidget {
           ],
           //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         ),
-        body: ListView(children: const [
+        body: ListView(children: [
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 30,
               left: 15,
               right: 15,
@@ -29,32 +29,37 @@ class ExemptionNewSubmition extends StatelessWidget {
             ),
             child: Column(children: [
               TextField(
-                //obscureText: true,
+                textCapitalization: TextCapitalization.sentences,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
                   labelText: 'Phone Number',
                 ),
               ),
-              Text(" "),
-              Text(" "),
+              const Text(" "),
               TextField(
-                //obscureText: true,
+                textCapitalization: TextCapitalization.sentences,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
                   labelText: 'Event/Program title/Emergency',
                 ),
               ),
-              Text(" "),
-              Text(" "),
+              const Text(" "),
               TextField(
-                //obscureText: true,
+                textCapitalization: TextCapitalization.sentences,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
                   labelText: 'Location/Venue',
                 ),
               ),
-              Text(" "),
-              Text(" "),
+              const Text(" "),
+              FilledButton.tonal(
+                  onPressed: () {}, child: const Text('       Submit      ')),
             ]),
           )
         ]));

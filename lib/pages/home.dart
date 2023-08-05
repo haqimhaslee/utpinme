@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/attendance_app.dart';
+import 'package:utp_in_me/pages/news_and_announcement.dart';
 import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/exemption/exemption.dart';
 import 'package:utp_in_me/pages/parcel_hub.dart';
@@ -31,12 +32,16 @@ class Home extends StatelessWidget {
                         Column(children: [
                           const Padding(
                             padding: EdgeInsets.only(
-                              top: 0,
+                              top: 15,
                               left: 15,
                               right: 15,
                               bottom: 0,
                             ),
-                            child: Text('Application Shortcut'),
+                            child: Row(
+                              children: [
+                                Text("Quick Apps"),
+                              ],
+                            ),
                           ),
                           Padding(
                               padding: const EdgeInsets.only(
@@ -504,18 +509,86 @@ class Home extends StatelessWidget {
                                       ],
                                     )),
                               )),
-                          const Padding(
-                            padding: EdgeInsets.only(
-                              top: 20,
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 10,
                               left: 15,
                               right: 15,
                               bottom: 0,
                             ),
-                            child: Text('Announcement / News'),
+                            child: Row(
+                              children: [
+                                const Text("My Calendar"),
+                                const Text("    |"),
+                                TextButton(
+                                    onPressed: () {},
+                                    child: const Text("View More"))
+                              ],
+                            ),
                           ),
                           Padding(
                               padding: const EdgeInsets.only(
-                                top: 10,
+                                top: 5,
+                                bottom: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 450,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onInverseSurface,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20)),
+                                ),
+                                child: const Align(
+                                    alignment: Alignment.center,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 0,
+                                              left: 0,
+                                              right: 0,
+                                              bottom: 0,
+                                            ),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[],
+                                            )),
+                                      ],
+                                    )),
+                              )),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 10,
+                              left: 15,
+                              right: 15,
+                              bottom: 0,
+                            ),
+                            child: Row(
+                              children: [
+                                const Text("News and announcement"),
+                                const Text("    |"),
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const NewsAnnouncement()));
+                                    },
+                                    child: const Text("View More"))
+                              ],
+                            ),
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                top: 5,
                                 left: 5,
                                 right: 5,
                                 bottom: 5,

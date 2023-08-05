@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Column(children: [
                     Text(
-                      'Hi, <name>!                     ',
+                      'Welcome, UTPians!      ',
                       style: TextStyle(
                         fontSize: 18,
                         //color: Color.fromARGB(186, 0, 0, 0),
@@ -110,8 +110,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MediaQuery.of(context).size.width < 640
           ? NavigationBar(
               selectedIndex: _selectedIndex,
-              labelBehavior:
-                  NavigationDestinationLabelBehavior.onlyShowSelected,
+              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
               onDestinationSelected: (int newIndex) {
                 setState(() {
                   _selectedIndex = newIndex;
@@ -126,12 +125,12 @@ class _HomePageState extends State<HomePage> {
                 NavigationDestination(
                   selectedIcon: Icon(Icons.grid_view_rounded),
                   icon: Icon(Icons.grid_view_rounded),
-                  label: 'More Apps',
+                  label: 'Application',
                 ),
                 NavigationDestination(
                   selectedIcon: Icon(Icons.emergency_rounded),
                   icon: Icon(Icons.emergency_rounded),
-                  label: 'Panic Button',
+                  label: 'Emergency',
                 ),
               ],
             )
@@ -157,12 +156,12 @@ class _HomePageState extends State<HomePage> {
               NavigationRailDestination(
                 selectedIcon: Icon(Icons.grid_view_rounded),
                 icon: Icon(Icons.grid_view_rounded),
-                label: Text('More Apps'),
+                label: Text('Application'),
               ),
               NavigationRailDestination(
                 selectedIcon: Icon(Icons.emergency_rounded),
                 icon: Icon(Icons.emergency_rounded),
-                label: Text('Panic Button'),
+                label: Text('Emergency'),
               ),
             ],
           ),

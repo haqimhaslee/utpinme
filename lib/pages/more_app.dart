@@ -233,7 +233,7 @@ class MoreApp extends StatelessWidget {
                                         .onPrimaryContainer,
                                   ),
                                   Text(
-                                    "Parcel Hub",
+                                    "Postal Hub",
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Theme.of(context)
@@ -315,6 +315,41 @@ class MoreApp extends StatelessWidget {
                                   ),
                                   Text(
                                     "iAttend",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onPrimaryContainer,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 125,
+                        height: 125,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: Material(
+                            //color: Theme.of(context).colorScheme.secondaryContainer,
+                            child: InkWell(
+                              //splashColor: Theme.of(context).colorScheme.tertiary,
+                              onTap: () {},
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.edit_note_rounded,
+                                    size: 35,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onPrimaryContainer,
+                                  ),
+                                  Text(
+                                    "e-Memo",
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Theme.of(context)

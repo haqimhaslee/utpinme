@@ -17,13 +17,13 @@ class HotlineApp extends StatelessWidget {
                   children: [
                     Column(children: [
                       Padding(
-                          padding: const EdgeInsets.only(
-                            top: 15,
-                            left: 15,
-                            right: 15,
-                            bottom: 25,
-                          ),
-                          child: Container(
+                        padding: const EdgeInsets.only(
+                          top: 60,
+                          left: 15,
+                          right: 15,
+                          bottom: 25,
+                        ),
+                        child: Container(
                             decoration: BoxDecoration(
                               color: Theme.of(context)
                                   .colorScheme
@@ -34,55 +34,84 @@ class HotlineApp extends StatelessWidget {
                             width: 400,
                             //height: 150,
                             child: Align(
-                                alignment: Alignment.center,
-                                child: Column(
+                              alignment: Alignment.center,
+                              child: Column(children: [
+                                Row(
                                   children: [
-                                    const Text(
-                                      "",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 5,
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 0,
+                                        left: 15,
+                                        right: 15,
+                                        bottom: 0,
+                                      ),
+                                      child: Icon(
+                                        Icons.warning_rounded,
                                       ),
                                     ),
-                                    Text(
-                                      "⚠️ IMPORTANT ⚠️",
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onTertiaryContainer,
-                                      ),
-                                    ),
-                                    Text(
-                                      "This Emergency Call is specifically used to report emergency case only such as:-",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onTertiaryContainer,
-                                      ),
-                                    ),
-                                    Text(
-                                      "Fire / Gas leak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onTertiaryContainer,
-                                      ),
-                                    ),
-                                    const Text(
-                                      "",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontSize: 5,
-                                      ),
-                                    ),
+                                    Column(
+                                      children: [
+                                        const Text(
+                                          "",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 5,
+                                          ),
+                                        ),
+                                        Text(
+                                          "This Emergency Call is specifically used to",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onTertiaryContainer,
+                                          ),
+                                        ),
+                                        Text(
+                                          "report emergency case only such as:-",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onTertiaryContainer,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Fire / Gas leak / Chemical Spill / Threat / Security /",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onTertiaryContainer,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Threat-Incident / Power Failure / Trap / Wild Animal",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onTertiaryContainer,
+                                          ),
+                                        ),
+                                        const Text(
+                                          "",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 5,
+                                          ),
+                                        ),
+                                      ],
+                                    )
                                   ],
-                                )),
-                          )),
+                                )
+                              ]),
+                            )),
+                      )
                     ]),
                     Column(children: [
                       SizedBox.fromSize(
@@ -121,82 +150,106 @@ class HotlineApp extends StatelessWidget {
                       children: [
                         const Text(" "),
                         Padding(
-                            padding: const EdgeInsets.only(
-                              top: 5,
-                              left: 15,
-                              right: 15,
-                              bottom: 5,
-                            ),
-                            child: Container(
-                              width: 450,
+                          padding: const EdgeInsets.only(
+                            top: 25,
+                            left: 15,
+                            right: 15,
+                            bottom: 25,
+                          ),
+                          child: Container(
                               decoration: BoxDecoration(
                                 color: Theme.of(context)
                                     .colorScheme
                                     .tertiaryContainer,
                                 borderRadius:
-                                    const BorderRadius.all(Radius.circular(15)),
+                                    const BorderRadius.all(Radius.circular(10)),
                               ),
-                              //width: 400,
+                              width: 400,
                               //height: 150,
                               child: Align(
-                                  alignment: Alignment.center,
-                                  child: Column(
+                                alignment: Alignment.center,
+                                child: Column(children: [
+                                  Row(
                                     children: [
-                                      const Text(
-                                        "",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 5,
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                          top: 0,
+                                          left: 15,
+                                          right: 15,
+                                          bottom: 0,
+                                        ),
+                                        child: Icon(
+                                          Icons.emoji_objects_rounded,
                                         ),
                                       ),
-                                      Text(
-                                        "⚠️ NOTE ⚠️",
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .onTertiaryContainer,
-                                        ),
-                                      ),
-                                      Text(
-                                        "For non-emergency cases, please log a report in UCS",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 14,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .onTertiaryContainer,
-                                        ),
-                                      ),
-                                      const Text(
-                                        "",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: 5,
-                                        ),
-                                      ),
+                                      Column(
+                                        children: [
+                                          const Text(
+                                            "",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 5,
+                                            ),
+                                          ),
+                                          Text(
+                                            "For non-emergency cases, please log a report in",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .onTertiaryContainer,
+                                            ),
+                                          ),
+                                          Text(
+                                            "Unified Customer Services (UCS) portal",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: Theme.of(context)
+                                                  .colorScheme
+                                                  .onTertiaryContainer,
+                                            ),
+                                          ),
+                                          const Text(
+                                            "",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontSize: 5,
+                                            ),
+                                          ),
+                                        ],
+                                      )
                                     ],
-                                  )),
-                            )),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const UCSPortal()));
-                          },
-                          child: const Text(
-                              'Unified Customer Services Portal (UCS)'),
+                                  )
+                                ]),
+                              )),
                         ),
-                        TextButton(
-                          onPressed: (() => {
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const SrcutpPopupPage()))
-                              }),
-                          child: const Text('SRCUTP Official Website'),
+                                            const UCSPortal()));
+                              },
+                              child: const Text('UCS'),
+                            ),
+                            const Text("    "),
+                            ElevatedButton(
+                              onPressed: (() => {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const SrcutpPopupPage()))
+                                  }),
+                              child: const Text('SRCUTP'),
+                            ),
+                          ],
                         ),
                         const Text(" "),
                         const Text(" "),
