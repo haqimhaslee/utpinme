@@ -17,56 +17,70 @@ class _InternalBusScheduleState extends State<InternalBusSchedule> {
     double wrapSize = screenSize - 100;
     return Column(children: [
       Padding(
-          padding: const EdgeInsets.only(
-            top: 15,
-            left: 15,
-            right: 15,
-            bottom: 5,
-          ),
-          child: Container(
+        padding: const EdgeInsets.only(
+          top: 25,
+          left: 15,
+          right: 15,
+          bottom: 0,
+        ),
+        child: Container(
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.tertiaryContainer,
-              borderRadius: const BorderRadius.all(Radius.circular(15)),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
             ),
-            width: 500,
-            //height: 150,
+            width: 400,
             child: Align(
-                alignment: Alignment.center,
-                child: Column(
+              alignment: Alignment.center,
+              child: Column(children: [
+                Row(
                   children: [
-                    const Text(
-                      "",
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "⚠️ NOTE ⚠️",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color:
-                            Theme.of(context).colorScheme.onTertiaryContainer,
+                    const Padding(
+                      padding: EdgeInsets.only(
+                        top: 0,
+                        left: 15,
+                        right: 15,
+                        bottom: 0,
+                      ),
+                      child: Icon(
+                        Icons.emoji_objects_rounded,
                       ),
                     ),
-                    Text(
-                      "*Bus will NOT deploy on PUBLIC HOLIDAY",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 14,
-                        color:
-                            Theme.of(context).colorScheme.onTertiaryContainer,
-                      ),
-                    ),
-                    const Text(
-                      "",
-                      textAlign: TextAlign.center,
-                    ),
+                    Column(
+                      children: [
+                        const Text(
+                          "",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 10,
+                          ),
+                        ),
+                        Text(
+                          "• Bus will NOT deployed on PUBLIC HOLIDAY",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onTertiaryContainer,
+                          ),
+                        ),
+                        const Text(
+                          "",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    )
                   ],
-                )),
-          )),
+                )
+              ]),
+            )),
+      ),
       const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(' '),
-        ],
+        children: <Widget>[],
       ),
       Padding(
         padding: const EdgeInsets.only(

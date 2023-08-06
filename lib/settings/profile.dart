@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/feedback.dart';
-//import 'package:utp_in_me/settings/app_licenses.dart';
 import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
@@ -15,19 +14,6 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 70,
         title: const Text('Profile'),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() {}),
-          ),
-          IconButton(
-            icon: const Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {}),
-          )
-        ],
       ),
       body: ListView(
         children: [

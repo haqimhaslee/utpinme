@@ -9,21 +9,12 @@ class DigitalId extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 70,
           title: const Text('Digital ID'),
-          elevation: 3,
           actions: [
             IconButton(
               icon: const Icon(Icons.more_vert_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() {}),
             ),
-            IconButton(
-              icon: const Icon(Icons.info_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
-              onPressed: (() => {}),
-            )
           ],
-
-          //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         ),
         body: Center(
           child: Column(children: [
@@ -40,7 +31,7 @@ class DigitalId extends StatelessWidget {
                     borderRadius: const BorderRadius.all(Radius.circular(30)),
                     boxShadow: const [
                       BoxShadow(
-                        color: Color.fromARGB(104, 0, 0, 0),
+                        color: Color.fromARGB(0, 0, 0, 0),
                         offset: Offset(
                           5.0,
                           5.0,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
+import 'package:utp_in_me/pages/srcutp_popup.dart';
 import 'package:utp_in_me/pages/survey_page.dart';
 import 'package:utp_in_me/pages/utp_nexus.dart';
 import 'package:utp_in_me/pages/feedback.dart';

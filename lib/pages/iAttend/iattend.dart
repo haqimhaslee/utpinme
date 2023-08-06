@@ -14,15 +14,14 @@ class IattendApp extends StatelessWidget {
           appBar: AppBar(
             toolbarHeight: 70,
             title: const Text('iAttend'),
-            elevation: 3,
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  //icon: Icon(Icons.directions_bus_filled_rounded),
+                  icon: Icon(Icons.date_range_rounded),
                   text: "Events",
                 ),
                 Tab(
-                  //icon: Icon(Icons.directions_bus_filled_rounded),
+                  icon: Icon(Icons.query_stats_rounded),
                   text: "Statistics",
                 ),
               ],
@@ -30,19 +29,11 @@ class IattendApp extends StatelessWidget {
             actions: [
               IconButton(
                 icon: const Icon(Icons.more_vert_rounded),
-                //color: Color.fromARGB(255, 58, 58, 58),
                 onPressed: (() {}),
               ),
-              IconButton(
-                icon: const Icon(Icons.info_rounded),
-                //color: Color.fromARGB(255, 58, 58, 58),
-                onPressed: (() => {}),
-              )
             ],
-            //backgroundColor: Color.fromARGB(255, 224, 234, 255),
           ),
           body: const TabBarView(
-            physics: NeverScrollableScrollPhysics(),
             children: [
               MyEvent(),
               MyStats(),

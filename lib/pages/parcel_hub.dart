@@ -9,15 +9,12 @@ class ParcelHub extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 70,
           title: const Text('Postal Hub'),
-          elevation: 3,
           actions: [
             IconButton(
               icon: const Icon(Icons.info_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() {}),
             ),
           ],
-          //backgroundColor: Color.fromARGB(255, 224, 234, 255),
         ),
         body: ListView(children: [
           Padding(

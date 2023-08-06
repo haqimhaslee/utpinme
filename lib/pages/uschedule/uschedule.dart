@@ -18,16 +18,14 @@ class USchedule extends StatelessWidget {
           appBar: AppBar(
             title: const Text('USchedule'),
 
-            elevation: 3,
-
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  //icon: Icon(Icons.directions_bus_filled_rounded),
+                  icon: Icon(Icons.book_rounded),
                   text: "Course",
                 ),
                 Tab(
-                  //icon: Icon(Icons.directions_bus_filled_rounded),
+                  icon: Icon(Icons.bookmark_rounded),
                   text: "Exam",
                 ),
               ],
@@ -38,16 +36,11 @@ class USchedule extends StatelessWidget {
                 //color: Color.fromARGB(255, 58, 58, 58),
                 onPressed: (() {}),
               ),
-              IconButton(
-                icon: const Icon(Icons.info_rounded),
-                //color: Color.fromARGB(255, 58, 58, 58),
-                onPressed: (() => {}),
-              )
             ],
             //backgroundColor: Color.fromARGB(255, 224, 234, 255),
           ),
           body: const TabBarView(
-            physics: NeverScrollableScrollPhysics(),
+            //physics: NeverScrollableScrollPhysics(),
             children: [
               UScheduleCourse(),
               UScheduleExam(),

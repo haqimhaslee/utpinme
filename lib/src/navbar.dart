@@ -82,9 +82,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Column(children: [
                     Text(
-                      'Welcome, UTPians!      ',
+                      'ULife   |   Welcome, UTPians!      ',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 17,
                         //color: Color.fromARGB(186, 0, 0, 0),
                       ),
                     )
@@ -94,7 +94,6 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
             onPressed: (() {}),
           ),
           const Padding(
@@ -110,7 +109,8 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MediaQuery.of(context).size.width < 640
           ? NavigationBar(
               selectedIndex: _selectedIndex,
-              labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+              labelBehavior:
+                  NavigationDestinationLabelBehavior.onlyShowSelected,
               onDestinationSelected: (int newIndex) {
                 setState(() {
                   _selectedIndex = newIndex;

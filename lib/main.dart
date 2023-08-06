@@ -9,10 +9,11 @@ void main() {
     systemNavigationBarColor: Colors.transparent,
   ));
 
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.edgeToEdge,
-    //overlays: [SystemUiOverlay.top]
-  );
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
+      overlays: [SystemUiOverlay.top]);
 }
 
 class UtpInMe extends StatelessWidget {

@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
               ),
               child: Container(
                   color: const Color.fromARGB(0, 235, 0, 0),
-                  width: 450,
+                  width: 200,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
                               ),
                               child: Container(
                                 alignment: Alignment.center,
-                                width: 450,
+                                width: 380,
                                 decoration: BoxDecoration(
                                   color: Theme.of(context)
                                       .colorScheme

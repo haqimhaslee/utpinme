@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/shuttle_bus/bus_live_location_page.dart';
+import 'package:utp_in_me/pages/shuttle_bus/bus_finder.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_external.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_internal.dart';
 import 'package:utp_in_me/pages/shuttle_bus/s_weekend.dart';
@@ -13,37 +13,30 @@ class ShuttleBus extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          elevation: 3,
           title: const Text('Shuttle Bus'),
           actions: [
             IconButton(
               icon: const Icon(Icons.more_vert_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
               onPressed: (() {}),
             ),
-            IconButton(
-              icon: const Icon(Icons.info_rounded),
-              //color: Color.fromARGB(255, 58, 58, 58),
-              onPressed: (() => {}),
-            )
           ],
           bottom: const TabBar(
             tabs: [
               Tab(
-                //icon: Icon(Icons.directions_bus_filled_rounded),
+                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Internal",
               ),
               Tab(
-                //icon: Icon(Icons.directions_bus_filled_rounded),
+                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "External",
               ),
               Tab(
-                //icon: Icon(Icons.directions_bus_filled_rounded),
+                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Weekend",
               ),
               Tab(
-                //icon: Icon(Icons.pin_drop_rounded),
-                text: "LiveBus™️",
+                icon: Icon(Icons.pin_drop_rounded),
+                text: "Bus Finder",
               )
             ],
           ),
@@ -72,7 +65,7 @@ class ShuttleBus extends StatelessWidget {
                     Column(children: [WeekendBusSchedule()]),
                   ]),
             ]),
-            const BusLiveLocation(),
+            const LiveBusPageGoogle(),
           ],
         ),
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
+import 'package:utp_in_me/pages/srcutp_popup.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({super.key});
@@ -8,20 +8,7 @@ class AboutApp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 70,
-        title: const Text('Profile'),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.more_vert_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() {}),
-          ),
-          IconButton(
-            icon: const Icon(Icons.info_rounded),
-            //color: Color.fromARGB(255, 58, 58, 58),
-            onPressed: (() => {}),
-          )
-        ],
+        title: const Text('About this app'),
       ),
       body: ListView(
         children: [
@@ -46,8 +33,6 @@ class AboutApp extends StatelessWidget {
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(15)),
                             ),
-                            //width: 400,
-                            //height: 180,
                             child: Align(
                                 alignment: Alignment.center,
                                 child: Column(
