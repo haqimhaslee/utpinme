@@ -64,32 +64,45 @@ class _HomePageState extends State<HomePage> {
         title: Padding(
             padding: const EdgeInsets.only(
               //top: 30,
-              left: 5,
-              right: 5,
+              left: 0,
+              right: 0,
               //bottom: 60,
             ),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondaryContainer,
-                borderRadius: const BorderRadius.all(Radius.circular(50)),
-              ),
-              child: const Padding(
-                  padding: EdgeInsets.only(
-                    top: 9,
-                    left: 20,
-                    //right: ,
-                    bottom: 9,
+            child: Row(children: [
+              SizedBox(
+                  height: 28,
+                  width: 76,
+                  child: Image.asset(
+                    'assets/app_logo.png',
+                    fit: BoxFit.cover,
+                  )),
+              Padding(
+                  padding: const EdgeInsets.only(
+                    left: 13,
                   ),
-                  child: Column(children: [
-                    Text(
-                      'ULife   |   Welcome, UTPians!      ',
-                      style: TextStyle(
-                        fontSize: 17,
-                        //color: Color.fromARGB(186, 0, 0, 0),
-                      ),
-                    )
-                  ])),
-            )),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.secondaryContainer,
+                      borderRadius: const BorderRadius.all(Radius.circular(50)),
+                    ),
+                    child: const Padding(
+                        padding: EdgeInsets.only(
+                          top: 9,
+                          left: 18,
+                          right: 18,
+                          bottom: 9,
+                        ),
+                        child: Column(children: [
+                          Text(
+                            'Welcome, UTPians!',
+                            style: TextStyle(
+                              fontSize: 17,
+                              //color: Color.fromARGB(186, 0, 0, 0),
+                            ),
+                          )
+                        ])),
+                  ))
+            ])),
         elevation: 3,
         actions: [
           IconButton(
@@ -97,7 +110,9 @@ class _HomePageState extends State<HomePage> {
             onPressed: (() {}),
           ),
           const Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(
+              right: 15,
+            ),
             child: CircleAvatar(
               radius: 20,
               backgroundImage: AssetImage("assets/profile_pic.png"),

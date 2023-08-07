@@ -8,7 +8,6 @@ import 'package:utp_in_me/pages/digital_id.dart';
 import 'package:utp_in_me/pages/attendance_app.dart';
 import 'package:utp_in_me/pages/iAttend/iattend.dart';
 import 'package:utp_in_me/pages/parcel_hub.dart';
-//import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:utp_in_me/pages/exemption/exemption.dart';
@@ -18,7 +17,6 @@ import 'package:utp_in_me/pages/ucs.dart';
 import 'package:utp_in_me/pages/ulab.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/pages/ulibrary.dart';
-//import 'package:utp_in_me/pages/uschedule_course.dart';
 import 'package:utp_in_me/pages/uschedule/uschedule.dart';
 
 class MoreApp extends StatelessWidget {
@@ -31,10 +29,10 @@ class MoreApp extends StatelessWidget {
             child: ListView(children: [
               Padding(
                   padding: const EdgeInsets.only(
-                    top: 30,
+                    top: 5,
                     left: 5,
                     right: 5,
-                    bottom: 60,
+                    bottom: 15,
                   ),
                   child: Wrap(
                     spacing: 10,

@@ -8,6 +8,7 @@ import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/pages/ucampus.dart';
 import 'package:utp_in_me/pages/ulearn.dart';
 import 'package:utp_in_me/settings/profile.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -16,15 +17,41 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          ImageSlideshow(
+            indicatorColor: Theme.of(context).colorScheme.primary,
+            indicatorBackgroundColor: Theme.of(context).colorScheme.surface,
+            autoPlayInterval: 5000,
+            indicatorRadius: 4,
+            isLoop: true,
+            height: 231,
+            children: [
+              Image.asset(
+                'assets/carousel_pic/ulife_live.png',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/carousel_pic/1.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/carousel_pic/2.png',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/ch.jpg',
+                fit: BoxFit.cover,
+              ),
+            ],
+          ),
           Padding(
               padding: const EdgeInsets.only(
-                top: 20,
+                top: 5,
                 left: 5,
                 right: 5,
-                bottom: 60,
+                bottom: 0,
               ),
-              child: Container(
-                  color: const Color.fromARGB(0, 235, 0, 0),
+              child: SizedBox(
+                  //color: const Color.fromARGB(0, 235, 0, 0),
                   width: 200,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +73,7 @@ class Home extends StatelessWidget {
                           Padding(
                               padding: const EdgeInsets.only(
                                 top: 15,
-                                bottom: 15,
+                                bottom: 10,
                               ),
                               child: Container(
                                 alignment: Alignment.center,
@@ -511,7 +538,7 @@ class Home extends StatelessWidget {
                               )),
                           Padding(
                             padding: const EdgeInsets.only(
-                              top: 10,
+                              top: 0,
                               left: 15,
                               right: 15,
                               bottom: 0,
@@ -519,7 +546,8 @@ class Home extends StatelessWidget {
                             child: Row(
                               children: [
                                 const Text("My Calendar"),
-                                const Text("    |"),
+                                const Flexible(
+                                    fit: FlexFit.tight, child: SizedBox()),
                                 TextButton(
                                     onPressed: () {},
                                     child: const Text("View More"))
@@ -542,14 +570,14 @@ class Home extends StatelessWidget {
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(20)),
                                 ),
-                                child: const Align(
+                                child: Align(
                                     alignment: Alignment.center,
                                     child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Padding(
-                                            padding: EdgeInsets.only(
+                                            padding: const EdgeInsets.only(
                                               top: 0,
                                               left: 0,
                                               right: 0,
@@ -558,14 +586,47 @@ class Home extends StatelessWidget {
                                             child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
-                                              children: <Widget>[],
+                                              children: <Widget>[
+                                                Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                      top: 5,
+                                                      left: 15,
+                                                      right: 15,
+                                                      bottom: 5,
+                                                    ),
+                                                    child: Card(
+                                                      elevation: 3,
+                                                      shape:
+                                                          RoundedRectangleBorder(
+                                                        side: BorderSide(
+                                                          color:
+                                                              Theme.of(context)
+                                                                  .colorScheme
+                                                                  .primary,
+                                                        ),
+                                                        borderRadius:
+                                                            const BorderRadius
+                                                                    .all(
+                                                                Radius.circular(
+                                                                    20)),
+                                                      ),
+                                                      child: const SizedBox(
+                                                        width: 200,
+                                                        height: 50,
+                                                        child: Center(
+                                                            child: Text(
+                                                                'Nothing in your calendar')),
+                                                      ),
+                                                    )),
+                                              ],
                                             )),
                                       ],
                                     )),
                               )),
                           Padding(
                             padding: const EdgeInsets.only(
-                              top: 10,
+                              top: 0,
                               left: 15,
                               right: 15,
                               bottom: 0,
@@ -573,7 +634,8 @@ class Home extends StatelessWidget {
                             child: Row(
                               children: [
                                 const Text("News and announcement"),
-                                const Text("    |"),
+                                const Flexible(
+                                    fit: FlexFit.tight, child: SizedBox()),
                                 TextButton(
                                     onPressed: () {
                                       Navigator.push(
@@ -1061,12 +1123,6 @@ class Home extends StatelessWidget {
                                     )),
                               )),
                         ]),
-                        const Column(
-                          children: [
-                            Text(" "),
-                            Text(" "),
-                          ],
-                        ),
                       ])))
         ],
       ),

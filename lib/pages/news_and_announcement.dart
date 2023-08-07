@@ -27,21 +27,55 @@ class NewsAnnouncement extends StatelessWidget {
             child: Material(
               child: InkWell(
                 onTap: () {},
-                child: const Column(
+                child: Column(
                   children: <Widget>[
-                    Divider(),
                     Row(
                       children: [
-                        Column(
+                        Padding(
+                            padding: const EdgeInsets.only(
+                              top: 8,
+                              left: 10,
+                              right: 10,
+                              //bottom: 15,
+                            ),
+                            child: SizedBox(
+                              width: 150,
+                              height: 150,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  child: Image.asset(
+                                    'assets/ch.jpg',
+                                    fit: BoxFit.cover,
+                                  )),
+                            )),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("NEWS Title 1"),
                             Text("News content"),
-                            Text("Date : 12/12/2012")
+                            //Flexible(fit: FlexFit.tight, child: SizedBox()),
+                            Text("Date : 12/12/2012"),
+                          ],
+                        ),
+                        const Flexible(fit: FlexFit.tight, child: SizedBox()),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.share_rounded),
+                              iconSize: 20,
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.bookmark_rounded),
+                              iconSize: 20,
+                            ),
                           ],
                         ),
                       ],
                     ),
-                    Divider(),
+                    const Divider(),
                   ],
                 ),
               ),

@@ -3,7 +3,7 @@ description: An Universiti Teknologi PETRONAS application
 
 publish_to: 'none'
 
-version: 23.6.13
+version: 23.8.71156
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -27,7 +27,7 @@ dependencies:
   dynamic_color: ^1.5.4
   quick_actions: ^1.0.1
   #adaptive_navigation: ^0.0.9
-  latlong2: ^0.8.1
+  #latlong2: ^0.8.1
   qr_code_scanner: ^1.0.1
   xml2json: ^6.0.0
   http: ^0.13.4
@@ -35,6 +35,8 @@ dependencies:
   cached_network_image: ^3.2.0
   #flutter_html: ^2.2.1
   webfeed_revised: ^0.7.0
+  flutter_image_slideshow: ^0.1.6
+  firebase_core: ^2.15.0
 
   
  
@@ -57,6 +59,10 @@ flutter:
   - assets/chan.jpg
   - assets/UTP-logo.png
   - assets/ch.jpg
+  - assets/app_logo.png
+  - assets/carousel_pic/ulife_live.png
+  - assets/carousel_pic/1.jpg
+  - assets/carousel_pic/2.png
 
   fonts:
       - family: GoogleSans
