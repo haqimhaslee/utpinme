@@ -13,8 +13,8 @@ class _LicensesState extends State<Licenses> {
     return Scaffold(
         body: CustomScrollView(
       slivers: [
-        SliverAppBar.large(
-          title: const Text('Licenses'),
+        const SliverAppBar.large(
+          title: Text('Licenses'),
         ),
         SliverToBoxAdapter(
           child: Column(
