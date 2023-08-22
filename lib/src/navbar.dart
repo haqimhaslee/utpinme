@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
 import 'package:utp_in_me/pages/digital_id.dart';
-import 'package:utp_in_me/pages/home.dart';
+import 'package:utp_in_me/pages/home/home.dart';
 import 'package:utp_in_me/pages/panic_button.dart';
 import 'package:utp_in_me/pages/more_app.dart';
 import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.background,
         toolbarHeight: 70,
         title: Padding(
             padding: const EdgeInsets.only(
@@ -76,32 +77,21 @@ class _HomePageState extends State<HomePage> {
                     'assets/app_logo.png',
                     fit: BoxFit.cover,
                   )),
-              Padding(
-                  padding: const EdgeInsets.only(
-                    left: 13,
+              const Padding(
+                  padding: EdgeInsets.only(
+                    top: 9,
+                    left: 23,
+                    bottom: 9,
                   ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.secondaryContainer,
-                      borderRadius: const BorderRadius.all(Radius.circular(50)),
-                    ),
-                    child: const Padding(
-                        padding: EdgeInsets.only(
-                          top: 9,
-                          left: 18,
-                          right: 18,
-                          bottom: 9,
-                        ),
-                        child: Column(children: [
-                          Text(
-                            'Welcome, UTPians!',
-                            style: TextStyle(
-                              fontSize: 17,
-                              //color: Color.fromARGB(186, 0, 0, 0),
-                            ),
-                          )
-                        ])),
-                  ))
+                  child: Column(children: [
+                    Text(
+                      'Welcome, UTPians!',
+                      style: TextStyle(
+                        fontSize: 17,
+                        //color: Color.fromARGB(186, 0, 0, 0),
+                      ),
+                    )
+                  ]))
             ])),
         elevation: 3,
         actions: [
@@ -155,6 +145,7 @@ class _HomePageState extends State<HomePage> {
           NavigationRail(
             elevation: 3,
             labelType: NavigationRailLabelType.all,
+            backgroundColor: Theme.of(context).colorScheme.background,
             groupAlignment: 0,
             selectedIndex: _selectedIndex,
             onDestinationSelected: (int index) {

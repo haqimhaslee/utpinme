@@ -17,8 +17,8 @@ class _MicrosoftProfileViewerState extends State<MicrosoftProfileViewer> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(slivers: [
-        SliverAppBar.large(
-          title: const Text('Microsoft Profile'),
+        const SliverAppBar.large(
+          title: Text('Microsoft Profile'),
         ),
         SliverToBoxAdapter(
           child: Column(

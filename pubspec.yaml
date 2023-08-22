@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.5
+  flutter_adaptive_scaffold: ^0.1.6
   gridview_menu: ^1.0.6
   flutter_polyline_points: ^1.0.0
   webview_flutter: ^4.0.2
@@ -20,7 +21,7 @@ dependencies:
   google_maps_flutter: ^2.4.0
   qr_flutter: ^4.1.0
   google_fonts: ^4.0.4
-  material_color_utilities: ^0.2.0
+  material_color_utilities: ^0.5.0
   #location: ^4.4.0
   flutter_svg: ^2.0.0+1
   #permission_handler: ^10.2.0

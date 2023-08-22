@@ -13,8 +13,8 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     return Scaffold(
         body: CustomScrollView(
       slivers: [
-        SliverAppBar.large(
-          title: const Text('Privacy & Policy'),
+        const SliverAppBar.large(
+          title: Text('Privacy & Policy'),
         ),
         SliverToBoxAdapter(
           child: Column(

@@ -9,9 +9,6 @@ void main() {
     systemNavigationBarColor: Colors.transparent,
   ));
 
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
       overlays: [SystemUiOverlay.top]);
 }
