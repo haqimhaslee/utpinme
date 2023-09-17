@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
-import 'package:utp_in_me/pages/digital_id.dart';
+import 'package:utp_in_me/pages/digital_id/digital_id.dart';
 import 'package:utp_in_me/pages/home/home.dart';
-import 'package:utp_in_me/pages/panic_button.dart';
+import 'package:utp_in_me/pages/news_and_notification/news_and_notification.dart';
 import 'package:utp_in_me/pages/more_app.dart';
 import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
-import 'package:utp_in_me/pages/ucs.dart';
-import 'package:utp_in_me/pages/ulearn.dart';
+import 'package:utp_in_me/settings/profile.dart';
+import 'package:animations/animations.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,6 +18,49 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final quickActions = const QuickActions();
+  void uLearnWeb() async {
+    try {
+      launch(
+        'https://ulearn.utp.edu.my/login/index.php',
+        customTabsOption: CustomTabsOption(
+          toolbarColor: Theme.of(context).colorScheme.background,
+          showPageTitle: true,
+          //enableDefaultShare: false
+        ),
+        safariVCOption: const SafariViewControllerOption(
+          preferredBarTintColor: Colors.blue,
+          preferredControlTintColor: Colors.white,
+          barCollapsingEnabled: true,
+          entersReaderIfAvailable: true,
+          dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
+  void ucsWeb() async {
+    try {
+      launch(
+        'https://ucs.utp.edu.my/',
+        customTabsOption: CustomTabsOption(
+          toolbarColor: Theme.of(context).colorScheme.background,
+          showPageTitle: true,
+          //enableDefaultShare: false
+        ),
+        safariVCOption: const SafariViewControllerOption(
+          preferredBarTintColor: Colors.blue,
+          preferredControlTintColor: Colors.white,
+          barCollapsingEnabled: true,
+          entersReaderIfAvailable: true,
+          dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+        ),
+      );
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
 
   @override
   void initState() {
@@ -34,17 +78,15 @@ class _HomePageState extends State<HomePage> {
     ]);
     quickActions.initialize((type) {
       if (type == 'ulearn') {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const ULearn()));
+        uLearnWeb();
       } else if (type == 'digitalid') {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const DigitalId()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => DigitalId()));
       } else if (type == 'shuttlebus') {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const ShuttleBus()));
       } else if (type == 'ucs') {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const UCSPortal()));
+        ucsWeb();
       }
     });
   }
@@ -53,126 +95,71 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _windgetOption = <Widget>[
     const Home(),
     const MoreApp(),
-    const HotlineApp(),
+    const NotificationPage(),
+    Profile(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        toolbarHeight: 70,
-        title: Padding(
-            padding: const EdgeInsets.only(
-              //top: 30,
-              left: 0,
-              right: 0,
-              //bottom: 60,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.background,
+          toolbarHeight: 70,
+          title: Padding(
+              padding: const EdgeInsets.only(
+                left: 0,
+                right: 0,
+              ),
+              child: Row(children: [
+                SizedBox(
+                    height: 28,
+                    width: 76,
+                    child: Image.asset(
+                      'assets/app_logo.png',
+                      fit: BoxFit.cover,
+                    )),
+              ])),
+        ),
+        bottomNavigationBar: NavigationBar(
+          selectedIndex: _selectedIndex,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+          onDestinationSelected: (int newIndex) {
+            setState(() {
+              _selectedIndex = newIndex;
+            });
+          },
+          destinations: const [
+            NavigationDestination(
+              selectedIcon: Icon(Icons.home_rounded),
+              icon: Icon(Icons.home_outlined),
+              label: 'Home',
             ),
-            child: Row(children: [
-              SizedBox(
-                  height: 28,
-                  width: 76,
-                  child: Image.asset(
-                    'assets/app_logo.png',
-                    fit: BoxFit.cover,
-                  )),
-              const Padding(
-                  padding: EdgeInsets.only(
-                    top: 9,
-                    left: 23,
-                    bottom: 9,
-                  ),
-                  child: Column(children: [
-                    Text(
-                      'Welcome, UTPians!',
-                      style: TextStyle(
-                        fontSize: 17,
-                        //color: Color.fromARGB(186, 0, 0, 0),
-                      ),
-                    )
-                  ]))
-            ])),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_rounded),
-            onPressed: (() {}),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.grid_view_rounded),
+              icon: Icon(Icons.grid_view_outlined),
+              label: 'Application',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.feed_rounded),
+              icon: Icon(Icons.feed_outlined),
+              label: 'News',
+            ),
+            NavigationDestination(
+              selectedIcon: Icon(Icons.person_rounded),
+              icon: Icon(Icons.person_outline_rounded),
+              label: 'Profile',
+            ),
+          ],
+        ),
+        body: PageTransitionSwitcher(
+          duration: const Duration(milliseconds: 300),
+          transitionBuilder: (child, animation, secondaryAnimation) =>
+              FadeThroughTransition(
+            animation: animation,
+            secondaryAnimation: secondaryAnimation,
+            child: child,
           ),
-          const Padding(
-            padding: EdgeInsets.only(
-              right: 15,
-            ),
-            child: CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage("assets/profile_pic.png"),
-            ),
-          )
-        ],
-        //backgroundColor: Color.fromARGB(255, 224, 234, 255),
-      ),
-      bottomNavigationBar: MediaQuery.of(context).size.width < 640
-          ? NavigationBar(
-              selectedIndex: _selectedIndex,
-              labelBehavior:
-                  NavigationDestinationLabelBehavior.onlyShowSelected,
-              onDestinationSelected: (int newIndex) {
-                setState(() {
-                  _selectedIndex = newIndex;
-                });
-              },
-              destinations: const [
-                NavigationDestination(
-                  selectedIcon: Icon(Icons.home_rounded),
-                  icon: Icon(Icons.home_rounded),
-                  label: 'Home',
-                ),
-                NavigationDestination(
-                  selectedIcon: Icon(Icons.grid_view_rounded),
-                  icon: Icon(Icons.grid_view_rounded),
-                  label: 'Application',
-                ),
-                NavigationDestination(
-                  selectedIcon: Icon(Icons.emergency_rounded),
-                  icon: Icon(Icons.emergency_rounded),
-                  label: 'Emergency',
-                ),
-              ],
-            )
-          : null,
-      body: Row(children: [
-        if (MediaQuery.of(context).size.width >= 640)
-          NavigationRail(
-            elevation: 3,
-            labelType: NavigationRailLabelType.all,
-            backgroundColor: Theme.of(context).colorScheme.background,
-            groupAlignment: 0,
-            selectedIndex: _selectedIndex,
-            onDestinationSelected: (int index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            destinations: const <NavigationRailDestination>[
-              NavigationRailDestination(
-                selectedIcon: Icon(Icons.home_rounded),
-                icon: Icon(Icons.home_rounded),
-                label: Text('Home'),
-              ),
-              NavigationRailDestination(
-                selectedIcon: Icon(Icons.grid_view_rounded),
-                icon: Icon(Icons.grid_view_rounded),
-                label: Text('Application'),
-              ),
-              NavigationRailDestination(
-                selectedIcon: Icon(Icons.emergency_rounded),
-                icon: Icon(Icons.emergency_rounded),
-                label: Text('Emergency'),
-              ),
-            ],
-          ),
-        Expanded(child: _windgetOption.elementAt(_selectedIndex)),
-      ]),
-    );
+          child: _windgetOption.elementAt(_selectedIndex),
+        ));
   }
 }

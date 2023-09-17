@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/exemption/exemption_approved.dart';
-import 'package:utp_in_me/pages/exemption/exemption_myrequest.dart';
-import 'package:utp_in_me/pages/exemption/exemption_newsubmit.dart';
+import 'package:utp_in_me/pages/el_tigre_exemption/exemption_approved.dart';
+import 'package:utp_in_me/pages/el_tigre_exemption/exemption_myrequest.dart';
+import 'package:utp_in_me/pages/el_tigre_exemption/exemption_newsubmit.dart';
 
 class ExemptionApp extends StatelessWidget {
   const ExemptionApp({super.key});

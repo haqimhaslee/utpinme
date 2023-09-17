@@ -23,20 +23,16 @@ class ShuttleBus extends StatelessWidget {
           bottom: const TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Internal",
               ),
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "External",
               ),
               Tab(
-                icon: Icon(Icons.directions_bus_filled_rounded),
                 text: "Weekend",
               ),
               Tab(
-                icon: Icon(Icons.pin_drop_rounded),
-                text: "Bus Finder",
+                text: "Live Bus",
               )
             ],
           ),

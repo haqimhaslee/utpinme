@@ -12,14 +12,14 @@ class MaterialTestPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             elevation: 3,
-            title: const Text('Material Library Page'),
+            title: const Text('Developers Page'),
             bottom: const TabBar(tabs: [
               Tab(
-                //text: "Widget",
+                text: "Widget/Component",
                 icon: Icon(Icons.widgets_rounded),
               ),
               Tab(
-                //text: "Color",
+                text: "Color  Palette",
                 icon: Icon(Icons.palette_rounded),
               ),
             ])),

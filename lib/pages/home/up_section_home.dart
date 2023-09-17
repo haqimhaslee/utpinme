@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:utp_in_me/pages/attendance_app.dart';
-import 'package:utp_in_me/pages/digital_id.dart';
-import 'package:utp_in_me/pages/exemption/exemption.dart';
+import 'package:utp_in_me/pages/digital_id/digital_id.dart';
+import 'package:utp_in_me/pages/el_tigre_exemption/exemption.dart';
+import 'package:utp_in_me/pages/panic_button.dart';
 import 'package:utp_in_me/pages/parcel_hub.dart';
 import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
-import 'package:utp_in_me/pages/ucampus.dart';
-import 'package:utp_in_me/pages/ulearn.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:utp_in_me/settings/profile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class UpSectionHome extends StatefulWidget {
   const UpSectionHome({super.key});
@@ -17,32 +17,189 @@ class UpSectionHome extends StatefulWidget {
 }
 
 class _UpSectionHomeState extends State<UpSectionHome> {
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
+    void attenndanceWeb() async {
+      try {
+        launch(
+          'https://apps.powerapps.com/play/e/default-84187be3-037e-41ec-889c-a150fe476432/a/afab9b41-ef46-4e5d-988b-2d0dce08234d?tenantId=84187be3-037e-41ec-889c-a150fe476432&source=portal',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: const SafariViewControllerOption(
+            preferredBarTintColor: Colors.blue,
+            preferredControlTintColor: Colors.white,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
+    void uLearnWeb() async {
+      try {
+        launch(
+          'https://ulearn.utp.edu.my/login/index.php',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: const SafariViewControllerOption(
+            preferredBarTintColor: Colors.blue,
+            preferredControlTintColor: Colors.white,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
+    void ucampusWeb() async {
+      try {
+        launch(
+          'https://ucampus.utp.edu.my/',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: const SafariViewControllerOption(
+            preferredBarTintColor: Colors.blue,
+            preferredControlTintColor: Colors.white,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
     return Column(
       children: [
-        ImageSlideshow(
-          indicatorColor: Theme.of(context).colorScheme.primary,
-          indicatorBackgroundColor: Theme.of(context).colorScheme.surface,
-          autoPlayInterval: 5000,
-          indicatorRadius: 3.5,
-          isLoop: true,
-          width: 420,
-          height: 231,
-          children: [
-            Image.asset(
-              'assets/carousel_pic/ulife_live.png',
-              fit: BoxFit.cover,
+        Padding(
+            padding: const EdgeInsets.only(
+              top: 15,
+              bottom: 15,
+              left: 7,
+              right: 7,
             ),
-            Image.asset(
-              'assets/carousel_pic/1.jpg',
-              fit: BoxFit.cover,
+            child: Card(
+              elevation: 2,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width - 10,
+                height: 100,
+                child: Center(
+                    child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(
+                        left: 10,
+                        right: 10,
+                      ),
+                      child: CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage("assets/profile_pic.png"),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          '<name>',
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                        Text(
+                          user.email!,
+                          style: Theme.of(context).textTheme.labelSmall,
+                        )
+                      ],
+                    ),
+                    const Flexible(fit: FlexFit.tight, child: SizedBox()),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        right: 10,
+                      ),
+                      child: SizedBox.fromSize(
+                        size: const Size(55, 55),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Material(
+                            color: Theme.of(context).colorScheme.error,
+                            child: InkWell(
+                              splashColor:
+                                  Theme.of(context).colorScheme.errorContainer,
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PanicButton()));
+                              },
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.emergency_rounded,
+                                    size: 30,
+                                    color:
+                                        Theme.of(context).colorScheme.onError,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )),
+              ),
+            )),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 10,
+            right: 10,
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15.0),
+            child: ImageSlideshow(
+              indicatorColor: Theme.of(context).colorScheme.primary,
+              indicatorBackgroundColor: Theme.of(context).colorScheme.surface,
+              autoPlayInterval: 5000,
+              indicatorRadius: 3.5,
+              isLoop: true,
+              width: MediaQuery.of(context).size.width - 20,
+              height: ((MediaQuery.of(context).size.width - 20) / 16) * 9,
+              children: [
+                Image.asset(
+                  'assets/carousel_pic/ulife_live.png',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/carousel_pic/1.jpg',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/carousel_pic/2.png',
+                  fit: BoxFit.cover,
+                ),
+              ],
             ),
-            Image.asset(
-              'assets/carousel_pic/2.png',
-              fit: BoxFit.cover,
-            ),
-          ],
+          ),
         ),
         const Padding(
           padding: EdgeInsets.only(
@@ -61,13 +218,12 @@ class _UpSectionHomeState extends State<UpSectionHome> {
           ),
         ),
         Padding(
-            padding: const EdgeInsets.only(
-              top: 15,
-              bottom: 10,
-            ),
+            padding:
+                const EdgeInsets.only(left: 10, right: 10, top: 15, bottom: 30),
             child: Container(
               alignment: Alignment.center,
-              width: 380,
+              width: MediaQuery.of(context).size.width - 20,
+              height: 160,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.secondaryContainer,
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -79,21 +235,18 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                     children: [
                       Padding(
                           padding: const EdgeInsets.only(
-                            top: 0,
+                            top: 10,
                             left: 0,
                             right: 0,
-                            bottom: 0,
+                            bottom: 10,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -111,7 +264,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const Profile()));
+                                                      Profile()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
@@ -131,13 +284,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -150,13 +300,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                         splashColor: Theme.of(context)
                                             .colorScheme
                                             .primary,
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const UCampus()));
-                                        },
+                                        onTap: ucampusWeb,
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -175,13 +319,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -194,13 +335,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                         splashColor: Theme.of(context)
                                             .colorScheme
                                             .primary,
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const ULearn()));
-                                        },
+                                        onTap: uLearnWeb,
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -219,13 +354,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -243,7 +375,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const DigitalId()));
+                                                      DigitalId()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
@@ -263,6 +395,8 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                             ],
                           )),
                       Padding(
@@ -270,18 +404,15 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                             top: 0,
                             left: 0,
                             right: 0,
-                            bottom: 0,
+                            bottom: 10,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -294,13 +425,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                         splashColor: Theme.of(context)
                                             .colorScheme
                                             .primary,
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const AttendanceApp()));
-                                        },
+                                        onTap: attenndanceWeb,
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -319,13 +444,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -363,13 +485,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -407,13 +526,10 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 15,
-                                  left: 20,
-                                  right: 20,
-                                  bottom: 15,
-                                ),
+                                padding: const EdgeInsets.only(),
                                 child: SizedBox.fromSize(
                                   size: const Size(55, 55),
                                   child: ClipRRect(
@@ -452,82 +568,8 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ),
                                 ),
                               ),
-                            ],
-                          )),
-                    ],
-                  )),
-            )),
-        Padding(
-            padding: const EdgeInsets.only(
-              top: 0,
-              left: 15,
-              right: 15,
-              bottom: 0,
-            ),
-            child: SizedBox(
-              width: 380,
-              child: Row(
-                children: [
-                  const Text("My Calendar"),
-                  const Flexible(fit: FlexFit.tight, child: SizedBox()),
-                  TextButton(onPressed: () {}, child: const Text("View More"))
-                ],
-              ),
-            )),
-        Padding(
-            padding: const EdgeInsets.only(
-              top: 5,
-              bottom: 15,
-            ),
-            child: Container(
-              alignment: Alignment.center,
-              width: 380,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onInverseSurface,
-                borderRadius: const BorderRadius.all(Radius.circular(20)),
-              ),
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                          padding: const EdgeInsets.only(
-                            top: 0,
-                            left: 5,
-                            right: 5,
-                            bottom: 0,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 5,
-                                    left: 15,
-                                    right: 15,
-                                    bottom: 5,
-                                  ),
-                                  child: Card(
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                      side: BorderSide(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .primary,
-                                      ),
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(20)),
-                                    ),
-                                    child: const SizedBox(
-                                      width: 200,
-                                      height: 50,
-                                      child: Center(
-                                          child:
-                                              Text('Nothing in your calendar')),
-                                    ),
-                                  )),
+                              const Flexible(
+                                  fit: FlexFit.tight, child: SizedBox()),
                             ],
                           )),
                     ],

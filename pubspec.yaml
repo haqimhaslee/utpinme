@@ -32,14 +32,20 @@ dependencies:
   qr_code_scanner: ^1.0.1
   xml2json: ^6.0.0
   http: ^0.13.4
-  url_launcher: ^6.0.18
+  url_launcher: ^6.1.14
   cached_network_image: ^3.2.0
   #flutter_html: ^2.2.1
   webfeed_revised: ^0.7.0
   flutter_image_slideshow: ^0.1.6
-  firebase_core: ^2.15.0
-
-  
+  firebase_core: ^2.15.1
+  firebase_auth: ^4.9.0
+  syncfusion_flutter_datagrid: ^22.2.12
+  awesome_ripple_animation: ^1.0.2
+  animations: ^2.0.8
+  loading_animation_widget: ^1.2.0+4
+  flutter_custom_tabs: ^1.2.1
+  geolocator: ^10.0.1
+ 
  
  
   

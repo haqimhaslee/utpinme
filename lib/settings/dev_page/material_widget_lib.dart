@@ -35,7 +35,8 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         Column(
           children: [
-            const Text("    "),
+            const Text("   "),
+            const Text("Button & Snackbar"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -92,13 +93,43 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
               ],
             ),
             const Text("       "),
-            FloatingActionButton(
-              onPressed: (() {}),
-              child: const Icon(Icons.notifications_rounded),
+            const Text("   "),
+            const Text("Floating Action Button (FAB)"),
+            const Text("   "),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FloatingActionButton.small(
+                  onPressed: (() {}),
+                  child: const Icon(Icons.add),
+                ),
+                const Text("    "),
+                FloatingActionButton(
+                  onPressed: (() {}),
+                  child: const Icon(Icons.add),
+                ),
+                const Text("    "),
+                FloatingActionButton.large(
+                  onPressed: (() {}),
+                  child: const Icon(Icons.add),
+                ),
+                const Text("    "),
+                FloatingActionButton.extended(
+                  onPressed: (() {}),
+                  label: const Text('Add'),
+                  icon: const Icon(Icons.add),
+                ),
+              ],
             ),
             const Text("       "),
+            const Text("   "),
+            const Text("Checkbox"),
+            const Text("   "),
             Checkbox(value: isChecked, onChanged: (bool? value) {}),
             const Text("       "),
+            const Text("   "),
+            const Text("Switch"),
+            const Text("   "),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -130,6 +161,8 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
               ],
             ),
             const Text("       "),
+            const Text("   "),
+            const Text("Slider"),
             Slider(
               value: _currentSliderValue,
               max: 100,
@@ -141,7 +174,28 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
                 });
               },
             ),
-            const Text("       "),
+            Slider(
+              value: _currentSliderValue,
+              max: 100,
+              divisions: 10,
+              label: _currentSliderValue.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _currentSliderValue = value;
+                });
+              },
+            ),
+            Slider(
+              value: _currentSliderValue,
+              max: 100,
+              divisions: 5,
+              label: _currentSliderValue.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _currentSliderValue = value;
+                });
+              },
+            ),
             Slider(
               value: _currentSliderPrimaryValue,
               secondaryTrackValue: _currentSliderSecondaryValue,
@@ -161,13 +215,11 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
                 });
               },
             ),
-            const Text("       "),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Text(
-                  'Choose chip',
-                ),
+                const Text("   "),
+                const Text("Chip"),
                 const SizedBox(height: 5.0),
                 Wrap(
                   spacing: 5.0,

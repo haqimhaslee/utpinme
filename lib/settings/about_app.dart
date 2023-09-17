@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/srcutp_popup.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({super.key});
   @override
   Widget build(BuildContext context) {
+    void srcutpWeb() async {
+      try {
+        launch(
+          'https://srcutp.org',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: const SafariViewControllerOption(
+            preferredBarTintColor: Colors.blue,
+            preferredControlTintColor: Colors.white,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 70,
@@ -449,13 +471,7 @@ class AboutApp extends StatelessWidget {
                       children: [
                         const Text(" "),
                         ElevatedButton(
-                          onPressed: (() => {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SrcutpPopupPage()))
-                              }),
+                          onPressed: srcutpWeb,
                           child: const Text('SRCUTP Official Website'),
                         ),
                         const Text(" "),

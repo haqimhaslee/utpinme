@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/auth/login_page.dart';
 import 'package:utp_in_me/auth/microsoft_account_portal.dart';
-import 'package:utp_in_me/auth/utp_net_id.dart';
 
 class ForgotPass extends StatefulWidget {
   const ForgotPass({super.key});
@@ -36,12 +35,7 @@ class _ForgotPassState extends State<ForgotPass> {
                   minimumSize: const Size.fromHeight(50),
                 ),
                 child: const Text('UTP Net ID'),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const UtpNetIdLogin()));
-                },
+                onPressed: () {},
               )),
           Container(
               height: 150,

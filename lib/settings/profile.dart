@@ -1,5 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/feedback.dart';
 import 'package:utp_in_me/settings/app_privacy_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
@@ -7,14 +8,38 @@ import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
 import 'package:utp_in_me/settings/utp_net_id.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+  Profile({super.key});
+
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
+    void feedbackWeb() async {
+      try {
+        launch(
+          'https://forms.office.com/r/GV0Hn0VxP5',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: const SafariViewControllerOption(
+            preferredBarTintColor: Colors.blue,
+            preferredControlTintColor: Colors.white,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 70,
-        title: const Text('Profile'),
-      ),
       body: ListView(
         children: [
           Container(
@@ -25,7 +50,7 @@ class Profile extends StatelessWidget {
                     Column(children: [
                       Padding(
                           padding: const EdgeInsets.only(
-                            top: 30,
+                            top: 15,
                             left: 15,
                             right: 15,
                             bottom: 7.5,
@@ -64,7 +89,7 @@ class Profile extends StatelessWidget {
                                       ),
                                     ),
                                     Text(
-                                      "<email_azure_aad>",
+                                      user.email!,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         color: Theme.of(context)
@@ -76,130 +101,6 @@ class Profile extends StatelessWidget {
                                   ],
                                 )),
                           )),
-                      Padding(
-                          padding: const EdgeInsets.only(
-                            top: 7.5,
-                            left: 15,
-                            right: 15,
-                            bottom: 50,
-                          ),
-                          child: Wrap(
-                              spacing: 10,
-                              runSpacing: 10,
-                              alignment: WrapAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .tertiaryContainer,
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(30)),
-                                  ),
-                                  width: 120,
-                                  //height: 180,
-                                  child: Align(
-                                      alignment: Alignment.center,
-                                      child: Column(
-                                        children: [
-                                          const Text(" "),
-                                          Text(
-                                            "Course",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          Text(
-                                            "<course>",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          const Text(" "),
-                                        ],
-                                      )),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .tertiaryContainer,
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(30)),
-                                  ),
-                                  width: 120,
-                                  //height: 180,
-                                  child: Align(
-                                      alignment: Alignment.center,
-                                      child: Column(
-                                        children: [
-                                          const Text(" "),
-                                          Text(
-                                            "CGPA",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          Text(
-                                            "<results>",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          const Text(" "),
-                                        ],
-                                      )),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .tertiaryContainer,
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(30)),
-                                  ),
-                                  width: 120,
-                                  //height: 180,
-                                  child: Align(
-                                      alignment: Alignment.center,
-                                      child: Column(
-                                        children: [
-                                          const Text(" "),
-                                          Text(
-                                            "Village",
-                                            style: TextStyle(
-                                              fontSize: 20,
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          Text(
-                                            "<village_ad>",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                              color: Theme.of(context)
-                                                  .colorScheme
-                                                  .onTertiaryContainer,
-                                            ),
-                                          ),
-                                          const Text(" "),
-                                        ],
-                                      )),
-                                ),
-                              ])),
                       Padding(
                           padding: const EdgeInsets.only(
                             top: 5,
@@ -428,13 +329,7 @@ class Profile extends StatelessWidget {
                                           .secondaryContainer,
                                       child: InkWell(
                                         //splashColor:Color.fromARGB(255, 191, 217, 255),
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const FeedbackForm()));
-                                        },
+                                        onTap: feedbackWeb,
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -500,7 +395,6 @@ class Profile extends StatelessWidget {
                                           .colorScheme
                                           .secondaryContainer,
                                       child: InkWell(
-                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: () {
                                           Navigator.push(
                                               context,
@@ -526,13 +420,21 @@ class Profile extends StatelessWidget {
                                     ),
                                   ),
                                 ),
+                                Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 15,
+                                      bottom: 15,
+                                    ),
+                                    child: TextButton(
+                                        style: TextButton.styleFrom(
+                                            foregroundColor: Theme.of(context)
+                                                .colorScheme
+                                                .error),
+                                        onPressed: signUserOut,
+                                        child: const Text('Log out')))
                               ],
                             )),
                           )),
-                      const Text(" "),
-                      const Text("Universiti Teknologi PETRONAS ©️"),
-                      const Text(" "),
-                      const Text(" "),
                     ]),
                   ]))
         ],
