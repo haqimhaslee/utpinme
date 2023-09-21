@@ -22,7 +22,7 @@ class LmgPass extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
                 boxShadow: const [
                   BoxShadow(
                     color: Color.fromARGB(0, 0, 0, 0),
@@ -52,7 +52,7 @@ class LmgPass extends StatelessWidget {
                           children: [
                             Text(
                               "Universiti Teknologi PETRONAS",
-                              style: Theme.of(context).textTheme.titleLarge,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
                         ),
@@ -100,7 +100,7 @@ class LmgPass extends StatelessWidget {
                             ),
                             Text(
                               "<name>",
-                              style: Theme.of(context).textTheme.titleLarge,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
                         ),
@@ -210,8 +210,8 @@ class LmgPass extends StatelessWidget {
                             child: Column(children: [
                               ClipRRect(
                                 borderRadius: const BorderRadius.only(
-                                  bottomRight: Radius.circular(30),
-                                  bottomLeft: Radius.circular(30),
+                                  bottomRight: Radius.circular(20),
+                                  bottomLeft: Radius.circular(20),
                                 ),
                                 child: Container(
                                   decoration: const BoxDecoration(
@@ -223,8 +223,8 @@ class LmgPass extends StatelessWidget {
                                     size: const Size(400, 90),
                                     child: ClipRRect(
                                       borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(30),
-                                        bottomLeft: Radius.circular(30),
+                                        bottomRight: Radius.circular(20),
+                                        bottomLeft: Radius.circular(20),
                                       ),
                                       child: Material(
                                         color: const Color.fromARGB(

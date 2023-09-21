@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
 import 'package:utp_in_me/pages/digital_id/digital_id.dart';
 import 'package:utp_in_me/pages/home/home.dart';
-import 'package:utp_in_me/pages/news_and_notification/news_and_notification.dart';
 import 'package:utp_in_me/pages/more_app.dart';
+import 'package:utp_in_me/pages/news_and_notification/notification.dart';
 import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:animations/animations.dart';
@@ -95,16 +95,16 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _windgetOption = <Widget>[
     const Home(),
     const MoreApp(),
-    const NotificationPage(),
-    Profile(),
+    const NewsNotification(),
+    const Profile(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.background,
           toolbarHeight: 70,
+          //elevation: 1,
           title: Padding(
               padding: const EdgeInsets.only(
                 left: 0,
@@ -122,6 +122,9 @@ class _HomePageState extends State<HomePage> {
         ),
         bottomNavigationBar: NavigationBar(
           selectedIndex: _selectedIndex,
+          //backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+          animationDuration: const Duration(milliseconds: 400),
+          //indicatorColor: Theme.of(context).colorScheme.background,
           labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
           onDestinationSelected: (int newIndex) {
             setState(() {
@@ -140,9 +143,9 @@ class _HomePageState extends State<HomePage> {
               label: 'Application',
             ),
             NavigationDestination(
-              selectedIcon: Icon(Icons.feed_rounded),
-              icon: Icon(Icons.feed_outlined),
-              label: 'News',
+              selectedIcon: Icon(Icons.notifications_rounded),
+              icon: Icon(Icons.notifications_outlined),
+              label: 'Notification',
             ),
             NavigationDestination(
               selectedIcon: Icon(Icons.person_rounded),
@@ -152,7 +155,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: PageTransitionSwitcher(
-          duration: const Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 250),
           transitionBuilder: (child, animation, secondaryAnimation) =>
               FadeThroughTransition(
             animation: animation,

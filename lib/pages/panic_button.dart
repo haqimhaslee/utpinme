@@ -55,9 +55,13 @@ class PanicButton extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Emergency',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
+          ),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
               color: const Color.fromARGB(0, 255, 255, 255),
@@ -114,7 +118,7 @@ class PanicButton extends StatelessWidget {
                                               textAlign: TextAlign.center,
                                               softWrap: true,
                                               style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: 13,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onTertiaryContainer,
@@ -124,7 +128,7 @@ class PanicButton extends StatelessWidget {
                                               "Fire / Gas leak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: 13,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onTertiaryContainer,
@@ -174,7 +178,8 @@ class PanicButton extends StatelessWidget {
                                     Text(
                                       "Emergency",
                                       style: TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w900,
                                         color: Theme.of(context)
                                             .colorScheme
                                             .onError,
@@ -278,7 +283,54 @@ class PanicButton extends StatelessWidget {
                         ),
                         const Text(" "),
                         const Text(" "),
-                        const Text(" "),
+                        const Text(
+                          "Hotline",
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 10,
+                            left: 15,
+                            right: 15,
+                          ),
+                          child: Card(
+                            elevation: 3,
+                            color:
+                                Theme.of(context).colorScheme.primaryContainer,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(13),
+                              child: Material(
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: const Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 20,
+                                              left: 20,
+                                              right: 10,
+                                              bottom: 20,
+                                            ),
+                                            child: Icon(Icons.phone_rounded),
+                                          ),
+                                          Text("RV"),
+                                          Flexible(
+                                              fit: FlexFit.tight,
+                                              child: SizedBox()),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ]))

@@ -45,6 +45,7 @@ dependencies:
   loading_animation_widget: ^1.2.0+4
   flutter_custom_tabs: ^1.2.1
   geolocator: ^10.0.1
+  package_info_plus: ^4.1.0
  
  
  
@@ -77,4 +78,7 @@ flutter:
           - asset: assets/fonts/google_sans_regular.ttf
           - asset: assets/fonts/google_sans_italic.ttf
             style: italic
+      - family: Kaleko
+        fonts:
+          - asset: assets/fonts/kaleko_regular.ttf
  

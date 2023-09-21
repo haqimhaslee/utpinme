@@ -1,20 +1,47 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/settings/app_privacy_policy.dart';
+import 'package:utp_in_me/settings/contact_us.dart';
 import 'package:utp_in_me/settings/about_app.dart';
 import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
-import 'package:utp_in_me/settings/microsoft/microsoft_profile_viewer.dart';
-import 'package:utp_in_me/settings/utp_net_id.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
-class Profile extends StatelessWidget {
-  Profile({super.key});
+class Profile extends StatefulWidget {
+  const Profile({super.key});
+
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  PackageInfo _packageInfo = PackageInfo(
+    appName: 'Unknown',
+    packageName: 'Unknown',
+    version: 'Unknown',
+    buildNumber: 'Unknown',
+    buildSignature: 'Unknown',
+    installerStore: 'Unknown',
+  );
 
   void signUserOut() {
     FirebaseAuth.instance.signOut();
   }
 
   final user = FirebaseAuth.instance.currentUser!;
+
+  @override
+  void initState() {
+    super.initState();
+    _initPackageInfo();
+  }
+
+  Future<void> _initPackageInfo() async {
+    final info = await PackageInfo.fromPlatform();
+    setState(() {
+      _packageInfo = info;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     void feedbackWeb() async {
@@ -27,8 +54,6 @@ class Profile extends StatelessWidget {
             //enableDefaultShare: false
           ),
           safariVCOption: const SafariViewControllerOption(
-            preferredBarTintColor: Colors.blue,
-            preferredControlTintColor: Colors.white,
             barCollapsingEnabled: true,
             entersReaderIfAvailable: true,
             dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
@@ -50,21 +75,19 @@ class Profile extends StatelessWidget {
                     Column(children: [
                       Padding(
                           padding: const EdgeInsets.only(
-                            top: 15,
-                            left: 15,
-                            right: 15,
+                            top: 16,
+                            left: 16,
+                            right: 16,
                             bottom: 7.5,
                           ),
                           child: Container(
                             decoration: BoxDecoration(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .tertiaryContainer,
+                                  .secondaryContainer,
                               borderRadius:
-                                  const BorderRadius.all(Radius.circular(30)),
+                                  const BorderRadius.all(Radius.circular(15)),
                             ),
-                            //width: 400,
-                            //height: 180,
                             child: Align(
                                 alignment: Alignment.center,
                                 child: Column(
@@ -80,152 +103,177 @@ class Profile extends StatelessWidget {
                                       height: 100,
                                     ),
                                     Text(
+                                      "",
+                                      style: TextStyle(
+                                          fontSize: 19,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
                                       "<name>",
                                       style: TextStyle(
-                                        fontSize: 25,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onTertiaryContainer,
-                                      ),
+                                          fontSize: 19,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                    Text(
+                                      "",
+                                      style: TextStyle(
+                                          fontSize: 5,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSecondaryContainer,
+                                          fontWeight: FontWeight.w800),
                                     ),
                                     Text(
                                       user.email!,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
+                                        fontWeight: FontWeight.w200,
+                                        fontSize: 14,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                     const Text(" "),
                                   ],
                                 )),
                           )),
+                      const Padding(
+                          padding: EdgeInsets.only(
+                            top: 25,
+                            bottom: 5,
+                          ),
+                          child: Text(
+                            'QUICK LINK',
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.w800),
+                          )),
                       Padding(
                           padding: const EdgeInsets.only(
                             top: 5,
+                            bottom: 15,
                             left: 15,
                             right: 15,
-                            bottom: 10,
                           ),
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)),
-                            ),
-
-                            //width: 400,
-                            //height: 180,
-                            child: Align(
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox.fromSize(
-                                      size: const Size(400, 60),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          topRight: Radius.circular(30),
-                                          topLeft: Radius.circular(30),
-                                        ),
-                                        child: Material(
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondaryContainer,
-                                          child: InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const MicrosoftProfileViewer()));
-                                            },
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  "Microsoft Profile",
-                                                  style: TextStyle(
-                                                    color: Theme.of(context)
-                                                        .colorScheme
-                                                        .onSecondaryContainer,
-                                                  ),
-                                                ),
-                                              ],
+                          child: Card(
+                              elevation: 1,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15)),
+                              ),
+                              child: Column(children: [
+                                SizedBox.fromSize(
+                                  size: const Size(400, 55),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      topLeft: Radius.circular(15),
+                                      topRight: Radius.circular(15),
+                                    ),
+                                    child: Material(
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
+                                      child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                        onTap: () {},
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              "UTP Website",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
                                             ),
-                                          ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                    SizedBox.fromSize(
-                                      size: const Size(400, 60),
-                                      child: ClipRRect(
-                                        //borderRadius:BorderRadius.circular(30),
-                                        child: Material(
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondaryContainer,
-                                          child: InkWell(
-                                            //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const UtpNetId()));
-                                            },
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  "Net ID",
-                                                  style: TextStyle(
-                                                    color: Theme.of(context)
-                                                        .colorScheme
-                                                        .onSecondaryContainer,
-                                                  ),
-                                                ),
-                                              ],
+                                  ),
+                                ),
+                                SizedBox.fromSize(
+                                  size: const Size(400, 55),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(),
+                                    child: Material(
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
+                                      child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                        onTap: () {},
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              "Net ID",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
                                             ),
-                                          ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                    SizedBox.fromSize(
-                                      size: const Size(400, 60),
-                                      child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          bottomRight: Radius.circular(30),
-                                          bottomLeft: Radius.circular(30),
-                                        ),
-                                        child: Material(
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .secondaryContainer,
-                                          child: InkWell(
-                                            //splashColor: Color.fromARGB(255, 191, 217, 255),
-                                            onTap: () {},
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  "Settings",
-                                                  style: TextStyle(
-                                                    color: Theme.of(context)
-                                                        .colorScheme
-                                                        .onSecondaryContainer,
-                                                  ),
-                                                ),
-                                              ],
+                                  ),
+                                ),
+                                SizedBox.fromSize(
+                                  size: const Size(400, 55),
+                                  child: ClipRRect(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomRight: Radius.circular(15),
+                                      bottomLeft: Radius.circular(15),
+                                    ),
+                                    child: Material(
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
+                                      child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                        onTap: () {},
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              "Microsoft Website",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
                                             ),
-                                          ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                  ],
-                                )),
+                                  ),
+                                ),
+                              ]))),
+                      const Padding(
+                          padding: EdgeInsets.only(
+                            top: 15,
+                            bottom: 5,
+                          ),
+                          child: Text(
+                            'HELP & SUPPORT',
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.w800),
                           )),
                       Padding(
                           padding: const EdgeInsets.only(
@@ -234,29 +282,24 @@ class Profile extends StatelessWidget {
                             right: 15,
                             bottom: 10,
                           ),
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              color: Color.fromARGB(0, 231, 231, 231),
+                          child: Card(
+                            elevation: 1,
+                            shape: const RoundedRectangleBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(30)),
+                                  BorderRadius.all(Radius.circular(15)),
                             ),
-                            width: 400,
-                            //height: 60,
-                            child: Align(
-                                //alignment: Alignment.center,
-                                child: Column(
+                            child: Column(
                               children: [
                                 SizedBox.fromSize(
-                                  size: const Size(400, 60),
+                                  size: const Size(400, 55),
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.only(
-                                      topRight: Radius.circular(30),
-                                      topLeft: Radius.circular(30),
+                                      topRight: Radius.circular(15),
+                                      topLeft: Radius.circular(15),
                                     ),
                                     child: Material(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
                                       child: InkWell(
                                         //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: () {
@@ -271,8 +314,10 @@ class Profile extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             Text(
-                                              "Privacy policy",
+                                              "Contact us",
                                               style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onSecondaryContainer,
@@ -285,13 +330,11 @@ class Profile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox.fromSize(
-                                  size: const Size(400, 60),
+                                  size: const Size(400, 55),
                                   child: ClipRRect(
-                                    //borderRadius:BorderRadius.circular(30),
                                     child: Material(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
                                       child: InkWell(
                                         //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: () {
@@ -299,15 +342,17 @@ class Profile extends StatelessWidget {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const LicensePage()));
+                                                      const PrivacyPolicy()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             Text(
-                                              "Licenses",
+                                              "Disclaimer",
                                               style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onSecondaryContainer,
@@ -320,13 +365,86 @@ class Profile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox.fromSize(
-                                  size: const Size(400, 60),
+                                  size: const Size(400, 55),
                                   child: ClipRRect(
-                                    //borderRadius:BorderRadius.circular(30),
                                     child: Material(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
+                                      child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const PrivacyPolicy()));
+                                        },
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              "Security Policy",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox.fromSize(
+                                  size: const Size(400, 55),
+                                  child: ClipRRect(
+                                    child: Material(
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
+                                      child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                        onTap: () => showLicensePage(
+                                          context: context,
+                                          applicationIcon: Padding(
+                                            padding: const EdgeInsets.all(8),
+                                            child: Image.asset(
+                                                'assets/app_logo.png',
+                                                width: 40,
+                                                height: 40),
+                                          ),
+                                          applicationVersion:
+                                              '${_packageInfo.appName} ver${_packageInfo.version}',
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              "Licenses",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .onSecondaryContainer,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox.fromSize(
+                                  size: const Size(400, 55),
+                                  child: ClipRRect(
+                                    child: Material(
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
                                       child: InkWell(
                                         //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: feedbackWeb,
@@ -337,6 +455,8 @@ class Profile extends StatelessWidget {
                                             Text(
                                               "Feedback",
                                               style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onSecondaryContainer,
@@ -349,13 +469,11 @@ class Profile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox.fromSize(
-                                  size: const Size(400, 60),
+                                  size: const Size(400, 55),
                                   child: ClipRRect(
-                                    //borderRadius:BorderRadius.circular(30),
                                     child: Material(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
                                       child: InkWell(
                                         //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: () {
@@ -370,8 +488,10 @@ class Profile extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             Text(
-                                              "Developers Page",
+                                              "Developers page",
                                               style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onSecondaryContainer,
@@ -384,17 +504,17 @@ class Profile extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox.fromSize(
-                                  size: const Size(400, 60),
+                                  size: const Size(400, 55),
                                   child: ClipRRect(
                                     borderRadius: const BorderRadius.only(
-                                      bottomRight: Radius.circular(30),
-                                      bottomLeft: Radius.circular(30),
+                                      bottomRight: Radius.circular(15),
+                                      bottomLeft: Radius.circular(15),
                                     ),
                                     child: Material(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
+                                      color:
+                                          const Color.fromARGB(0, 255, 193, 7),
                                       child: InkWell(
+                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
                                         onTap: () {
                                           Navigator.push(
                                               context,
@@ -407,8 +527,10 @@ class Profile extends StatelessWidget {
                                               MainAxisAlignment.center,
                                           children: <Widget>[
                                             Text(
-                                              "About this app",
+                                              "About this application",
                                               style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 12,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onSecondaryContainer,
@@ -420,21 +542,73 @@ class Profile extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 15,
-                                      bottom: 15,
-                                    ),
-                                    child: TextButton(
-                                        style: TextButton.styleFrom(
-                                            foregroundColor: Theme.of(context)
-                                                .colorScheme
-                                                .error),
-                                        onPressed: signUserOut,
-                                        child: const Text('Log out')))
                               ],
-                            )),
+                            ),
                           )),
+                      Padding(
+                          padding: const EdgeInsets.only(
+                            top: 5,
+                            bottom: 15,
+                            left: 15,
+                            right: 15,
+                          ),
+                          child: Card(
+                            color: Theme.of(context).colorScheme.errorContainer,
+                            elevation: 1,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15)),
+                            ),
+                            child: SizedBox.fromSize(
+                              size: const Size(400, 55),
+                              child: ClipRRect(
+                                borderRadius: const BorderRadius.only(
+                                  bottomRight: Radius.circular(15),
+                                  bottomLeft: Radius.circular(15),
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15),
+                                ),
+                                child: Material(
+                                  color: const Color.fromARGB(0, 255, 193, 7),
+                                  child: InkWell(
+                                    //splashColor:Color.fromARGB(255, 191, 217, 255),
+                                    onTap: signUserOut,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Log Out",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 13,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onErrorContainer,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )),
+                      Text(
+                        '${_packageInfo.appName} ver${_packageInfo.version}',
+                        style: const TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w300),
+                      ),
+                      Text(
+                        _packageInfo.packageName,
+                        style: const TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w300),
+                      ),
+                      const Text(
+                        " ",
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w300),
+                      )
                     ]),
                   ]))
         ],

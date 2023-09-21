@@ -5,9 +5,10 @@ class NewsNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: ,
       body: ListView(children: [
         Card(
-          elevation: 3,
+          elevation: 1,
           child: ClipRRect(
             borderRadius: const BorderRadius.only(
               bottomRight: Radius.circular(15),
@@ -16,6 +17,7 @@ class NewsNotification extends StatelessWidget {
               topRight: Radius.circular(15),
             ),
             child: Material(
+              color: const Color.fromARGB(0, 0, 0, 0),
               child: InkWell(
                 onTap: () {},
                 child: Column(

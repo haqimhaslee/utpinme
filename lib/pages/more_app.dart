@@ -18,7 +18,7 @@ class MoreApp extends StatelessWidget {
         launch(
           'https://apps.powerapps.com/play/e/default-84187be3-037e-41ec-889c-a150fe476432/a/afab9b41-ef46-4e5d-988b-2d0dce08234d?tenantId=84187be3-037e-41ec-889c-a150fe476432&source=portal',
           customTabsOption: CustomTabsOption(
-            toolbarColor: Theme.of(context).colorScheme.background,
+            toolbarColor: Theme.of(context).colorScheme.primaryContainer,
             showPageTitle: true,
             //enableDefaultShare: false
           ),
@@ -289,15 +289,15 @@ class MoreApp extends StatelessWidget {
                     bottom: 15,
                   ),
                   child: Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
+                    spacing: 5,
+                    runSpacing: 5,
                     alignment: WrapAlignment.center,
                     children: <Widget>[
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
                             //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
@@ -319,13 +319,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.directions_bus_filled_rounded,
-                                        size: 35,
+                                        size: 30,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -333,10 +333,11 @@ class MoreApp extends StatelessWidget {
                                     "Shuttle Bus",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -346,10 +347,10 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
                             //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
@@ -371,13 +372,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.calendar_month_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -385,10 +386,11 @@ class MoreApp extends StatelessWidget {
                                     "USchedule Course",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -398,10 +400,10 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
                             //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
@@ -423,13 +425,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.calendar_month_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -437,10 +439,11 @@ class MoreApp extends StatelessWidget {
                                     "USchedule Exam",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -450,12 +453,11 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
                               //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: attenndanceFDWeb,
@@ -469,13 +471,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.app_registration_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -483,10 +485,11 @@ class MoreApp extends StatelessWidget {
                                     "Attendance FD",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -496,12 +499,11 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
                               //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: attenndanceUGWeb,
@@ -515,13 +517,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.app_registration_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -529,10 +531,11 @@ class MoreApp extends StatelessWidget {
                                     "Attendance UG",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w100,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -542,14 +545,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -566,13 +567,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.badge_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -580,10 +581,11 @@ class MoreApp extends StatelessWidget {
                                     "Digital ID",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -593,10 +595,10 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
                             //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
@@ -618,13 +620,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.local_shipping_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -632,10 +634,11 @@ class MoreApp extends StatelessWidget {
                                     "Postal Hub",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -645,14 +648,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: surveyWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -664,13 +665,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.edit_note_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -678,10 +679,11 @@ class MoreApp extends StatelessWidget {
                                     "Surveys",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -691,14 +693,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -716,13 +716,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.people_alt_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -730,10 +730,11 @@ class MoreApp extends StatelessWidget {
                                     "iAttend",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -743,14 +744,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -768,13 +767,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.people_alt_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -782,10 +781,11 @@ class MoreApp extends StatelessWidget {
                                     "UCareer",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -795,14 +795,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -820,13 +818,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.people_alt_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -834,10 +832,11 @@ class MoreApp extends StatelessWidget {
                                     "UTP",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -847,14 +846,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -872,13 +869,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.people_alt_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondary,
                                       ),
                                     ),
                                   ),
@@ -886,10 +883,11 @@ class MoreApp extends StatelessWidget {
                                     "UTrace",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -899,14 +897,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -924,13 +920,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.people_alt_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -938,10 +934,11 @@ class MoreApp extends StatelessWidget {
                                     "UResearch",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -951,14 +948,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(30),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {},
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -970,13 +965,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.edit_note_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -984,10 +979,11 @@ class MoreApp extends StatelessWidget {
                                     "e-Memo",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -997,14 +993,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -1022,13 +1016,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.check_circle_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1036,10 +1030,11 @@ class MoreApp extends StatelessWidget {
                                     "Exemption",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1049,14 +1044,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: uLearnWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1068,13 +1061,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.book_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1082,10 +1075,11 @@ class MoreApp extends StatelessWidget {
                                     "ULearn",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1095,14 +1089,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: uLearnXWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1114,13 +1106,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.book_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1128,10 +1120,11 @@ class MoreApp extends StatelessWidget {
                                     "ULearnX",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1141,14 +1134,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: ucampusWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1160,13 +1151,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.school_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1174,10 +1165,11 @@ class MoreApp extends StatelessWidget {
                                     "UCampus",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1187,14 +1179,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: ucsWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1206,13 +1196,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.design_services_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1220,10 +1210,11 @@ class MoreApp extends StatelessWidget {
                                     "UCS",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1233,14 +1224,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: () {
                                 Navigator.push(
                                     context,
@@ -1257,13 +1246,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.design_services_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1271,10 +1260,11 @@ class MoreApp extends StatelessWidget {
                                     "USummon",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1284,14 +1274,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: uLibraryWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1303,13 +1291,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.my_library_books_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1317,10 +1305,11 @@ class MoreApp extends StatelessWidget {
                                     "ULibrary",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1330,14 +1319,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: uLabWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1349,13 +1336,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.label_important_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1363,10 +1350,11 @@ class MoreApp extends StatelessWidget {
                                     "ULab",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1376,14 +1364,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: uBookingWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1395,13 +1381,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.edit_calendar_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1409,10 +1395,11 @@ class MoreApp extends StatelessWidget {
                                     "UBooking",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1422,14 +1409,12 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
                               onTap: utpNexusWeb,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1441,13 +1426,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.web_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1455,10 +1440,11 @@ class MoreApp extends StatelessWidget {
                                     "UTP Nexus",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
@@ -1468,10 +1454,10 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
-                        height: 110,
+                        width: 100,
+                        height: 100,
                         child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           child: Material(
                             child: InkWell(
                               onTap: srcutpWeb,
@@ -1485,13 +1471,13 @@ class MoreApp extends StatelessWidget {
                                       height: 50,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .tertiaryContainer,
+                                          .secondaryContainer,
                                       child: Icon(
                                         Icons.webhook_rounded,
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onTertiaryContainer,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),
@@ -1499,10 +1485,11 @@ class MoreApp extends StatelessWidget {
                                     "SRCUTP",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .onPrimaryContainer,
+                                          .onBackground,
                                     ),
                                   ),
                                 ],
