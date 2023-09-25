@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:utp_in_me/pages/news_and_notification/more_news.dart';
+import 'package:utp_in_me/pages/news_and_notification/more_upcoming_events.dart';
+import 'package:utp_in_me/pages/panic_button.dart';
 
 class UpSectionHome extends StatefulWidget {
   const UpSectionHome({super.key});
@@ -17,6 +20,131 @@ class _UpSectionHomeState extends State<UpSectionHome> {
       children: [
         Padding(
           padding: const EdgeInsets.only(
+            top: 10,
+            left: 5,
+            right: 5,
+            bottom: 5,
+          ),
+          child: Card(
+            elevation: 1,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+            ),
+            child: SizedBox(
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15),
+                ),
+                child: Material(
+                  color: const Color.fromARGB(0, 255, 193, 7),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 15,
+                      bottom: 15,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        const Padding(
+                          padding: EdgeInsets.only(right: 15, left: 15),
+                          child: SizedBox(
+                            width: 60,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                CircleAvatar(
+                                  radius: 30,
+                                  backgroundImage:
+                                      AssetImage("assets/profile_pic.png"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 205,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const Row(
+                                children: [
+                                  Icon(
+                                    Icons.person_rounded,
+                                    size: 18,
+                                  ),
+                                  Text("  null",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w600,
+                                      ))
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.mail_rounded,
+                                    size: 18,
+                                  ),
+                                  Text("  ${user.email!}")
+                                ],
+                              ),
+                              const Row(
+                                children: [
+                                  Icon(
+                                    Icons.book_rounded,
+                                    size: 18,
+                                  ),
+                                  Text("  null")
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox.fromSize(
+                          size: const Size(60, 60),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15.0),
+                            child: Material(
+                              color: Theme.of(context).colorScheme.error,
+                              child: InkWell(
+                                splashColor: Theme.of(context)
+                                    .colorScheme
+                                    .errorContainer,
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PanicButton()));
+                                },
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.emergency,
+                                      size: 40,
+                                      color:
+                                          Theme.of(context).colorScheme.onError,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 10,
             left: 10,
             right: 10,
           ),
@@ -49,7 +177,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
         ),
         Padding(
           padding: const EdgeInsets.only(
-            top: 5,
+            top: 10,
             left: 15,
             right: 15,
             //bottom: 5,
@@ -60,10 +188,17 @@ class _UpSectionHomeState extends State<UpSectionHome> {
               children: [
                 const Text(
                   "News",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
                 ),
                 const Flexible(fit: FlexFit.tight, child: SizedBox()),
-                TextButton(onPressed: () {}, child: const Text('View More'))
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MoreNews()));
+                    },
+                    child: const Text('View More'))
               ],
             ),
           ),
@@ -168,7 +303,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'NEW TITLE : FOR CH ARCHITECTURE, NOW CAN FLY',
+                                  'FOR CH ARCHITECTURE, NOW CAN FLY TO THE MOON',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -290,7 +425,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'NEW TITLE : ULIFE NOW LIVE IN YOUR SMARTPHONE',
+                                  'DOWNLOAD & REGISTER NOW : ULIFE NOW LIVE IN YOUR SMARTPHONE',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -412,7 +547,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'NEW TITLE : CLASSROOM BOOKING NOW AVAILABLE DURING STUDY WEEK',
+                                  'CLASSROOM BOOKING NOW AVAILABLE DURING STUDY WEEK',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -534,7 +669,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'NEW TITLE : ENGAGEMENT WITH GRADUATING STUDENT',
+                                  'ENGAGEMENT WITH GRADUATING STUDENT, CLASS OF MAY 2023',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -565,7 +700,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
             )),
         Padding(
           padding: const EdgeInsets.only(
-            top: 15,
+            top: 10,
             left: 15,
             right: 15,
             //bottom: 5,
@@ -576,10 +711,18 @@ class _UpSectionHomeState extends State<UpSectionHome> {
               children: [
                 const Text(
                   "Upcoming events",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
                 ),
                 const Flexible(fit: FlexFit.tight, child: SizedBox()),
-                TextButton(onPressed: () {}, child: const Text('View More'))
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const MoreUpcomingEvents()));
+                    },
+                    child: const Text('View More'))
               ],
             ),
           ),

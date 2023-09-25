@@ -3,7 +3,7 @@ import 'package:quick_actions/quick_actions.dart';
 import 'package:utp_in_me/pages/digital_id/digital_id.dart';
 import 'package:utp_in_me/pages/home/home.dart';
 import 'package:utp_in_me/pages/more_app.dart';
-import 'package:utp_in_me/pages/news_and_notification/notification.dart';
+import 'package:utp_in_me/pages/news_and_notification/more_notification.dart';
 import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:animations/animations.dart';
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _windgetOption = <Widget>[
     const Home(),
     const MoreApp(),
-    const NewsNotification(),
+    const MoreNotification(),
     const Profile(),
   ];
 
@@ -148,8 +148,8 @@ class _HomePageState extends State<HomePage> {
               label: 'Notification',
             ),
             NavigationDestination(
-              selectedIcon: Icon(Icons.person_rounded),
-              icon: Icon(Icons.person_outline_rounded),
+              selectedIcon: Icon(Icons.manage_accounts_rounded),
+              icon: Icon(Icons.manage_accounts_outlined),
               label: 'Profile',
             ),
           ],

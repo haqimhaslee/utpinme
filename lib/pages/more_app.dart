@@ -875,7 +875,7 @@ class MoreApp extends StatelessWidget {
                                         size: 35,
                                         color: Theme.of(context)
                                             .colorScheme
-                                            .onSecondary,
+                                            .onSecondaryContainer,
                                       ),
                                     ),
                                   ),

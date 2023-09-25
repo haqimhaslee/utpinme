@@ -298,11 +298,10 @@ class PanicButton extends StatelessWidget {
                           ),
                           child: Card(
                             elevation: 3,
-                            color:
-                                Theme.of(context).colorScheme.primaryContainer,
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(13),
+                              borderRadius: BorderRadius.circular(10),
                               child: Material(
+                                color: const Color.fromARGB(0, 255, 193, 7),
                                 child: InkWell(
                                   onTap: () {},
                                   child: const Column(

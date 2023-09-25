@@ -2,8 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/settings/contact_us.dart';
+import 'package:utp_in_me/settings/disclaimer.dart';
+import 'package:utp_in_me/settings/security_policy.dart';
 import 'package:utp_in_me/settings/about_app.dart';
-import 'package:utp_in_me/settings/dev_page/material_test_page.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class Profile extends StatefulWidget {
@@ -112,7 +113,7 @@ class _ProfileState extends State<Profile> {
                                           fontWeight: FontWeight.w800),
                                     ),
                                     Text(
-                                      "<name>",
+                                      "null",
                                       style: TextStyle(
                                           fontSize: 19,
                                           color: Theme.of(context)
@@ -307,7 +308,7 @@ class _ProfileState extends State<Profile> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const PrivacyPolicy()));
+                                                      const ContactUs()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
@@ -342,7 +343,7 @@ class _ProfileState extends State<Profile> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const PrivacyPolicy()));
+                                                      const Disclaimer()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
@@ -377,7 +378,7 @@ class _ProfileState extends State<Profile> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      const PrivacyPolicy()));
+                                                      const SecurityPolicy()));
                                         },
                                         child: Column(
                                           mainAxisAlignment:
@@ -471,41 +472,6 @@ class _ProfileState extends State<Profile> {
                                 SizedBox.fromSize(
                                   size: const Size(400, 55),
                                   child: ClipRRect(
-                                    child: Material(
-                                      color:
-                                          const Color.fromARGB(0, 255, 193, 7),
-                                      child: InkWell(
-                                        //splashColor:Color.fromARGB(255, 191, 217, 255),
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const MaterialTestPage()));
-                                        },
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: <Widget>[
-                                            Text(
-                                              "Developers page",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 12,
-                                                color: Theme.of(context)
-                                                    .colorScheme
-                                                    .onSecondaryContainer,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox.fromSize(
-                                  size: const Size(400, 55),
-                                  child: ClipRRect(
                                     borderRadius: const BorderRadius.only(
                                       bottomRight: Radius.circular(15),
                                       bottomLeft: Radius.circular(15),
@@ -578,7 +544,7 @@ class _ProfileState extends State<Profile> {
                                           MainAxisAlignment.center,
                                       children: <Widget>[
                                         Text(
-                                          "Log Out",
+                                          "Sign Out",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 13,

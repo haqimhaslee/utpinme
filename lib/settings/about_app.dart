@@ -1,36 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({super.key});
   @override
   Widget build(BuildContext context) {
-    void srcutpWeb() async {
-      try {
-        launch(
-          'https://srcutp.org',
-          customTabsOption: CustomTabsOption(
-            toolbarColor: Theme.of(context).colorScheme.background,
-            showPageTitle: true,
-            //enableDefaultShare: false
-          ),
-          safariVCOption: const SafariViewControllerOption(
-            preferredBarTintColor: Colors.blue,
-            preferredControlTintColor: Colors.white,
-            barCollapsingEnabled: true,
-            entersReaderIfAvailable: true,
-            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
-          ),
-        );
-      } catch (e) {
-        debugPrint(e.toString());
-      }
-    }
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 70,
-        title: const Text('About this app'),
+        title: const Text('About this application'),
       ),
       body: ListView(
         children: [
@@ -45,7 +22,7 @@ class AboutApp extends StatelessWidget {
                             top: 30,
                             left: 15,
                             right: 15,
-                            bottom: 50,
+                            bottom: 30,
                           ),
                           child: Container(
                             decoration: BoxDecoration(
@@ -71,26 +48,7 @@ class AboutApp extends StatelessWidget {
                                     ),
                                     const Text(" "),
                                     Text(
-                                      "This application made by Students Representative Council UTP 22/23",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .tertiary,
-                                      ),
-                                    ),
-                                    const Text(" "),
-                                    Text(
-                                      "Really impressed with development milestone.",
-                                      style: TextStyle(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .tertiary,
-                                      ),
-                                    ),
-                                    const Text(" "),
-                                    Text(
-                                      "Way to go!",
+                                      "This application made by -",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         color: Theme.of(context)
@@ -103,10 +61,10 @@ class AboutApp extends StatelessWidget {
                                 )),
                           )),
                       Text(
-                        "Project Team Members",
+                        "Our Team",
                         style: TextStyle(
                           fontSize: 20,
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Theme.of(context).colorScheme.onBackground,
                         ),
                       ),
                       const Text(" "),
@@ -281,206 +239,7 @@ class AboutApp extends StatelessWidget {
                           )),
                       const Text(" "),
                       const Text(" "),
-                      Text(
-                        "Project Phase",
-                        style: TextStyle(
-                          fontSize: 25,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                      const Text(" "),
-                      Padding(
-                          padding: const EdgeInsets.only(
-                            top: 5,
-                            left: 15,
-                            right: 15,
-                            bottom: 5,
-                          ),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryContainer,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(15)),
-                            ),
-                            //width: 400,
-                            //height: 120,
-                            child: Align(
-                                alignment: Alignment.center,
-                                child: Column(children: [
-                                  const Text(" "),
-                                  Text(
-                                    "Phase 1",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                  Text(
-                                    "Were are here",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Building from scratch",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Inserting all core/relevent thing",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                ])),
-                          )),
-                      Padding(
-                          padding: const EdgeInsets.only(
-                            top: 5,
-                            left: 15,
-                            right: 15,
-                            bottom: 5,
-                          ),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryContainer,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(15)),
-                            ),
-                            //width: 400,
-                            //height: 120,
-                            child: Align(
-                                alignment: Alignment.center,
-                                child: Column(children: [
-                                  const Text(" "),
-                                  Text(
-                                    "Phase 2",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                  Text(
-                                    "Large-Screen Optimization",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Optimization for large screen devices",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Expecially for tablet and desktop",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                ])),
-                          )),
-                      Padding(
-                          padding: const EdgeInsets.only(
-                            top: 5,
-                            left: 15,
-                            right: 15,
-                            bottom: 5,
-                          ),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondaryContainer,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(15)),
-                            ),
-                            //width: 400,
-                            //height: 120,
-                            child: Align(
-                                alignment: Alignment.center,
-                                child: Column(children: [
-                                  const Text(" "),
-                                  Text(
-                                    "Phase 3",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                  Text(
-                                    "Single Sign-In Feature",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Bringing single sign-in feature in all page in this app",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Will not require relog in thi app anymore!",
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSecondaryContainer,
-                                    ),
-                                  ),
-                                  const Text(" "),
-                                ])),
-                          ))
                     ]),
-                    Column(
-                      children: [
-                        const Text(" "),
-                        ElevatedButton(
-                          onPressed: srcutpWeb,
-                          child: const Text('SRCUTP Official Website'),
-                        ),
-                        const Text(" "),
-                        const Text("Universiti Teknologi PETRONAS ©️"),
-                        const Text(" "),
-                        const Text(" "),
-                        const Text(" "),
-                      ],
-                    ),
                   ]))
         ],
       ),
