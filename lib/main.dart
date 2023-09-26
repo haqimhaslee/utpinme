@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter/services.dart';
 import 'package:dynamic_color/dynamic_color.dart';
+import 'package:utp_in_me/src/utp_ui_color.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,13 +36,13 @@ class UtpInMe extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'GoogleSans',
             //colorScheme: lightColorScheme ?? _defaultLightColorScheme,
-            colorScheme: lightDynamic,
+            colorScheme: lightDynamic ?? lightColorScheme,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
             fontFamily: 'GoogleSans',
             //colorScheme: darkColorScheme ?? _defaultDarkColorScheme,
-            colorScheme: darkDynamic,
+            colorScheme: darkDynamic ?? darkColorScheme,
             useMaterial3: true,
           ),
           themeMode: ThemeMode.system,
