@@ -103,8 +103,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          toolbarHeight: 70,
-          //elevation: 1,
+          elevation: 5,
+          scrolledUnderElevation: 5,
           title: Padding(
               padding: const EdgeInsets.only(
                 left: 0,
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
           //backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
           animationDuration: const Duration(milliseconds: 400),
           //indicatorColor: Theme.of(context).colorScheme.background,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
           onDestinationSelected: (int newIndex) {
             setState(() {
               _selectedIndex = newIndex;

@@ -94,14 +94,10 @@ class _ProfileState extends State<Profile> {
                                 child: Column(
                                   children: [
                                     const Text(" "),
-                                    Container(
-                                      decoration: const BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(100)),
-                                      ),
-                                      width: 100,
-                                      height: 100,
+                                    const CircleAvatar(
+                                      radius: 50,
+                                      backgroundImage:
+                                          AssetImage("assets/profile_pic.png"),
                                     ),
                                     Text(
                                       "",
@@ -113,7 +109,7 @@ class _ProfileState extends State<Profile> {
                                           fontWeight: FontWeight.w800),
                                     ),
                                     Text(
-                                      "null",
+                                      "Admin",
                                       style: TextStyle(
                                           fontSize: 19,
                                           color: Theme.of(context)
@@ -561,12 +557,12 @@ class _ProfileState extends State<Profile> {
                             ),
                           )),
                       Text(
-                        '${_packageInfo.appName} ver${_packageInfo.version}',
+                        'Logged in as ${user.email!}',
                         style: const TextStyle(
                             fontSize: 10, fontWeight: FontWeight.w300),
                       ),
                       Text(
-                        _packageInfo.packageName,
+                        '${_packageInfo.appName} ver${_packageInfo.version}',
                         style: const TextStyle(
                             fontSize: 10, fontWeight: FontWeight.w300),
                       ),

@@ -99,7 +99,7 @@ class StudentId extends StatelessWidget {
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                             Text(
-                              "<name>",
+                              "Admin",
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
@@ -132,7 +132,7 @@ class StudentId extends StatelessWidget {
                                         Theme.of(context).textTheme.bodySmall,
                                   ),
                                   Text(
-                                    "<course>",
+                                    "-",
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),
@@ -152,7 +152,7 @@ class StudentId extends StatelessWidget {
                                         Theme.of(context).textTheme.bodySmall,
                                   ),
                                   Text(
-                                    "<ID>",
+                                    "23000000",
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),

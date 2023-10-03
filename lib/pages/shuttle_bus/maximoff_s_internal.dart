@@ -89,38 +89,58 @@ class _InternalBusScheduleTempState extends State<InternalBusScheduleTemp> {
       Expanded(
         child: SfDataGrid(
           source: employeeDataSource,
-          columnWidthMode: ColumnWidthMode.fill,
+          columnWidthMode: ColumnWidthMode.auto,
+          headerGridLinesVisibility: GridLinesVisibility.horizontal,
           headerRowHeight: 70,
           columns: <GridColumn>[
             GridColumn(
-                columnName: 'id',
+                columnName: 'station',
                 label: Container(
                     padding: const EdgeInsets.all(16.0),
                     alignment: Alignment.center,
-                    child: const Text(
-                      'Station',
-                    ))),
+                    child: const Text('Station/Checkpoint'))),
             GridColumn(
-                columnName: 'name',
+                columnName: 'trip_1',
                 label: Container(
                     padding: const EdgeInsets.all(8.0),
                     alignment: Alignment.center,
                     child: const Text('Trip 1'))),
             GridColumn(
-                columnName: 'designation',
+                columnName: 'trip_2',
                 label: Container(
                     padding: const EdgeInsets.all(8.0),
                     alignment: Alignment.center,
-                    child: const Text(
-                      'Trip 2',
-                      overflow: TextOverflow.ellipsis,
-                    ))),
+                    child: const Text('Trip 2'))),
             GridColumn(
-                columnName: 'salary',
+                columnName: 'trip_3',
                 label: Container(
                     padding: const EdgeInsets.all(8.0),
                     alignment: Alignment.center,
                     child: const Text('Trip 3'))),
+            GridColumn(
+                columnName: 'trip_4',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Trip 4'))),
+            GridColumn(
+                columnName: 'trip_5',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Trip 5'))),
+            GridColumn(
+                columnName: 'trip_6',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Trip 6'))),
+            GridColumn(
+                columnName: 'trip_7',
+                label: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: const Text('Trip 7'))),
           ],
         ),
       )
@@ -129,20 +149,34 @@ class _InternalBusScheduleTempState extends State<InternalBusScheduleTemp> {
 
   List<Employee> getEmployeeData() {
     return [
-      Employee('PMMD', 'James', 'Project Lead', 20000),
-      Employee('An-Nur Mosque', 'Kathryn', 'Manager', 30000),
-      Employee('Main Gate', 'Lara', 'Developer', 15000),
-      Employee('Village 6', 'Michael', 'Designer', 15000),
-      Employee('Chancellor Complex', 'Martin', 'Developer', 15000),
-      Employee('R&D Block', 'Newberry', 'Developer', 15000),
-      Employee('Village 5', 'Balnc', 'Developer', 15000),
-      Employee('Village 4', 'Perry', 'Developer', 15000),
-      Employee('PMMD', 'Gable', 'Developer', 15000),
-      Employee('Block L', 'Grimes', 'Developer', 15000),
-      Employee('Chancellor Complex', 'Grimes', 'Developer', 15000),
-      Employee('Village 6', 'Grimes', 'Developer', 15000),
-      Employee('An-Nur Mosque', 'Grimes', 'Developer', 15000),
-      Employee('PMMD', 'Grimes', 'Developer', 15000)
+      Employee('PMMD', 'James', 'Project Lead', '20000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('An-Nur Mosque', 'Kathryn', 'Manager', '30000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Main Gate', 'Lara', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Village 6', 'Michael', 'Designer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Chancellor Complex', 'Martin', 'Developer', '15000', 'PMMD',
+          'James', 'Project Lead', '20000'),
+      Employee('R&D Block', 'Newberry', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Village 5', 'Balnc', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Village 4', 'Perry', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('PMMD', 'Gable', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Block L', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('Chancellor Complex', 'Grimes', 'Developer', '15000', 'PMMD',
+          'James', 'Project Lead', '20000'),
+      Employee('Village 6', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('An-Nur Mosque', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000'),
+      Employee('PMMD', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
+          'Project Lead', '20000')
     ];
   }
 }
@@ -151,19 +185,28 @@ class _InternalBusScheduleTempState extends State<InternalBusScheduleTemp> {
 /// information about the employee which will be rendered in datagrid.
 class Employee {
   /// Creates the employee class with required details.
-  Employee(this.id, this.name, this.designation, this.salary);
+  Employee(
+    this.station,
+    this.trip_1,
+    this.trip_2,
+    this.trip_3,
+    this.trip_4,
+    this.trip_5,
+    this.trip_6,
+    this.trip_7,
+  );
 
   /// Id of an employee.
-  final String id;
+  final String station;
 
   /// Name of an employee.
-  final String name;
-
-  /// Designation of an employee.
-  final String designation;
-
-  /// Salary of an employee.
-  final int salary;
+  final String trip_1;
+  final String trip_2;
+  final String trip_3;
+  final String trip_4;
+  final String trip_5;
+  final String trip_6;
+  final String trip_7;
 }
 
 /// An object to set the employee collection data source to the datagrid. This
@@ -173,11 +216,14 @@ class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
     _employeeData = employeeData
         .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<String>(columnName: 'id', value: e.id),
-              DataGridCell<String>(columnName: 'name', value: e.name),
-              DataGridCell<String>(
-                  columnName: 'designation', value: e.designation),
-              DataGridCell<int>(columnName: 'salary', value: e.salary),
+              DataGridCell<String>(columnName: 'station', value: e.station),
+              DataGridCell<String>(columnName: 'trip_1', value: e.trip_1),
+              DataGridCell<String>(columnName: 'trip_2', value: e.trip_2),
+              DataGridCell<String>(columnName: 'trip_3', value: e.trip_3),
+              DataGridCell<String>(columnName: 'trip_4', value: e.trip_4),
+              DataGridCell<String>(columnName: 'trip_5', value: e.trip_5),
+              DataGridCell<String>(columnName: 'trip_6', value: e.trip_6),
+              DataGridCell<String>(columnName: 'trip_7', value: e.trip_7),
             ]))
         .toList();
   }

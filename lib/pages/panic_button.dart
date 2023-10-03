@@ -53,12 +53,10 @@ class PanicButton extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        elevation: 5,
+        scrolledUnderElevation: 5,
         title: const Text(
           'Emergency',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w900,
-          ),
         ),
       ),
       body: ListView(
@@ -71,7 +69,7 @@ class PanicButton extends StatelessWidget {
                     Column(children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                          top: 30,
+                          top: 20,
                           left: 15,
                           right: 15,
                           bottom: 50,
@@ -84,7 +82,7 @@ class PanicButton extends StatelessWidget {
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(10)),
                             ),
-                            width: 400,
+                            width: MediaQuery.of(context).size.width - 30,
                             //height: 150,
                             child: Align(
                               alignment: Alignment.center,
@@ -103,7 +101,9 @@ class PanicButton extends StatelessWidget {
                                       ),
                                     ),
                                     SizedBox(
-                                        width: 300,
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                100,
                                         child: Column(
                                           children: [
                                             const Text(
@@ -115,7 +115,7 @@ class PanicButton extends StatelessWidget {
                                             ),
                                             Text(
                                               "This Emergency Call is specifically used to report emergency case only such as:-",
-                                              textAlign: TextAlign.center,
+                                              textAlign: TextAlign.left,
                                               softWrap: true,
                                               style: TextStyle(
                                                 fontSize: 13,
@@ -125,10 +125,11 @@ class PanicButton extends StatelessWidget {
                                               ),
                                             ),
                                             Text(
-                                              "Fire / Gas leak / Chemical Spill / Threat / Security / Threat-Incident / Power Failure / Trap / Wild Animal",
+                                              "Fire • Gas leak • Chemical Spill • Threat • Security • Threat-Incident • Power Failure • Trap • Wild Animal",
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
                                                 fontSize: 13,
+                                                fontWeight: FontWeight.w600,
                                                 color: Theme.of(context)
                                                     .colorScheme
                                                     .onTertiaryContainer,
@@ -210,61 +211,59 @@ class PanicButton extends StatelessWidget {
                                 borderRadius:
                                     const BorderRadius.all(Radius.circular(10)),
                               ),
-                              width: 400,
+                              width: MediaQuery.of(context).size.width - 30,
                               child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                child: Column(children: [
+                                  Row(
                                     children: [
-                                      Row(
-                                        children: [
-                                          const Padding(
-                                            padding: EdgeInsets.only(
-                                              top: 0,
-                                              left: 15,
-                                              right: 15,
-                                              bottom: 0,
-                                            ),
-                                            child: Icon(
-                                              Icons.emoji_objects_rounded,
-                                            ),
-                                          ),
-                                          SizedBox(
-                                              width: 293,
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  const Text(
-                                                    "",
-                                                    textAlign: TextAlign.left,
-                                                    style: TextStyle(
-                                                      fontSize: 5,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    "For non-emergency cases, please log a report in Unified Customer Services (UCS) portal",
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .onTertiaryContainer,
-                                                    ),
-                                                  ),
-                                                  const Text(
-                                                    "",
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 5,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ))
-                                        ],
-                                      )
-                                    ]),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                          top: 0,
+                                          left: 15,
+                                          right: 15,
+                                          bottom: 0,
+                                        ),
+                                        child: Icon(
+                                          Icons.emoji_objects_rounded,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width -
+                                              100,
+                                          child: Column(
+                                            children: [
+                                              const Text(
+                                                "",
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontSize: 5,
+                                                ),
+                                              ),
+                                              Text(
+                                                "For non-emergency cases, please log a report in Unified Customer Services (UCS) portal",
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Theme.of(context)
+                                                      .colorScheme
+                                                      .onTertiaryContainer,
+                                                ),
+                                              ),
+                                              const Text(
+                                                "",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontSize: 5,
+                                                ),
+                                              ),
+                                            ],
+                                          ))
+                                    ],
+                                  )
+                                ]),
                               )),
                         ),
                         Row(
@@ -282,6 +281,7 @@ class PanicButton extends StatelessWidget {
                           ],
                         ),
                         const Text(" "),
+                        const Divider(),
                         const Text(" "),
                         const Text(
                           "Hotline",
@@ -297,7 +297,7 @@ class PanicButton extends StatelessWidget {
                             right: 15,
                           ),
                           child: Card(
-                            elevation: 3,
+                            //elevation: 3,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: Material(
@@ -318,6 +318,84 @@ class PanicButton extends StatelessWidget {
                                             child: Icon(Icons.phone_rounded),
                                           ),
                                           Text("RV"),
+                                          Flexible(
+                                              fit: FlexFit.tight,
+                                              child: SizedBox()),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 15,
+                            right: 15,
+                          ),
+                          child: Card(
+                            //elevation: 3,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Material(
+                                color: const Color.fromARGB(0, 255, 193, 7),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: const Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 20,
+                                              left: 20,
+                                              right: 10,
+                                              bottom: 20,
+                                            ),
+                                            child: Icon(Icons.phone_rounded),
+                                          ),
+                                          Text("Security 1"),
+                                          Flexible(
+                                              fit: FlexFit.tight,
+                                              child: SizedBox()),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 15,
+                            right: 15,
+                          ),
+                          child: Card(
+                            //elevation: 3,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: Material(
+                                color: const Color.fromARGB(0, 255, 193, 7),
+                                child: InkWell(
+                                  onTap: () {},
+                                  child: const Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              top: 20,
+                                              left: 20,
+                                              right: 10,
+                                              bottom: 20,
+                                            ),
+                                            child: Icon(Icons.phone_rounded),
+                                          ),
+                                          Text("Security 2"),
                                           Flexible(
                                               fit: FlexFit.tight,
                                               child: SizedBox()),

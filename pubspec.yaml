@@ -71,6 +71,13 @@ flutter:
   - assets/carousel_pic/ulife_live.png
   - assets/carousel_pic/1.jpg
   - assets/carousel_pic/2.png
+  - assets/prototype/1.jpg
+  - assets/prototype/2.jpg
+  - assets/prototype/3.jpg
+  - assets/prototype/4.jpg
+  - assets/prototype/5.jpg
+  - assets/prototype/6.png
+  - assets/prototype/7.jpg
 
   fonts:
       - family: GoogleSans

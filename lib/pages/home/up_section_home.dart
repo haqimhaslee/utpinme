@@ -51,7 +51,6 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                         const Padding(
                           padding: EdgeInsets.only(right: 15, left: 15),
                           child: SizedBox(
-                            width: 60,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -65,20 +64,26 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                           ),
                         ),
                         SizedBox(
-                          width: 205,
+                          width: MediaQuery.of(context).size.width - 180,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              const Row(
+                              Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.person_rounded,
                                     size: 18,
                                   ),
-                                  Text("  null",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                      ))
+                                  SizedBox(
+                                      width: MediaQuery.of(context).size.width -
+                                          199,
+                                      child: const Padding(
+                                          padding: EdgeInsets.only(
+                                              right: 5, left: 5),
+                                          child: Text("Admin",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                              ))))
                                 ],
                               ),
                               Row(
@@ -87,16 +92,28 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                     Icons.mail_rounded,
                                     size: 18,
                                   ),
-                                  Text("  ${user.email!}")
+                                  SizedBox(
+                                      width: MediaQuery.of(context).size.width -
+                                          199,
+                                      child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              right: 5, left: 5),
+                                          child: Text(user.email!)))
                                 ],
                               ),
-                              const Row(
+                              Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.book_rounded,
                                     size: 18,
                                   ),
-                                  Text("  null")
+                                  SizedBox(
+                                      width: MediaQuery.of(context).size.width -
+                                          199,
+                                      child: const Padding(
+                                          padding: EdgeInsets.only(
+                                              right: 5, left: 5),
+                                          child: Text("-")))
                                 ],
                               ),
                             ],
@@ -124,7 +141,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   children: <Widget>[
                                     Icon(
                                       Icons.emergency,
-                                      size: 40,
+                                      size: 35,
                                       color:
                                           Theme.of(context).colorScheme.onError,
                                     ),
@@ -152,9 +169,11 @@ class _UpSectionHomeState extends State<UpSectionHome> {
             borderRadius: BorderRadius.circular(15.0),
             child: ImageSlideshow(
               indicatorColor: Theme.of(context).colorScheme.primary,
-              indicatorBackgroundColor: Theme.of(context).colorScheme.surface,
-              autoPlayInterval: 5000,
-              indicatorRadius: 3.5,
+              indicatorBackgroundColor:
+                  Theme.of(context).colorScheme.surfaceVariant,
+              autoPlayInterval: 6000,
+              indicatorRadius: 4,
+              //disableUserScrolling: true,
               isLoop: true,
               width: MediaQuery.of(context).size.width - 20,
               height: ((MediaQuery.of(context).size.width - 20) / 16) * 9,
@@ -169,6 +188,14 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                 ),
                 Image.asset(
                   'assets/carousel_pic/2.png',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/prototype/3.jpg',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'assets/prototype/4.jpg',
                   fit: BoxFit.cover,
                 ),
               ],
@@ -227,7 +254,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                         child: InkWell(
                           onTap: () {},
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Padding(
                                   padding: const EdgeInsets.only(
@@ -250,8 +277,8 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                         child: Container(
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                                image:
-                                                    AssetImage("assets/ch.jpg"),
+                                                image: AssetImage(
+                                                    "assets/prototype/1.jpg"),
                                                 fit: BoxFit.cover),
                                           ),
                                           child: SizedBox.fromSize(
@@ -303,7 +330,151 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'FOR CH ARCHITECTURE, NOW CAN FLY TO THE MOON',
+                                  'Dr Phil Considine, Director of Strathclyde Executive Education and Development, Strathclyde Business School, University of Strathclyde',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w800),
+                                  softWrap: false,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              const Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 5,
+                                    left: 8,
+                                    right: 8,
+                                    bottom: 0,
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        '11 September 2023',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      Text(
+                                        ' | ',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      Text(
+                                        'CORP',
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ],
+                                  ))
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  elevation: 1,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                  ),
+                  child: SizedBox.fromSize(
+                    size: const Size(270, 80),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15),
+                        bottomLeft: Radius.circular(15),
+                        bottomRight: Radius.circular(15),
+                      ),
+                      child: Material(
+                        color: const Color.fromARGB(0, 255, 193, 7),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: <Widget>[
+                              Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                  ),
+                                  child: Container(
+                                    decoration: const BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(0)),
+                                    ),
+                                    child: Column(children: [
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(15),
+                                          topRight: Radius.circular(15),
+                                        ),
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/prototype/2.jpg"),
+                                                fit: BoxFit.cover),
+                                          ),
+                                          child: SizedBox.fromSize(
+                                            size: const Size(300, 80),
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                topLeft: Radius.circular(15),
+                                                topRight: Radius.circular(15),
+                                              ),
+                                              child: Material(
+                                                color: const Color.fromARGB(
+                                                    30, 67, 97, 141),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: <Widget>[
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                        top: 0,
+                                                        left: 0,
+                                                        right: 0,
+                                                        bottom: 00,
+                                                      ),
+                                                      child: Column(
+                                                        children: [
+                                                          SizedBox.fromSize(
+                                                            size: const Size(
+                                                                180, 70),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                                  )),
+                              const Padding(
+                                padding: EdgeInsets.only(
+                                  top: 5,
+                                  left: 8,
+                                  right: 8,
+                                  bottom: 0,
+                                ),
+                                child: Text(
+                                  'Visit by University Nottingham Malaysia (UNM)',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -316,11 +487,30 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   right: 8,
                                   bottom: 0,
                                 ),
-                                child: Text(
-                                  '8 September 2023',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '28 July 2023',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      ' | ',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      'CORP',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
                                 ),
                               )
                             ],
@@ -373,7 +563,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    "assets/carousel_pic/ulife_live.png"),
+                                                    "assets/prototype/3.jpg"),
                                                 fit: BoxFit.cover),
                                           ),
                                           child: SizedBox.fromSize(
@@ -425,7 +615,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'DOWNLOAD & REGISTER NOW : ULIFE NOW LIVE IN YOUR SMARTPHONE',
+                                  'UTP’s CONVORIDE 2023 IS NOW OPEN FOR REGISTRATION!',
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -438,11 +628,30 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   right: 8,
                                   bottom: 0,
                                 ),
-                                child: Text(
-                                  '8 September 2023',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '03 July 2023',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      ' | ',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      '-',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
                                 ),
                               )
                             ],
@@ -471,7 +680,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                         child: InkWell(
                           onTap: () {},
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Padding(
                                   padding: const EdgeInsets.only(
@@ -495,7 +704,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                           decoration: const BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    "assets/carousel_pic/1.jpg"),
+                                                    "assets/prototype/4.jpg"),
                                                 fit: BoxFit.cover),
                                           ),
                                           child: SizedBox.fromSize(
@@ -547,7 +756,8 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   bottom: 0,
                                 ),
                                 child: Text(
-                                  'CLASSROOM BOOKING NOW AVAILABLE DURING STUDY WEEK',
+                                  "UTP's CONVORIDE ROUTES",
+                                  textAlign: TextAlign.left,
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w800),
@@ -560,133 +770,30 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   right: 8,
                                   bottom: 0,
                                 ),
-                                child: Text(
-                                  '8 September 2023',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Card(
-                  elevation: 1,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                  ),
-                  child: SizedBox.fromSize(
-                    size: const Size(270, 80),
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15),
-                        bottomLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(15),
-                      ),
-                      child: Material(
-                        color: const Color.fromARGB(0, 255, 193, 7),
-                        child: InkWell(
-                          onTap: () {},
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-                                  padding: const EdgeInsets.only(
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                  ),
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(0)),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '03 July 2023',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
                                     ),
-                                    child: Column(children: [
-                                      ClipRRect(
-                                        borderRadius: const BorderRadius.only(
-                                          topLeft: Radius.circular(15),
-                                          topRight: Radius.circular(15),
-                                        ),
-                                        child: Container(
-                                          decoration: const BoxDecoration(
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    "assets/carousel_pic/2.png"),
-                                                fit: BoxFit.cover),
-                                          ),
-                                          child: SizedBox.fromSize(
-                                            size: const Size(300, 80),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(15),
-                                                topRight: Radius.circular(15),
-                                              ),
-                                              child: Material(
-                                                color: const Color.fromARGB(
-                                                    30, 67, 97, 141),
-                                                child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: <Widget>[
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                        top: 0,
-                                                        left: 0,
-                                                        right: 0,
-                                                        bottom: 00,
-                                                      ),
-                                                      child: Column(
-                                                        children: [
-                                                          SizedBox.fromSize(
-                                                            size: const Size(
-                                                                180, 70),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ]),
-                                  )),
-                              const Padding(
-                                padding: EdgeInsets.only(
-                                  top: 5,
-                                  left: 8,
-                                  right: 8,
-                                  bottom: 0,
-                                ),
-                                child: Text(
-                                  'ENGAGEMENT WITH GRADUATING STUDENT, CLASS OF MAY 2023',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(
-                                  top: 5,
-                                  left: 8,
-                                  right: 8,
-                                  bottom: 0,
-                                ),
-                                child: Text(
-                                  '8 September 2023',
-                                  style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500),
+                                    Text(
+                                      ' | ',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                    Text(
+                                      '-',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
                                 ),
                               )
                             ],
@@ -749,14 +856,9 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                       child: Material(
                         color: const Color.fromARGB(0, 255, 193, 7),
                         child: InkWell(
-                          //splashColor:Color.fromARGB(255, 191, 217, 255),
                           onTap: () {},
                           child: Padding(
-                            padding: const EdgeInsets.only(
-                              top: 10,
-
-                              //bottom: 5,
-                            ),
+                            padding: const EdgeInsets.only(top: 10),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[

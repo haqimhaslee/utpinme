@@ -9,9 +9,6 @@ import 'package:utp_in_me/src/utp_ui_color.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.transparent,
-  ));
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
       overlays: [SystemUiOverlay.top]);
@@ -22,26 +19,17 @@ void main() async {
 class UtpInMe extends StatelessWidget {
   const UtpInMe({Key? key}) : super(key: key);
 
-//  static final _defaultLightColorScheme =
-//      ColorScheme.fromSwatch(primarySwatch: Colors.blue);
-
-//  static final _defaultDarkColorScheme = ColorScheme.fromSwatch(
-//      primarySwatch: Colors.blue, brightness: Brightness.dark);
-
   @override
   Widget build(BuildContext context) {
-//    return DynamicColorBuilder(builder: (lightColorScheme, darkColorScheme) {
     return DynamicColorBuilder(builder: (lightDynamic, darkDynamic) {
       return MaterialApp(
           theme: ThemeData(
             fontFamily: 'GoogleSans',
-            //colorScheme: lightColorScheme ?? _defaultLightColorScheme,
             colorScheme: lightDynamic ?? lightColorScheme,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
             fontFamily: 'GoogleSans',
-            //colorScheme: darkColorScheme ?? _defaultDarkColorScheme,
             colorScheme: darkDynamic ?? darkColorScheme,
             useMaterial3: true,
           ),
