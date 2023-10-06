@@ -15,6 +15,8 @@ class USummon extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             toolbarHeight: 70,
+            centerTitle: true,
+            elevation: 3,
             title: const Text('USummon'),
             bottom: const TabBar(
               tabs: [

@@ -9,6 +9,8 @@ class ParcelHub extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 70,
           title: const Text('Postal Hub'),
+          centerTitle: true,
+          elevation: 3,
           actions: [
             IconButton(
               icon: const Icon(Icons.info_rounded),

@@ -280,6 +280,10 @@ class MoreApp extends StatelessWidget {
     }
 
     return Scaffold(
+        appBar: AppBar(
+            //elevation: 3,
+            centerTitle: true,
+            title: const Text("Mini App")),
         body: Align(
             alignment: Alignment.center,
             child: ListView(children: [

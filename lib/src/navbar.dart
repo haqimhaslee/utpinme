@@ -102,30 +102,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 5,
-          scrolledUnderElevation: 5,
-          title: Padding(
-              padding: const EdgeInsets.only(
-                left: 0,
-                right: 0,
-              ),
-              child: Row(children: [
-                SizedBox(
-                    height: 28,
-                    width: 76,
-                    child: Image.asset(
-                      'assets/app_logo.png',
-                      fit: BoxFit.cover,
-                    )),
-              ])),
-        ),
         bottomNavigationBar: NavigationBar(
           selectedIndex: _selectedIndex,
           //backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
           animationDuration: const Duration(milliseconds: 400),
           //indicatorColor: Theme.of(context).colorScheme.background,
-          labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
           onDestinationSelected: (int newIndex) {
             setState(() {
               _selectedIndex = newIndex;
@@ -140,12 +122,12 @@ class _HomePageState extends State<HomePage> {
             NavigationDestination(
               selectedIcon: Icon(Icons.grid_view_rounded),
               icon: Icon(Icons.grid_view_outlined),
-              label: 'Application',
+              label: 'Mini Apps',
             ),
             NavigationDestination(
               selectedIcon: Icon(Icons.notifications_rounded),
               icon: Icon(Icons.notifications_outlined),
-              label: 'Notification',
+              label: 'Alerts',
             ),
             NavigationDestination(
               selectedIcon: Icon(Icons.manage_accounts_rounded),

@@ -31,14 +31,14 @@ immediately when first run, as it is used to execute the `flutter` tool itself.
 This will also occur when Flutter is upgraded (e.g. by running the `flutter
 upgrade` command).
 
-# Project preview (version 23.1.25060315)
+# Project preview (version 23.1.25060315)(OLD)
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
 # Join us in BETA Testing
-Starting to join developers preview and try out by run `gh repo clone haqimhaslee/UTPinMe-DEV_PREV`
+Starting to join developers preview and try out by run `not available`
 Do remind to run `flutter pub get` to import all the others public package before debugging
 
-* [DOWNLOAD APK (Android only)](https://drive.google.com/drive/folders/1MDrGijhW2MFYGl_tGraEsfY0-LpjDFYv?usp=sharing)
+* [DOWNLOAD APK (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
 
 *Key/Token authentication will not be upload OR share on public branch
 

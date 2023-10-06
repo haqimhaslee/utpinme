@@ -12,16 +12,18 @@ class IattendApp extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
+            elevation: 3,
+            centerTitle: true,
             toolbarHeight: 70,
             title: const Text('iAttend'),
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  icon: Icon(Icons.date_range_rounded),
+                  //icon: Icon(Icons.date_range_rounded),
                   text: "Events",
                 ),
                 Tab(
-                  icon: Icon(Icons.query_stats_rounded),
+                  //icon: Icon(Icons.query_stats_rounded),
                   text: "Statistics",
                 ),
               ],

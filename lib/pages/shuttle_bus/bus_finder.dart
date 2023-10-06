@@ -1,7 +1,14 @@
 //import 'dart:async';
+// ignore_for_file: unused_local_variable, duplicate_ignore, prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class Data {
+  String label;
+  Data(this.label);
+}
 
 class LiveBusPageGoogle extends StatefulWidget {
   const LiveBusPageGoogle({super.key});
@@ -12,6 +19,12 @@ class LiveBusPageGoogle extends StatefulWidget {
 
 class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
   static const CameraPosition _uTeknologiPetronas =
+      CameraPosition(target: LatLng(4.3819152, 100.9700975), zoom: 18);
+  static const CameraPosition _internalView =
+      CameraPosition(target: LatLng(4.3819152, 100.9700975), zoom: 18);
+  static const CameraPosition _externalView =
+      CameraPosition(target: LatLng(4.3819152, 100.9700975), zoom: 18);
+  static const CameraPosition _weekendView =
       CameraPosition(target: LatLng(4.3819152, 100.9700975), zoom: 18);
 
   Future<Position> determinePosition() async {
@@ -40,28 +53,198 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
     return await Geolocator.getCurrentPosition();
   }
 
+  int? _value = 0;
+  final List<Data> _choiceChipsList = [
+    Data("Internal"),
+    Data("External"),
+    Data("Weekend"),
+  ];
+
   @override
   Widget build(BuildContext context) {
+    var pinpointInternal = {
+      const Marker(
+        markerId: MarkerId("1"),
+        position: LatLng(4.388381, 100.967819),
+      ),
+      const Marker(
+        markerId: MarkerId("2"),
+        position: LatLng(4.386747, 100.973438),
+      ),
+      const Marker(
+        markerId: MarkerId("3"),
+        position: LatLng(4.385688, 100.979594),
+      ),
+      const Marker(
+        markerId: MarkerId("4"),
+        position: LatLng(4.383349, 100.973281),
+      ),
+      const Marker(
+        markerId: MarkerId("5"),
+        position: LatLng(4.382113, 100.970389),
+      ),
+      const Marker(
+        markerId: MarkerId("6"),
+        position: LatLng(4.379588, 100.961718),
+      ),
+      const Marker(
+        markerId: MarkerId("7"),
+        position: LatLng(4.388114, 100.963178),
+      ),
+      const Marker(
+        markerId: MarkerId("8"),
+        position: LatLng(4.388724, 100.965190),
+      ),
+      const Marker(
+        markerId: MarkerId("9"),
+        position: LatLng(4.385755, 100.971251),
+      ),
+    };
+    var pinpointExternal = {
+      const Marker(
+        markerId: MarkerId("1"),
+        position: LatLng(4.388338, 100.967864),
+      ),
+      const Marker(
+        markerId: MarkerId("2"),
+        position: LatLng(4.379692, 100.961713),
+      ),
+      const Marker(
+        markerId: MarkerId("3"),
+        position: LatLng(4.382040, 100.970422),
+      ),
+      const Marker(
+        markerId: MarkerId("4"),
+        position: LatLng(4.385698, 100.971224),
+      ),
+      const Marker(
+        markerId: MarkerId("5"),
+        position: LatLng(4.385716, 100.979556),
+      ),
+      const Marker(
+        markerId: MarkerId("6"),
+        position: LatLng(4.364061, 100.976660),
+      ),
+      const Marker(
+        markerId: MarkerId("7"),
+        position: LatLng(4.355022, 100.968017),
+      ),
+      const Marker(
+        markerId: MarkerId("8"),
+        position: LatLng(4.366313, 100.966852),
+      ),
+      const Marker(
+        markerId: MarkerId("9"),
+        position: LatLng(4.372774, 100.969351),
+      ),
+      const Marker(
+        markerId: MarkerId("10"),
+        position: LatLng(4.388744, 100.965474),
+      ),
+    };
+    var pinpointWeekend = {
+      const Marker(
+        markerId: MarkerId("1"),
+        position: LatLng(4.388372, 100.967875),
+      ),
+      const Marker(
+        markerId: MarkerId("2"),
+        position: LatLng(4.357631, 100.967575),
+      ),
+      const Marker(
+        markerId: MarkerId("3"),
+        position: LatLng(4.544771, 101.069084),
+      ),
+      const Marker(
+        markerId: MarkerId("4"),
+        position: LatLng(4.459871, 101.049394),
+      ),
+    };
+
+    var pinpointNull;
     return Scaffold(
         body: GoogleMap(
           mapType: MapType.normal,
-          initialCameraPosition: _uTeknologiPetronas,
+          initialCameraPosition: (_value == 0)
+              ? (_internalView)
+              : (_value == 1)
+                  ? (_externalView)
+                  : (_value == 2)
+                      ? (_weekendView)
+                      : _uTeknologiPetronas,
+
           //mapToolbarEnabled: true,
-          markers: {
-            const Marker(
-              markerId: MarkerId('location'),
-            )
-          },
+          markers: (_value == 0)
+              ? (pinpointInternal)
+              : (_value == 1)
+                  ? (pinpointExternal)
+                  : (_value == 2)
+                      ? (pinpointWeekend)
+                      : pinpointNull,
+
           zoomControlsEnabled: false,
-          //myLocationEnabled: true,
+          myLocationEnabled: true,
           //liteModeEnabled: true,
-          //myLocationButtonEnabled: true,
+          //myLocationButtonEnabled: false,
           //onMapCreated: (GoogleMapController controller) {
           //  _controller.complete(controller);
           //},
         ),
+        bottomSheet: SizedBox(
+          height: 150,
+          width: MediaQuery.of(context).size.width,
+          child: ClipRRect(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Text(
+                  'Choose a checkpoint to view',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                Wrap(
+                  spacing: 10,
+                  direction: Axis.horizontal,
+                  children: choiceChips(),
+                ),
+                const SizedBox(height: 20.0),
+                const Text(
+                  'Powered by Google Maps',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w100,
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+              ],
+            ),
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
-            onPressed: determinePosition,
-            child: const Icon(Icons.my_location_rounded)));
+            child: const Icon(Icons.my_location_rounded), onPressed: () {}));
+  }
+
+  List<Widget> choiceChips() {
+    List<Widget> chips = [];
+    for (int i = 0; i < _choiceChipsList.length; i++) {
+      Widget item = Padding(
+        padding: const EdgeInsets.only(left: 0, right: 0),
+        child: ChoiceChip(
+          label: Text(_choiceChipsList[i].label),
+          selected: _value == i,
+          onSelected: (bool value) {
+            setState(() {
+              _value = i;
+            });
+          },
+        ),
+      );
+      chips.add(item);
+    }
+    return chips;
   }
 }

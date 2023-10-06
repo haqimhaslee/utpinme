@@ -53,8 +53,9 @@ class PanicButton extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 5,
-        scrolledUnderElevation: 5,
+        elevation: 3,
+        scrolledUnderElevation: 3,
+        centerTitle: true,
         title: const Text(
           'Emergency',
         ),

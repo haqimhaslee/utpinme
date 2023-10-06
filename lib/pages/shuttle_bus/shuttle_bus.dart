@@ -14,6 +14,7 @@ class ShuttleBus extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 3,
+          centerTitle: true,
           title: const Text('Shuttle Bus'),
           actions: [
             IconButton(
