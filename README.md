@@ -35,7 +35,8 @@ Do remind to run `flutter pub get` to import all the others public package befor
 * [DOWNLOAD APK (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
 * Username : `user1@utp.edu.my`
 * Password : `user@utp`
-*Key/Token authentication will not be upload OR share on public branch
+
+* Key/Token authentication will not be upload OR share on public branch
 
 [flutter.dev]: https://flutter.dev
 [Build Status - Cirrus]: https://api.cirrus-ci.com/github/flutter/flutter.svg
