@@ -1,11 +1,11 @@
-# UTPinMe -DEV_PREV
+# UTPinMe
 
 [![Build Status - Cirrus][]][Build status]
 [![codecov](https://codecov.io/gh/flutter/flutter/branch/master/graph/badge.svg?token=11yDrJU2M2)](https://codecov.io/gh/flutter/flutter)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5631/badge)](https://bestpractices.coreinfrastructure.org/projects/5631)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/flutter/flutter/badge)](https://deps.dev/project/github/flutter%2Fflutter)
 
-UTP Student Experience Application
+UTP Application
 
 ## Getting Started
 A few resources to get you started if you interested of this project:
@@ -35,7 +35,6 @@ upgrade` command).
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
 # Join us in BETA Testing
-Starting to join developers preview and try out by run `not available`
 Do remind to run `flutter pub get` to import all the others public package before debugging
 
 * [DOWNLOAD APK (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
