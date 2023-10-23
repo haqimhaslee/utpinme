@@ -3,10 +3,10 @@ description: An Universiti Teknologi PETRONAS application
 
 publish_to: 'none'
 
-version: 23.8.71156
+version: 23.10.171330
 
 environment:
-  sdk: '>=2.18.5 <3.0.0'
+  sdk: '>=2.18.5 <3.13.0'
 
 
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
   google_maps_flutter: ^2.4.0
   qr_flutter: ^4.1.0
   google_fonts: ^4.0.4
-  material_color_utilities: ^0.5.0
+  material_color_utilities: ^0.5.0'
   #location: ^4.4.0
   flutter_svg: ^2.0.0+1
   #permission_handler: ^10.2.0
@@ -46,6 +46,9 @@ dependencies:
   flutter_custom_tabs: ^1.2.1
   geolocator: ^10.0.1
   package_info_plus: ^4.1.0
+  salomon_bottom_bar: ^3.3.2
+  eva_icons_flutter: ^3.1.0
+
  
  
  
@@ -78,6 +81,7 @@ flutter:
   - assets/prototype/5.jpg
   - assets/prototype/6.png
   - assets/prototype/7.jpg
+  - assets/prototype/news_1.jpg
 
   fonts:
       - family: GoogleSans

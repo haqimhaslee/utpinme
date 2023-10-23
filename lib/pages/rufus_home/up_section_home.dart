@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:utp_in_me/pages/news_and_notification/more_news.dart';
-import 'package:utp_in_me/pages/news_and_notification/more_upcoming_events.dart';
+import 'package:utp_in_me/pages/nox_news_and_notification/more_news.dart';
+import 'package:utp_in_me/pages/nox_news_and_notification/more_upcoming_events.dart';
+import 'package:utp_in_me/pages/nox_news_and_notification/viewer_news.dart';
 import 'package:utp_in_me/pages/panic_button.dart';
+import 'package:utp_in_me/pages/rufus_digital_id/digital_id.dart';
 
 class UpSectionHome extends StatefulWidget {
   const UpSectionHome({super.key});
@@ -40,118 +42,128 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                 ),
                 child: Material(
                   color: const Color.fromARGB(0, 255, 193, 7),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 15,
-                      bottom: 15,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        const Padding(
-                          padding: EdgeInsets.only(right: 15, left: 15),
-                          child: SizedBox(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DigitalId()));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 15,
+                        bottom: 15,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const Padding(
+                            padding: EdgeInsets.only(right: 15, left: 15),
+                            child: SizedBox(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  CircleAvatar(
+                                    radius: 30,
+                                    backgroundImage:
+                                        AssetImage("assets/profile_pic.png"),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width - 180,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage:
-                                      AssetImage("assets/profile_pic.png"),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.person_rounded,
+                                      size: 18,
+                                    ),
+                                    SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                199,
+                                        child: const Padding(
+                                            padding: EdgeInsets.only(
+                                                right: 5, left: 5),
+                                            child: Text("Admin",
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                ))))
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.mail_rounded,
+                                      size: 18,
+                                    ),
+                                    SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                199,
+                                        child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 5, left: 5),
+                                            child: Text(user.email!)))
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.book_rounded,
+                                      size: 18,
+                                    ),
+                                    SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width -
+                                                199,
+                                        child: const Padding(
+                                            padding: EdgeInsets.only(
+                                                right: 5, left: 5),
+                                            child: Text("-")))
+                                  ],
                                 ),
                               ],
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width - 180,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  const Icon(
-                                    Icons.person_rounded,
-                                    size: 18,
+                          SizedBox.fromSize(
+                            size: const Size(60, 60),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15.0),
+                              child: Material(
+                                color: Theme.of(context).colorScheme.error,
+                                child: InkWell(
+                                  splashColor: Theme.of(context)
+                                      .colorScheme
+                                      .errorContainer,
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const PanicButton()));
+                                  },
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Icon(
+                                        Icons.emergency,
+                                        size: 35,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onError,
+                                      ),
+                                    ],
                                   ),
-                                  SizedBox(
-                                      width: MediaQuery.of(context).size.width -
-                                          199,
-                                      child: const Padding(
-                                          padding: EdgeInsets.only(
-                                              right: 5, left: 5),
-                                          child: Text("Admin",
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                              ))))
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  const Icon(
-                                    Icons.mail_rounded,
-                                    size: 18,
-                                  ),
-                                  SizedBox(
-                                      width: MediaQuery.of(context).size.width -
-                                          199,
-                                      child: Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 5, left: 5),
-                                          child: Text(user.email!)))
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  const Icon(
-                                    Icons.book_rounded,
-                                    size: 18,
-                                  ),
-                                  SizedBox(
-                                      width: MediaQuery.of(context).size.width -
-                                          199,
-                                      child: const Padding(
-                                          padding: EdgeInsets.only(
-                                              right: 5, left: 5),
-                                          child: Text("-")))
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox.fromSize(
-                          size: const Size(60, 60),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(15.0),
-                            child: Material(
-                              color: Theme.of(context).colorScheme.error,
-                              child: InkWell(
-                                splashColor: Theme.of(context)
-                                    .colorScheme
-                                    .errorContainer,
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const PanicButton()));
-                                },
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Icon(
-                                      Icons.emergency,
-                                      size: 35,
-                                      color:
-                                          Theme.of(context).colorScheme.onError,
-                                    ),
-                                  ],
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -252,7 +264,12 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                       child: Material(
                         color: const Color.fromARGB(0, 255, 193, 7),
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ViewerNews()));
+                          },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[

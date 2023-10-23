@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:utp_in_me/auth/auth_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:dynamic_color/dynamic_color.dart';
-import 'package:utp_in_me/src/utp_ui_color.dart';
+import 'package:utp_in_me/src/utp_ui.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
-      overlays: [SystemUiOverlay.top]);
+  //SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
+  //    overlays: [SystemUiOverlay.bottom]);
 
   runApp(const UtpInMe());
 }

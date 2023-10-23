@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
-import 'package:utp_in_me/pages/digital_id/digital_id.dart';
-import 'package:utp_in_me/pages/home/home.dart';
+import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
+import 'package:utp_in_me/pages/rufus_digital_id/digital_id.dart';
+import 'package:utp_in_me/pages/rufus_home/home.dart';
 import 'package:utp_in_me/pages/more_app.dart';
-import 'package:utp_in_me/pages/news_and_notification/more_notification.dart';
-import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
+import 'package:utp_in_me/pages/nox_news_and_notification/more_notification.dart';
+import 'package:utp_in_me/pages/el_tigre_shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -91,7 +94,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  int _selectedIndex = 0;
+  var _selectedIndex = 0;
   final List<Widget> _windgetOption = <Widget>[
     const Home(),
     const MoreApp(),
@@ -102,42 +105,59 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: NavigationBar(
-          selectedIndex: _selectedIndex,
-          //backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
-          animationDuration: const Duration(milliseconds: 400),
-          //indicatorColor: Theme.of(context).colorScheme.background,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-          onDestinationSelected: (int newIndex) {
-            setState(() {
-              _selectedIndex = newIndex;
-            });
-          },
-          destinations: const [
-            NavigationDestination(
-              selectedIcon: Icon(Icons.home_rounded),
-              icon: Icon(Icons.home_outlined),
-              label: 'Home',
+        bottomNavigationBar: SalomonBottomBar(
+          selectedItemColor: Theme.of(context).colorScheme.primary,
+
+          //selectedColorOpacity: 0.2,
+          currentIndex: _selectedIndex,
+
+          onTap: (i) => setState(() => _selectedIndex = i),
+          items: [
+            /// Home
+            SalomonBottomBarItem(
+              icon: const Icon(EvaIcons.homeOutline),
+              title: const Text("Home"),
+              activeIcon: const Icon(EvaIcons.home),
             ),
-            NavigationDestination(
-              selectedIcon: Icon(Icons.grid_view_rounded),
-              icon: Icon(Icons.grid_view_outlined),
-              label: 'Mini Apps',
+
+            /// Likes
+            SalomonBottomBarItem(
+              icon: const Icon(EvaIcons.gridOutline),
+              title: const Text("Mini App"),
+              activeIcon: const Icon(EvaIcons.grid),
+              //selectedColor: Colors.pink,
             ),
-            NavigationDestination(
-              selectedIcon: Icon(Icons.notifications_rounded),
-              icon: Icon(Icons.notifications_outlined),
-              label: 'Alerts',
+
+            /// Search
+            SalomonBottomBarItem(
+              icon: const Icon(EvaIcons.bellOutline),
+              activeIcon: const Icon(EvaIcons.bell),
+              title: const Text("Notifications"),
+              //selectedColor: Colors.orange,
             ),
-            NavigationDestination(
-              selectedIcon: Icon(Icons.manage_accounts_rounded),
-              icon: Icon(Icons.manage_accounts_outlined),
-              label: 'Profile',
+
+            /// Profile
+            SalomonBottomBarItem(
+              icon: const Icon(EvaIcons.personOutline),
+              activeIcon: const Icon(EvaIcons.person),
+              title: const Text("Profile"),
+              //selectedColor: Colors.teal,
             ),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          //shape: CircleBorder(),
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const QRViewExample(),
+            ));
+          },
+          child: const Icon(Icons.qr_code_scanner_rounded),
+        ),
         body: PageTransitionSwitcher(
-          duration: const Duration(milliseconds: 250),
+          duration: const Duration(milliseconds: 400),
           transitionBuilder: (child, animation, secondaryAnimation) =>
               FadeThroughTransition(
             animation: animation,

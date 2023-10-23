@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-import 'package:utp_in_me/pages/academic_calendar/acad_cal.dart';
-import 'package:utp_in_me/pages/directory/directory.dart';
+import 'package:utp_in_me/pages/rufus_academic_calendar/acad_cal.dart';
+import 'package:utp_in_me/pages/nox_directory/directory.dart';
 import 'package:utp_in_me/pages/el_tigre_usummon/usummon.dart';
-import 'package:utp_in_me/pages/shuttle_bus/shuttle_bus.dart';
-import 'package:utp_in_me/pages/digital_id/digital_id.dart';
-import 'package:utp_in_me/pages/iAttend/iattend.dart';
-import 'package:utp_in_me/pages/parcel_hub.dart';
+import 'package:utp_in_me/pages/el_tigre_shuttle_bus/shuttle_bus.dart';
+import 'package:utp_in_me/pages/rufus_digital_id/digital_id.dart';
+import 'package:utp_in_me/pages/el_tigre_iAttend/iattend.dart';
+import 'package:utp_in_me/pages/postal_hub.dart';
 import 'package:utp_in_me/pages/el_tigre_exemption/exemption.dart';
-import 'package:utp_in_me/pages/uschedule/uschedule.dart';
+import 'package:utp_in_me/pages/nox_uschedule/uschedule.dart';
 
 class MoreApp extends StatelessWidget {
   const MoreApp({super.key});
@@ -281,7 +281,8 @@ class MoreApp extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-            //elevation: 3,
+            elevation: 5,
+            scrolledUnderElevation: 5,
             centerTitle: true,
             title: const Text("Mini App")),
         body: Align(

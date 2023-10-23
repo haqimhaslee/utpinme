@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 //import 'package:utp_in_me/pages/iAttend/iattend_qr.dart';
 //import 'package:utp_in_me/pages/iAttend/iattend_myevent.dart';
-import 'package:utp_in_me/pages/uschedule/uschedule_course.dart';
+import 'package:utp_in_me/pages/nox_uschedule/uschedule_course.dart';
 //import 'package:utp_in_me/pages/iAttend/iattend_mystats.dart';
-import 'package:utp_in_me/pages/uschedule/uschedule_exam.dart';
+import 'package:utp_in_me/pages/nox_uschedule/uschedule_exam.dart';
 //import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 //import 'package:utp_in_me/pages/ucs.dart';
 

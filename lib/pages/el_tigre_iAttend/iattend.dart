@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/iAttend/iattend_qr.dart';
-import 'package:utp_in_me/pages/iAttend/iattend_myevent.dart';
-import 'package:utp_in_me/pages/iAttend/iattend_mystats.dart';
+import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
+import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_myevent.dart';
+import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_mystats.dart';
 
 class IattendApp extends StatelessWidget {
   const IattendApp({super.key});

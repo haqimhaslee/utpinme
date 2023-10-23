@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+double mainRadius = 15;
+double contentRadius = 5;
 const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xFF2E5DA8),

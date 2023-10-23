@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/academic_calendar/fd_acad_cal.dart';
-import 'package:utp_in_me/pages/academic_calendar/intern_acad_cal.dart';
-import 'package:utp_in_me/pages/academic_calendar/ug_acad_cal.dart';
+import 'package:utp_in_me/pages/rufus_academic_calendar/fd_acad_cal.dart';
+import 'package:utp_in_me/pages/rufus_academic_calendar/intern_acad_cal.dart';
+import 'package:utp_in_me/pages/rufus_academic_calendar/ug_acad_cal.dart';
 
 class AcadCal extends StatelessWidget {
   const AcadCal({super.key});
