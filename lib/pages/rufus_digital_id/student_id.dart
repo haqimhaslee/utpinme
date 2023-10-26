@@ -99,7 +99,7 @@ class StudentId extends StatelessWidget {
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                             Text(
-                              "Admin",
+                              user.email!,
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
@@ -152,7 +152,7 @@ class StudentId extends StatelessWidget {
                                         Theme.of(context).textTheme.bodySmall,
                                   ),
                                   Text(
-                                    "23000000",
+                                    "-",
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),

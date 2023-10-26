@@ -68,6 +68,22 @@ class LmgPass extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          top: 5,
+                          left: 0,
+                          right: 0,
+                          bottom: 5,
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              "LMG Safety Passport",
+                              style: Theme.of(context).textTheme.titleSmall,
+                            ),
+                          ],
+                        ),
+                      ),
                       const Padding(
                         padding: EdgeInsets.only(
                           top: 10,
@@ -95,11 +111,7 @@ class LmgPass extends StatelessWidget {
                         child: Column(
                           children: [
                             Text(
-                              "Name",
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                            Text(
-                              "<name>",
+                              user.email!,
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
@@ -127,12 +139,12 @@ class LmgPass extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "Course",
+                                    "Date Issued",
                                     style:
                                         Theme.of(context).textTheme.bodySmall,
                                   ),
                                   Text(
-                                    "<course>",
+                                    "18 May 2023",
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),
@@ -147,12 +159,12 @@ class LmgPass extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Text(
-                                    "ID",
+                                    "Date Expire",
                                     style:
                                         Theme.of(context).textTheme.bodySmall,
                                   ),
                                   Text(
-                                    "<ID>",
+                                    "18 May 2024",
                                     style:
                                         Theme.of(context).textTheme.bodyLarge,
                                   ),
@@ -174,7 +186,8 @@ class LmgPass extends StatelessWidget {
                               bottom: 1,
                             ),
                             child: QrImageView(
-                              data: user.email!,
+                              data:
+                                  'https://ulearn.utp.edu.my/admin/tool/certificate/index.php?code=6632308728MM',
                               version: QrVersions.auto,
                               size: 100,
                               gapless: true,
@@ -183,20 +196,8 @@ class LmgPass extends StatelessWidget {
                         ]),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 5,
-                          left: 10,
-                          right: 10,
-                          bottom: 5,
-                        ),
-                        child: Text(
-                          user.email!,
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      Padding(
                           padding: const EdgeInsets.only(
-                            top: 0,
+                            top: 15,
                             left: 0,
                             right: 0,
                             bottom: 0,

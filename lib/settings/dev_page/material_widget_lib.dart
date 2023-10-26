@@ -99,25 +99,9 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FloatingActionButton.small(
-                  onPressed: (() {}),
-                  child: const Icon(Icons.add),
-                ),
-                const Text("    "),
-                FloatingActionButton(
-                  onPressed: (() {}),
-                  child: const Icon(Icons.add),
-                ),
-                const Text("    "),
                 FloatingActionButton.large(
                   onPressed: (() {}),
                   child: const Icon(Icons.add),
-                ),
-                const Text("    "),
-                FloatingActionButton.extended(
-                  onPressed: (() {}),
-                  label: const Text('Add'),
-                  icon: const Icon(Icons.add),
                 ),
               ],
             ),
@@ -166,29 +150,7 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
             Slider(
               value: _currentSliderValue,
               max: 100,
-              divisions: 100,
-              label: _currentSliderValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderValue = value;
-                });
-              },
-            ),
-            Slider(
-              value: _currentSliderValue,
-              max: 100,
-              divisions: 10,
-              label: _currentSliderValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _currentSliderValue = value;
-                });
-              },
-            ),
-            Slider(
-              value: _currentSliderValue,
-              max: 100,
-              divisions: 5,
+              //divisions: 100,
               label: _currentSliderValue.round().toString(),
               onChanged: (double value) {
                 setState(() {
@@ -207,6 +169,7 @@ class _MaterialWidgetLibraryState extends State<MaterialWidgetLibrary> {
               },
             ),
             Slider(
+              //divisions: 200,
               value: _currentSliderSecondaryValue,
               label: _currentSliderSecondaryValue.round().toString(),
               onChanged: (double value) {

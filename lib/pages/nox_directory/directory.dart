@@ -11,79 +11,71 @@ class _DirectoryState extends State<Directory> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 5,
+          scrolledUnderElevation: 5,
           toolbarHeight: 70,
           title: const Text('Directory'),
         ),
-        body: ListView(children: [
-          Padding(
+        body: Column(
+          children: [
+            Padding(
               padding: const EdgeInsets.only(
-                top: 15,
+                top: 10,
                 left: 10,
                 right: 10,
                 bottom: 5,
               ),
-              child: Column(children: [
-                SearchAnchor(builder:
-                    (BuildContext context, SearchController controller) {
-                  return SearchBar(
-                    controller: controller,
-                    padding: const MaterialStatePropertyAll<EdgeInsets>(
-                        EdgeInsets.symmetric(horizontal: 16.0)),
-                    onTap: () {
-                      controller.openView();
-                    },
-                    onChanged: (_) {
-                      controller.openView();
-                    },
-                    leading: const Icon(Icons.search),
-                    trailing: <Widget>[
-                      Tooltip(
-                        message: 'Change brightness mode',
-                        child: IconButton(
-                          onPressed: () => showDialog<String>(
-                            context: context,
-                            builder: (BuildContext context) => Dialog(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    const Text('This is a filter dialog.'),
-                                    const SizedBox(height: 15),
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: const Text('OK'),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
+              child: SizedBox(
+                height: 70,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width - 100,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30.0),
                           ),
-                          icon: const Icon(Icons.tune_rounded),
-                          selectedIcon: const Icon(Icons.tune_rounded),
+                          labelText: 'Enter keyword',
                         ),
-                      )
-                    ],
-                  );
-                }, suggestionsBuilder:
-                    (BuildContext context, SearchController controller) {
-                  return List<ListTile>.generate(5, (int index) {
-                    final String item = 'item $index';
-                    return ListTile(
-                      title: Text(item),
-                      onTap: () {
-                        setState(() {
-                          controller.closeView(item);
-                        });
-                      },
-                    );
-                  });
-                }),
-                const Divider(),
-              ]))
-        ]));
+                      ),
+                    ),
+                    const Flexible(fit: FlexFit.tight, child: SizedBox()),
+                    Padding(
+                        padding: const EdgeInsets.only(
+                          top: 5,
+                          left: 10,
+                          right: 10,
+                          bottom: 5,
+                        ),
+                        child: SizedBox(
+                            width: 60,
+                            height: 60,
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.search_rounded)))),
+                  ],
+                ),
+              ),
+            ),
+            const Padding(
+                padding: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                ),
+                child: Divider()),
+            Expanded(
+                child: ListView(children: const [
+              Padding(
+                  padding: EdgeInsets.only(
+                    top: 15,
+                    left: 10,
+                    right: 10,
+                    bottom: 5,
+                  ),
+                  child: Column(children: []))
+            ]))
+          ],
+        ));
   }
 }

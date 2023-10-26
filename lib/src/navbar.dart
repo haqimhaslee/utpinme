@@ -10,7 +10,7 @@ import 'package:utp_in_me/settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+//import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -115,31 +115,31 @@ class _HomePageState extends State<HomePage> {
           items: [
             /// Home
             SalomonBottomBarItem(
-              icon: const Icon(EvaIcons.homeOutline),
+              icon: const Icon(Icons.home_outlined),
               title: const Text("Home"),
-              activeIcon: const Icon(EvaIcons.home),
+              activeIcon: const Icon(Icons.home),
             ),
 
             /// Likes
             SalomonBottomBarItem(
-              icon: const Icon(EvaIcons.gridOutline),
+              icon: const Icon(Icons.grid_3x3_outlined),
               title: const Text("Mini App"),
-              activeIcon: const Icon(EvaIcons.grid),
+              activeIcon: const Icon(Icons.grid_3x3_rounded),
               //selectedColor: Colors.pink,
             ),
 
             /// Search
             SalomonBottomBarItem(
-              icon: const Icon(EvaIcons.bellOutline),
-              activeIcon: const Icon(EvaIcons.bell),
+              icon: const Icon(Icons.notifications_outlined),
+              activeIcon: const Icon(Icons.notifications_rounded),
               title: const Text("Notifications"),
               //selectedColor: Colors.orange,
             ),
 
             /// Profile
             SalomonBottomBarItem(
-              icon: const Icon(EvaIcons.personOutline),
-              activeIcon: const Icon(EvaIcons.person),
+              icon: const Icon(Icons.person_outline),
+              activeIcon: const Icon(Icons.person_rounded),
               title: const Text("Profile"),
               //selectedColor: Colors.teal,
             ),
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
           child: const Icon(Icons.qr_code_scanner_rounded),
         ),
         body: PageTransitionSwitcher(
-          duration: const Duration(milliseconds: 400),
+          duration: const Duration(milliseconds: 350),
           transitionBuilder: (child, animation, secondaryAnimation) =>
               FadeThroughTransition(
             animation: animation,

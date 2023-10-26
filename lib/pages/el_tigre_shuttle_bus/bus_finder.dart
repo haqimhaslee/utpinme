@@ -141,6 +141,10 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
         markerId: MarkerId("10"),
         position: LatLng(4.388744, 100.965474),
       ),
+      const Marker(
+        markerId: MarkerId("11"),
+        position: LatLng(4.362106011309385, 100.97183584165968),
+      ),
     };
     var pinpointWeekend = {
       const Marker(
@@ -159,73 +163,71 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
         markerId: MarkerId("4"),
         position: LatLng(4.459871, 101.049394),
       ),
+      const Marker(
+        markerId: MarkerId("5"),
+        position: LatLng(4.5990523839102835, 101.08998617861626),
+      ),
     };
 
     var pinpointNull;
     return Scaffold(
-        body: GoogleMap(
-          mapType: MapType.normal,
-          initialCameraPosition: (_value == 0)
-              ? (_internalView)
-              : (_value == 1)
-                  ? (_externalView)
-                  : (_value == 2)
-                      ? (_weekendView)
-                      : _uTeknologiPetronas,
+      body: GoogleMap(
+        mapType: MapType.normal,
+        initialCameraPosition: (_value == 0)
+            ? (_internalView)
+            : (_value == 1)
+                ? (_externalView)
+                : (_value == 2)
+                    ? (_weekendView)
+                    : _uTeknologiPetronas,
 
-          //mapToolbarEnabled: true,
-          markers: (_value == 0)
-              ? (pinpointInternal)
-              : (_value == 1)
-                  ? (pinpointExternal)
-                  : (_value == 2)
-                      ? (pinpointWeekend)
-                      : pinpointNull,
+        mapToolbarEnabled: false,
 
-          zoomControlsEnabled: false,
-          myLocationEnabled: true,
-          //liteModeEnabled: true,
-          //myLocationButtonEnabled: false,
-          //onMapCreated: (GoogleMapController controller) {
-          //  _controller.complete(controller);
-          //},
-        ),
-        bottomSheet: SizedBox(
-          height: 150,
-          width: MediaQuery.of(context).size.width,
-          child: ClipRRect(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const Text(
-                  'Choose a checkpoint to view',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w900,
-                  ),
+        markers: (_value == 0)
+            ? (pinpointInternal)
+            : (_value == 1)
+                ? (pinpointExternal)
+                : (_value == 2)
+                    ? (pinpointWeekend)
+                    : pinpointNull,
+
+        zoomControlsEnabled: false,
+        myLocationEnabled: true,
+        //liteModeEnabled: true,
+        //myLocationButtonEnabled: false,
+        //onMapCreated: (GoogleMapController controller) {
+        //  _controller.complete(controller);
+        //},
+      ),
+      bottomSheet: SizedBox(
+        height: 150,
+        width: MediaQuery.of(context).size.width,
+        child: ClipRRect(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const Text(
+                'Choose a checkpoint to view',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
                 ),
-                const SizedBox(height: 8.0),
-                Wrap(
-                  spacing: 10,
-                  direction: Axis.horizontal,
-                  children: choiceChips(),
-                ),
-                const SizedBox(height: 20.0),
-                const Text(
-                  'Powered by Google Maps',
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                const SizedBox(height: 20.0),
-              ],
-            ),
+              ),
+              const SizedBox(height: 8.0),
+              Wrap(
+                spacing: 10,
+                direction: Axis.horizontal,
+                children: choiceChips(),
+              ),
+              const SizedBox(height: 20.0),
+            ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-            child: const Icon(Icons.my_location_rounded), onPressed: () {}));
+      ),
+      //floatingActionButton: FloatingActionButton(
+      //    child: const Icon(Icons.my_location_rounded), onPressed: () {})
+    );
   }
 
   List<Widget> choiceChips() {

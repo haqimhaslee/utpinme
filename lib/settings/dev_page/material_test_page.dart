@@ -12,7 +12,7 @@ class MaterialTestPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
             elevation: 3,
-            title: const Text('Developers Page'),
+            title: const Text('Dev Prev Page'),
             bottom: const TabBar(tabs: [
               Tab(
                 text: "Widget/Component",

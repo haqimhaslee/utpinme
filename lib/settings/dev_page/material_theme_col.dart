@@ -391,6 +391,130 @@ class _MaterialThemeColorState extends State<MaterialThemeColor> {
                     ],
                   ),
                 )),
+            const Text(''),
+            const Text(" "),
+            const Text(" "),
+            const Text('Error'),
+            Padding(
+                padding: const EdgeInsets.only(
+                  top: 5,
+                  left: 15,
+                  right: 15,
+                  bottom: 5,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.error,
+                    borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  ),
+                  width: 400,
+                  //height: 150,
+                  child:
+                      //alignment: Alignment.center,
+                      Column(
+                    children: [
+                      const Text(" "),
+                      Text(
+                        "error",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).colorScheme.onError,
+                        ),
+                      ),
+                      const Text(" "),
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.only(
+                  top: 5,
+                  left: 15,
+                  right: 15,
+                  bottom: 5,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.errorContainer,
+                    borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  ),
+                  width: 400,
+                  //height: 150,
+                  child:
+                      //alignment: Alignment.center,
+                      Column(
+                    children: [
+                      const Text(" "),
+                      Text(
+                        "errorContainer",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).colorScheme.onErrorContainer,
+                        ),
+                      ),
+                      const Text(" "),
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.only(
+                  top: 5,
+                  left: 15,
+                  right: 15,
+                  bottom: 5,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.onError,
+                    borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  ),
+                  width: 400,
+                  //height: 150,
+                  child:
+                      //alignment: Alignment.center,
+                      Column(
+                    children: [
+                      const Text(" "),
+                      Text(
+                        "onError",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).colorScheme.error,
+                        ),
+                      ),
+                      const Text(" "),
+                    ],
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.only(
+                  top: 5,
+                  left: 15,
+                  right: 15,
+                  bottom: 20,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.onErrorContainer,
+                    borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  ),
+                  width: 400,
+                  //height: 150,
+                  child:
+                      //alignment: Alignment.center,
+                      Column(
+                    children: [
+                      const Text(" "),
+                      Text(
+                        "onErrorContainer",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).colorScheme.errorContainer,
+                        ),
+                      ),
+                      const Text(" "),
+                    ],
+                  ),
+                )),
             const Text(" "),
             const Text(" "),
             const Text("Powered by Google MD3 - m3.material.io"),

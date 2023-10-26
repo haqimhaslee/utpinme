@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:utp_in_me/pages/nox_uschedule/nox_uschedule_exam.dart';
 import 'package:utp_in_me/pages/rufus_academic_calendar/acad_cal.dart';
 import 'package:utp_in_me/pages/nox_directory/directory.dart';
 import 'package:utp_in_me/pages/el_tigre_usummon/usummon.dart';
@@ -420,7 +421,7 @@ class MoreApp extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const USchedule()));
+                                            const NoxUscheduleExam()));
                               },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,

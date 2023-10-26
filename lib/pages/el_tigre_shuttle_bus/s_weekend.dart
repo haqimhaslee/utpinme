@@ -165,7 +165,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -184,7 +183,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 09.00'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -203,7 +201,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.00'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -222,7 +219,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.00'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -313,7 +309,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       runSpacing: 5,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.error,
@@ -337,7 +332,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               ),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -356,7 +350,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.15'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -375,7 +368,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.15'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -466,7 +458,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -485,7 +476,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 09.30'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -504,7 +494,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 12.40'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -523,7 +512,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 15.40'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -614,7 +602,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -633,7 +620,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.00'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -652,7 +638,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.00'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -671,7 +656,150 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.00'),
                             )),
                         Container(
-                            width: 95,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Theme.of(context).colorScheme.primary,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 1,
+                                left: 5,
+                                right: 5,
+                                bottom: 1,
+                              ),
+                              child: Text('Trip 4 : 18.00'),
+                            )),
+                      ],
+                    ),
+                  ),
+                  const Text(""),
+                ],
+              ),
+            ],
+          )),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(
+          top: 0,
+          left: 10,
+          right: 10,
+          bottom: 0,
+        ),
+        child: Container(
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+          ),
+          child: Align(
+              child: Row(
+            children: [
+              Padding(
+                  padding: const EdgeInsets.only(
+                    top: 0,
+                    left: 30,
+                    right: 30,
+                    bottom: 0,
+                  ),
+                  child: Column(children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      width: 1,
+                      height: 60,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primary,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(100)),
+                      ),
+                      width: 20,
+                      height: 20,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      width: 1,
+                      height: 60,
+                    ),
+                  ])),
+              Column(
+                children: <Widget>[
+                  Text(
+                    "Ipoh Parade",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    ),
+                  ),
+                  SizedBox(
+                    width: wrapSize,
+                    child: Wrap(
+                      spacing: 5,
+                      runSpacing: 5,
+                      alignment: WrapAlignment.center,
+                      children: <Widget>[
+                        Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Theme.of(context).colorScheme.primary,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 1,
+                                left: 5,
+                                right: 5,
+                                bottom: 1,
+                              ),
+                              child: Text('Trip 1 : 10.00'),
+                            )),
+                        Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Theme.of(context).colorScheme.primary,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 1,
+                                left: 5,
+                                right: 5,
+                                bottom: 1,
+                              ),
+                              child: Text('Trip 2 : 13.00'),
+                            )),
+                        Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Theme.of(context).colorScheme.primary,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6)),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                top: 1,
+                                left: 5,
+                                right: 5,
+                                bottom: 1,
+                              ),
+                              child: Text('Trip 3 : 16.00'),
+                            )),
+                        Container(
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -762,7 +890,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -781,7 +908,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.40'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -800,7 +926,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.40'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -819,7 +944,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.40'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -910,7 +1034,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                       alignment: WrapAlignment.center,
                       children: <Widget>[
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -929,7 +1052,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 1 : 10.50'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -948,7 +1070,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 2 : 13.50'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,
@@ -967,7 +1088,6 @@ class _WeekendBusScheduleState extends State<WeekendBusSchedule> {
                               child: Text('Trip 3 : 16.50'),
                             )),
                         Container(
-                            width: 95,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Theme.of(context).colorScheme.primary,

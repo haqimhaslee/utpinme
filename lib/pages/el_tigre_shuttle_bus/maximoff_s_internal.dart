@@ -149,34 +149,34 @@ class _InternalBusScheduleTempState extends State<InternalBusScheduleTemp> {
 
   List<Employee> getEmployeeData() {
     return [
-      Employee('PMMD', 'James', 'Project Lead', '20000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('An-Nur Mosque', 'Kathryn', 'Manager', '30000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Main Gate', 'Lara', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Village 6', 'Michael', 'Designer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Chancellor Complex', 'Martin', 'Developer', '15000', 'PMMD',
-          'James', 'Project Lead', '20000'),
-      Employee('R&D Block', 'Newberry', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Village 5', 'Balnc', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Village 4', 'Perry', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('PMMD', 'Gable', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Block L', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('Chancellor Complex', 'Grimes', 'Developer', '15000', 'PMMD',
-          'James', 'Project Lead', '20000'),
-      Employee('Village 6', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('An-Nur Mosque', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000'),
-      Employee('PMMD', 'Grimes', 'Developer', '15000', 'PMMD', 'James',
-          'Project Lead', '20000')
+      Employee(
+          'PMMD', '7:00', '8:00', '12:00', '13:00', '14:00', '16:00', '17:00'),
+      Employee('An-Nur Mosque', '7:03', '8:03', '12:03', '13:03', '14:03',
+          '16:03', '17:03'),
+      Employee('Main Gate', '7:05', '8:05', '12:05', '13:05', '14:05', '16:05',
+          '17:05'),
+      Employee('Village 6', '7:10', '8:10', '12:10', '13:10', '14:10', '16:10',
+          '17:10'),
+      Employee('Chancellor Complex', '7:13', '8:13', '12:13', '13:13', '14:13',
+          '16:13', '17:13'),
+      Employee('R&D Block', '7:20', '8:20', '12:20', '13:20', '14:20', '16:20',
+          '17:20'),
+      Employee('Village 5', '7:23', '8:23', '12:23', '13:23', '14:23', '16:23',
+          '17:23'),
+      Employee('Village 4', '7:25', '8:25', '12:25', '13:25', '14:25', '16:25',
+          '17:25'),
+      Employee(
+          'PMMD', '7:35', '8:35', '12:35', '13:35', '14:35', '16:35', '17:35'),
+      Employee('Block L', '7:40', '8:40', '12:40', '13:40', '14:40', '16:40',
+          '17:40'),
+      Employee('Chancellor Complex', '7:43', '8:43', '12:43', '13:43', '14:43',
+          '16:43', '17:43'),
+      Employee('Village 6', '7:45', '8:45', '12:45', '13:45', '14:45', '16:45',
+          '17:45'),
+      Employee('An-Nur Mosque', '7:48', '8:48', '12:48', '13:48', '14:48',
+          '16:48', '17:48'),
+      Employee(
+          'PMMD', '7:50', '8:50', '12:50', '13:50', '14:50', '16:50', '17:50')
     ];
   }
 }

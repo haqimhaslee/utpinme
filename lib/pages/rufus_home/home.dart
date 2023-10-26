@@ -7,8 +7,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          //elevation: 5,
-          //scrolledUnderElevation: 5,
+          elevation: 5,
+          scrolledUnderElevation: 5,
           //backgroundColor: Theme.of(context).colorScheme.primary,
           //centerTitle: true,
           bottomOpacity: 1,
