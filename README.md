@@ -20,26 +20,23 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Terms of service
-The Flutter tool may occasionally download resources from Google servers. By
-downloading or using the Flutter SDK, you agree to the Google Terms of Service:
-https://policies.google.com/terms
-
 For example, when installed from GitHub (as opposed to from a prepackaged
 archive), the Flutter tool will download the Dart SDK from Google servers
 immediately when first run, as it is used to execute the `flutter` tool itself.
 This will also occur when Flutter is upgraded (e.g. by running the `flutter
 upgrade` command).
 
-# Project preview (version 23.1.25060315)(OLD)
+# App preview (version 23.1.25060315)(OLD)
 <p align="center"><img src="https://github.com/haqimhaslee/UTPinMe-flutter/blob/main/README%20assets/AIO.png?raw=true" alt="Reflectly hero image"></p>
 
-# Join us in BETA Testing
+
 Do remind to run `flutter pub get` to import all the others public package before debugging
 
 * [DOWNLOAD APK (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
+* Username : `user1@utp.edu.my`
+* Password : `user@utp`
 
-*Key/Token authentication will not be upload OR share on public branch
+* Key/Token authentication will not be upload OR share on public branch
 
 [flutter.dev]: https://flutter.dev
 [Build Status - Cirrus]: https://api.cirrus-ci.com/github/flutter/flutter.svg
