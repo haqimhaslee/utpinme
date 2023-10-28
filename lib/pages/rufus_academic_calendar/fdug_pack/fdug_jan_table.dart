@@ -46,13 +46,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Item'),
                                 ),
                                 Center(
-                                  child: Text('Start'),
+                                  child: Text('From'),
                                 ),
                                 Center(
-                                  child: Text('Until'),
+                                  child: Text('Till'),
                                 ),
                                 Center(
-                                  child: Text('No. Weeks'),
+                                  child: Text('Duration'),
                                 ),
                               ],
                             ),
@@ -62,13 +62,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Orientation Week'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('03 Jan'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('08 Jan'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('06 days'),
                                 ),
                               ],
                             ),
@@ -78,13 +78,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Lecture'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('09 Jan'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('31 Mac'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('12 weeks'),
                                 ),
                               ],
                             ),
@@ -94,13 +94,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Study Break'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('01 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('03 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('03 days'),
                                 ),
                               ],
                             ),
@@ -110,13 +110,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Exam Week'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('04 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('18 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('15 days'),
                                 ),
                               ],
                             ),
@@ -126,13 +126,13 @@ class FdUgJanTable extends StatelessWidget {
                                   child: Text('Sem Break'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('19 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('07 May'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('3 weeks'),
                                 ),
                               ],
                             ),

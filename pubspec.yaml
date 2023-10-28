@@ -15,7 +15,6 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter_adaptive_scaffold: ^0.1.6
   gridview_menu: ^1.0.6
-  flutter_polyline_points: ^1.0.0
   webview_flutter: ^4.0.2
   flutter_launcher_icons: ^0.13.1
   google_maps_flutter: ^2.4.0
@@ -31,11 +30,11 @@ dependencies:
   #latlong2: ^0.8.1
   qr_code_scanner: ^1.0.1
   xml2json: ^6.0.0
-  http: ^0.13.4
+  http: ^1.1.0
   url_launcher: ^6.1.14
   cached_network_image: ^3.2.0
   #flutter_html: ^2.2.1
-  webfeed_revised: ^0.7.0
+  #webfeed_revised: ^0.7.0
   flutter_image_slideshow: ^0.1.6
   firebase_core: ^2.15.1
   firebase_auth: ^4.9.0
@@ -47,7 +46,9 @@ dependencies:
   geolocator: ^10.0.1
   package_info_plus: ^4.1.0
   salomon_bottom_bar: ^3.3.2
-  eva_icons_flutter: ^3.1.0
+  #eva_icons_flutter: ^3.1.0
+  microsoft_graph_api: ^0.0.6
+  aad_oauth: ^1.0.0
 
  
  

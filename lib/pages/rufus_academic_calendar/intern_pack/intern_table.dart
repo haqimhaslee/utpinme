@@ -43,96 +43,64 @@ class InternTable extends StatelessWidget {
                               ),
                               children: const <Widget>[
                                 Center(
-                                  child: Text('Item'),
+                                  child: Text('Particular'),
                                 ),
                                 Center(
-                                  child: Text('Start'),
+                                  child: Text('SIT (14 Weeks)'),
                                 ),
                                 Center(
-                                  child: Text('Until'),
+                                  child: Text('Break*'),
                                 ),
                                 Center(
-                                  child: Text('No. Weeks'),
-                                ),
-                              ],
-                            ),
-                            const TableRow(
-                              children: <Widget>[
-                                Center(
-                                  child: Text('Orientation Week'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
+                                  child: Text('SIP (14 Weeks)'),
                                 ),
                               ],
                             ),
                             const TableRow(
                               children: <Widget>[
                                 Center(
-                                  child: Text('Lecture'),
+                                  child: Text('SIIP Jan 2023'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('09 Jan - 14 Apr'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('14 Apr - 07 May'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
-                                ),
-                              ],
-                            ),
-                            const TableRow(
-                              children: <Widget>[
-                                Center(
-                                  child: Text('Study Break'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
-                                ),
-                                Center(
-                                  child: Text('Data'),
+                                  child: Text('08 May - 11 Aug'),
                                 ),
                               ],
                             ),
                             const TableRow(
                               children: <Widget>[
                                 Center(
-                                  child: Text('Exam Week'),
+                                  child: Text('SIIP May 2023'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('08 May - 11 Aug'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('12 Aug - 03 Sep'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('04 Sep - 08 Dec'),
                                 ),
                               ],
                             ),
                             const TableRow(
                               children: <Widget>[
                                 Center(
-                                  child: Text('Sem Break'),
+                                  child: Text('SIIP Sept 2023'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('04 Sep - 08 Dec'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('09 Dec - 07 Jan'),
                                 ),
                                 Center(
-                                  child: Text('Data'),
+                                  child: Text('08 Jan - 12 Apr 2024'),
                                 ),
                               ],
                             ),
