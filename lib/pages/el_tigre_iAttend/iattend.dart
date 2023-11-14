@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
+//import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
 import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_myevent.dart';
 import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_mystats.dart';
 
@@ -41,14 +41,12 @@ class IattendApp extends StatelessWidget {
               MyStats(),
             ],
           ),
-          floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const QRViewExample(),
-              ));
-            },
-            label: const Text('New Program/Event'),
-            icon: const Icon(Icons.add),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            //shape: CircleBorder(),
+            foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            onPressed: () {},
+            child: const Icon(Icons.add_rounded),
           ),
         ));
   }

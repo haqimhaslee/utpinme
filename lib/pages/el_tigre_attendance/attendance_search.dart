@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 //import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 //import 'package:utp_in_me/pages/ucs.dart';
 
-class Attendance extends StatelessWidget {
-  const Attendance({super.key});
+class AttendanceSearch extends StatelessWidget {
+  const AttendanceSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,15 @@ class Attendance extends StatelessWidget {
         scrolledUnderElevation: 3,
         centerTitle: true,
         title: const Text(
-          'Attendance',
+          'Select subject',
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.replay_rounded),
+            onPressed: (() {}),
+          ),
+        ],
       ),
-      //Add using FAB
       body: ListView(
         children: [
           Container(
