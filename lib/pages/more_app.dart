@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-import 'package:utp_in_me/pages/nox_uschedule/nox_uschedule_exam.dart';
+import 'package:utp_in_me/pages/el_tigre_ucs/ucs.dart';
+import 'package:utp_in_me/pages/nox_facility/facility.dart';
 import 'package:utp_in_me/pages/rufus_academic_calendar/acad_cal.dart';
 import 'package:utp_in_me/pages/nox_directory/directory.dart';
 import 'package:utp_in_me/pages/el_tigre_usummon/usummon.dart';
@@ -10,56 +11,13 @@ import 'package:utp_in_me/pages/el_tigre_iAttend/iattend.dart';
 import 'package:utp_in_me/pages/postal_hub.dart';
 import 'package:utp_in_me/pages/el_tigre_exemption/exemption.dart';
 import 'package:utp_in_me/pages/nox_uschedule/uschedule.dart';
+import 'package:utp_in_me/pages/el_tigre_attendance/attendance.dart';
 
 class MoreApp extends StatelessWidget {
   const MoreApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    void attenndanceFDWeb() async {
-      try {
-        launch(
-          'https://apps.powerapps.com/play/e/default-84187be3-037e-41ec-889c-a150fe476432/a/afab9b41-ef46-4e5d-988b-2d0dce08234d?tenantId=84187be3-037e-41ec-889c-a150fe476432&source=portal',
-          customTabsOption: CustomTabsOption(
-            toolbarColor: Theme.of(context).colorScheme.primaryContainer,
-            showPageTitle: true,
-            //enableDefaultShare: false
-          ),
-          safariVCOption: const SafariViewControllerOption(
-            preferredBarTintColor: Colors.blue,
-            preferredControlTintColor: Colors.white,
-            barCollapsingEnabled: true,
-            entersReaderIfAvailable: true,
-            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
-          ),
-        );
-      } catch (e) {
-        debugPrint(e.toString());
-      }
-    }
-
-    void attenndanceUGWeb() async {
-      try {
-        launch(
-          'https://apps.powerapps.com/play/e/default-84187be3-037e-41ec-889c-a150fe476432/a/afab9b41-ef46-4e5d-988b-2d0dce08234d?tenantId=84187be3-037e-41ec-889c-a150fe476432&source=portal',
-          customTabsOption: CustomTabsOption(
-            toolbarColor: Theme.of(context).colorScheme.background,
-            showPageTitle: true,
-            //enableDefaultShare: false
-          ),
-          safariVCOption: const SafariViewControllerOption(
-            preferredBarTintColor: Colors.blue,
-            preferredControlTintColor: Colors.white,
-            barCollapsingEnabled: true,
-            entersReaderIfAvailable: true,
-            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
-          ),
-        );
-      } catch (e) {
-        debugPrint(e.toString());
-      }
-    }
-
     void surveyWeb() async {
       try {
         launch(
@@ -258,28 +216,6 @@ class MoreApp extends StatelessWidget {
       }
     }
 
-    void ucsWeb() async {
-      try {
-        launch(
-          'https://ucs.utp.edu.my/',
-          customTabsOption: CustomTabsOption(
-            toolbarColor: Theme.of(context).colorScheme.background,
-            showPageTitle: true,
-            //enableDefaultShare: false
-          ),
-          safariVCOption: const SafariViewControllerOption(
-            preferredBarTintColor: Colors.blue,
-            preferredControlTintColor: Colors.white,
-            barCollapsingEnabled: true,
-            entersReaderIfAvailable: true,
-            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
-          ),
-        );
-      } catch (e) {
-        debugPrint(e.toString());
-      }
-    }
-
     return Scaffold(
         appBar: AppBar(
             elevation: 5,
@@ -391,63 +327,10 @@ class MoreApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "USchedule Course",
+                                    "USchedule",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.w500,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onBackground,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
-                            child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const NoxUscheduleExam()));
-                              },
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
-                                      child: Icon(
-                                        Icons.calendar_month_rounded,
-                                        size: 35,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSecondaryContainer,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    "USchedule Exam",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 11,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
@@ -519,8 +402,13 @@ class MoreApp extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           child: Material(
                             child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
-                              onTap: attenndanceFDWeb,
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const Attendance()));
+                              },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
@@ -542,53 +430,7 @@ class MoreApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "Attendance FD",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onBackground,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Material(
-                            child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
-                              onTap: attenndanceUGWeb,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
-                                      child: Icon(
-                                        Icons.app_registration_rounded,
-                                        size: 35,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSecondaryContainer,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    "Attendance UG",
+                                    "Attendance",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 13,
@@ -668,7 +510,7 @@ class MoreApp extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const ParcelHub()));
+                                            const Facility()));
                               },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1400,7 +1242,12 @@ class MoreApp extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                           child: Material(
                             child: InkWell(
-                              onTap: ucsWeb,
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Ucs()));
+                              },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[

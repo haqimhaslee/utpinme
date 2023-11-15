@@ -146,9 +146,9 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Theme.of(context).colorScheme.primary,
+          //backgroundColor: Theme.of(context).colorScheme.primary,
           //shape: CircleBorder(),
-          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          //foregroundColor: Theme.of(context).colorScheme.onPrimary,
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const QRViewExample(),

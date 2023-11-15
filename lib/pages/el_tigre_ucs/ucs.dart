@@ -19,16 +19,24 @@ class Ucs extends StatelessWidget {
             elevation: 3,
             title: const Text('Unified Customer Services'),
             bottom: const TabBar(
-              isScrollable: true,
+              //isScrollable: true,
+
               tabs: [
                 Tab(
                   text: "My Case",
                 ),
                 Tab(
-                  text: "Knowledge Hub",
+                  text: "Knowledge Base",
                 ),
               ],
             ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            //backgroundColor: Theme.of(context).colorScheme.primary,
+            //shape: CircleBorder(),
+            //foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            onPressed: () {},
+            child: const Icon(Icons.add_rounded),
           ),
           body: TabBarView(
             children: [
