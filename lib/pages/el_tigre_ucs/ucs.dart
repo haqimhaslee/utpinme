@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:utp_in_me/pages/el_tigre_ucs/create_case_data.dart';
 import 'package:utp_in_me/pages/el_tigre_ucs/knowledge_hub.dart';
 import 'package:utp_in_me/pages/el_tigre_ucs/my_support.dart';
 
@@ -32,10 +33,17 @@ class Ucs extends StatelessWidget {
             ),
           ),
           floatingActionButton: FloatingActionButton(
-            //backgroundColor: Theme.of(context).colorScheme.primary,
-            //shape: CircleBorder(),
-            //foregroundColor: Theme.of(context).colorScheme.onPrimary,
-            onPressed: () {},
+            tooltip: "Create a case",
+            onPressed: () => showDialog<String>(
+              context: context,
+              builder: (BuildContext context) => const Dialog.fullscreen(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[Expanded(child: CreateCaseUcs())],
+                ),
+              ),
+            ),
             child: const Icon(Icons.add_rounded),
           ),
           body: TabBarView(

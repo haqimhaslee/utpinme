@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/el_tigre_attendance/attendance_search.dart';
+//import 'package:utp_in_me/pages/el_tigre_attendance/attendance_search.dart';
 //import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
 //import 'package:utp_in_me/pages/ucs.dart';
 
@@ -18,15 +19,17 @@ class Attendance extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          // backgroundColor: Theme.of(context).colorScheme.primary,
-          //shape: CircleBorder(),
-          //foregroundColor: Theme.of(context).colorScheme.onPrimary,
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const AttendanceSearch()));
-          },
+          tooltip: "Register attendance",
+          onPressed: () => showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => const Dialog.fullscreen(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[Expanded(child: AttendanceSearch())],
+              ),
+            ),
+          ),
           child: const Icon(Icons.add_rounded),
         ),
         body: Column(children: [

@@ -42,14 +42,14 @@ class ExemptionApp extends StatelessWidget {
               ExemptionMyRequest(),
             ],
           ),
-          floatingActionButton: FloatingActionButton.extended(
+          floatingActionButton: FloatingActionButton(
+            tooltip: "New exemption request",
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const ExemptionNewSubmition(),
               ));
             },
-            label: const Text('New Request'),
-            icon: const Icon(Icons.add),
+            child: const Icon(Icons.add_rounded),
           ),
         ));
   }

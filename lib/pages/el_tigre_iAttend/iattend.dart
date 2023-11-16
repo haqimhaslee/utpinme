@@ -42,9 +42,7 @@ class IattendApp extends StatelessWidget {
             ],
           ),
           floatingActionButton: FloatingActionButton(
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            //shape: CircleBorder(),
-            foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            tooltip: "Add an activity",
             onPressed: () {},
             child: const Icon(Icons.add_rounded),
           ),

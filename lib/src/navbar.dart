@@ -9,7 +9,7 @@ import 'package:utp_in_me/pages/el_tigre_shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+//import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 //import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -105,50 +105,65 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: SalomonBottomBar(
-          selectedItemColor: Theme.of(context).colorScheme.primary,
-
-          //selectedColorOpacity: 0.2,
-          currentIndex: _selectedIndex,
-
-          onTap: (i) => setState(() => _selectedIndex = i),
-          items: [
+        appBar: AppBar(
+          elevation: 5,
+          scrolledUnderElevation: 5,
+          //backgroundColor: Theme.of(context).colorScheme.primary,
+          //centerTitle: true,
+          bottomOpacity: 1,
+          title: SizedBox.fromSize(
+            size: const Size(95, 40),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(13)),
+              child: Material(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/app_logo.png',
+                      width: 76,
+                      height: 28,
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        bottomNavigationBar: NavigationBar(
+          height: 70,
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: (i) => setState(() => _selectedIndex = i),
+          destinations: const [
             /// Home
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.home_outlined),
-              title: const Text("Home"),
-              activeIcon: const Icon(Icons.home),
+            NavigationDestination(
+              label: "Home",
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home_rounded),
             ),
-
-            /// Likes
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.grid_3x3_outlined),
-              title: const Text("Mini App"),
-              activeIcon: const Icon(Icons.grid_3x3_rounded),
-              //selectedColor: Colors.pink,
+            NavigationDestination(
+              label: "Mini App",
+              icon: Icon(Icons.grid_view_outlined),
+              selectedIcon: Icon(Icons.grid_view_rounded),
             ),
-
-            /// Search
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.notifications_outlined),
-              activeIcon: const Icon(Icons.notifications_rounded),
-              title: const Text("Notifications"),
-              //selectedColor: Colors.orange,
+            NavigationDestination(
+              label: "Notifications",
+              icon: Icon(Icons.notifications_outlined),
+              selectedIcon: Icon(Icons.notifications_rounded),
+            ),
+            NavigationDestination(
+              label: "Profile",
+              icon: Icon(Icons.person_outline),
+              selectedIcon: Icon(Icons.person_rounded),
             ),
 
             /// Profile
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.person_outline),
-              activeIcon: const Icon(Icons.person_rounded),
-              title: const Text("Profile"),
-              //selectedColor: Colors.teal,
-            ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          //backgroundColor: Theme.of(context).colorScheme.primary,
-          //shape: CircleBorder(),
-          //foregroundColor: Theme.of(context).colorScheme.onPrimary,
+          tooltip: "Scan a code",
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const QRViewExample(),

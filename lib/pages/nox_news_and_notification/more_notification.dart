@@ -5,11 +5,6 @@ class MoreNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          elevation: 5,
-          scrolledUnderElevation: 5,
-          centerTitle: true,
-          title: const Text("Notification")),
       body: ListView(children: [
         Card(
           elevation: 0,

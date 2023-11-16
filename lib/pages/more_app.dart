@@ -194,6 +194,28 @@ class MoreApp extends StatelessWidget {
       }
     }
 
+    void petronasShop() async {
+      try {
+        launch(
+          'https://www.setel.com/PETRONAS-Shop',
+          customTabsOption: CustomTabsOption(
+            toolbarColor: Theme.of(context).colorScheme.background,
+            showPageTitle: true,
+            //enableDefaultShare: false
+          ),
+          safariVCOption: SafariViewControllerOption(
+            preferredBarTintColor: Theme.of(context).colorScheme.background,
+            preferredControlTintColor: Theme.of(context).colorScheme.background,
+            barCollapsingEnabled: true,
+            entersReaderIfAvailable: true,
+            dismissButtonStyle: SafariViewControllerDismissButtonStyle.close,
+          ),
+        );
+      } catch (e) {
+        debugPrint(e.toString());
+      }
+    }
+
     void ucampusWeb() async {
       try {
         launch(
@@ -217,11 +239,6 @@ class MoreApp extends StatelessWidget {
     }
 
     return Scaffold(
-        appBar: AppBar(
-            elevation: 5,
-            scrolledUnderElevation: 5,
-            centerTitle: true,
-            title: const Text("Mini App")),
         body: Align(
             alignment: Alignment.center,
             child: ListView(children: [
@@ -1545,6 +1562,51 @@ class MoreApp extends StatelessWidget {
                                   ),
                                   Text(
                                     "SRCUTP",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onBackground,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Material(
+                            child: InkWell(
+                              onTap: petronasShop,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Container(
+                                      width: 50,
+                                      height: 50,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondaryContainer,
+                                      child: Icon(
+                                        Icons.store_rounded,
+                                        size: 35,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSecondaryContainer,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    "PETRONAS Shop",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 13,
