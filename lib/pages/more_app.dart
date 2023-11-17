@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+//import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
 import 'package:utp_in_me/pages/el_tigre_ucs/ucs.dart';
 import 'package:utp_in_me/pages/nox_facility/facility.dart';
 import 'package:utp_in_me/pages/rufus_academic_calendar/acad_cal.dart';
@@ -12,6 +13,7 @@ import 'package:utp_in_me/pages/postal_hub.dart';
 import 'package:utp_in_me/pages/el_tigre_exemption/exemption.dart';
 import 'package:utp_in_me/pages/nox_uschedule/uschedule.dart';
 import 'package:utp_in_me/pages/el_tigre_attendance/attendance.dart';
+import 'package:animations/animations.dart';
 
 class MoreApp extends StatelessWidget {
   const MoreApp({super.key});
@@ -254,109 +256,85 @@ class MoreApp extends StatelessWidget {
                     runSpacing: 5,
                     alignment: WrapAlignment.center,
                     children: <Widget>[
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
-                            child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ShuttleBus()));
-                              },
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
-                                      child: Icon(
-                                        Icons.directions_bus_filled_rounded,
-                                        size: 30,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSecondaryContainer,
-                                      ),
-                                    ),
+                      OpenContainer(
+                        transitionDuration: const Duration(milliseconds: 400),
+                        openBuilder: (context, _) => const ShuttleBus(),
+                        closedBuilder: (context, openContainer) => SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  child: Icon(
+                                    Icons.directions_bus_filled_rounded,
+                                    size: 35,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSecondaryContainer,
                                   ),
-                                  Text(
-                                    "Shuttle Bus",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onBackground,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
-                            ),
+                              Text(
+                                "Shuttle Bus",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Material(
-                            //color: Theme.of(context).colorScheme.secondaryContainer,
-                            child: InkWell(
-                              //splashColor: Theme.of(context).colorScheme.tertiary,
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const USchedule()));
-                              },
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondaryContainer,
-                                      child: Icon(
-                                        Icons.calendar_month_rounded,
-                                        size: 35,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSecondaryContainer,
-                                      ),
-                                    ),
+                      OpenContainer(
+                        transitionDuration: const Duration(milliseconds: 400),
+                        openBuilder: (context, _) => const USchedule(),
+                        closedBuilder: (context, openContainer) => SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .secondaryContainer,
+                                  child: Icon(
+                                    Icons.calendar_month_rounded,
+                                    size: 35,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSecondaryContainer,
                                   ),
-                                  Text(
-                                    "USchedule",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onBackground,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
-                            ),
+                              Text(
+                                "USchedule",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onBackground,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -715,20 +693,14 @@ class MoreApp extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Material(
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const IattendApp()));
-                              },
+                      OpenContainer(
+                        transitionDuration: const Duration(milliseconds: 400),
+                        openBuilder: (context, _) => const IattendApp(),
+                        closedBuilder: (context, openContainer) => SizedBox(
+                          width: 100,
+                          height: 100,
+                          child: ClipRRect(
+                            child: Material(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
