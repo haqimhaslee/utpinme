@@ -162,15 +162,7 @@ class _HomePageState extends State<HomePage> {
             /// Profile
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          tooltip: "Scan a code",
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const QRViewExample(),
-            ));
-          },
-          child: const Icon(Icons.qr_code_scanner_rounded),
-        ),
+        floatingActionButton: const QrFAB(),
         body: PageTransitionSwitcher(
           duration: const Duration(milliseconds: 350),
           transitionBuilder: (child, animation, secondaryAnimation) =>
@@ -182,4 +174,23 @@ class _HomePageState extends State<HomePage> {
           child: _windgetOption.elementAt(_selectedIndex),
         ));
   }
+}
+
+class QrFAB extends StatelessWidget {
+  const QrFAB({super.key});
+
+  @override
+  Widget build(BuildContext context) => OpenContainer(
+      transitionDuration: const Duration(milliseconds: 300),
+      openBuilder: (context, _) => const QRViewExample(),
+      //closedShape: const CircleBorder(),
+      closedColor: Theme.of(context).colorScheme.primaryContainer,
+      closedBuilder: (context, openContainer) => Container(
+            height: 56,
+            width: 56,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Theme.of(context).colorScheme.primaryContainer),
+            child: const Icon(Icons.add_rounded),
+          ));
 }
