@@ -32,7 +32,8 @@ upgrade` command).
 
 Do remind to run `flutter pub get` to import all the others public package before debugging
 
-* [DOWNLOAD APK (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
+* DOWNLOAD APK-UI Testing (Coming Soon)
+* [DOWNLOAD APK-Stable (Now available in Android only)](https://drive.google.com/drive/folders/1O3U9nuH7u-WAhq2Ki92OVi-z8kasuz5W?usp=sharing)
 * Username : `user1@utp.edu.my`
 * Password : `user@utp`
 
