@@ -257,7 +257,8 @@ class MoreApp extends StatelessWidget {
                     alignment: WrapAlignment.center,
                     children: <Widget>[
                       OpenContainer(
-                        transitionDuration: const Duration(milliseconds: 400),
+                        //transitionDuration: const Duration(milliseconds: 400),
+                        closedColor: Theme.of(context).colorScheme.background,
                         openBuilder: (context, _) => const ShuttleBus(),
                         closedBuilder: (context, openContainer) => SizedBox(
                           width: 100,
@@ -298,7 +299,8 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       OpenContainer(
-                        transitionDuration: const Duration(milliseconds: 400),
+                        //transitionDuration: const Duration(milliseconds: 400),
+                        closedColor: Theme.of(context).colorScheme.background,
                         openBuilder: (context, _) => const USchedule(),
                         closedBuilder: (context, openContainer) => SizedBox(
                           width: 100,
@@ -694,7 +696,7 @@ class MoreApp extends StatelessWidget {
                         ),
                       ),
                       OpenContainer(
-                        transitionDuration: const Duration(milliseconds: 400),
+                        //transitionDuration: const Duration(milliseconds: 400),
                         openBuilder: (context, _) => const IattendApp(),
                         closedBuilder: (context, openContainer) => SizedBox(
                           width: 100,
