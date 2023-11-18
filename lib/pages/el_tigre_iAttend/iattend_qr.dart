@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'dart:developer';
@@ -49,7 +48,7 @@ class _QRViewExampleState extends State<QRViewExample> {
                   const Text(''),
                   if (result != null)
                     Text(
-                        'Barcode Type: ${describeEnum(result!.format)}   Data: ${result!.code}')
+                        'Barcode Type: ${(result!.format)}   Data: ${result!.code}')
                   else
                     const Text(' '),
                   Row(
