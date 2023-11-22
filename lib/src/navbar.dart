@@ -21,6 +21,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final quickActions = const QuickActions();
+
   void uLearnWeb() async {
     try {
       launch(
@@ -196,11 +197,19 @@ class _HomePageState extends State<HomePage> {
             /// Profile
           ],
         ),
-        floatingActionButton: const QrFAB(),
+        floatingActionButton: FloatingActionButton(
+            tooltip: "Scan a QR code",
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const QRViewExample()));
+            },
+            child: const Icon(Icons.qr_code_scanner_rounded)),
         body: PageTransitionSwitcher(
-          duration: const Duration(milliseconds: 350),
           transitionBuilder: (child, animation, secondaryAnimation) =>
-              FadeThroughTransition(
+              SharedAxisTransition(
+            transitionType: SharedAxisTransitionType.vertical,
             animation: animation,
             secondaryAnimation: secondaryAnimation,
             child: child,
@@ -208,23 +217,4 @@ class _HomePageState extends State<HomePage> {
           child: _windgetOption.elementAt(_selectedIndex),
         ));
   }
-}
-
-class QrFAB extends StatelessWidget {
-  const QrFAB({super.key});
-
-  @override
-  Widget build(BuildContext context) => OpenContainer(
-      //transitionDuration: const Duration(milliseconds: 300),
-      openBuilder: (context, _) => const QRViewExample(),
-      //closedShape: const CircleBorder(),
-      closedColor: Theme.of(context).colorScheme.primaryContainer,
-      closedBuilder: (context, openContainer) => Container(
-            height: 56,
-            width: 56,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Theme.of(context).colorScheme.primaryContainer),
-            child: const Icon(Icons.add_rounded),
-          ));
 }

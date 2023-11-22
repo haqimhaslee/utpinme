@@ -1,36 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/el_tigre_attendance/attendance_search.dart';
-//import 'package:utp_in_me/pages/el_tigre_attendance/attendance_search.dart';
-//import 'package:utp_in_me/pages/srcutp/srcutp_popup.dart';
-//import 'package:utp_in_me/pages/ucs.dart';
 
-class Attendance extends StatelessWidget {
-  const Attendance({super.key});
+class UEventProduct extends StatelessWidget {
+  const UEventProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          elevation: 3,
-          scrolledUnderElevation: 3,
-          title: const Text(
-            'Attendance',
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          tooltip: "Register attendance",
-          onPressed: () => showDialog<String>(
-            context: context,
-            builder: (BuildContext context) => const Dialog.fullscreen(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[Expanded(child: AttendanceSearch())],
-              ),
-            ),
-          ),
-          child: const Icon(Icons.add_rounded),
-        ),
         body: Column(children: [
           Padding(
             padding: const EdgeInsets.only(
