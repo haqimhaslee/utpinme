@@ -7,7 +7,7 @@ class ViewerUpcomingEvents extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Upcoming Events'),
-        //elevation: 3,
+        elevation: 3,
       ),
       body: ListView(children: [
         Card(

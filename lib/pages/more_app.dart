@@ -14,6 +14,7 @@ import 'package:utp_in_me/pages/el_tigre_exemption/exemption.dart';
 import 'package:utp_in_me/pages/nox_uschedule/uschedule.dart';
 import 'package:utp_in_me/pages/el_tigre_attendance/attendance.dart';
 import 'package:animations/animations.dart';
+import 'package:utp_in_me/pages/uevent/uevent.dart';
 
 class MoreApp extends StatelessWidget {
   const MoreApp({super.key});
@@ -478,6 +479,58 @@ class MoreApp extends StatelessWidget {
                                   ),
                                   Text(
                                     "Digital ID",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onBackground,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Material(
+                            //color: Theme.of(context).colorScheme.secondaryContainer,
+                            child: InkWell(
+                              //splashColor: Theme.of(context).colorScheme.tertiary,
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const UEvent()));
+                              },
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Container(
+                                      width: 50,
+                                      height: 50,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondaryContainer,
+                                      child: Icon(
+                                        Icons.confirmation_num_rounded,
+                                        size: 35,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSecondaryContainer,
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    "UEvent",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 13,

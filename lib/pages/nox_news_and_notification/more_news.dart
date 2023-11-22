@@ -8,7 +8,6 @@ class MoreNews extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('News'),
-        centerTitle: true,
         elevation: 5,
         scrolledUnderElevation: 5,
       ),

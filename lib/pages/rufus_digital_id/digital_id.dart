@@ -14,7 +14,6 @@ class DigitalId extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            //toolbarHeight: 70,
             elevation: 3,
             title: const Text('Digital ID'),
             bottom: const TabBar(

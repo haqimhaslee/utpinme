@@ -50,7 +50,7 @@ class _AttendanceSearchState extends State<AttendanceSearch> {
                 const Flexible(fit: FlexFit.tight, child: SizedBox()),
                 Padding(
                   padding: const EdgeInsets.only(left: 8, right: 8),
-                  child: TextButton(
+                  child: FilledButton(
                     onPressed: () => showDialog<String>(
                       context: context,
                       builder: (BuildContext context) => Dialog(

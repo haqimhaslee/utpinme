@@ -9,7 +9,6 @@ class Facility extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 70,
           title: const Text('Facility'),
-          centerTitle: true,
           elevation: 3,
         ),
         body: Column(children: [

@@ -95,6 +95,7 @@ class _UpSectionHomeState extends State<UpSectionHome> {
                                   ],
                                 ),
                                 Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const Icon(
                                       Icons.mail_rounded,

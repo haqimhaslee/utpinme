@@ -1,7 +1,9 @@
+// Custom UI Element files
 import 'package:flutter/material.dart';
 
-double mainRadius = 15;
-double contentRadius = 5;
+
+
+//Color UI
 const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xFF2E5DA8),
@@ -35,7 +37,6 @@ const lightColorScheme = ColorScheme(
   outlineVariant: Color(0xFFC4C6D0),
   scrim: Color(0xFF000000),
 );
-
 const darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xFFACC7FF),
@@ -69,3 +70,6 @@ const darkColorScheme = ColorScheme(
   outlineVariant: Color(0xFF44474E),
   scrim: Color(0xFF000000),
 );
+
+
+//Custom Button element

@@ -13,7 +13,6 @@ class IattendApp extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             elevation: 3,
-            centerTitle: true,
             toolbarHeight: 70,
             title: const Text('iAttend'),
             bottom: const TabBar(

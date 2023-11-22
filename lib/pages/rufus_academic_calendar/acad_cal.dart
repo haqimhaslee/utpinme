@@ -14,7 +14,6 @@ class AcadCal extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Academic Calendar'),
             elevation: 3,
-            centerTitle: true,
             bottom: const TabBar(
               isScrollable: true,
               tabs: [
