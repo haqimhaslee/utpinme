@@ -168,7 +168,6 @@ class _HomePageState extends State<HomePage> {
                       )))
             ])),
         bottomNavigationBar: NavigationBar(
-          height: 70,
           selectedIndex: _selectedIndex,
           onDestinationSelected: (i) => setState(() => _selectedIndex = i),
           destinations: const [
