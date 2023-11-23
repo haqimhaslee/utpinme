@@ -1,8 +1,6 @@
 // Custom UI Element files
 import 'package:flutter/material.dart';
 
-
-
 //Color UI
 const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
@@ -72,4 +70,4 @@ const darkColorScheme = ColorScheme(
 );
 
 
-//Custom Button element
+//Custom element
