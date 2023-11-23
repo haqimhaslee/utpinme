@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
-import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
-import 'package:utp_in_me/pages/rufus_digital_id/digital_id.dart';
-import 'package:utp_in_me/pages/rufus_home/home.dart';
-import 'package:utp_in_me/pages/more_app.dart';
-import 'package:utp_in_me/pages/nox_news_and_notification/more_notification.dart';
-import 'package:utp_in_me/pages/el_tigre_shuttle_bus/shuttle_bus.dart';
-import 'package:utp_in_me/settings/profile.dart';
+import 'package:utp_in_me/pages/mini_app/digital_id/digital_id.dart';
+import 'package:utp_in_me/pages/home/home.dart';
+import 'package:utp_in_me/pages/mini_app/mini_app.dart';
+import 'package:utp_in_me/pages/qr_services/qr_page.dart';
+import 'package:utp_in_me/pages/news_and_notification/more_notification.dart';
+import 'package:utp_in_me/pages/mini_app/shuttle_bus/shuttle_bus.dart';
+import 'package:utp_in_me/pages/settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-//import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-//import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -199,10 +197,8 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton(
             tooltip: "Scan a QR code",
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const QRViewExample()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const QRService()));
             },
             child: const Icon(Icons.qr_code_scanner_rounded)),
         body: PageTransitionSwitcher(
