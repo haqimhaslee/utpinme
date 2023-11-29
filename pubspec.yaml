@@ -37,7 +37,8 @@ dependencies:
   flutter_image_slideshow: ^0.1.6
   firebase_core: ^2.15.1
   firebase_auth: ^4.9.0
-  syncfusion_flutter_datagrid: ^22.2.12
+  syncfusion_flutter_datagrid: ^23.2.6
+  syncfusion_flutter_calendar: ^23.2.6
   awesome_ripple_animation: ^1.0.2
   animations: ^2.0.8
   loading_animation_widget: ^1.2.0+4
@@ -49,6 +50,7 @@ dependencies:
   microsoft_graph_api: ^0.0.6
   aad_oauth: ^1.0.0
   flutter_speed_dial: ^7.0.0
+  
 
  
  

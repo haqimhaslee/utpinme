@@ -15,11 +15,11 @@ class USchedule extends StatelessWidget {
             bottom: const TabBar(
               tabs: [
                 Tab(
-                  icon: Icon(Icons.book_rounded),
+                  // icon: Icon(Icons.book_rounded),
                   text: "Course",
                 ),
                 Tab(
-                  icon: Icon(Icons.bookmark_rounded),
+                  //icon: Icon(Icons.bookmark_rounded),
                   text: "Exam",
                 ),
               ],
@@ -32,6 +32,7 @@ class USchedule extends StatelessWidget {
             ],
           ),
           body: const TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: [
               UScheduleCourse(),
               UScheduleExam(),
