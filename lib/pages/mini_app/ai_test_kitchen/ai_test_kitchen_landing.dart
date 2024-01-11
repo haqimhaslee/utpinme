@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/notebook_lm.dart';
-import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_chatbot.dart';
+import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_assist.dart';
+//import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_chatbot.dart';
 //import 'package:qr_flutter/qr_flutter.dart';
 
 class AiTestKitchen extends StatelessWidget {
@@ -9,36 +10,7 @@ class AiTestKitchen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Row(
-            children: [
-              const Text('AI Test  '),
-              Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Theme.of(context).colorScheme.primary,
-                      width: 1.5,
-                    ),
-                    borderRadius: const BorderRadius.all(Radius.circular(6)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 1,
-                      left: 5,
-                      right: 5,
-                      bottom: 1,
-                    ),
-                    child: Text(
-                      "Kitchen",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w900,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
-                    ),
-                  ))
-            ],
-          ),
+          title: const Text('AI Test Kitchen'),
           elevation: 3,
           actions: [
             IconButton(
@@ -182,7 +154,7 @@ class AiTestKitchen extends StatelessWidget {
                                                                         bottom:
                                                                             1),
                                                                     child: Text(
-                                                                        "powered by PaLM 2",
+                                                                        "PaLM 2",
                                                                         textAlign:
                                                                             TextAlign
                                                                                 .center,
@@ -234,7 +206,7 @@ class AiTestKitchen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const UtpChatBot()));
+                                  builder: (context) => const UtpAssist()));
                         },
                         child: Padding(
                             padding: const EdgeInsets.only(
@@ -309,7 +281,7 @@ class AiTestKitchen extends StatelessWidget {
                                                           padding:
                                                               EdgeInsets.only(),
                                                           child: Text(
-                                                            "Chat LLM",
+                                                            "UTP Assist",
                                                             style: TextStyle(
                                                               fontSize: 17,
                                                             ),
@@ -346,7 +318,7 @@ class AiTestKitchen extends StatelessWidget {
                                                                         bottom:
                                                                             1),
                                                                     child: Text(
-                                                                        "powered by ChatGPT",
+                                                                        "Gemini Pro",
                                                                         textAlign:
                                                                             TextAlign
                                                                                 .center,

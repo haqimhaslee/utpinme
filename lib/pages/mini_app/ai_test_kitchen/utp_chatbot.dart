@@ -7,7 +7,7 @@ class UtpChatBot extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('UTP ChatBot LLM'),
+          title: const Text('UTP Assist'),
           elevation: 3,
           actions: [
             IconButton(
@@ -16,43 +16,6 @@ class UtpChatBot extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomAppBar(
-            height: 110,
-            elevation: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(
-                  height: 30,
-                  child: Row(
-                    children: [
-                      OutlinedButton(
-                          onPressed: () {}, child: const Text("Summarize")),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                    height: 50,
-                    child: Row(
-                      children: [
-                        IconButton(
-                          tooltip: 'Add files',
-                          icon: const Icon(Icons.add_circle_outline_rounded),
-                          onPressed: () {},
-                        ),
-                        const SizedBox(
-                          width: 200,
-                          child: TextField(),
-                        ),
-                        IconButton(
-                          tooltip: 'Send prompt',
-                          icon: const Icon(Icons.send),
-                          onPressed: () {},
-                        ),
-                      ],
-                    )),
-              ],
-            )),
         body: Center(
           child: Wrap(
               spacing: 20,
