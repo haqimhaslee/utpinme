@@ -5,8 +5,10 @@ import 'firebase_options.dart';
 //import 'package:flutter/services.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:utp_in_me/src/utp_ui.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 void main() async {
+  Gemini.init(apiKey: 'AIzaSyCVuAXlWbZuPj73dmddUPCRN-hPomjKmYU');
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 

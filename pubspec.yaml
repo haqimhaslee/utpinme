@@ -51,6 +51,8 @@ dependencies:
   aad_oauth: ^1.0.0
   flutter_speed_dial: ^7.0.0
   dash_chat_2: ^0.0.19
+  flutter_gemini: ^2.0.1
+  flutter_markdown: ^0.6.18+3
   
 
  

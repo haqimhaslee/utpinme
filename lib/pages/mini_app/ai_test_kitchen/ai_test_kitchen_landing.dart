@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/notebook_lm.dart';
-import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_assist.dart';
+//import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_assist.dart';
+import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_assist_v2.dart';
 //import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_chatbot.dart';
 //import 'package:qr_flutter/qr_flutter.dart';
 
@@ -117,7 +118,7 @@ class AiTestKitchen extends StatelessWidget {
                                                           padding:
                                                               EdgeInsets.only(),
                                                           child: Text(
-                                                            "Notebook LLM",
+                                                            "Project UExplore",
                                                             style: TextStyle(
                                                               fontSize: 17,
                                                             ),
@@ -154,7 +155,7 @@ class AiTestKitchen extends StatelessWidget {
                                                                         bottom:
                                                                             1),
                                                                     child: Text(
-                                                                        "PaLM 2",
+                                                                        "PaLM2 | Coming Soon",
                                                                         textAlign:
                                                                             TextAlign
                                                                                 .center,
@@ -163,7 +164,7 @@ class AiTestKitchen extends StatelessWidget {
                                                                                 11,
                                                                             fontWeight:
                                                                                 FontWeight.w900,
-                                                                            color: Theme.of(context).colorScheme.primary)))))
+                                                                            color: Theme.of(context).colorScheme.primary))))),
                                                       ],
                                                     ),
                                                     const Padding(
@@ -206,7 +207,7 @@ class AiTestKitchen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const UtpAssist()));
+                                  builder: (context) => const SectionChat()));
                         },
                         child: Padding(
                             padding: const EdgeInsets.only(
@@ -281,7 +282,7 @@ class AiTestKitchen extends StatelessWidget {
                                                           padding:
                                                               EdgeInsets.only(),
                                                           child: Text(
-                                                            "UTP Assist",
+                                                            "Project UAssist",
                                                             style: TextStyle(
                                                               fontSize: 17,
                                                             ),
@@ -318,7 +319,7 @@ class AiTestKitchen extends StatelessWidget {
                                                                         bottom:
                                                                             1),
                                                                     child: Text(
-                                                                        "Gemini Pro",
+                                                                        "Gemini | BETA",
                                                                         textAlign:
                                                                             TextAlign
                                                                                 .center,
