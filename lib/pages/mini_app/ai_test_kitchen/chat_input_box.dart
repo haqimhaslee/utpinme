@@ -13,14 +13,14 @@ class ChatInputBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
       //color: Color.fromRGBO(242, 242, 242, 0.988)
-      margin: const EdgeInsets.all(5),
+      margin: const EdgeInsets.all(2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Divider(),
+          // const Divider(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +28,12 @@ class ChatInputBox extends StatelessWidget {
               SizedBox(
                   width: MediaQuery.of(context).size.width - 80,
                   child: Padding(
-                    padding: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.only(
+                      top: 10,
+                      left: 0,
+                      right: 0,
+                      bottom: 5,
+                    ),
                     child: TextField(
                       controller: controller,
                       minLines: 1,
@@ -40,7 +45,8 @@ class ChatInputBox extends StatelessWidget {
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
-                        labelText: 'Enter your prompt',
+                        hintText: 'Enter your prompt',
+                        //labelText: 'Enter your prompt',
                       ),
                       onTapOutside: (event) =>
                           FocusManager.instance.primaryFocus?.unfocus(),
@@ -57,6 +63,7 @@ class ChatInputBox extends StatelessWidget {
               )
             ],
           ),
+          const Divider(),
           const Text(
               "*UAssist may display inaccurate info, including about people, so double-check its responses",
               textAlign: TextAlign.center,
