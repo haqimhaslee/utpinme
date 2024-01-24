@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/ai_test_kitchen_landing.dart';
+import 'package:utp_in_me/pages/mini_app/e_memo/e_memo.dart';
 import 'package:utp_in_me/pages/mini_app/ucs/ucs.dart';
 import 'package:utp_in_me/pages/mini_app/facility/facility.dart';
 import 'package:utp_in_me/pages/mini_app/academic_calendar/acad_cal.dart';
@@ -1135,7 +1136,12 @@ class MoreApp extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                           child: Material(
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Ememo()));
+                              },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[

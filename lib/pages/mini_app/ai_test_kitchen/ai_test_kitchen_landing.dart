@@ -164,7 +164,10 @@ class AiTestKitchen extends StatelessWidget {
                                                                                 11,
                                                                             fontWeight:
                                                                                 FontWeight.w900,
-                                                                            color: Theme.of(context).colorScheme.primary))))),
+                                                                            color: Theme.of(context).colorScheme.primary))
+                                                                            )
+                                                                            )
+                                                                            ),
                                                       ],
                                                     ),
                                                     const Padding(

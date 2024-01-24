@@ -172,22 +172,22 @@ class _HomePageState extends State<HomePage> {
             /// Home
             NavigationDestination(
               label: "Home",
-              icon: Icon(Icons.home_outlined),
+              icon: Icon(Icons.home_rounded),
               selectedIcon: Icon(Icons.home_rounded),
             ),
             NavigationDestination(
               label: "Mini App",
-              icon: Icon(Icons.grid_view_outlined),
+              icon: Icon(Icons.grid_view_rounded),
               selectedIcon: Icon(Icons.grid_view_rounded),
             ),
             NavigationDestination(
               label: "Notifications",
-              icon: Icon(Icons.notifications_outlined),
+              icon: Icon(Icons.notifications_rounded),
               selectedIcon: Icon(Icons.notifications_rounded),
             ),
             NavigationDestination(
               label: "Profile",
-              icon: Icon(Icons.person_outline),
+              icon: Icon(Icons.person_rounded),
               selectedIcon: Icon(Icons.person_rounded),
             ),
 
