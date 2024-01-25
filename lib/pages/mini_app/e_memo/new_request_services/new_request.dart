@@ -135,7 +135,7 @@ class _EmemoNewRequestState extends State<EmemoNewRequest> {
           child: Card(
               elevation: 1,
               child: ListTile(
-                title: Text("• " + objective[index]),
+                title: Text("• ${objective[index]}"),
                 trailing: IconButton(
                   icon: const Icon(Icons.close_rounded),
                   onPressed: () => removeObjective(index, context),
@@ -603,7 +603,7 @@ class _EmemoNewRequestState extends State<EmemoNewRequest> {
                               child: Card(
                                   elevation: 1,
                                   child: ListTile(
-                                    title: Text("• " + objective[index]),
+                                    title: Text("• ${objective[index]}"),
                                     trailing: IconButton(
                                       icon: const Icon(Icons.close_rounded),
                                       onPressed: () =>
