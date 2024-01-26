@@ -582,7 +582,8 @@ class MoreApp extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const UEvent()));
+                                        builder: (context) =>
+                                            const UEvent()));
                               },
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
