@@ -63,7 +63,7 @@ class _AddEventState extends State<AddEvent> {
           maxWidth: 1080,
           compressFormat:
               ImageCompressFormat.jpg, // maybe change later, test quality first
-          compressQuality: 30,
+          compressQuality: 20,
           aspectRatio: const CropAspectRatio(ratioX: 1.0, ratioY: 1.0));
 
       if (isEventDetailsVisible) {
@@ -404,7 +404,6 @@ class _AddEventState extends State<AddEvent> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint(packagesList.length.toString());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -483,10 +482,8 @@ class _AddEventState extends State<AddEvent> {
             ),
             // navigating button between add event / add packages
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const SizedBox(
-                  width: 35,
-                ),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -502,7 +499,6 @@ class _AddEventState extends State<AddEvent> {
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     )),
-                const SizedBox(width: 20),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -656,14 +652,26 @@ class _AddEventState extends State<AddEvent> {
                                     bannerImage: null);
 
                                 // post event to firestore
-                                docReference.set(eventEntity.toMap());
+                                await docReference.set(eventEntity.toMap());
 
                                 // adding event image
                                 /* this line post to firebase*/
-                                imageServices.postImage(
-                                    eventEntity.bannerImageName,
-                                    docReference.id.toString(),
-                                    eventBannerFile!);
+                                imageServices
+                                    .postImage(
+                                        eventEntity.bannerImageName,
+                                        docReference.id.toString(),
+                                        eventBannerFile!)
+                                    .then((value) {
+                                  // reset event text fields
+                                  eventBannerFile = null;
+                                  eventBannerBytes = null;
+                                  eventTitleController.clear();
+                                  eventDescController.clear();
+                                  ticketPriceController.clear();
+                                  eventLoactionController.clear();
+                                  dateSelection = null;
+                                  setState(() {});
+                                });
 
                                 // adding packages image
                                 packagesList.asMap().forEach((index, package) {
@@ -693,6 +701,7 @@ class _AddEventState extends State<AddEvent> {
                             ),
                           ),
                         ),
+                        const SizedBox(height: 25,),
                       ],
                     ),
                   ),

@@ -19,6 +19,7 @@ class _SearchPageState extends State<SearchPage> {
     "PETRA",
     "UPAG",
     "GDSC",
+    "SK"
     ""
   ];
 

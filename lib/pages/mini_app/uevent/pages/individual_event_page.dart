@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/mini_app/uevent/entities/package_entity.dart';
 import '../entities/event_entity.dart';
 import '../utilities/utilities.dart';
 
@@ -21,6 +22,13 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
 
   @override
   Widget build(BuildContext context) {
+    List<PackageEntity> packageList = [];
+
+    for (var data in widget.event.merchData) {
+      PackageEntity packageEntity = PackageEntity.fromMap(data);
+      packageList.add(packageEntity);
+    }
+
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -102,6 +110,7 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -128,7 +137,7 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                               ),
                             ),
                           ),
-                          const Padding(padding: EdgeInsets.all(5)),
+                          //const Padding(padding: EdgeInsets.all(5)),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -191,24 +200,53 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                         ),
                       ),
                       Visibility(
-                        visible: !isEventDetailsVisible,
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Hello",
-                              style: TextStyle(
-                                color: Colors
-                                    .blue, // Change the text color to blue
-                                fontSize: 20, // Change the font size
-                                fontWeight:
-                                    FontWeight.bold, // Make the text bold
-                                // Add more styles as needed
-                              ),
+                          visible: !isEventDetailsVisible,
+                          child: Expanded(
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              itemCount: packageList.length,
+                              itemBuilder: (context, index) {
+                                return ListTile(
+                                  contentPadding: const EdgeInsets.all(8.0),
+                                  title: Text(
+                                    packageList[index].packageName,
+                                    style: MyTextStyles.individualEventTitleTxt,
+                                  ),
+                                  subtitle: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      const Text(
+                                        "Description",
+                                        style:
+                                            MyTextStyles.individualEventHeaderTxt,
+                                      ),
+                                      Text(
+                                        packageList[index].description,
+                                        style:
+                                            MyTextStyles.individualEventNormalTxt,
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      const Text(
+                                        "Price",
+                                        style:
+                                            MyTextStyles.individualEventHeaderTxt,
+                                      ),
+                                      Text(
+                                        "RM${packageList[index].cost}",
+                                        style:
+                                            MyTextStyles.individualEventNormalTxt,
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
                             ),
-                          ],
-                        ),
-                      ),
+                          )),
                     ],
                   ),
                 ),
