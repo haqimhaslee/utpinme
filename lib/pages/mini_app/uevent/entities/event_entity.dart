@@ -17,7 +17,7 @@ class EventEntity {
   final String status;
   final String? link;
   final bool? notifications;
-  final double? cost;
+  final double cost;
   final List<String>? sponsors;
   final String? socialMediaLink;
   final List<dynamic> merchData; // keep track of image file names
@@ -42,7 +42,7 @@ class EventEntity {
       required this.status,
       this.link,
       this.notifications,
-      this.cost,
+      required this.cost,
       this.sponsors,
       this.socialMediaLink,
       required this.merchData,
@@ -64,6 +64,7 @@ class EventEntity {
       capacity: map['capacity'] as int?,
       status: map['status'] as String,
       bannerImage: null,
+      cost: map['cost'] * 1.0,
       //tags: map['tags'] as List<dynamic>,
       merchData: map['merchData'] as List<dynamic>,
       merchImages: [],
@@ -80,6 +81,7 @@ class EventEntity {
       'dateTime': dateTime,
       'organizer': organizer,
       'status': status,
+      'cost': cost,
       //'tags': tags,
       "bannerImage": bannerImage,
       'merchData': merchData,

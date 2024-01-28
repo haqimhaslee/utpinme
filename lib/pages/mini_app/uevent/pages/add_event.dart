@@ -575,41 +575,43 @@ class _AddEventState extends State<AddEvent> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.0),
-                            color: Colors.blue[900],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              if (dateSelection != null)
-                                Text(
-                                  dateSelection.toString(),
-                                  style: const TextStyle(color: Colors.white),
-                                ),
-                              IconButton(
-                                  onPressed: () async {
-                                    DateTime? date = await showDateTimePicker(
-                                      context: context,
-                                    );
+                        InkWell(
+                          onTap: () async {
+                            DateTime? date = await showDateTimePicker(
+                              context: context,
+                            );
 
-                                    if (date != null) {
-                                      setState(() {
-                                        dateSelection = date;
-                                        timestamp = Timestamp.fromDate(date);
-                                      });
-                                    }
-                                    debugPrint(
-                                        "Datetime: ${date.toString()}"); // TODO: delete in production
-                                    debugPrint(
-                                        "Timestamp: ${timestamp.toString()}"); // TODO: delete in production
-                                  },
-                                  icon: const Icon(
-                                    Icons.date_range,
-                                    color: Colors.white,
-                                  )),
-                            ],
+                            if (date != null) {
+                              setState(() {
+                                dateSelection = date;
+                                timestamp = Timestamp.fromDate(date);
+                              });
+                            }
+                            debugPrint(
+                                "Datetime: ${date.toString()}"); // TODO: delete in production
+                            debugPrint(
+                                "Timestamp: ${timestamp.toString()}"); // TODO: delete in production
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              color: Colors.blue[900],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                if (dateSelection != null)
+                                  Text(
+                                    dateSelection.toString(),
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
+                                const Icon(
+                                  Icons.date_range,
+                                  color: Colors.white,
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -640,6 +642,8 @@ class _AddEventState extends State<AddEvent> {
                                     description: eventDescController.text,
                                     location: eventLoactionController.text,
                                     dateTime: dateSelection!,
+                                    cost: double.parse(
+                                        ticketPriceController.text),
                                     organizer:
                                         "SYNTECH", // get organizer from user_entity of registed clubs
                                     //tags: tagsSelection,
@@ -701,7 +705,9 @@ class _AddEventState extends State<AddEvent> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 25,),
+                        const SizedBox(
+                          height: 25,
+                        ),
                       ],
                     ),
                   ),

@@ -186,12 +186,12 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                 ),
                 width: MediaQuery.of(context).size.width,
                 child: Padding(
-                  padding: const EdgeInsets.all(40),
+                  padding: const EdgeInsets.fromLTRB(15, 30, 15, 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -245,12 +245,12 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                           ),
                         ],
                       ),
-                      const Padding(padding: EdgeInsets.all(15)),
                       Visibility(
                         visible: isEventDetailsVisible,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            const Padding(padding: EdgeInsets.all(10)),
                             Text(
                               widget.event.title,
                               style: MyTextStyles.individualEventTitleTxt,
@@ -270,13 +270,13 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                             ),
                             const SizedBox(height: 20),
                             const Text(
-                              "Category",
+                              "Ticket",
                               style: MyTextStyles.individualEventHeaderTxt,
                             ),
-                            /*Text(
-                              widget.event.tags.toString(),
+                            Text(
+                              "RM${widget.event.cost.toString()}",
                               style: MyTextStyles.individualEventNormalTxt,
-                            ),*/
+                            ),
                           ],
                         ),
                       ),
@@ -284,11 +284,13 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                           visible: !isEventDetailsVisible,
                           child: Expanded(
                             child: ListView.builder(
+                              padding: EdgeInsets.zero,
                               shrinkWrap: true,
                               itemCount: packageList.length,
                               itemBuilder: (context, index) {
                                 return ListTile(
-                                  contentPadding: const EdgeInsets.all(8.0),
+                                  contentPadding:
+                                      const EdgeInsets.fromLTRB(8, 10, 8, 0),
                                   title: Text(
                                     packageList[index].packageName,
                                     style: MyTextStyles.individualEventTitleTxt,
@@ -297,9 +299,6 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      const SizedBox(
-                                        height: 5,
-                                      ),
                                       const Text(
                                         "Description",
                                         style: MyTextStyles
@@ -323,6 +322,9 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                                         style: MyTextStyles
                                             .individualEventNormalTxt,
                                       ),
+                                      const SizedBox(
+                                        height: 10,
+                                      )
                                     ],
                                   ),
                                 );
