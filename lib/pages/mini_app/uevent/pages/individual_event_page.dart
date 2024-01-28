@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/entities/package_entity.dart';
 import '../entities/event_entity.dart';
@@ -20,6 +21,9 @@ class IndividualEventPage extends StatefulWidget {
 class _IndividualEventPageState extends State<IndividualEventPage> {
   bool isEventDetailsVisible = true;
 
+  int _carouselCurrent = 0;
+  final CarouselController _carouselController = CarouselController();
+
   @override
   Widget build(BuildContext context) {
     List<PackageEntity> packageList = [];
@@ -39,14 +43,91 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                     width: MediaQuery.of(context).size.width,
                     child: widget.event.bannerImage == null
                         ? const Placeholder()
-                        : Image.memory(widget.event
-                            .bannerImage!), //Image.asset(widget.imgUrl, fit: BoxFit.cover),
+                        : Image.memory(widget.event.bannerImage!),
                   )
                 : Container(
-                    height: MediaQuery.of(context).size.width,
+                    //height: MediaQuery.of(context).size.width,
                     child: widget.event.merchData.isEmpty
                         ? const Placeholder()
-                        : ListView.builder(
+                        : Stack(
+                            children: [
+                              CarouselSlider.builder(
+                                carouselController: _carouselController,
+                                itemCount: widget.event.merchData.length,
+                                itemBuilder: (context, index, realIndex) {
+                                  return Container(
+                                    child: Center(
+                                      child: Image.memory(
+                                        widget.event.merchImages[index]!,
+                                        fit: BoxFit.cover,
+                                        width:
+                                            MediaQuery.of(context).size.width,
+                                        height:
+                                            MediaQuery.of(context).size.width,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                options: CarouselOptions(
+                                  viewportFraction: 1.0,
+                                  height: MediaQuery.of(context).size.width,
+                                  initialPage: 0,
+                                  autoPlay: true,
+                                  autoPlayInterval: const Duration(seconds: 2),
+                                  autoPlayAnimationDuration:
+                                      const Duration(milliseconds: 800),
+                                  autoPlayCurve: Curves.fastOutSlowIn,
+                                  scrollDirection: Axis.horizontal,
+                                  onPageChanged: (index, reason) {
+                                    setState(
+                                      () {
+                                        _carouselCurrent = index;
+                                      },
+                                    );
+                                  },
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                left: MediaQuery.of(context).size.width * 0.5 -
+                                    (widget.event.merchData.length * 16 / 2),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: widget.event.merchData
+                                      .asMap()
+                                      .entries
+                                      .map(
+                                    (entry) {
+                                      return GestureDetector(
+                                        onTap: () => _carouselController
+                                            .animateToPage(entry.key),
+                                        child: Container(
+                                          width: 12.0,
+                                          height: 12.0,
+                                          margin: EdgeInsets.symmetric(
+                                              vertical: 8.0, horizontal: 4.0),
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: (Theme.of(context)
+                                                            .brightness ==
+                                                        Brightness.dark
+                                                    ? Colors.white
+                                                    : Colors.black)
+                                                .withOpacity(_carouselCurrent ==
+                                                        entry.key
+                                                    ? 0.9
+                                                    : 0.4),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).toList(),
+                                ),
+                              ),
+                            ],
+                          ),
+                  ),
+            /*ListView.builder(
                             scrollDirection: Axis.horizontal,
                             shrinkWrap: true,
                             itemCount: widget.event.merchData.length,
@@ -54,7 +135,7 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                               return Image.memory(
                                   widget.event.merchImages[index]!);
                             },
-                          )),
+                          )),*/
             Positioned(
               top: 40,
               left: 16,
@@ -213,33 +294,34 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                                     style: MyTextStyles.individualEventTitleTxt,
                                   ),
                                   subtitle: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       const SizedBox(
                                         height: 5,
                                       ),
                                       const Text(
                                         "Description",
-                                        style:
-                                            MyTextStyles.individualEventHeaderTxt,
+                                        style: MyTextStyles
+                                            .individualEventHeaderTxt,
                                       ),
                                       Text(
                                         packageList[index].description,
-                                        style:
-                                            MyTextStyles.individualEventNormalTxt,
+                                        style: MyTextStyles
+                                            .individualEventNormalTxt,
                                       ),
                                       const SizedBox(
                                         height: 5,
                                       ),
                                       const Text(
                                         "Price",
-                                        style:
-                                            MyTextStyles.individualEventHeaderTxt,
+                                        style: MyTextStyles
+                                            .individualEventHeaderTxt,
                                       ),
                                       Text(
                                         "RM${packageList[index].cost}",
-                                        style:
-                                            MyTextStyles.individualEventNormalTxt,
+                                        style: MyTextStyles
+                                            .individualEventNormalTxt,
                                       ),
                                     ],
                                   ),
