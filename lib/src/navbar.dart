@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "BETA",
+                          "v2.24",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 13,
