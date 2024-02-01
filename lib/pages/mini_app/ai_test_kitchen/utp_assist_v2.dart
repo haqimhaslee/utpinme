@@ -1,6 +1,6 @@
 //import 'dart:ffi';
 import 'package:firebase_auth/firebase_auth.dart';
-
+import 'package:shimmer/shimmer.dart';
 import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/chat_input_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
@@ -146,16 +146,33 @@ class _SectionChatState extends State<SectionChat> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             const SizedBox(
-                              height: 8,
+                              height: 5,
                             ),
                             SizedBox(
                               //height: 15,
                               child: LoadingAnimationWidget.staggeredDotsWave(
                                 color: Theme.of(context).colorScheme.primary,
-                                size: 35,
+                                size: 25,
                               ),
                             ),
-                            const Text('Generating answer'),
+                            SizedBox(
+                              width: 300.0,
+                              height: 75.0,
+                              child: Shimmer.fromColors(
+                                baseColor:
+                                    Theme.of(context).colorScheme.primary,
+                                highlightColor:
+                                    Theme.of(context).colorScheme.tertiary,
+                                child: const Text(
+                                  'Generating answer',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
                             const SizedBox(
                               height: 5,
                             ),

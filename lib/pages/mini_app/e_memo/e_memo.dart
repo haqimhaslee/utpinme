@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:utp_in_me/pages/mini_app/e_memo/e_memo_advisor.dart';
+import 'package:utp_in_me/pages/mini_app/e_memo/e_memo_approval.dart';
+import 'package:utp_in_me/pages/mini_app/e_memo/e_memo_myrequest.dart';
 import 'package:utp_in_me/pages/mini_app/e_memo/new_request_services/new_request.dart';
-//import 'package:utp_in_me/pages/el_tigre_iAttend/iattend_qr.dart';
-import 'package:utp_in_me/pages/mini_app/iAttend/iattend_myevent.dart';
-import 'package:utp_in_me/pages/mini_app/iAttend/iattend_mystats.dart';
 
 class Ememo extends StatelessWidget {
   const Ememo({super.key});
@@ -41,9 +41,9 @@ class Ememo extends StatelessWidget {
           ),
           body: const TabBarView(
             children: [
-              MyEvent(),
-              MyStats(),
-              MyEvent(),
+              EMemoMyRequest(),
+              EMemoAdvisor(),
+              EMemoApproval(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
