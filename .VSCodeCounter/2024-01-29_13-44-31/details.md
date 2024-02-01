@@ -1,0 +1,133 @@
+# Details
+
+Date : 2024-01-29 13:44:31
+
+Directory c:\\Users\\haqim\\Project\\Flutter\\utpinme
+
+Total : 118 files,  28080 codes, 329 comments, 586 blanks, all 28995 lines
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
+
+## Files
+| filename | language | code | comment | blank | total |
+| :--- | :--- | ---: | ---: | ---: | ---: |
+| [.github/ISSUE_TEMPLATE/bug_report.md](/.github/ISSUE_TEMPLATE/bug_report.md) | Markdown | 28 | 0 | 9 | 37 |
+| [.github/ISSUE_TEMPLATE/feature_request.md](/.github/ISSUE_TEMPLATE/feature_request.md) | Markdown | 15 | 0 | 6 | 21 |
+| [CODE_OF_CONDUCT.md](/CODE_OF_CONDUCT.md) | Markdown | 93 | 0 | 36 | 129 |
+| [CONTRIBUTING.md](/CONTRIBUTING.md) | Markdown | 1 | 0 | 1 | 2 |
+| [LICENSE.md](/LICENSE.md) | Markdown | 281 | 0 | 59 | 340 |
+| [README.md](/README.md) | Markdown | 54 | 0 | 13 | 67 |
+| [SECURITY.md](/SECURITY.md) | Markdown | 6 | 0 | 4 | 10 |
+| [analysis_options.yaml](/analysis_options.yaml) | YAML | 3 | 0 | 3 | 6 |
+| [android/app/build.gradle](/android/app/build.gradle) | Gradle | 53 | 5 | 13 | 71 |
+| [android/app/google-services.json](/android/app/google-services.json) | JSON | 0 | 0 | 1 | 1 |
+| [android/app/src/debug/AndroidManifest.xml](/android/app/src/debug/AndroidManifest.xml) | XML | 4 | 4 | 1 | 9 |
+| [android/app/src/main/AndroidManifest.xml](/android/app/src/main/AndroidManifest.xml) | XML | 36 | 6 | 3 | 45 |
+| [android/app/src/main/res/drawable-v21/launch_background.xml](/android/app/src/main/res/drawable-v21/launch_background.xml) | XML | 4 | 7 | 1 | 12 |
+| [android/app/src/main/res/drawable/launch_background.xml](/android/app/src/main/res/drawable/launch_background.xml) | XML | 4 | 7 | 1 | 12 |
+| [android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml](/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml) | XML | 6 | 0 | 0 | 6 |
+| [android/app/src/main/res/values-night/styles.xml](/android/app/src/main/res/values-night/styles.xml) | XML | 9 | 8 | 0 | 17 |
+| [android/app/src/main/res/values/styles.xml](/android/app/src/main/res/values/styles.xml) | XML | 9 | 8 | 0 | 17 |
+| [android/app/src/profile/AndroidManifest.xml](/android/app/src/profile/AndroidManifest.xml) | XML | 5 | 4 | 2 | 11 |
+| [android/build.gradle](/android/build.gradle) | Gradle | 27 | 0 | 5 | 32 |
+| [android/gradle.properties](/android/gradle.properties) | Properties | 3 | 0 | 1 | 4 |
+| [android/gradle/wrapper/gradle-wrapper.properties](/android/gradle/wrapper/gradle-wrapper.properties) | Properties | 5 | 0 | 1 | 6 |
+| [android/settings.gradle](/android/settings.gradle) | Gradle | 8 | 0 | 4 | 12 |
+| [assets/map_styles/dark.json](/assets/map_styles/dark.json) | JSON | 161 | 0 | 0 | 161 |
+| [assets/map_styles/light.json](/assets/map_styles/light.json) | JSON | 1 | 0 | 0 | 1 |
+| [ios/Runner/AppDelegate.swift](/ios/Runner/AppDelegate.swift) | Swift | 12 | 0 | 2 | 14 |
+| [ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json](/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json) | JSON | 1 | 0 | 0 | 1 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json](/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json) | JSON | 23 | 0 | 1 | 24 |
+| [ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md](/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md) | Markdown | 3 | 0 | 2 | 5 |
+| [ios/Runner/Base.lproj/LaunchScreen.storyboard](/ios/Runner/Base.lproj/LaunchScreen.storyboard) | XML | 36 | 1 | 1 | 38 |
+| [ios/Runner/Base.lproj/Main.storyboard](/ios/Runner/Base.lproj/Main.storyboard) | XML | 25 | 1 | 1 | 27 |
+| [ios/Runner/Runner-Bridging-Header.h](/ios/Runner/Runner-Bridging-Header.h) | C++ | 1 | 0 | 1 | 2 |
+| [ios/firebase_app_id_file.json](/ios/firebase_app_id_file.json) | JSON | 7 | 0 | 0 | 7 |
+| [lib/auth/auth_page.dart](/lib/auth/auth_page.dart) | Dart | 21 | 0 | 3 | 24 |
+| [lib/auth/login_page.dart](/lib/auth/login_page.dart) | Dart | 162 | 2 | 10 | 174 |
+| [lib/firebase_options.dart](/lib/firebase_options.dart) | Dart | 54 | 12 | 4 | 70 |
+| [lib/main.dart](/lib/main.dart) | Dart | 43 | 6 | 7 | 56 |
+| [lib/pages/home/home.dart](/lib/pages/home/home.dart) | Dart | 12 | 0 | 2 | 14 |
+| [lib/pages/home/news/more_news.dart](/lib/pages/home/news/more_news.dart) | Dart | 628 | 0 | 2 | 630 |
+| [lib/pages/home/news/viewer_news.dart](/lib/pages/home/news/viewer_news.dart) | Dart | 176 | 2 | 2 | 180 |
+| [lib/pages/home/panic_button.dart](/lib/pages/home/panic_button.dart) | Dart | 409 | 6 | 5 | 420 |
+| [lib/pages/home/up_section_home.dart](/lib/pages/home/up_section_home.dart) | Dart | 1,282 | 9 | 7 | 1,298 |
+| [lib/pages/home/upcoming_events/more_upcoming_events.dart](/lib/pages/home/upcoming_events/more_upcoming_events.dart) | Dart | 694 | 0 | 2 | 696 |
+| [lib/pages/home/upcoming_events/viewer_upcoming_events.dart](/lib/pages/home/upcoming_events/viewer_upcoming_events.dart) | Dart | 796 | 0 | 2 | 798 |
+| [lib/pages/mini_app/academic_calendar/acad_cal.dart](/lib/pages/mini_app/academic_calendar/acad_cal.dart) | Dart | 40 | 0 | 3 | 43 |
+| [lib/pages/mini_app/academic_calendar/fdug_pack/fdug_acad_cal.dart](/lib/pages/mini_app/academic_calendar/fdug_pack/fdug_acad_cal.dart) | Dart | 108 | 4 | 3 | 115 |
+| [lib/pages/mini_app/academic_calendar/fdug_pack/fdug_jan_table.dart](/lib/pages/mini_app/academic_calendar/fdug_pack/fdug_jan_table.dart) | Dart | 141 | 1 | 3 | 145 |
+| [lib/pages/mini_app/academic_calendar/fdug_pack/fdug_may_table.dart](/lib/pages/mini_app/academic_calendar/fdug_pack/fdug_may_table.dart) | Dart | 141 | 1 | 3 | 145 |
+| [lib/pages/mini_app/academic_calendar/fdug_pack/fdug_sept_table.dart](/lib/pages/mini_app/academic_calendar/fdug_pack/fdug_sept_table.dart) | Dart | 141 | 1 | 3 | 145 |
+| [lib/pages/mini_app/academic_calendar/intern_pack/intern_acad_cal.dart](/lib/pages/mini_app/academic_calendar/intern_pack/intern_acad_cal.dart) | Dart | 64 | 2 | 3 | 69 |
+| [lib/pages/mini_app/academic_calendar/intern_pack/intern_table.dart](/lib/pages/mini_app/academic_calendar/intern_pack/intern_table.dart) | Dart | 109 | 1 | 3 | 113 |
+| [lib/pages/mini_app/academic_calendar/pg_pack/pg_acad_cal.dart](/lib/pages/mini_app/academic_calendar/pg_pack/pg_acad_cal.dart) | Dart | 86 | 3 | 3 | 92 |
+| [lib/pages/mini_app/academic_calendar/pg_pack/pg_jan_table.dart](/lib/pages/mini_app/academic_calendar/pg_pack/pg_jan_table.dart) | Dart | 141 | 1 | 3 | 145 |
+| [lib/pages/mini_app/academic_calendar/pg_pack/pg_jul_table.dart](/lib/pages/mini_app/academic_calendar/pg_pack/pg_jul_table.dart) | Dart | 141 | 1 | 3 | 145 |
+| [lib/pages/mini_app/academic_calendar/public_holiday.dart](/lib/pages/mini_app/academic_calendar/public_holiday.dart) | Dart | 220 | 1 | 3 | 224 |
+| [lib/pages/mini_app/ai_test_kitchen/ai_test_kitchen_landing.dart](/lib/pages/mini_app/ai_test_kitchen/ai_test_kitchen_landing.dart) | Dart | 358 | 3 | 2 | 363 |
+| [lib/pages/mini_app/ai_test_kitchen/chat_input_box.dart](/lib/pages/mini_app/ai_test_kitchen/chat_input_box.dart) | Dart | 71 | 4 | 4 | 79 |
+| [lib/pages/mini_app/ai_test_kitchen/notebook_lm.dart](/lib/pages/mini_app/ai_test_kitchen/notebook_lm.dart) | Dart | 192 | 1 | 2 | 195 |
+| [lib/pages/mini_app/ai_test_kitchen/utp_assist.dart](/lib/pages/mini_app/ai_test_kitchen/utp_assist.dart) | Dart | 226 | 8 | 10 | 244 |
+| [lib/pages/mini_app/ai_test_kitchen/utp_assist_v2.dart](/lib/pages/mini_app/ai_test_kitchen/utp_assist_v2.dart) | Dart | 254 | 6 | 14 | 274 |
+| [lib/pages/mini_app/attendance/attendance.dart](/lib/pages/mini_app/attendance/attendance.dart) | Dart | 329 | 3 | 3 | 335 |
+| [lib/pages/mini_app/attendance/attendance_confirmation.dart](/lib/pages/mini_app/attendance/attendance_confirmation.dart) | Dart | 94 | 3 | 3 | 100 |
+| [lib/pages/mini_app/attendance/attendance_search.dart](/lib/pages/mini_app/attendance/attendance_search.dart) | Dart | 905 | 1 | 7 | 913 |
+| [lib/pages/mini_app/digital_id/digital_id.dart](/lib/pages/mini_app/digital_id/digital_id.dart) | Dart | 35 | 0 | 4 | 39 |
+| [lib/pages/mini_app/digital_id/lmg_pass.dart](/lib/pages/mini_app/digital_id/lmg_pass.dart) | Dart | 289 | 1 | 4 | 294 |
+| [lib/pages/mini_app/digital_id/student_id.dart](/lib/pages/mini_app/digital_id/student_id.dart) | Dart | 287 | 1 | 4 | 292 |
+| [lib/pages/mini_app/directory/directory.dart](/lib/pages/mini_app/directory/directory.dart) | Dart | 79 | 0 | 3 | 82 |
+| [lib/pages/mini_app/directory/directory_viewer.dart](/lib/pages/mini_app/directory/directory_viewer.dart) | Dart | 44 | 1 | 2 | 47 |
+| [lib/pages/mini_app/e_memo/e_memo.dart](/lib/pages/mini_app/e_memo/e_memo.dart) | Dart | 54 | 5 | 3 | 62 |
+| [lib/pages/mini_app/e_memo/new_request_services/new_request.dart](/lib/pages/mini_app/e_memo/new_request_services/new_request.dart) | Dart | 683 | 16 | 17 | 716 |
+| [lib/pages/mini_app/exemption/exemption.dart](/lib/pages/mini_app/exemption/exemption.dart) | Dart | 52 | 1 | 3 | 56 |
+| [lib/pages/mini_app/exemption/exemption_approved.dart](/lib/pages/mini_app/exemption/exemption_approved.dart) | Dart | 40 | 2 | 3 | 45 |
+| [lib/pages/mini_app/exemption/exemption_myrequest.dart](/lib/pages/mini_app/exemption/exemption_myrequest.dart) | Dart | 40 | 2 | 3 | 45 |
+| [lib/pages/mini_app/exemption/exemption_newsubmit.dart](/lib/pages/mini_app/exemption/exemption_newsubmit.dart) | Dart | 58 | 1 | 2 | 61 |
+| [lib/pages/mini_app/exemption/exemption_viewer.dart](/lib/pages/mini_app/exemption/exemption_viewer.dart) | Dart | 0 | 0 | 1 | 1 |
+| [lib/pages/mini_app/facility/facility.dart](/lib/pages/mini_app/facility/facility.dart) | Dart | 145 | 2 | 3 | 150 |
+| [lib/pages/mini_app/iAttend/iattend.dart](/lib/pages/mini_app/iAttend/iattend.dart) | Dart | 45 | 3 | 3 | 51 |
+| [lib/pages/mini_app/iAttend/iattend_myevent.dart](/lib/pages/mini_app/iAttend/iattend_myevent.dart) | Dart | 74 | 2 | 3 | 79 |
+| [lib/pages/mini_app/iAttend/iattend_myevent_viewer.dart](/lib/pages/mini_app/iAttend/iattend_myevent_viewer.dart) | Dart | 74 | 2 | 3 | 79 |
+| [lib/pages/mini_app/iAttend/iattend_mystats.dart](/lib/pages/mini_app/iAttend/iattend_mystats.dart) | Dart | 86 | 0 | 3 | 89 |
+| [lib/pages/mini_app/mini_app.dart](/lib/pages/mini_app/mini_app.dart) | Dart | 1,957 | 28 | 13 | 1,998 |
+| [lib/pages/mini_app/postalhub/postal_hub.dart](/lib/pages/mini_app/postalhub/postal_hub.dart) | Dart | 45 | 1 | 2 | 48 |
+| [lib/pages/mini_app/shuttle_bus/bus_finder.dart](/lib/pages/mini_app/shuttle_bus/bus_finder.dart) | Dart | 225 | 10 | 18 | 253 |
+| [lib/pages/mini_app/shuttle_bus/maximoff_s_internal.dart](/lib/pages/mini_app/shuttle_bus/maximoff_s_internal.dart) | Dart | 226 | 8 | 14 | 248 |
+| [lib/pages/mini_app/shuttle_bus/s_external.dart](/lib/pages/mini_app/shuttle_bus/s_external.dart) | Dart | 4,264 | 0 | 5 | 4,269 |
+| [lib/pages/mini_app/shuttle_bus/s_internal.dart](/lib/pages/mini_app/shuttle_bus/s_internal.dart) | Dart | 2,891 | 0 | 5 | 2,896 |
+| [lib/pages/mini_app/shuttle_bus/s_weekend.dart](/lib/pages/mini_app/shuttle_bus/s_weekend.dart) | Dart | 1,116 | 0 | 5 | 1,121 |
+| [lib/pages/mini_app/shuttle_bus/shuttle_bus.dart](/lib/pages/mini_app/shuttle_bus/shuttle_bus.dart) | Dart | 61 | 2 | 3 | 66 |
+| [lib/pages/mini_app/ucs/case_viewer.dart](/lib/pages/mini_app/ucs/case_viewer.dart) | Dart | 0 | 0 | 1 | 1 |
+| [lib/pages/mini_app/ucs/create_case_data.dart](/lib/pages/mini_app/ucs/create_case_data.dart) | Dart | 146 | 2 | 7 | 155 |
+| [lib/pages/mini_app/ucs/knowledge_hub.dart](/lib/pages/mini_app/ucs/knowledge_hub.dart) | Dart | 14 | 0 | 4 | 18 |
+| [lib/pages/mini_app/ucs/my_support.dart](/lib/pages/mini_app/ucs/my_support.dart) | Dart | 642 | 0 | 5 | 647 |
+| [lib/pages/mini_app/ucs/ucs.dart](/lib/pages/mini_app/ucs/ucs.dart) | Dart | 51 | 1 | 5 | 57 |
+| [lib/pages/mini_app/uevent/uevent.dart](/lib/pages/mini_app/uevent/uevent.dart) | Dart | 114 | 1 | 7 | 122 |
+| [lib/pages/mini_app/uevent/uevent_help_page.dart](/lib/pages/mini_app/uevent/uevent_help_page.dart) | Dart | 83 | 0 | 3 | 86 |
+| [lib/pages/mini_app/uevent/uevent_my_ticket.dart](/lib/pages/mini_app/uevent/uevent_my_ticket.dart) | Dart | 279 | 1 | 3 | 283 |
+| [lib/pages/mini_app/uevent/uevent_product_page.dart](/lib/pages/mini_app/uevent/uevent_product_page.dart) | Dart | 307 | 0 | 3 | 310 |
+| [lib/pages/mini_app/uschedule/nox_uschedule_exam.dart](/lib/pages/mini_app/uschedule/nox_uschedule_exam.dart) | Dart | 15 | 1 | 2 | 18 |
+| [lib/pages/mini_app/uschedule/uschedule.dart](/lib/pages/mini_app/uschedule/uschedule.dart) | Dart | 39 | 2 | 3 | 44 |
+| [lib/pages/mini_app/uschedule/uschedule_course.dart](/lib/pages/mini_app/uschedule/uschedule_course.dart) | Dart | 107 | 19 | 19 | 145 |
+| [lib/pages/mini_app/uschedule/uschedule_exam.dart](/lib/pages/mini_app/uschedule/uschedule_exam.dart) | Dart | 320 | 2 | 3 | 325 |
+| [lib/pages/mini_app/usummon/appeal.dart](/lib/pages/mini_app/usummon/appeal.dart) | Dart | 13 | 0 | 4 | 17 |
+| [lib/pages/mini_app/usummon/summon.dart](/lib/pages/mini_app/usummon/summon.dart) | Dart | 13 | 0 | 4 | 17 |
+| [lib/pages/mini_app/usummon/usummon.dart](/lib/pages/mini_app/usummon/usummon.dart) | Dart | 36 | 0 | 4 | 40 |
+| [lib/pages/mini_app/usummon/usummon_viewer.dart](/lib/pages/mini_app/usummon/usummon_viewer.dart) | Dart | 0 | 0 | 1 | 1 |
+| [lib/pages/news_and_notification/more_notification.dart](/lib/pages/news_and_notification/more_notification.dart) | Dart | 648 | 0 | 2 | 650 |
+| [lib/pages/qr_services/qr_page.dart](/lib/pages/qr_services/qr_page.dart) | Dart | 149 | 0 | 11 | 160 |
+| [lib/pages/settings/about_app.dart](/lib/pages/settings/about_app.dart) | Dart | 297 | 7 | 2 | 306 |
+| [lib/pages/settings/contact_us.dart](/lib/pages/settings/contact_us.dart) | Dart | 1,023 | 7 | 4 | 1,034 |
+| [lib/pages/settings/dev_page/material_test_page.dart](/lib/pages/settings/dev_page/material_test_page.dart) | Dart | 33 | 0 | 3 | 36 |
+| [lib/pages/settings/dev_page/material_theme_col.dart](/lib/pages/settings/dev_page/material_theme_col.dart) | Dart | 492 | 33 | 5 | 530 |
+| [lib/pages/settings/dev_page/material_widget_lib.dart](/lib/pages/settings/dev_page/material_widget_lib.dart) | Dart | 218 | 5 | 5 | 228 |
+| [lib/pages/settings/disclaimer.dart](/lib/pages/settings/disclaimer.dart) | Dart | 99 | 0 | 4 | 103 |
+| [lib/pages/settings/profile.dart](/lib/pages/settings/profile.dart) | Dart | 560 | 11 | 10 | 581 |
+| [lib/pages/settings/security_policy.dart](/lib/pages/settings/security_policy.dart) | Dart | 207 | 0 | 4 | 211 |
+| [lib/src/navbar.dart](/lib/src/navbar.dart) | Dart | 199 | 6 | 11 | 216 |
+| [lib/src/token.dart](/lib/src/token.dart) | Dart | 0 | 0 | 1 | 1 |
+| [lib/src/utp_ui.dart](/lib/src/utp_ui.dart) | Dart | 67 | 3 | 3 | 73 |
+| [pubspec.yaml](/pubspec.yaml) | YAML | 77 | 7 | 18 | 102 |
+
+[Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

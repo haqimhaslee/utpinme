@@ -1,0 +1,217 @@
+Date : 2024-01-29 13:44:31
+Directory : c:\Users\haqim\Project\Flutter\utpinme
+Total : 118 files,  28080 codes, 329 comments, 586 blanks, all 28995 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         85 |     27,079 |        271 |        396 |     27,746 |
+| Markdown   |          8 |        481 |          0 |        130 |        611 |
+| JSON       |          6 |        193 |          0 |          2 |        195 |
+| XML        |         10 |        138 |         46 |         10 |        194 |
+| Gradle     |          3 |         88 |          5 |         22 |        115 |
+| YAML       |          2 |         80 |          7 |         21 |        108 |
+| Swift      |          1 |         12 |          0 |          2 |         14 |
+| Properties |          2 |          8 |          0 |          2 |         10 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                         | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                            |        118 |     28,080 |        329 |        586 |     28,995 |
+| . (Files)                                                                                                    |          7 |        515 |          7 |        134 |        656 |
+| .github                                                                                                      |          2 |         43 |          0 |         15 |         58 |
+| .github\ISSUE_TEMPLATE                                                                                       |          2 |         43 |          0 |         15 |         58 |
+| android                                                                                                      |         14 |        173 |         49 |         33 |        255 |
+| android (Files)                                                                                              |          3 |         38 |          0 |         10 |         48 |
+| android\app                                                                                                  |         10 |        130 |         49 |         22 |        201 |
+| android\app (Files)                                                                                          |          2 |         53 |          5 |         14 |         72 |
+| android\app\src                                                                                              |          8 |         77 |         44 |          8 |        129 |
+| android\app\src\debug                                                                                        |          1 |          4 |          4 |          1 |          9 |
+| android\app\src\main                                                                                         |          6 |         68 |         36 |          5 |        109 |
+| android\app\src\main (Files)                                                                                 |          1 |         36 |          6 |          3 |         45 |
+| android\app\src\main\res                                                                                     |          5 |         32 |         30 |          2 |         64 |
+| android\app\src\main\res\drawable                                                                            |          1 |          4 |          7 |          1 |         12 |
+| android\app\src\main\res\drawable-v21                                                                        |          1 |          4 |          7 |          1 |         12 |
+| android\app\src\main\res\mipmap-anydpi-v26                                                                   |          1 |          6 |          0 |          0 |          6 |
+| android\app\src\main\res\values                                                                              |          1 |          9 |          8 |          0 |         17 |
+| android\app\src\main\res\values-night                                                                        |          1 |          9 |          8 |          0 |         17 |
+| android\app\src\profile                                                                                      |          1 |          5 |          4 |          2 |         11 |
+| android\gradle                                                                                               |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                                       |          1 |          5 |          0 |          1 |          6 |
+| assets                                                                                                       |          2 |        162 |          0 |          0 |        162 |
+| assets\map_styles                                                                                            |          2 |        162 |          0 |          0 |        162 |
+| ios                                                                                                          |          8 |        108 |          2 |          8 |        118 |
+| ios (Files)                                                                                                  |          1 |          7 |          0 |          0 |          7 |
+| ios\Runner                                                                                                   |          7 |        101 |          2 |          8 |        111 |
+| ios\Runner (Files)                                                                                           |          2 |         13 |          0 |          3 |         16 |
+| ios\Runner\Assets.xcassets                                                                                   |          3 |         27 |          0 |          3 |         30 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                |          1 |          1 |          0 |          0 |          1 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                              |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                        |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                          |         85 |     27,079 |        271 |        396 |     27,746 |
+| lib (Files)                                                                                                  |          2 |         97 |         18 |         11 |        126 |
+| lib\auth                                                                                                     |          2 |        183 |          2 |         13 |        198 |
+| lib\pages                                                                                                    |         78 |     26,533 |        242 |        357 |     27,132 |
+| lib\pages\home                                                                                               |          7 |      3,997 |         17 |         22 |      4,036 |
+| lib\pages\home (Files)                                                                                       |          3 |      1,703 |         15 |         14 |      1,732 |
+| lib\pages\home\news                                                                                          |          2 |        804 |          2 |          4 |        810 |
+| lib\pages\home\upcoming_events                                                                               |          2 |      1,490 |          0 |          4 |      1,494 |
+| lib\pages\mini_app                                                                                           |         61 |     18,810 |        162 |        285 |     19,257 |
+| lib\pages\mini_app (Files)                                                                                   |          1 |      1,957 |         28 |         13 |      1,998 |
+| lib\pages\mini_app\academic_calendar                                                                         |         11 |      1,332 |         16 |         33 |      1,381 |
+| lib\pages\mini_app\academic_calendar (Files)                                                                 |          2 |        260 |          1 |          6 |        267 |
+| lib\pages\mini_app\academic_calendar\fdug_pack                                                               |          4 |        531 |          7 |         12 |        550 |
+| lib\pages\mini_app\academic_calendar\intern_pack                                                             |          2 |        173 |          3 |          6 |        182 |
+| lib\pages\mini_app\academic_calendar\pg_pack                                                                 |          3 |        368 |          5 |          9 |        382 |
+| lib\pages\mini_app\ai_test_kitchen                                                                           |          5 |      1,101 |         22 |         32 |      1,155 |
+| lib\pages\mini_app\attendance                                                                                |          3 |      1,328 |          7 |         13 |      1,348 |
+| lib\pages\mini_app\digital_id                                                                                |          3 |        611 |          2 |         12 |        625 |
+| lib\pages\mini_app\directory                                                                                 |          2 |        123 |          1 |          5 |        129 |
+| lib\pages\mini_app\e_memo                                                                                    |          2 |        737 |         21 |         20 |        778 |
+| lib\pages\mini_app\e_memo (Files)                                                                            |          1 |         54 |          5 |          3 |         62 |
+| lib\pages\mini_app\e_memo\new_request_services                                                               |          1 |        683 |         16 |         17 |        716 |
+| lib\pages\mini_app\exemption                                                                                 |          5 |        190 |          6 |         12 |        208 |
+| lib\pages\mini_app\facility                                                                                  |          1 |        145 |          2 |          3 |        150 |
+| lib\pages\mini_app\iAttend                                                                                   |          4 |        279 |          7 |         12 |        298 |
+| lib\pages\mini_app\postalhub                                                                                 |          1 |         45 |          1 |          2 |         48 |
+| lib\pages\mini_app\shuttle_bus                                                                               |          6 |      8,783 |         20 |         50 |      8,853 |
+| lib\pages\mini_app\ucs                                                                                       |          5 |        853 |          3 |         22 |        878 |
+| lib\pages\mini_app\uevent                                                                                    |          4 |        783 |          2 |         16 |        801 |
+| lib\pages\mini_app\uschedule                                                                                 |          4 |        481 |         24 |         27 |        532 |
+| lib\pages\mini_app\usummon                                                                                   |          4 |         62 |          0 |         13 |         75 |
+| lib\pages\news_and_notification                                                                              |          1 |        648 |          0 |          2 |        650 |
+| lib\pages\qr_services                                                                                        |          1 |        149 |          0 |         11 |        160 |
+| lib\pages\settings                                                                                           |          8 |      2,929 |         63 |         37 |      3,029 |
+| lib\pages\settings (Files)                                                                                   |          5 |      2,186 |         25 |         24 |      2,235 |
+| lib\pages\settings\dev_page                                                                                  |          3 |        743 |         38 |         13 |        794 |
+| lib\src                                                                                                      |          3 |        266 |          9 |         15 |        290 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                     | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\haqim\Project\Flutter\utpinme\.github\ISSUE_TEMPLATE\bug_report.md                                  | Markdown   |         28 |          0 |          9 |         37 |
+| c:\Users\haqim\Project\Flutter\utpinme\.github\ISSUE_TEMPLATE\feature_request.md                             | Markdown   |         15 |          0 |          6 |         21 |
+| c:\Users\haqim\Project\Flutter\utpinme\CODE_OF_CONDUCT.md                                                    | Markdown   |         93 |          0 |         36 |        129 |
+| c:\Users\haqim\Project\Flutter\utpinme\CONTRIBUTING.md                                                       | Markdown   |          1 |          0 |          1 |          2 |
+| c:\Users\haqim\Project\Flutter\utpinme\LICENSE.md                                                            | Markdown   |        281 |          0 |         59 |        340 |
+| c:\Users\haqim\Project\Flutter\utpinme\README.md                                                             | Markdown   |         54 |          0 |         13 |         67 |
+| c:\Users\haqim\Project\Flutter\utpinme\SECURITY.md                                                           | Markdown   |          6 |          0 |          4 |         10 |
+| c:\Users\haqim\Project\Flutter\utpinme\analysis_options.yaml                                                 | YAML       |          3 |          0 |          3 |          6 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\build.gradle                                              | Gradle     |         53 |          5 |         13 |         71 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\google-services.json                                      | JSON       |          0 |          0 |          1 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\debug\AndroidManifest.xml                             | XML        |          4 |          4 |          1 |          9 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\AndroidManifest.xml                              | XML        |         36 |          6 |          3 |         45 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\res\drawable-v21\launch_background.xml           | XML        |          4 |          7 |          1 |         12 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\res\drawable\launch_background.xml               | XML        |          4 |          7 |          1 |         12 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml            | XML        |          6 |          0 |          0 |          6 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\res\values-night\styles.xml                      | XML        |          9 |          8 |          0 |         17 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\main\res\values\styles.xml                            | XML        |          9 |          8 |          0 |         17 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\app\src\profile\AndroidManifest.xml                           | XML        |          5 |          4 |          2 |         11 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\build.gradle                                                  | Gradle     |         27 |          0 |          5 |         32 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\gradle.properties                                             | Properties |          3 |          0 |          1 |          4 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\gradle\wrapper\gradle-wrapper.properties                      | Properties |          5 |          0 |          1 |          6 |
+| c:\Users\haqim\Project\Flutter\utpinme\android\settings.gradle                                               | Gradle     |          8 |          0 |          4 |         12 |
+| c:\Users\haqim\Project\Flutter\utpinme\assets\map_styles\dark.json                                           | JSON       |        161 |          0 |          0 |        161 |
+| c:\Users\haqim\Project\Flutter\utpinme\assets\map_styles\light.json                                          | JSON       |          1 |          0 |          0 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\AppDelegate.swift                                          | Swift      |         12 |          0 |          2 |         14 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json           | JSON       |          1 |          0 |          0 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json         | JSON       |         23 |          0 |          1 |         24 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md             | Markdown   |          3 |          0 |          2 |          5 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Base.lproj\LaunchScreen.storyboard                         | XML        |         36 |          1 |          1 |         38 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Base.lproj\Main.storyboard                                 | XML        |         25 |          1 |          1 |         27 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\Runner\Runner-Bridging-Header.h                                   | C++        |          1 |          0 |          1 |          2 |
+| c:\Users\haqim\Project\Flutter\utpinme\ios\firebase_app_id_file.json                                         | JSON       |          7 |          0 |          0 |          7 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\auth\auth_page.dart                                               | Dart       |         21 |          0 |          3 |         24 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\auth\login_page.dart                                              | Dart       |        162 |          2 |         10 |        174 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\firebase_options.dart                                             | Dart       |         54 |         12 |          4 |         70 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\main.dart                                                         | Dart       |         43 |          6 |          7 |         56 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\home.dart                                              | Dart       |         12 |          0 |          2 |         14 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\news\more_news.dart                                    | Dart       |        628 |          0 |          2 |        630 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\news\viewer_news.dart                                  | Dart       |        176 |          2 |          2 |        180 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\panic_button.dart                                      | Dart       |        409 |          6 |          5 |        420 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\up_section_home.dart                                   | Dart       |      1,282 |          9 |          7 |      1,298 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\upcoming_events\more_upcoming_events.dart              | Dart       |        694 |          0 |          2 |        696 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\home\upcoming_events\viewer_upcoming_events.dart            | Dart       |        796 |          0 |          2 |        798 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\acad_cal.dart                    | Dart       |         40 |          0 |          3 |         43 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\fdug_pack\fdug_acad_cal.dart     | Dart       |        108 |          4 |          3 |        115 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\fdug_pack\fdug_jan_table.dart    | Dart       |        141 |          1 |          3 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\fdug_pack\fdug_may_table.dart    | Dart       |        141 |          1 |          3 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\fdug_pack\fdug_sept_table.dart   | Dart       |        141 |          1 |          3 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\intern_pack\intern_acad_cal.dart | Dart       |         64 |          2 |          3 |         69 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\intern_pack\intern_table.dart    | Dart       |        109 |          1 |          3 |        113 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\pg_pack\pg_acad_cal.dart         | Dart       |         86 |          3 |          3 |         92 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\pg_pack\pg_jan_table.dart        | Dart       |        141 |          1 |          3 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\pg_pack\pg_jul_table.dart        | Dart       |        141 |          1 |          3 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\academic_calendar\public_holiday.dart              | Dart       |        220 |          1 |          3 |        224 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ai_test_kitchen\ai_test_kitchen_landing.dart       | Dart       |        358 |          3 |          2 |        363 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ai_test_kitchen\chat_input_box.dart                | Dart       |         71 |          4 |          4 |         79 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ai_test_kitchen\notebook_lm.dart                   | Dart       |        192 |          1 |          2 |        195 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ai_test_kitchen\utp_assist.dart                    | Dart       |        226 |          8 |         10 |        244 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ai_test_kitchen\utp_assist_v2.dart                 | Dart       |        254 |          6 |         14 |        274 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\attendance\attendance.dart                         | Dart       |        329 |          3 |          3 |        335 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\attendance\attendance_confirmation.dart            | Dart       |         94 |          3 |          3 |        100 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\attendance\attendance_search.dart                  | Dart       |        905 |          1 |          7 |        913 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\digital_id\digital_id.dart                         | Dart       |         35 |          0 |          4 |         39 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\digital_id\lmg_pass.dart                           | Dart       |        289 |          1 |          4 |        294 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\digital_id\student_id.dart                         | Dart       |        287 |          1 |          4 |        292 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\directory\directory.dart                           | Dart       |         79 |          0 |          3 |         82 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\directory\directory_viewer.dart                    | Dart       |         44 |          1 |          2 |         47 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\e_memo\e_memo.dart                                 | Dart       |         54 |          5 |          3 |         62 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\e_memo\new_request_services\new_request.dart       | Dart       |        683 |         16 |         17 |        716 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\exemption\exemption.dart                           | Dart       |         52 |          1 |          3 |         56 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\exemption\exemption_approved.dart                  | Dart       |         40 |          2 |          3 |         45 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\exemption\exemption_myrequest.dart                 | Dart       |         40 |          2 |          3 |         45 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\exemption\exemption_newsubmit.dart                 | Dart       |         58 |          1 |          2 |         61 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\exemption\exemption_viewer.dart                    | Dart       |          0 |          0 |          1 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\facility\facility.dart                             | Dart       |        145 |          2 |          3 |        150 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\iAttend\iattend.dart                               | Dart       |         45 |          3 |          3 |         51 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\iAttend\iattend_myevent.dart                       | Dart       |         74 |          2 |          3 |         79 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\iAttend\iattend_myevent_viewer.dart                | Dart       |         74 |          2 |          3 |         79 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\iAttend\iattend_mystats.dart                       | Dart       |         86 |          0 |          3 |         89 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\mini_app.dart                                      | Dart       |      1,957 |         28 |         13 |      1,998 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\postalhub\postal_hub.dart                          | Dart       |         45 |          1 |          2 |         48 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\bus_finder.dart                        | Dart       |        225 |         10 |         18 |        253 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\maximoff_s_internal.dart               | Dart       |        226 |          8 |         14 |        248 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\s_external.dart                        | Dart       |      4,264 |          0 |          5 |      4,269 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\s_internal.dart                        | Dart       |      2,891 |          0 |          5 |      2,896 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\s_weekend.dart                         | Dart       |      1,116 |          0 |          5 |      1,121 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\shuttle_bus\shuttle_bus.dart                       | Dart       |         61 |          2 |          3 |         66 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ucs\case_viewer.dart                               | Dart       |          0 |          0 |          1 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ucs\create_case_data.dart                          | Dart       |        146 |          2 |          7 |        155 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ucs\knowledge_hub.dart                             | Dart       |         14 |          0 |          4 |         18 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ucs\my_support.dart                                | Dart       |        642 |          0 |          5 |        647 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\ucs\ucs.dart                                       | Dart       |         51 |          1 |          5 |         57 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uevent\uevent.dart                                 | Dart       |        114 |          1 |          7 |        122 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uevent\uevent_help_page.dart                       | Dart       |         83 |          0 |          3 |         86 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uevent\uevent_my_ticket.dart                       | Dart       |        279 |          1 |          3 |        283 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uevent\uevent_product_page.dart                    | Dart       |        307 |          0 |          3 |        310 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uschedule\nox_uschedule_exam.dart                  | Dart       |         15 |          1 |          2 |         18 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uschedule\uschedule.dart                           | Dart       |         39 |          2 |          3 |         44 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uschedule\uschedule_course.dart                    | Dart       |        107 |         19 |         19 |        145 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\uschedule\uschedule_exam.dart                      | Dart       |        320 |          2 |          3 |        325 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\usummon\appeal.dart                                | Dart       |         13 |          0 |          4 |         17 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\usummon\summon.dart                                | Dart       |         13 |          0 |          4 |         17 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\usummon\usummon.dart                               | Dart       |         36 |          0 |          4 |         40 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\mini_app\usummon\usummon_viewer.dart                        | Dart       |          0 |          0 |          1 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\news_and_notification\more_notification.dart                | Dart       |        648 |          0 |          2 |        650 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\qr_services\qr_page.dart                                    | Dart       |        149 |          0 |         11 |        160 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\about_app.dart                                     | Dart       |        297 |          7 |          2 |        306 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\contact_us.dart                                    | Dart       |      1,023 |          7 |          4 |      1,034 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\dev_page\material_test_page.dart                   | Dart       |         33 |          0 |          3 |         36 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\dev_page\material_theme_col.dart                   | Dart       |        492 |         33 |          5 |        530 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\dev_page\material_widget_lib.dart                  | Dart       |        218 |          5 |          5 |        228 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\disclaimer.dart                                    | Dart       |         99 |          0 |          4 |        103 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\profile.dart                                       | Dart       |        560 |         11 |         10 |        581 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\pages\settings\security_policy.dart                               | Dart       |        207 |          0 |          4 |        211 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\src\navbar.dart                                                   | Dart       |        199 |          6 |         11 |        216 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\src\token.dart                                                    | Dart       |          0 |          0 |          1 |          1 |
+| c:\Users\haqim\Project\Flutter\utpinme\lib\src\utp_ui.dart                                                   | Dart       |         67 |          3 |          3 |         73 |
+| c:\Users\haqim\Project\Flutter\utpinme\pubspec.yaml                                                          | YAML       |         77 |          7 |         18 |        102 |
+| Total                                                                                                        |            |     28,080 |        329 |        586 |     28,995 |
++--------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
