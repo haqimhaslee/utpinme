@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
-import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/ai_test_kitchen_landing.dart';
 import 'package:utp_in_me/pages/mini_app/ai_test_kitchen/utp_assist_v2.dart';
 import 'package:utp_in_me/pages/mini_app/e_memo/e_memo.dart';
 import 'package:utp_in_me/pages/mini_app/ucs/ucs.dart';
