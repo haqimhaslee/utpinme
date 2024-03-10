@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class Data {
   String label;
@@ -180,9 +181,7 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
                 : (_value == 2)
                     ? (_weekendView)
                     : _uTeknologiPetronas,
-
         mapToolbarEnabled: false,
-
         markers: (_value == 0)
             ? (pinpointInternal)
             : (_value == 1)
@@ -190,41 +189,88 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
                 : (_value == 2)
                     ? (pinpointWeekend)
                     : pinpointNull,
-
         zoomControlsEnabled: false,
         myLocationEnabled: true,
-        //liteModeEnabled: true,
-        //myLocationButtonEnabled: false,
-        //onMapCreated: (GoogleMapController controller) {
-        //  _controller.complete(controller);
-        //},
       ),
-      bottomSheet: SizedBox(
-        height: 150,
-        width: MediaQuery.of(context).size.width,
-        child: ClipRRect(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              const Text(
-                'Choose a checkpoint to view',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w900,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
+      floatingActionButton: Padding(
+          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: Card(
+            elevation: 2,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const SizedBox(height: 10.0),
+                Wrap(
+                  spacing: 10,
+                  direction: Axis.horizontal,
+                  children: choiceChips(),
                 ),
-              ),
-              const SizedBox(height: 8.0),
-              Wrap(
-                spacing: 10,
-                direction: Axis.horizontal,
-                children: choiceChips(),
-              ),
-              const SizedBox(height: 20.0),
-            ],
-          ),
-        ),
-      ),
+                const VerticalDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.directions_bus_rounded),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text("Shuttle Bus",
+                            textAlign: TextAlign.center, style: TextStyle()),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: LoadingAnimationWidget.horizontalRotatingDots(
+                          color: Theme.of(context).colorScheme.primary,
+                          size: 25,
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(
+                            top: 0,
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                          ),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(6)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 1,
+                                  left: 5,
+                                  right: 5,
+                                  bottom: 1,
+                                ),
+                                child: Text(
+                                  "RUNNING",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color:
+                                        Theme.of(context).colorScheme.primary,
+                                  ),
+                                ),
+                              ))),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )),
+
       //floatingActionButton: FloatingActionButton(
       //    child: const Icon(Icons.my_location_rounded), onPressed: () {})
     );

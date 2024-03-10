@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quick_actions/quick_actions.dart';
-import 'package:utp_in_me/pages/mini_app/digital_id/digital_id.dart';
+//import 'package:quick_actions/quick_actions.dart';
+//import 'package:utp_in_me/pages/mini_app/digital_id/digital_id.dart';
 import 'package:utp_in_me/pages/home/home.dart';
 import 'package:utp_in_me/pages/mini_app/mini_app.dart';
 import 'package:utp_in_me/pages/qr_services/qr_page.dart';
 import 'package:utp_in_me/pages/news_and_notification/more_notification.dart';
-import 'package:utp_in_me/pages/mini_app/shuttle_bus/shuttle_bus.dart';
+//import 'package:utp_in_me/pages/mini_app/shuttle_bus/shuttle_bus.dart';
 import 'package:utp_in_me/pages/settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
@@ -18,7 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final quickActions = const QuickActions();
+  //final quickActions = const QuickActions();
 
   void uLearnWeb() async {
     try {
@@ -64,34 +64,34 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  @override
-  void initState() {
-    super.initState();
+  // @override
+  // void initState() {
+  //  super.initState();
 
-    quickActions.setShortcutItems(const [
-      ShortcutItem(type: 'ulearn', localizedTitle: 'ULearn', icon: 'ulearn'),
-      ShortcutItem(
-          type: 'digitalid', localizedTitle: 'Digital ID', icon: 'badge'),
-      ShortcutItem(
-          type: 'shuttlebus',
-          localizedTitle: 'Shuttle Bus',
-          icon: 'shuttlebus'),
-      ShortcutItem(type: 'ucs', localizedTitle: 'UCS', icon: 'ucs'),
-    ]);
-    quickActions.initialize((type) {
-      if (type == 'ulearn') {
-        uLearnWeb();
-      } else if (type == 'digitalid') {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DigitalId()));
-      } else if (type == 'shuttlebus') {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ShuttleBus()));
-      } else if (type == 'ucs') {
-        ucsWeb();
-      }
-    });
-  }
+  //   quickActions.setShortcutItems(const [
+  //     ShortcutItem(type: 'ulearn', localizedTitle: 'ULearn', icon: 'ulearn'),
+  //     ShortcutItem(
+  //         type: 'digitalid', localizedTitle: 'Digital ID', icon: 'badge'),
+  //     ShortcutItem(
+  //         type: 'shuttlebus',
+  //         localizedTitle: 'Shuttle Bus',
+  //         icon: 'shuttlebus'),
+  //     ShortcutItem(type: 'ucs', localizedTitle: 'UCS', icon: 'ucs'),
+//    ]);
+  //   quickActions.initialize((type) {
+//      if (type == 'ulearn') {
+//        uLearnWeb();
+//      } else if (type == 'digitalid') {
+  //       Navigator.push(
+  //           context, MaterialPageRoute(builder: (context) => DigitalId()));
+//      } else if (type == 'shuttlebus') {
+//        Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => const ShuttleBus()));
+  //     } else if (type == 'ucs') {/
+  //       ucsWeb();
+//      }
+  //   });
+  // }
 
   var _selectedIndex = 0;
   final List<Widget> _windgetOption = <Widget>[
