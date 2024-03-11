@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/mini_app/shuttle_bus/bus_finder.dart';
-import 'package:utp_in_me/pages/mini_app/shuttle_bus/s_external.dart';
-import 'package:utp_in_me/pages/mini_app/shuttle_bus/maximoff_s_internal.dart';
-import 'package:utp_in_me/pages/mini_app/shuttle_bus/s_weekend.dart';
+import 'package:utp_in_me/pages/mini_app/utp_bus/bus_finder.dart';
+import 'package:utp_in_me/pages/mini_app/utp_bus/s_external.dart';
+import 'package:utp_in_me/pages/mini_app/utp_bus/maximoff_s_internal.dart';
+import 'package:utp_in_me/pages/mini_app/utp_bus/s_weekend.dart';
 
 class ShuttleBus extends StatelessWidget {
   const ShuttleBus({super.key});
