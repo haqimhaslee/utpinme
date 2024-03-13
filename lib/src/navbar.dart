@@ -107,8 +107,6 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
             elevation: 5,
             scrolledUnderElevation: 5,
-            //backgroundColor: Theme.of(context).colorScheme.primary,
-            //centerTitle: true,
             bottomOpacity: 1,
             title: Row(children: [
               SizedBox.fromSize(
@@ -166,19 +164,10 @@ class _HomePageState extends State<HomePage> {
                       )))
             ])),
         bottomNavigationBar: BottomAppBar(
-          //height: 70,
-          // ****** APP BAR ******************
+          height: 70,
           clipBehavior: Clip.antiAlias,
-          shape:
-              const CircularNotchedRectangle(), // ← carves notch for FAB in BottomAppBar
-          //color: Theme.of(context).primaryColor.withAlpha(255),
-          // ↑ use .withAlpha(0) to debug/peek underneath ↑ BottomAppBar
-          //elevation: 0, // ← removes slight shadow under FAB, hardly noticeable
-          // ↑ default elevation is 8. Peek it by setting color ↑ alpha to 0
+          shape: const CircularNotchedRectangle(),
           child: NavigationBar(
-            //indicatorShape: const CircleBorder(),
-            //indicatorColor: const Color.fromARGB(0, 0, 0, 0),
-
             selectedIndex: _selectedIndex,
             onDestinationSelected: (i) => setState(() => _selectedIndex = i),
             destinations: const [

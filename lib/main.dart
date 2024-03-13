@@ -36,15 +36,13 @@ class UtpInMe extends StatelessWidget {
     return DynamicColorBuilder(builder: (lightDynamic, darkDynamic) {
       return MaterialApp(
           theme: ThemeData(
-            //fontFamily: 'GoogleSans',
+            fontFamily: 'GoogleSans',
             colorScheme: lightDynamic ?? lightColorScheme,
-            //colorScheme: lightColorScheme,
             useMaterial3: true,
           ),
           darkTheme: ThemeData(
-            //fontFamily: 'GoogleSans',
+            fontFamily: 'GoogleSans',
             colorScheme: darkDynamic ?? darkColorScheme,
-            //colorScheme: darkColorScheme,
             useMaterial3: true,
           ),
           themeMode: ThemeMode.system,
