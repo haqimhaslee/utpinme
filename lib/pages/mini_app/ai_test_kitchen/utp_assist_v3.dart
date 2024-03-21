@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shimmer/shimmer.dart';
 
 //import 'package:url_launcher/link.dart';
 
@@ -10,6 +12,8 @@ class ChatWidgetV3 extends StatefulWidget {
   @override
   State<ChatWidgetV3> createState() => _ChatWidgetV3State();
 }
+
+final user = FirebaseAuth.instance.currentUser!;
 
 class _ChatWidgetV3State extends State<ChatWidgetV3> {
   late final GenerativeModel _model;
@@ -26,7 +30,13 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
       model: 'gemini-pro',
       apiKey: 'AIzaSyCRKcnEzJwJJYalb1B4bAdVQqOsB_5W3lw',
     );
-    _chat = _model.startChat();
+    _chat = _model.startChat(history: [
+      Content.text('I am User and you are UAssist'),
+      Content.model([
+        TextPart(
+            'Hi User, I am UAssist, custom AI chatbot for Universiti Teknologi PETRONAS')
+      ])
+    ]);
   }
 
   void _scrollDown() {
@@ -49,39 +59,28 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
           scrolledUnderElevation: 5,
           bottomOpacity: 1,
           title: Row(children: [
-            const Text('UAssist'),
+            const Text('UAssist by '),
             Padding(
-                padding: const EdgeInsets.only(
-                  top: 0,
-                  bottom: 0,
-                  left: 10,
-                  right: 0,
+              padding: const EdgeInsets.only(
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+              ),
+              child: Shimmer.fromColors(
+                period: const Duration(milliseconds: 2000),
+                baseColor: Theme.of(context).colorScheme.primary,
+                highlightColor: Theme.of(context).colorScheme.tertiary,
+                child: const Text(
+                  'Gemini AI',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    //fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                child: Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Theme.of(context).colorScheme.primary,
-                        width: 1.5,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(6)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 1,
-                        left: 5,
-                        right: 5,
-                        bottom: 1,
-                      ),
-                      child: Text(
-                        "v3_PREV - Gemini 1.0 Pro",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w900,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                    )))
+              ),
+            )
           ])),
       body: Padding(
         padding: const EdgeInsets.only(top: 5, left: 5, right: 5),
@@ -89,23 +88,46 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: ListView.builder(
-                controller: _scrollController,
-                itemBuilder: (context, idx) {
-                  var content = _chat.history.toList()[idx];
-                  var text = content.parts
-                      .whereType<TextPart>()
-                      .map<String>((e) => e.text)
-                      .join('');
-                  return MessageWidget(
-                    text: text,
-                    isFromUser: content.role == 'user',
-                  );
-                },
-                itemCount: _chat.history.length,
-              ),
-            ),
+            _chat.history.length <= 2
+                ? const Expanded(
+                    child: Center(
+                        child: Padding(
+                            padding: EdgeInsets.only(
+                                top: 30, left: 30, right: 30, bottom: 30),
+                            child: SizedBox(
+                              height: 100,
+                              width: 200,
+                              child: Card(
+                                  elevation: 0,
+                                  child: Center(
+                                    child: Text(
+                                      'No conversation yet',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        //color: Colors.black,
+                                      ),
+                                    ),
+                                  )),
+                            ))))
+                : Expanded(
+                    child: ListView.builder(
+                      controller: _scrollController,
+                      itemBuilder: (context, idx) {
+                        var content = _chat.history
+                            .toList()[idx + 2]; // Start from index 1
+                        var text = content.parts
+                            .whereType<TextPart>()
+                            .map<String>((e) => e.text)
+                            .join('');
+                        return MessageWidget(
+                          text: text,
+                          isFromUser: content.role == 'user',
+                        );
+                      },
+                      itemCount: _chat.history.length -
+                          2, // Adjust itemCount accordingly
+                    ),
+                  ),
             Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 20,
@@ -128,7 +150,7 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
                         ),
                       ),
                       const SizedBox.square(
-                        dimension: 5,
+                        dimension: 8,
                       ),
                       if (!_loading)
                         IconButton(
@@ -141,8 +163,9 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
                           ),
                         )
                       else
-                        LoadingAnimationWidget.inkDrop(
-                          color: Theme.of(context).colorScheme.primary,
+                        LoadingAnimationWidget.flickr(
+                          leftDotColor: Theme.of(context).colorScheme.primary,
+                          rightDotColor: Theme.of(context).colorScheme.error,
                           size: 25,
                         ),
                     ],

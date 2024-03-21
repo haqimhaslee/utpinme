@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
                     top: 0,
                     bottom: 0,
                     left: 10,
-                    right: 0,
+                    right: 10,
                   ),
                   child: Container(
                       decoration: BoxDecoration(
@@ -63,9 +63,9 @@ class Home extends StatelessWidget {
                             color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
-                      )))
+                      ))),
             ])),
-        body: Center(
+        body: const Center(
           child: UpSectionHome(),
         ));
   }
