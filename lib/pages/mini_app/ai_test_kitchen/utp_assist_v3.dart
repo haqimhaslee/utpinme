@@ -45,16 +45,44 @@ class _ChatWidgetV3State extends State<ChatWidgetV3> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('UAssist'),
-        elevation: 3,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.info_rounded),
-            splashRadius: 1,
-            onPressed: (() {}),
-          ),
-        ],
-      ),
+          elevation: 5,
+          scrolledUnderElevation: 5,
+          bottomOpacity: 1,
+          title: Row(children: [
+            const Text('UAssist'),
+            Padding(
+                padding: const EdgeInsets.only(
+                  top: 0,
+                  bottom: 0,
+                  left: 10,
+                  right: 0,
+                ),
+                child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Theme.of(context).colorScheme.primary,
+                        width: 1.5,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(6)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        top: 1,
+                        left: 5,
+                        right: 5,
+                        bottom: 1,
+                      ),
+                      child: Text(
+                        "v3_PREV - Gemini 1.0 Pro",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w900,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                    )))
+          ])),
       body: Padding(
         padding: const EdgeInsets.only(top: 5, left: 5, right: 5),
         child: Column(

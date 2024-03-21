@@ -66,6 +66,11 @@ class _ProfileState extends State<Profile> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+          elevation: 5,
+          scrolledUnderElevation: 5,
+          bottomOpacity: 1,
+          title: const Text('Profile & Settings')),
       body: ListView(
         children: [
           Container(

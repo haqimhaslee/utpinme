@@ -284,6 +284,7 @@ class _LiveBusPageGoogleState extends State<LiveBusPageGoogle> {
         child: ChoiceChip(
           label: Text(_choiceChipsList[i].label),
           selected: _value == i,
+          showCheckmark: false,
           onSelected: (bool value) {
             setState(() {
               _value = i;

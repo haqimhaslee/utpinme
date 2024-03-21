@@ -29,83 +29,81 @@ class _QRServiceState extends State<QRService> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Scan a code"),
-        elevation: 0,
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        elevation: 3,
+        //backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
-      body: Column(
+      body: _buildQrView(context),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
+      floatingActionButton: Column(
         children: <Widget>[
-          Expanded(flex: 4, child: _buildQrView(context)),
           Expanded(
               flex: 1,
-              child: Container(
-                color: const Color.fromARGB(255, 0, 0, 0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    const Text(''),
-                    if (result != null)
-                      Row(
-                        children: [
-                          Text('Barcode Type: ${(result!.format)}'),
-                          Text('Data: ${result!.code}')
-                        ],
-                      )
-                    else
-                      const Text(' '),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  const Text(''),
+                  if (result != null)
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 45),
-                          child: Container(
-                            margin: const EdgeInsets.all(0),
-                            child: TextButton(
-                                onPressed: () async {
-                                  await controller?.toggleFlash();
-                                  setState(() {});
-                                },
-                                child: FutureBuilder(
-                                  future: controller?.getFlashStatus(),
-                                  builder: (context, snapshot) {
-                                    if (snapshot.data != null) {
-                                      return const Icon(Icons.flash_on_rounded);
-                                    } else {
-                                      return const Icon(Icons.flash_on_rounded);
-                                    }
-                                  },
-                                )),
-                          ),
-                        ),
-                        const Flexible(fit: FlexFit.tight, child: SizedBox()),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 45),
-                          child: Container(
-                            margin: const EdgeInsets.all(0),
-                            child: TextButton(
-                                onPressed: () async {
-                                  await controller?.flipCamera();
-                                  setState(() {});
-                                },
-                                child: FutureBuilder(
-                                  future: controller?.getCameraInfo(),
-                                  builder: (context, snapshot) {
-                                    if (snapshot.data != null) {
-                                      return const Icon(
-                                          Icons.cameraswitch_rounded);
-                                    } else {
-                                      return const Icon(
-                                          Icons.cameraswitch_rounded);
-                                    }
-                                  },
-                                )),
-                          ),
-                        )
+                      children: [
+                        Text('Barcode Type: ${(result!.format)}'),
+                        Text('Data: ${result!.code}')
                       ],
-                    ),
-                    const Text(''),
-                  ],
-                ),
+                    )
+                  else
+                    const Text(' '),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(left: 45),
+                        child: Container(
+                          margin: const EdgeInsets.all(0),
+                          child: TextButton(
+                              onPressed: () async {
+                                await controller?.toggleFlash();
+                                setState(() {});
+                              },
+                              child: FutureBuilder(
+                                future: controller?.getFlashStatus(),
+                                builder: (context, snapshot) {
+                                  if (snapshot.data != null) {
+                                    return const Icon(Icons.flash_on_rounded);
+                                  } else {
+                                    return const Icon(Icons.flash_on_rounded);
+                                  }
+                                },
+                              )),
+                        ),
+                      ),
+                      const Flexible(fit: FlexFit.tight, child: SizedBox()),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 45),
+                        child: Container(
+                          margin: const EdgeInsets.all(0),
+                          child: TextButton(
+                              onPressed: () async {
+                                await controller?.flipCamera();
+                                setState(() {});
+                              },
+                              child: FutureBuilder(
+                                future: controller?.getCameraInfo(),
+                                builder: (context, snapshot) {
+                                  if (snapshot.data != null) {
+                                    return const Icon(
+                                        Icons.cameraswitch_rounded);
+                                  } else {
+                                    return const Icon(
+                                        Icons.cameraswitch_rounded);
+                                  }
+                                },
+                              )),
+                        ),
+                      )
+                    ],
+                  ),
+                  const Text(''),
+                ],
               ))
         ],
       ),
