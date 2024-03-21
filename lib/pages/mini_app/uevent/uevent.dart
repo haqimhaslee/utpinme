@@ -7,7 +7,6 @@ import 'package:utp_in_me/pages/mini_app/uevent/pages/event_page.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/pages/search_page.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/uevent_help_page.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/uevent_my_ticket.dart';
-import 'package:utp_in_me/pages/mini_app/uevent/uevent_product_page.dart';
 import 'package:animations/animations.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/usecases/event_usecase.dart';
 import 'package:utp_in_me/pages/mini_app/uevent/usecases/navigation_usecase.dart';

@@ -39,7 +39,7 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
         child: Stack(
           children: [
             isEventDetailsVisible
-                ? Container(
+                ? SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: widget.event.bannerImage == null
                         ? const Placeholder()
@@ -55,16 +55,14 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                                 carouselController: _carouselController,
                                 itemCount: widget.event.merchData.length,
                                 itemBuilder: (context, index, realIndex) {
-                                  return Container(
-                                    child: Center(
-                                      child: Image.memory(
-                                        widget.event.merchImages[index]!,
-                                        fit: BoxFit.cover,
-                                        width:
-                                            MediaQuery.of(context).size.width,
-                                        height:
-                                            MediaQuery.of(context).size.width,
-                                      ),
+                                  return Center(
+                                    child: Image.memory(
+                                      widget.event.merchImages[index]!,
+                                      fit: BoxFit.cover,
+                                      width:
+                                          MediaQuery.of(context).size.width,
+                                      height:
+                                          MediaQuery.of(context).size.width,
                                     ),
                                   );
                                 },
@@ -104,7 +102,7 @@ class _IndividualEventPageState extends State<IndividualEventPage> {
                                         child: Container(
                                           width: 12.0,
                                           height: 12.0,
-                                          margin: EdgeInsets.symmetric(
+                                          margin: const EdgeInsets.symmetric(
                                               vertical: 8.0, horizontal: 4.0),
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,

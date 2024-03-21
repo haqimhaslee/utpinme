@@ -46,6 +46,7 @@ class _AddEventState extends State<AddEvent> {
   List<PackageEntity> packagesList = [];
 
   // image picking
+  // ignore: unused_field
   List<XFile>? _mediaFileList;
 
   dynamic _pickImageError;
@@ -521,7 +522,7 @@ class _AddEventState extends State<AddEvent> {
               visible: isEventDetailsVisible,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
@@ -651,8 +652,7 @@ class _AddEventState extends State<AddEvent> {
                                     attendees: [],
                                     merchData: merchData,
                                     merchImages: [],
-                                    bannerImageName: ("banner" +
-                                        p.extension(eventBannerFile!.path)),
+                                    bannerImageName: ("banner${p.extension(eventBannerFile!.path)}"),
                                     bannerImage: null);
 
                                 // post event to firestore
@@ -719,7 +719,7 @@ class _AddEventState extends State<AddEvent> {
               visible: !isEventDetailsVisible,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),

@@ -32,5 +32,6 @@ class ImageServices {
     } on FirebaseException catch (e) {
       debugPrint("Error: $e");
     }
+    return null;
   }
 }

@@ -18,12 +18,12 @@ class _EventPageState extends State<EventPage> {
   bool _isLoadMoreRunning = false;
   late ScrollController _scrollController;
 
-  Future _refresh() async {
-    EventUseCase eventUseCase =
-        Provider.of<EventUseCase>(context, listen: false);
-    function = eventUseCase.fetchEventsFromFirestore();
-    setState(() {});
-  }
+  //Future _refresh() async {
+  //  EventUseCase eventUseCase =
+  //      Provider.of<EventUseCase>(context, listen: false);
+  //  function = eventUseCase.fetchEventsFromFirestore();
+  //  setState(() {});
+  //}
 
   Future<void> _loadMore() async {
     EventUseCase eventUseCase =

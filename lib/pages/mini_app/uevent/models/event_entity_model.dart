@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import '../entities/event_entity.dart';
 
 class EventEntityModel {
   /*EventEntity sampleEvent = EventEntity(
