@@ -21,8 +21,8 @@ void main() async {
   ));
 
 //Setting SystmeUIMode
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
-      overlays: [SystemUiOverlay.bottom]);
+  //Systemahrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge,
+     // overlays: [SystemUiOverlay.bottom]);
 
   runApp(const UtpInMe());
 }
