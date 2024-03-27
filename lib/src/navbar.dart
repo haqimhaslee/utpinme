@@ -6,7 +6,7 @@ import 'package:utp_in_me/pages/mini_app/mini_app.dart';
 import 'package:utp_in_me/pages/qr_services/qr_page.dart';
 import 'package:utp_in_me/pages/news_and_notification/more_notification.dart';
 //import 'package:utp_in_me/pages/mini_app/shuttle_bus/shuttle_bus.dart';
-import 'package:utp_in_me/pages/settings/profile.dart';
+import 'package:utp_in_me/pages/profile_and_settings/profile.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 

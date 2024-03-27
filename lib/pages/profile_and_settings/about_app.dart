@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/settings/dev_page/material_test_page.dart';
+import 'package:utp_in_me/pages/profile_and_settings/dev_page/material_test_page.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({super.key});

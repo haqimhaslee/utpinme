@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
 import 'package:flutter/material.dart';
-import 'package:utp_in_me/pages/settings/contact_us.dart';
-import 'package:utp_in_me/pages/settings/disclaimer.dart';
-import 'package:utp_in_me/pages/settings/security_policy.dart';
-import 'package:utp_in_me/pages/settings/about_app.dart';
+import 'package:utp_in_me/pages/profile_and_settings/contact_us.dart';
+import 'package:utp_in_me/pages/profile_and_settings/disclaimer.dart';
+import 'package:utp_in_me/pages/profile_and_settings/security_policy.dart';
+import 'package:utp_in_me/pages/profile_and_settings/about_app.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class Profile extends StatefulWidget {
